@@ -25,20 +25,32 @@ export default function AboutPage() {
           />
           <div>
             <p className="label">The Story</p>
+            {/* REPLACE WITH REAL CONTENT */}
             <h2 className="h-display mt-3">
-              [PLACEHOLDER — <span className="italic text-gold">A Headline About Nancy</span>]
+              Helping Dallas Families{" "}
+              <span className="italic text-gold">Find Home</span>
             </h2>
             <GoldDivider className="mt-6" />
+            {/* REPLACE WITH REAL CONTENT */}
             <p className="body-p mt-8">
-              [PLACEHOLDER — Nancy's origin story. Where she grew up, what
-              brought her to Dallas, what brought her to real estate.]
+              Nancy has spent her career in and around Dallas — and it shows.
+              From Highland Park to Lakewood, she knows the streets, the
+              schools, and the stories that make each neighborhood feel like
+              home. Real estate, for her, has always been about people first.
             </p>
+            {/* REPLACE WITH REAL CONTENT */}
             <p className="body-p mt-4">
-              [PLACEHOLDER — Her philosophy and approach with clients.]
+              Her philosophy is simple: listen carefully, advise honestly, and
+              advocate fiercely. Whether you&apos;re upgrading, downsizing, or
+              buying your first place, you&apos;ll get the same thoughtful,
+              unhurried attention on every call and every showing.
             </p>
+            {/* REPLACE WITH REAL CONTENT */}
             <p className="body-p mt-4">
-              [PLACEHOLDER — Personal note: family, hobbies, what she loves
-              about Dallas.]
+              When she&apos;s not touring homes, you&apos;ll find her at her
+              favorite local coffee shop, walking the Katy Trail, or spending
+              Sunday mornings with her family. Dallas isn&apos;t just her
+              market — it&apos;s her home.
             </p>
 
             <div className="mt-10 p-8 bg-bgSection border border-bordr">

@@ -48,9 +48,20 @@ export const NEIGHBORHOODS = [
   "[Bluffview]", "[Devonshire]", "[Bishop Arts]", "[Uptown]",
 ];
 
+// REPLACE WITH REAL CONTENT
 export const TESTIMONIALS = [
-  { quote: "[PLACEHOLDER — paste a real client testimonial here. Aim for 2–3 sentences about Nancy's process and outcome.]", name: "[Client Name]", detail: "[Bought in Highland Park, 2025]" },
-  { quote: "[PLACEHOLDER — paste a second client testimonial. Sellers love when other sellers vouch for results.]", name: "[Client Name]", detail: "[Sold in Lakewood, 2025]" },
+  {
+    quote:
+      "Nancy made what could have been an overwhelming process feel completely manageable. She knew the Highland Park market inside out and helped us find a home we didn't even know we were looking for. We couldn't be happier.",
+    name: "Sarah & James M.",
+    detail: "Bought in Highland Park",
+  },
+  {
+    quote:
+      "We interviewed three agents before choosing Nancy, and it wasn't even close. She priced our home strategically, had a marketing plan ready on day one, and we sold in 11 days — above asking. Truly exceptional.",
+    name: "The Reynolds Family",
+    detail: "Sold in Lakewood",
+  },
 ];
 
 export const BUY_STEPS = [

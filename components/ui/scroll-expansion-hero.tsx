@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface Props {
@@ -8,7 +9,7 @@ interface Props {
   bgImageSrc: string;
   title?: string;
   date?: string;
-  scrollToExpand?: string;
+  subtitle?: string;
   textBlend?: boolean;
   children?: ReactNode;
 }
@@ -18,7 +19,7 @@ export default function ScrollExpandMedia({
   bgImageSrc,
   title,
   date,
-  scrollToExpand,
+  subtitle,
   textBlend,
   children,
 }: Props) {
@@ -154,14 +155,6 @@ export default function ScrollExpandMedia({
                       {date}
                     </p>
                   )}
-                  {scrollToExpand && (
-                    <p
-                      className="text-goldLight text-[11px] tracking-button uppercase font-semibold mt-2"
-                      style={{ transform: `translateX(${textTranslateX}vw)` }}
-                    >
-                      {scrollToExpand}
-                    </p>
-                  )}
                 </div>
               </div>
 
@@ -182,6 +175,31 @@ export default function ScrollExpandMedia({
                 >
                   {restOfTitle}
                 </motion.h1>
+                {subtitle && (
+                  <p
+                    className="text-white/85 text-[14px] md:text-[15px] font-light max-w-xl mt-4 px-6"
+                    style={{ opacity: 1 - scrollProgress * 1.5 }}
+                  >
+                    {subtitle}
+                  </p>
+                )}
+                <div
+                  className="flex flex-wrap items-center justify-center gap-4 mt-8"
+                  style={{ opacity: 1 - scrollProgress * 1.5 }}
+                >
+                  <Link
+                    href="/buy"
+                    className="btn-base bg-gold text-white border border-gold hover:bg-goldDark hover:-translate-y-[3px] !px-10"
+                  >
+                    I'm Buying
+                  </Link>
+                  <Link
+                    href="/sell"
+                    className="btn-base bg-transparent text-white border border-white hover:bg-white/15 hover:-translate-y-[3px] !px-10"
+                  >
+                    I'm Selling
+                  </Link>
+                </div>
               </div>
             </div>
 

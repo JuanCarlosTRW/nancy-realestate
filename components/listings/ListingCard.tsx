@@ -22,8 +22,8 @@ export default function ListingCard({
   status,
 }: Props) {
   return (
-    <article className="group bg-warmWhite border border-bordr transition-all duration-300 hover:-translate-y-1 hover:border-gold">
-      <div className="relative h-[240px] overflow-hidden bg-bgSection">
+    <article className="group bg-warmWhite border border-bordr transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
+      <div className="relative h-[290px] overflow-hidden bg-bgSection">
         <Image
           src={img}
           alt={address}

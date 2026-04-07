@@ -61,7 +61,15 @@ export default function Footer() {
         <div className="container-x px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between text-[11px] text-white/50">
           <p>© {new Date().getFullYear()} Nancy Real Estate. All rights reserved.</p>
           <p>
-            Designed by <span className="text-gold">Client Growth</span>
+            Designed by{" "}
+            <a
+              href="https://clientgrowth.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold hover:text-goldLight"
+            >
+              Client Growth
+            </a>
           </p>
         </div>
       </div>

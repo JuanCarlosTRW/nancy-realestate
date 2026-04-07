@@ -45,8 +45,8 @@ export default function Navigation() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10" aria-label="Primary">
-          {NAV_ITEMS.map((item) => {
+        <nav className="hidden md:flex items-center gap-9" aria-label="Primary">
+          {NAV_ITEMS.filter((i) => i.href !== "/contact").map((item) => {
             const active = pathname === item.href;
             return (
               <Link
@@ -68,6 +68,17 @@ export default function Navigation() {
               </Link>
             );
           })}
+          <Link
+            href="/contact"
+            className={cn(
+              "text-[11px] font-semibold tracking-button uppercase px-6 py-2.5 transition-all",
+              solid
+                ? "bg-gold text-white border border-gold hover:bg-goldDark"
+                : "bg-transparent text-white border border-white/70 hover:bg-white/10 hover:border-goldLight"
+            )}
+          >
+            Get in Touch
+          </Link>
         </nav>
 
         <button
@@ -86,7 +97,7 @@ export default function Navigation() {
       {open && (
         <div className="md:hidden bg-warmWhite border-t border-bordr">
           <nav className="flex flex-col py-4">
-            {NAV_ITEMS.map((item) => (
+            {NAV_ITEMS.filter((i) => i.href !== "/contact").map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -99,6 +110,13 @@ export default function Navigation() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="mx-6 mt-3 mb-2 btn-base bg-gold text-white border border-gold"
+            >
+              Get in Touch
+            </Link>
           </nav>
         </div>
       )}

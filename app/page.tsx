@@ -15,7 +15,7 @@ export default function Home() {
       bgImageSrc={IMG.heroExterior}
       title="Your Elevated"
       date="Dallas · Fort Worth · North Texas"
-      scrollToExpand="Scroll to Begin"
+      subtitle="Personalized real estate service across Dallas–Fort Worth. Whether you're buying your first home or selling your fifth, Nancy guides every step with clarity and care."
       textBlend
     >
       <MeetAgent />

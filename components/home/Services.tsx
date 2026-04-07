@@ -1,74 +1,68 @@
-import Button from "@/components/ui/Button";
-import { Home, Key } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 
-const cards = [
+const panels = [
   {
-    icon: Key,
     title: "For Buyers",
-    desc: "From the first showing to the closing table — guidance that's calm, clear, and on your side.",
-    bullets: [
-      "Personalized neighborhood matching",
-      "Private tours and market insights",
-      "Skilled offer negotiation",
-      "End-to-end closing support",
-    ],
-    cta: "Start Buying",
+    desc: "From the first showing to closing day — calm, clear guidance and a curated search built around the life you're moving toward.",
+    cta: "I'm Buying",
     href: "/buy",
+    img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop",
   },
   {
-    icon: Home,
     title: "For Sellers",
-    desc: "Strategic pricing, beautiful marketing, and full-service representation to maximize your sale.",
-    bullets: [
-      "Comparative market analysis",
-      "Professional photography & staging",
-      "Targeted digital exposure",
-      "Smooth, coordinated closing",
-    ],
-    cta: "Start Selling",
+    desc: "Strategic pricing, elevated marketing, and full-service representation designed to maximize your sale without the stress.",
+    cta: "I'm Selling",
     href: "/sell",
+    img: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=1600&auto=format&fit=crop",
   },
 ];
 
 export default function Services() {
   return (
-    <section className="section-pad bg-bgSection">
-      <div className="container-x text-center mb-16">
-        <p className="label">What I Do</p>
-        <h2 className="h-display mt-3">
-          Service Built <span className="italic text-gold">Around You</span>
-        </h2>
-      </div>
-      <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-8">
-        {cards.map((c) => {
-          const Icon = c.icon;
-          return (
-            <div
-              key={c.title}
-              className="bg-warmWhite border border-bordr p-10 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:border-gold"
-            >
-              <Icon className="text-gold mb-6" size={32} strokeWidth={1.5} />
-              <h3 className="font-display text-3xl text-darkText">{c.title}</h3>
-              <p className="body-p mt-4">{c.desc}</p>
-              <ul className="mt-8 space-y-3">
-                {c.bullets.map((b) => (
-                  <li
-                    key={b}
-                    className="flex items-start text-[14px] text-mediumText font-light"
-                  >
-                    <span className="text-gold mr-3 mt-2">●</span>
-                    {b}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-10">
-                <Button href={c.href} variant="outline">
-                  {c.cta}
-                </Button>
-              </div>
+    <section className="bg-bgSection">
+      <Reveal>
+        <div className="text-center py-20 px-6">
+          <p className="label">What I Do</p>
+          <h2 className="h-display mt-3">
+            Service Built <span className="italic text-gold">Around You</span>
+          </h2>
+        </div>
+      </Reveal>
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        {panels.map((p) => (
+          <Link
+            href={p.href}
+            key={p.title}
+            className="group relative min-h-[420px] md:min-h-[560px] overflow-hidden"
+          >
+            <Image
+              src={p.img}
+              alt={p.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover transition-transform duration-[900ms] group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80 group-hover:from-black/20 group-hover:to-black/75 transition-all duration-500" />
+            <div className="relative z-10 h-full flex flex-col justify-end p-10 md:p-16 text-white">
+              <p className="text-[11px] tracking-label uppercase font-semibold text-goldLight">
+                {p.title}
+              </p>
+              <h3 className="font-display font-light text-4xl md:text-5xl mt-3 max-w-md leading-tight">
+                {p.title === "For Buyers"
+                  ? "Find the home you'll love."
+                  : "Sell for what it's worth."}
+              </h3>
+              <p className="mt-5 max-w-md text-[14px] leading-[1.8] font-light text-white/85">
+                {p.desc}
+              </p>
+              <span className="inline-block mt-8 text-[11px] tracking-button uppercase font-semibold text-gold group-hover:text-goldLight">
+                {p.cta} →
+              </span>
             </div>
-          );
-        })}
+          </Link>
+        ))}
       </div>
     </section>
   );
