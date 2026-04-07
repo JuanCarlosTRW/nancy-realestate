@@ -139,11 +139,17 @@ export default function ScrollExpandMedia({
                     className="w-full h-full object-cover"
                     priority
                   />
+                  {/* Base darken */}
                   <motion.div
                     className="absolute inset-0 bg-black/40"
                     initial={{ opacity: 0.7 }}
-                    animate={{ opacity: 0.5 - scrollProgress * 0.3 }}
+                    animate={{ opacity: 0.5 - scrollProgress * 0.15 }}
                     transition={{ duration: 0.2 }}
+                  />
+                  {/* Bottom gradient for CTA legibility — only when fully expanded */}
+                  <div
+                    className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent transition-opacity duration-700 pointer-events-none"
+                    style={{ opacity: mediaFullyExpanded ? 1 : 0 }}
                   />
                 </div>
                 <div className="flex flex-col items-center text-center relative z-10 mt-4">
@@ -187,7 +193,7 @@ export default function ScrollExpandMedia({
                   </p>
                 )}
                 <div
-                  className="flex flex-wrap items-center justify-center gap-4 mt-8 transition-opacity duration-500"
+                  className="flex flex-wrap items-center justify-center gap-5 mt-10 transition-opacity duration-700"
                   style={{
                     opacity: mediaFullyExpanded ? 1 : 0,
                     pointerEvents: mediaFullyExpanded ? "auto" : "none",
@@ -195,15 +201,22 @@ export default function ScrollExpandMedia({
                 >
                   <Link
                     href="/buy"
-                    className="btn-base bg-gold text-white border border-gold hover:bg-goldDark hover:-translate-y-[3px] !px-10"
+                    className="group relative inline-flex items-center gap-3 px-10 py-[18px] text-[11px] tracking-button uppercase font-semibold text-darkText bg-white hover:bg-cream transition-all duration-500 hover:gap-5 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.5)]"
                   >
-                    I'm Buying
+                    <span>I&apos;m Buying</span>
+                    <span className="text-gold transition-transform duration-500 group-hover:translate-x-1">
+                      →
+                    </span>
+                    <span className="absolute inset-x-0 -bottom-px h-px bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
                   </Link>
                   <Link
                     href="/sell"
-                    className="btn-base bg-transparent text-white border border-white hover:bg-white/15 hover:-translate-y-[3px] !px-10"
+                    className="group relative inline-flex items-center gap-3 px-10 py-[18px] text-[11px] tracking-button uppercase font-semibold text-white border border-white/40 backdrop-blur-md bg-white/5 hover:bg-white/10 hover:border-white/70 transition-all duration-500 hover:gap-5"
                   >
-                    I'm Selling
+                    <span>I&apos;m Selling</span>
+                    <span className="text-goldLight transition-transform duration-500 group-hover:translate-x-1">
+                      →
+                    </span>
                   </Link>
                 </div>
               </div>
