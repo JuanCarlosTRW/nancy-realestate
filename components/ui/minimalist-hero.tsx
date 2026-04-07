@@ -47,10 +47,10 @@ export default function MinimalistAboutHero() {
             className="relative z-10 w-56 md:w-64 lg:w-72 aspect-[3/4]"
           >
             <Image
-              src={IMG.agent}
+              src={IMG.nancy}
               alt="Nancy"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               priority
               sizes="(max-width: 768px) 224px, 288px"
             />
@@ -65,9 +65,9 @@ export default function MinimalistAboutHero() {
           className="z-20 order-3 flex items-center justify-center md:justify-start"
         >
           <h1 className="font-display font-light text-darkText text-6xl md:text-7xl lg:text-8xl leading-none text-center md:text-left">
-            your
+            a little
             <br />
-            <span className="italic text-gold">advocate.</span>
+            <span className="italic text-gold">about me.</span>
           </h1>
         </motion.div>
       </div>

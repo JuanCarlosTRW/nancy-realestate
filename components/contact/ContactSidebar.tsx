@@ -1,13 +1,13 @@
 import PlaceholderImage from "@/components/ui/PlaceholderImage";
-import { IMG } from "@/lib/constants";
+import { IMG, NANCY_PHONE, NANCY_EMAIL } from "@/lib/constants";
 
 export default function ContactSidebar() {
   return (
     <div>
       <PlaceholderImage
-        src={IMG.agent}
+        src={IMG.nancy}
         alt="Nancy"
-        className="aspect-square w-full"
+        className="aspect-square w-full max-w-[420px]"
       />
       <div className="mt-8">
         <p className="font-display text-3xl text-darkText">Nancy</p>
@@ -15,10 +15,24 @@ export default function ContactSidebar() {
           Real Estate Advisor
         </p>
         <ul className="mt-6 space-y-2 text-[14px] text-mediumText font-light">
-          <li>📞 [XXX-XXX-XXXX]</li>
-          <li>✉️ [nancy@email.com]</li>
-          <li>📍 Dallas–Fort Worth · North Texas</li>
-          <li>🏢 [PLACEHOLDER Brokerage]</li>
+          {/* REPLACE WITH REAL CONTENT */}
+          <li>
+            <a
+              href={`tel:${NANCY_PHONE.replace(/[^\d+]/g, "")}`}
+              className="hover:text-gold"
+            >
+              {NANCY_PHONE}
+            </a>
+          </li>
+          {/* REPLACE WITH REAL CONTENT */}
+          <li>
+            <a href={`mailto:${NANCY_EMAIL}`} className="hover:text-gold">
+              {NANCY_EMAIL}
+            </a>
+          </li>
+          <li>Dallas–Fort Worth · North Texas</li>
+          {/* REPLACE WITH REAL CONTENT */}
+          <li>[PLACEHOLDER Brokerage]</li>
         </ul>
       </div>
 

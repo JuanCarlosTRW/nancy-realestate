@@ -13,7 +13,8 @@ export default function Home() {
     <ScrollExpandMedia
       mediaSrc={IMG.heroExterior}
       bgImageSrc={IMG.heroExterior}
-      title="Your Elevated"
+      titleStart="Real Estate,"
+      titleAccent="Done Personally"
       date="Dallas · Fort Worth · North Texas"
       subtitle="Personalized real estate service across Dallas–Fort Worth. Whether you're buying your first home or selling your fifth, Nancy guides every step with clarity and care."
       textBlend

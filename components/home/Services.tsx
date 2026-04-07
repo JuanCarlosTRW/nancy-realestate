@@ -35,7 +35,7 @@ export default function Services() {
           <Link
             href={p.href}
             key={p.title}
-            className="group relative min-h-[420px] md:min-h-[560px] overflow-hidden"
+            className="group relative min-h-[380px] md:min-h-[460px] overflow-hidden"
           >
             <Image
               src={p.img}
@@ -44,20 +44,15 @@ export default function Services() {
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-[900ms] group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80 group-hover:from-black/20 group-hover:to-black/75 transition-all duration-500" />
-            <div className="relative z-10 h-full flex flex-col justify-end p-10 md:p-16 text-white">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/35 to-black/65 transition-all duration-500" />
+            <div className="relative z-10 h-full flex flex-col justify-end p-10 md:p-14 text-white">
               <p className="text-[11px] tracking-label uppercase font-semibold text-goldLight">
                 {p.title}
               </p>
-              <h3 className="font-display font-light text-4xl md:text-5xl mt-3 max-w-md leading-tight">
-                {p.title === "For Buyers"
-                  ? "Find the home you'll love."
-                  : "Sell for what it's worth."}
-              </h3>
-              <p className="mt-5 max-w-md text-[14px] leading-[1.8] font-light text-white/85">
+              <p className="mt-5 max-w-md text-[15px] leading-[1.8] font-light text-white/90">
                 {p.desc}
               </p>
-              <span className="inline-block mt-8 text-[11px] tracking-button uppercase font-semibold text-gold group-hover:text-goldLight">
+              <span className="inline-block mt-7 text-[11px] tracking-button uppercase font-semibold text-gold group-hover:text-goldLight">
                 {p.cta} →
               </span>
             </div>

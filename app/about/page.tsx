@@ -19,9 +19,9 @@ export default function AboutPage() {
       <section id="bio" className="section-pad bg-warmWhite">
         <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <PlaceholderImage
-            src={IMG.agentTall}
+            src={IMG.nancy}
             alt="Nancy"
-            className="aspect-[4/5] w-full"
+            className="aspect-[4/5] w-full max-w-[480px]"
           />
           <div>
             <p className="label">The Story</p>
@@ -33,37 +33,20 @@ export default function AboutPage() {
             <GoldDivider className="mt-6" />
             {/* REPLACE WITH REAL CONTENT */}
             <p className="body-p mt-8">
-              Nancy has spent her career in and around Dallas — and it shows.
-              From Highland Park to Lakewood, she knows the streets, the
-              schools, and the stories that make each neighborhood feel like
-              home. Real estate, for her, has always been about people first.
+              I didn&apos;t come from a real estate dynasty or a big-name
+              brokerage. I got into this business because I genuinely enjoy
+              helping people find the right home — and I believe everyone
+              deserves an agent who puts their needs first, not the commission.
             </p>
             {/* REPLACE WITH REAL CONTENT */}
             <p className="body-p mt-4">
-              Her philosophy is simple: listen carefully, advise honestly, and
-              advocate fiercely. Whether you&apos;re upgrading, downsizing, or
-              buying your first place, you&apos;ll get the same thoughtful,
-              unhurried attention on every call and every showing.
+              When I&apos;m not showing homes or negotiating contracts,
+              you&apos;ll find me exploring Dallas neighborhoods, discovering
+              new restaurants, and spending time with the people I love. I
+              bring that same energy to my work — real, personal, and always
+              in your corner.
             </p>
-            {/* REPLACE WITH REAL CONTENT */}
-            <p className="body-p mt-4">
-              When she&apos;s not touring homes, you&apos;ll find her at her
-              favorite local coffee shop, walking the Katy Trail, or spending
-              Sunday mornings with her family. Dallas isn&apos;t just her
-              market — it&apos;s her home.
-            </p>
-
-            <div className="mt-10 p-8 bg-bgSection border border-bordr">
-              <p className="text-[11px] tracking-label uppercase font-semibold text-gold mb-4">
-                Credentials
-              </p>
-              <ul className="space-y-2 text-[14px] text-mediumText font-light">
-                <li>License: [TX #XXXXXXX]</li>
-                <li>Certifications: [PLACEHOLDER]</li>
-                <li>Member: [Greater Dallas Association of REALTORS]</li>
-                <li>Brokerage: [PLACEHOLDER Brokerage Name]</li>
-              </ul>
-            </div>
+            {/* Credentials box hidden until real data is available */}
           </div>
         </div>
       </section>

@@ -7,7 +7,13 @@ export const NAV_ITEMS = [
   { label: "Contact", href: "/contact" },
 ];
 
+export const NANCY_PHONE = "(214) 555-0199"; // REPLACE WITH REAL CONTENT
+export const NANCY_EMAIL = "nancy@nancyrealestatedallas.com"; // REPLACE WITH REAL CONTENT
+export const NANCY_LICENSE = "TX License #XXXXXX"; // REPLACE WITH REAL CONTENT
+
 export const IMG = {
+  nancy:
+    "https://static.wixstatic.com/media/62f926_35e6468384ed48a780ff46a1be68a220~mv2.png",
   heroExterior:
     "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1920&auto=format&fit=crop",
   interior:

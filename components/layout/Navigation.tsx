@@ -2,8 +2,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import { NAV_ITEMS } from "@/lib/constants";
+import { Menu, X, Phone } from "lucide-react";
+import { NAV_ITEMS, NANCY_PHONE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export default function Navigation() {
@@ -81,8 +81,19 @@ export default function Navigation() {
           </Link>
         </nav>
 
+        <div className="md:hidden flex items-center gap-4">
+          <a
+            href={`tel:${NANCY_PHONE.replace(/[^\d+]/g, "")}`}
+            aria-label="Call Nancy"
+            className={cn(
+              "p-2",
+              solid ? "text-darkText" : "text-white"
+            )}
+          >
+            <Phone size={18} />
+          </a>
         <button
-          className="md:hidden"
+          className=""
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -92,6 +103,7 @@ export default function Navigation() {
             <Menu className={solid ? "text-darkText" : "text-white"} />
           )}
         </button>
+        </div>
       </div>
 
       {open && (

@@ -20,6 +20,9 @@ export default function BuyPage() {
         titleAccent="Love Coming Back To"
         subtitle="A clear, calm process — from your first conversation to the moment you turn the key."
       />
+      <div className="bg-bgSection pb-12 -mt-6 text-center">
+        <Button href="/listings">Search Homes</Button>
+      </div>
       <ProcessSteps steps={BUY_STEPS} />
       <section className="section-pad bg-bgSection text-center">
         <p className="label">Local Knowledge</p>

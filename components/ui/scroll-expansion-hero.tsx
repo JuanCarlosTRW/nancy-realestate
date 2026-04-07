@@ -8,6 +8,8 @@ interface Props {
   mediaSrc: string;
   bgImageSrc: string;
   title?: string;
+  titleStart?: string;
+  titleAccent?: string;
   date?: string;
   subtitle?: string;
   textBlend?: boolean;
@@ -18,6 +20,8 @@ export default function ScrollExpandMedia({
   mediaSrc,
   bgImageSrc,
   title,
+  titleStart,
+  titleAccent,
   date,
   subtitle,
   textBlend,
@@ -94,8 +98,9 @@ export default function ScrollExpandMedia({
   const mediaHeight = 400 + scrollProgress * (isMobile ? 200 : 400);
   const textTranslateX = scrollProgress * (isMobile ? 180 : 150);
 
-  const firstWord = title ? title.split(" ")[0] : "";
-  const restOfTitle = title ? title.split(" ").slice(1).join(" ") : "";
+  const firstWord = titleStart ?? (title ? title.split(" ")[0] : "");
+  const restOfTitle =
+    titleAccent ?? (title ? title.split(" ").slice(1).join(" ") : "");
 
   return (
     <div ref={sectionRef} className="transition-colors duration-700 ease-in-out overflow-x-hidden">
@@ -115,7 +120,7 @@ export default function ScrollExpandMedia({
               className="w-screen h-screen object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-charcoal/50" />
+            <div className="absolute inset-0 bg-charcoal/30" />
           </motion.div>
 
           <div className="container mx-auto flex flex-col items-center justify-start relative z-10">
@@ -141,9 +146,9 @@ export default function ScrollExpandMedia({
                   />
                   {/* Base darken */}
                   <motion.div
-                    className="absolute inset-0 bg-black/40"
-                    initial={{ opacity: 0.7 }}
-                    animate={{ opacity: 0.5 - scrollProgress * 0.15 }}
+                    className="absolute inset-0 bg-charcoal/30"
+                    initial={{ opacity: 0.6 }}
+                    animate={{ opacity: 0.4 - scrollProgress * 0.1 }}
                     transition={{ duration: 0.2 }}
                   />
                   {/* Bottom gradient for CTA legibility — only when fully expanded */}

@@ -58,7 +58,31 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-x px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between text-[11px] text-white/50">
+        <div className="container-x px-6 md:px-12 py-6 text-[10px] text-white/40 leading-[1.8]">
+          {/* REPLACE WITH REAL CONTENT */}
+          <p className="mb-2">
+            Nancy [Last Name], TX License #XXXXXX
+            {" · "}
+            <a
+              href="https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-0.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gold"
+            >
+              Information About Brokerage Services
+            </a>
+            {" · "}
+            <a
+              href="https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-4.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gold"
+            >
+              Consumer Protection Notice
+            </a>
+          </p>
+        </div>
+        <div className="container-x px-6 md:px-12 pb-6 flex flex-col md:flex-row justify-between text-[11px] text-white/50">
           <p>© {new Date().getFullYear()} Nancy Real Estate. All rights reserved.</p>
           <p>
             Designed by{" "}

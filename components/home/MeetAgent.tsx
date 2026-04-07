@@ -6,20 +6,22 @@ import { IMG } from "@/lib/constants";
 
 export default function MeetAgent() {
   return (
-    <section className="bg-warmWhite py-20 md:py-[100px]">
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.1fr] gap-10 md:gap-20 items-center">
-        {/* Full-bleed photo on the left */}
-        <div className="relative w-full aspect-[4/5] md:aspect-auto md:h-[720px]">
-          <Image
-            src={IMG.agentTall}
-            alt="Nancy, Dallas real estate advisor"
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-          />
-        </div>
+    <section className="section-pad bg-warmWhite">
+      <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+        {/* Contained portrait */}
+        <Reveal>
+          <div className="relative w-full max-w-[440px] mx-auto aspect-[4/5] bg-cream">
+            <Image
+              src={IMG.nancy}
+              alt="Nancy, Dallas real estate advisor"
+              fill
+              sizes="(max-width: 768px) 100vw, 440px"
+              className="object-cover object-top"
+            />
+          </div>
+        </Reveal>
 
-        <div className="px-6 md:px-12 lg:pr-20 max-w-2xl">
+        <div>
           <Reveal>
             <p className="label">Meet Your Agent</p>
             <h2 className="h-display mt-3">
@@ -31,26 +33,28 @@ export default function MeetAgent() {
           <Reveal delay={0.1}>
             {/* REPLACE WITH REAL CONTENT */}
             <p className="body-p mt-8">
-              With deep roots in the Dallas community and a passion for
-              connecting people with the right home, Nancy brings a personal
-              touch to every transaction. Her clients aren&apos;t just deals —
-              they&apos;re relationships built on trust.
+              I got into real estate because I love helping people navigate one
+              of the biggest decisions of their lives. Buying or selling a home
+              can feel overwhelming, and I believe having someone in your
+              corner who genuinely cares makes all the difference.
             </p>
             {/* REPLACE WITH REAL CONTENT */}
             <p className="body-p mt-4">
-              Whether you&apos;re a first-time buyer navigating an unfamiliar
-              market or a seasoned seller looking for top dollar, Nancy&apos;s
-              approach is the same: listen first, strategize second, and
-              deliver results that speak for themselves.
+              I&apos;m not the agent who&apos;s going to pressure you or rush
+              you. I listen, I communicate, and I make sure you feel confident
+              every step of the way. Whether you&apos;re a first-time buyer or
+              you&apos;ve done this before, my job is to make the process as
+              smooth and stress-free as possible.
             </p>
           </Reveal>
 
           <Reveal delay={0.2}>
             <div className="grid grid-cols-3 gap-6 mt-10 py-8 border-y border-bordr">
+              {/* REPLACE WITH REAL CONTENT */}
               {[
-                { n: "[XX]+", l: "Homes Sold" },
-                { n: "[XX]", l: "Years Experience" },
-                { n: "[X]M+", l: "In Sales Volume" },
+                { n: "50+", l: "Homes Sold" },
+                { n: "5+", l: "Years Experience" },
+                { n: "$15M+", l: "In Sales Volume" },
               ].map((s) => (
                 <div key={s.l} className="text-center">
                   <p className="font-display text-4xl text-gold">{s.n}</p>
