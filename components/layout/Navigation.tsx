@@ -1,0 +1,107 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
+import { NAV_ITEMS } from "@/lib/constants";
+import { cn } from "@/lib/utils";
+
+export default function Navigation() {
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+  const transparentRoute = pathname === "/" || pathname === "/about";
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const solid = scrolled || !transparentRoute || open;
+
+  return (
+    <header
+      className={cn(
+        "fixed top-0 inset-x-0 z-50 transition-all duration-300",
+        solid
+          ? "bg-warmWhite/90 backdrop-blur border-b border-bordr"
+          : "bg-transparent"
+      )}
+    >
+      <div className="container-x flex items-center justify-between px-6 md:px-12 h-20">
+        <Link href="/" className="flex flex-col leading-none">
+          <span
+            className={cn(
+              "font-display text-2xl",
+              solid ? "text-darkText" : "text-white"
+            )}
+          >
+            Nancy
+          </span>
+          <span className="text-[9px] tracking-label uppercase font-semibold text-gold mt-1">
+            Real Estate · Dallas
+          </span>
+        </Link>
+
+        <nav className="hidden md:flex items-center gap-10" aria-label="Primary">
+          {NAV_ITEMS.map((item) => {
+            const active = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "text-[11px] font-semibold tracking-button uppercase transition-colors relative",
+                  active
+                    ? "text-gold"
+                    : solid
+                    ? "text-darkText hover:text-gold"
+                    : "text-white hover:text-goldLight"
+                )}
+              >
+                {item.label}
+                {active && (
+                  <span className="absolute -bottom-2 left-0 right-0 h-px bg-gold" />
+                )}
+              </Link>
+            );
+          })}
+        </nav>
+
+        <button
+          className="md:hidden"
+          onClick={() => setOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          {open ? (
+            <X className={solid ? "text-darkText" : "text-white"} />
+          ) : (
+            <Menu className={solid ? "text-darkText" : "text-white"} />
+          )}
+        </button>
+      </div>
+
+      {open && (
+        <div className="md:hidden bg-warmWhite border-t border-bordr">
+          <nav className="flex flex-col py-4">
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "px-6 py-3 text-[12px] font-semibold tracking-button uppercase",
+                  pathname === item.href ? "text-gold" : "text-darkText"
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}
