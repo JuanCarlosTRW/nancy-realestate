@@ -177,15 +177,21 @@ export default function ScrollExpandMedia({
                 </motion.h1>
                 {subtitle && (
                   <p
-                    className="text-white/85 text-[14px] md:text-[15px] font-light max-w-xl mt-4 px-6"
-                    style={{ opacity: 1 - scrollProgress * 1.5 }}
+                    className="text-white/85 text-[14px] md:text-[15px] font-light max-w-xl mt-4 px-6 transition-opacity duration-500"
+                    style={{
+                      opacity: mediaFullyExpanded ? 1 : 0,
+                      pointerEvents: mediaFullyExpanded ? "auto" : "none",
+                    }}
                   >
                     {subtitle}
                   </p>
                 )}
                 <div
-                  className="flex flex-wrap items-center justify-center gap-4 mt-8"
-                  style={{ opacity: 1 - scrollProgress * 1.5 }}
+                  className="flex flex-wrap items-center justify-center gap-4 mt-8 transition-opacity duration-500"
+                  style={{
+                    opacity: mediaFullyExpanded ? 1 : 0,
+                    pointerEvents: mediaFullyExpanded ? "auto" : "none",
+                  }}
                 >
                   <Link
                     href="/buy"
