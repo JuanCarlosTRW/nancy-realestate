@@ -2,16 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --c-primary: #C8A97E;
+  --c-primary-dark: #A8845A;
+  --c-bg: #FAF7F2;
+  --c-bg-dark: #1C1712;
+  --c-bg-section: #F2EDE4;
+  --c-text: #2C2218;
+  --c-text-muted: #5C4A38;
+  --c-border: #E8DDD0;
+  --c-accent: #8B4513;
+}
+
 html, body {
-  background: #FEFCF9;
-  color: #4A4A4A;
+  background: #FAF7F2;
+  color: #5C4A38;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: #E8D5A8;
-  color: #1A1A1A;
+  background: #E8D5B8;
+  color: #2C2218;
 }
 
 main {
@@ -28,10 +40,22 @@ html { scroll-behavior: smooth; }
 @layer components {
   .section-pad { @apply px-6 md:px-12 lg:px-20 py-20 md:py-[100px]; }
   .container-x { @apply max-w-7xl mx-auto; }
-  .label { @apply text-[11px] font-semibold tracking-label uppercase text-gold; }
+  .label { @apply text-[11px] font-medium tracking-label uppercase text-gold; }
   .h-display { @apply font-display font-normal text-darkText; font-size: clamp(32px, 4vw, 48px); line-height: 1.15; }
   .h-hero { @apply font-display font-light text-darkText; font-size: clamp(40px, 6vw, 76px); line-height: 1.05; }
   .body-p { @apply text-[15px] leading-[1.9] text-mediumText font-light; }
-  .btn-base { @apply inline-flex items-center justify-center px-8 py-4 text-[12px] font-semibold tracking-button uppercase transition-all duration-300; }
-  .gold-divider { background: linear-gradient(90deg, transparent, #C6A96C, transparent); height: 1px; }
+  .btn-base { @apply inline-flex items-center justify-center px-8 py-4 text-[12px] font-medium tracking-button uppercase transition-all duration-300; border-radius: 4px; }
+  .gold-divider { background: linear-gradient(90deg, transparent, #C8A97E, transparent); height: 1px; }
+  .card-warm { @apply bg-warmWhite border border-bordr; border-radius: 2px; box-shadow: 0 20px 40px -20px rgba(140,100,60,0.12); }
+}
+
+/* Subtle grain overlay — applied on section backgrounds for warm depth */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.55  0 0 0 0 0.42  0 0 0 0 0.25  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.5;
+  mix-blend-mode: multiply;
 }

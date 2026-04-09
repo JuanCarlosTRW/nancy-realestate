@@ -18,58 +18,98 @@ function SubmitButton() {
 }
 
 const inputCls =
-  "w-full bg-warmWhite border border-bordr px-4 py-3 text-[14px] text-darkText font-light focus:outline-none focus:border-gold transition-colors";
+  "w-full bg-warmWhite border border-bordr rounded-[2px] px-4 py-3 text-[14px] text-darkText font-light focus:outline-none focus:border-gold transition-colors";
 const labelCls =
-  "block text-[11px] tracking-button uppercase font-semibold text-mediumText mb-2";
+  "block text-[11px] tracking-button uppercase font-medium text-mediumText mb-2";
 
 export default function ContactForm() {
   const [state, formAction] = useFormState(submitContact, initial);
 
   if (state.success) {
     return (
-      <div className="border border-gold p-12 text-center bg-cream">
+      <div className="border border-gold/60 rounded-[2px] p-12 text-center bg-bgSection shadow-warm">
         <p className="font-display text-3xl text-darkText mb-3">Thank you</p>
+        <div className="gold-divider w-12 mx-auto mb-4" />
         <p className="body-p">{state.message}</p>
       </div>
     );
   }
 
   return (
-    <form action={formAction} className="space-y-6">
-      <div>
-        <label htmlFor="name" className={labelCls}>Name</label>
-        <input id="name" name="name" required className={inputCls} />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label htmlFor="email" className={labelCls}>Email</label>
-          <input id="email" name="email" type="email" required className={inputCls} />
-        </div>
-        <div>
-          <label htmlFor="phone" className={labelCls}>Phone</label>
-          <input id="phone" name="phone" type="tel" className={inputCls} />
-        </div>
-      </div>
-      <div>
-        <label htmlFor="interest" className={labelCls}>I'm Interested In</label>
-        <select id="interest" name="interest" className={inputCls} defaultValue="">
-          <option value="" disabled>Select one</option>
-          <option>Buying</option>
-          <option>Selling</option>
-          <option>Both</option>
-          <option>Investment</option>
-          <option>Home Valuation</option>
-          <option>Just have questions</option>
-        </select>
-      </div>
-      <div>
-        <label htmlFor="message" className={labelCls}>Message</label>
-        <textarea id="message" name="message" rows={5} className={inputCls} />
-      </div>
-      <SubmitButton />
-      <p className="text-[11px] text-lightText text-center font-light">
-        Your information is private and never shared.
+    <div>
+      <p className="label">Get in Touch</p>
+      <h2 className="h-display mt-4">
+        Let&apos;s Start{" "}
+        <span className="italic text-gold">the Conversation</span>
+      </h2>
+      <div className="gold-divider w-14 mt-6" />
+      <p className="body-p mt-6 max-w-md">
+        No pressure, no sales pitch. Just tell me what you&apos;re thinking
+        and I&apos;ll get back to you quickly.
       </p>
-    </form>
+
+      <form action={formAction} className="space-y-6 mt-10">
+        <div>
+          <label htmlFor="name" className={labelCls}>
+            Full Name
+          </label>
+          <input id="name" name="name" required className={inputCls} />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="email" className={labelCls}>
+              Email
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              className={inputCls}
+            />
+          </div>
+          <div>
+            <label htmlFor="phone" className={labelCls}>
+              Phone (optional)
+            </label>
+            <input id="phone" name="phone" type="tel" className={inputCls} />
+          </div>
+        </div>
+        <div>
+          <label htmlFor="interest" className={labelCls}>
+            I&apos;m interested in
+          </label>
+          <select
+            id="interest"
+            name="interest"
+            className={inputCls}
+            defaultValue=""
+          >
+            <option value="" disabled>
+              Select one
+            </option>
+            <option>Buying</option>
+            <option>Selling</option>
+            <option>Just Exploring</option>
+          </select>
+        </div>
+        <div>
+          <label htmlFor="message" className={labelCls}>
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows={5}
+            placeholder="Tell me a bit about what you're looking for..."
+            className={inputCls}
+          />
+        </div>
+        <SubmitButton />
+        <p className="text-[11px] text-lightText text-center font-light">
+          I typically respond within 24 hours.
+        </p>
+      </form>
+    </div>
   );
 }

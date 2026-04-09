@@ -1,76 +1,64 @@
 import Image from "next/image";
-import Button from "@/components/ui/Button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import GoldDivider from "@/components/ui/GoldDivider";
 import Reveal from "@/components/ui/Reveal";
 import { IMG } from "@/lib/constants";
 
 export default function MeetAgent() {
   return (
-    <section className="section-pad bg-warmWhite">
-      <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-        {/* Contained portrait */}
+    <section className="section-pad bg-bgSection">
+      <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+        {/* Contained portrait with warm frame */}
         <Reveal>
-          <div className="relative w-full max-w-[440px] mx-auto aspect-[4/5] bg-cream">
-            <Image
-              src={IMG.nancy}
-              alt="Nancy, Dallas real estate advisor"
-              fill
-              sizes="(max-width: 768px) 100vw, 440px"
-              className="object-cover object-top"
-            />
+          <div className="relative w-full max-w-[460px] mx-auto">
+            <div className="absolute -inset-4 border border-gold/30 rounded-[2px] hidden md:block" />
+            <div className="relative aspect-[4/5] bg-cream rounded-[2px] overflow-hidden shadow-warmLg">
+              <Image
+                src={IMG.nancy}
+                alt="Nancy Musselman, Dallas real estate agent"
+                fill
+                sizes="(max-width: 768px) 100vw, 460px"
+                className="object-cover object-top"
+              />
+            </div>
           </div>
         </Reveal>
 
         <div>
           <Reveal>
-            <p className="label">Meet Your Agent</p>
-            <h2 className="h-display mt-3">
-              Real Estate,{" "}
-              <span className="italic text-gold">Done Personally</span>
+            <p className="label">About Nancy</p>
+            <h2 className="h-display mt-4">
+              A Dallasite{" "}
+              <span className="italic text-gold">Through and Through</span>
             </h2>
-            <GoldDivider className="mt-6" />
+            <GoldDivider className="mt-6 w-16" />
           </Reveal>
           <Reveal delay={0.1}>
-            {/* REPLACE WITH REAL CONTENT */}
             <p className="body-p mt-8">
-              I got into real estate because I love helping people navigate one
-              of the biggest decisions of their lives. Buying or selling a home
-              can feel overwhelming, and I believe having someone in your
-              corner who genuinely cares makes all the difference.
+              I didn&apos;t become a REALTOR by accident. I spent decades
+              watching this city grow, raising my family here, and waiting for
+              the right moment. When my kids grew up, I finally did what I
+              always wanted.
             </p>
-            {/* REPLACE WITH REAL CONTENT */}
-            <p className="body-p mt-4">
-              I&apos;m not the agent who&apos;s going to pressure you or rush
-              you. I listen, I communicate, and I make sure you feel confident
-              every step of the way. Whether you&apos;re a first-time buyer or
-              you&apos;ve done this before, my job is to make the process as
-              smooth and stress-free as possible.
+            <p className="body-p mt-5">
+              Real estate lets me combine everything I&apos;m good at — knowing
+              Dallas, reading people, and making sure every detail is right.
             </p>
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="grid grid-cols-3 gap-6 mt-10 py-8 border-y border-bordr">
-              {/* REPLACE WITH REAL CONTENT */}
-              {[
-                { n: "50+", l: "Homes Sold" },
-                { n: "5+", l: "Years Experience" },
-                { n: "$15M+", l: "In Sales Volume" },
-              ].map((s) => (
-                <div key={s.l} className="text-center">
-                  <p className="font-display text-4xl text-gold">{s.n}</p>
-                  <p className="text-[10px] tracking-label uppercase font-semibold text-lightText mt-2">
-                    {s.l}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.3}>
             <div className="mt-10">
-              <Button href="/about" variant="outline">
-                Learn More About Nancy
-              </Button>
+              <Link
+                href="/about"
+                className="group inline-flex items-center gap-3 text-[12px] tracking-button uppercase font-medium text-gold hover:text-goldDark transition-all"
+              >
+                <span>Read my story</span>
+                <ArrowRight
+                  size={16}
+                  className="transition-transform duration-500 group-hover:translate-x-1.5"
+                />
+              </Link>
             </div>
           </Reveal>
         </div>

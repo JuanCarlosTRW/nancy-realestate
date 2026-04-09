@@ -3,14 +3,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import { NAV_ITEMS, NANCY_PHONE } from "@/lib/constants";
+import { NAV_ITEMS, NANCY_PHONE_TEL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export default function Navigation() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const transparentRoute = pathname === "/" || pathname === "/about";
+  const transparentRoute = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -26,7 +26,7 @@ export default function Navigation() {
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-300",
         solid
-          ? "bg-warmWhite/90 backdrop-blur border-b border-bordr"
+          ? "bg-warmWhite/92 backdrop-blur border-b border-bordr"
           : "bg-transparent"
       )}
     >
@@ -34,14 +34,14 @@ export default function Navigation() {
         <Link href="/" className="flex flex-col leading-none">
           <span
             className={cn(
-              "font-display text-2xl",
+              "font-display text-2xl tracking-tight",
               solid ? "text-darkText" : "text-white"
             )}
           >
-            Nancy
+            Nancy Musselman
           </span>
-          <span className="text-[9px] tracking-label uppercase font-semibold text-gold mt-1">
-            Real Estate · Dallas
+          <span className="text-[9px] tracking-label uppercase font-medium text-gold mt-1">
+            Beam Real Estate · Dallas
           </span>
         </Link>
 
@@ -53,7 +53,7 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-[11px] font-semibold tracking-button uppercase transition-colors relative",
+                  "text-[11px] font-medium tracking-button uppercase transition-colors relative",
                   active
                     ? "text-gold"
                     : solid
@@ -71,38 +71,34 @@ export default function Navigation() {
           <Link
             href="/contact"
             className={cn(
-              "text-[11px] font-semibold tracking-button uppercase px-6 py-2.5 transition-all",
+              "text-[11px] font-medium tracking-button uppercase px-6 py-2.5 transition-all rounded-[4px]",
               solid
                 ? "bg-gold text-white border border-gold hover:bg-goldDark"
                 : "bg-transparent text-white border border-white/70 hover:bg-white/10 hover:border-goldLight"
             )}
           >
-            Get in Touch
+            Let&apos;s Talk
           </Link>
         </nav>
 
         <div className="md:hidden flex items-center gap-4">
           <a
-            href={`tel:${NANCY_PHONE.replace(/[^\d+]/g, "")}`}
+            href={`tel:${NANCY_PHONE_TEL}`}
             aria-label="Call Nancy"
-            className={cn(
-              "p-2",
-              solid ? "text-darkText" : "text-white"
-            )}
+            className={cn("p-2", solid ? "text-darkText" : "text-white")}
           >
             <Phone size={18} />
           </a>
-        <button
-          className=""
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          {open ? (
-            <X className={solid ? "text-darkText" : "text-white"} />
-          ) : (
-            <Menu className={solid ? "text-darkText" : "text-white"} />
-          )}
-        </button>
+          <button
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
+            {open ? (
+              <X className={solid ? "text-darkText" : "text-white"} />
+            ) : (
+              <Menu className={solid ? "text-darkText" : "text-white"} />
+            )}
+          </button>
         </div>
       </div>
 
@@ -115,7 +111,7 @@ export default function Navigation() {
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className={cn(
-                  "px-6 py-3 text-[12px] font-semibold tracking-button uppercase",
+                  "px-6 py-3 text-[12px] font-medium tracking-button uppercase",
                   pathname === item.href ? "text-gold" : "text-darkText"
                 )}
               >
@@ -127,7 +123,7 @@ export default function Navigation() {
               onClick={() => setOpen(false)}
               className="mx-6 mt-3 mb-2 btn-base bg-gold text-white border border-gold"
             >
-              Get in Touch
+              Let&apos;s Talk
             </Link>
           </nav>
         </div>

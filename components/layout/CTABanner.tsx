@@ -1,10 +1,9 @@
-import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 export default function CTABanner({
   title = "Ready to Make Your Move?",
-  subtitle = "Whether you're buying, selling, or just curious about the market — let's talk.",
-  cta = "Get in Touch",
+  subtitle = "Whether you have one question or you're ready to start today, reach out. No pressure, no sales pitch.",
+  cta = "Reach Out to Nancy",
   href = "/contact",
 }: {
   title?: string;
@@ -13,29 +12,24 @@ export default function CTABanner({
   href?: string;
 }) {
   return (
-    <section className="relative overflow-hidden">
-      <Image
-        src="https://images.unsplash.com/photo-1545194445-dddb8f4487c6?q=80&w=1920&auto=format&fit=crop"
-        alt="Dallas skyline"
-        fill
-        sizes="100vw"
-        className="object-cover"
-      />
+    <section className="relative overflow-hidden bg-charcoal">
+      {/* Subtle gold radial warmth */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 opacity-60"
         style={{
           background:
-            "linear-gradient(135deg, rgba(198,169,108,0.92) 0%, rgba(212,188,138,0.88) 50%, rgba(168,137,63,0.94) 100%)",
+            "radial-gradient(ellipse at 50% 120%, rgba(200,169,126,0.22) 0%, rgba(28,23,18,0) 60%)",
         }}
       />
-      <div className="relative px-6 md:px-12 py-24 md:py-28 text-center text-white">
-        <h2 className="font-display font-light text-4xl md:text-5xl mb-6">
+      <div className="relative container-x px-6 md:px-12 py-24 md:py-28 text-center">
+        <h2 className="font-display font-light text-4xl md:text-5xl text-white mb-6 leading-[1.1]">
           {title}
         </h2>
-        <p className="max-w-xl mx-auto text-[15px] leading-[1.9] font-light text-white/95 mb-10">
+        <div className="gold-divider w-16 mx-auto mb-8" />
+        <p className="max-w-xl mx-auto text-[15px] leading-[1.9] font-light text-white/75 mb-10">
           {subtitle}
         </p>
-        <Button href={href} variant="outline-white">
+        <Button href={href} variant="gold">
           {cta}
         </Button>
       </div>
