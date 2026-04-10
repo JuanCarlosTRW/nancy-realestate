@@ -56,23 +56,24 @@ function NeighborhoodCard({ hood }: { hood: Hood }) {
         alt={`${hood.name} neighborhood`}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-        className="object-cover transition-transform duration-700 group-hover:scale-105"
+        className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.06]"
       />
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)",
+            "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.25) 40%, transparent 100%)",
         }}
       />
       {/* Gold bottom border on hover */}
       <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 z-10">
-        <h3 className="font-display font-light text-[20px] md:text-[22px] text-white leading-[1.1]">
+        <h3 className="font-display font-medium text-[22px] md:text-[24px] text-white leading-[1.1]">
           {hood.name}
         </h3>
-        <div className="w-8 h-px bg-gradient-to-r from-gold to-transparent mt-2" />
-        <p className="text-[12px] md:text-[13px] text-white/75 font-light mt-2 leading-[1.5]">
+        {/* Gold line between name and tagline — expands on hover */}
+        <div className="w-[30px] group-hover:w-[60px] h-[2px] bg-gold mt-2 mb-2 transition-all duration-500" />
+        <p className="text-[12px] text-white/80 font-light leading-[1.5] tracking-[0.02em]">
           {hood.descriptor}
         </p>
       </div>
@@ -99,20 +100,20 @@ export default function Neighborhoods() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
           {HOODS.slice(0, 4).map((n, i) => (
             <Reveal key={n.name} delay={i * 0.08}>
-              <div className="h-[200px] sm:h-[220px] md:h-[280px]">
+              <div className="h-[200px] sm:h-[240px] md:h-[300px]">
                 <NeighborhoodCard hood={n} />
               </div>
             </Reveal>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-2">
           {HOODS.slice(4).map((n, i) => (
             <Reveal key={n.name} delay={(i + 4) * 0.08}>
-              <div className="h-[200px] sm:h-[220px] md:h-[280px]">
+              <div className="h-[200px] sm:h-[240px] md:h-[300px]">
                 <NeighborhoodCard hood={n} />
               </div>
             </Reveal>

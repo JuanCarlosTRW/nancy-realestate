@@ -17,9 +17,9 @@ export const NANCY_LICENSE = "TX License #844625";
 export const NANCY_LICENSE_NUMBER = "844625";
 
 export const TREC_IABS_URL =
-  "https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-4-1.pdf";
+  "https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-0.pdf";
 export const TREC_CPN_URL =
-  "https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-4-1.pdf";
+  "https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-4.pdf";
 
 export const IMG = {
   // Nancy's photo — downloaded locally for reliability

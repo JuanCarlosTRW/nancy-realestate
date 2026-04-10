@@ -60,7 +60,7 @@ export default function Hero() {
           style={{ fontSize: "clamp(36px, 7vw, 84px)" }}
         >
           <BlurText
-            text="Born Here. Built for This."
+            text="Real Estate the Way It Should Be."
             delay={120}
             animateBy="words"
             direction="top"

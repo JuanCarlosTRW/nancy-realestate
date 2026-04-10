@@ -95,16 +95,21 @@ export default function SellPage() {
               <AnimatedDivider className="w-16 mx-auto mt-8" />
             </div>
           </Reveal>
-          <div className="space-y-2">
+          <div className="space-y-0">
             {STEPS.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.08}>
-                <div className="grid grid-cols-[auto_1fr] gap-8 md:gap-12 py-10 border-b border-bordr last:border-0 items-start">
-                  <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full border border-gold/40 bg-bgSection">
-                    <span className="font-display text-gold text-[20px] md:text-[22px]">
+                <div className="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start">
+                  {/* Number column with connector line */}
+                  <div className="flex flex-col items-center">
+                    <span className="font-display text-[40px] md:text-[48px] text-gold/30 leading-none font-light select-none">
                       {s.n}
                     </span>
+                    {i < STEPS.length - 1 && (
+                      <div className="w-px flex-1 bg-gold/15 mt-3 min-h-[40px]" />
+                    )}
                   </div>
-                  <div>
+                  {/* Content */}
+                  <div className="pb-10 md:pb-12">
                     <h3 className="font-display text-[26px] md:text-[30px] text-darkText leading-tight">
                       {s.title}
                     </h3>
@@ -117,18 +122,29 @@ export default function SellPage() {
         </div>
       </section>
 
-      {/* Personal attention callout */}
+      {/* Personal attention callout — elevated pullout quote */}
       <Reveal>
-        <div className="py-16 md:py-20 bg-warmWhite border-t border-bordr">
-          <p className="container-x max-w-3xl text-center font-display italic text-[22px] md:text-[28px] text-darkText leading-[1.45]">
-            Every home I list gets my full attention. I do not juggle 30 listings
-            at once. When I represent your home, it gets the focus it deserves.
-          </p>
+        <div className="py-20 md:py-24 bg-bgSection px-6 md:px-12">
+          <div className="container-x max-w-[700px] text-center">
+            {/* Decorative quotation mark */}
+            <span
+              className="block font-display text-[100px] md:text-[120px] text-gold/15 leading-none select-none -mb-6 md:-mb-8"
+              aria-hidden="true"
+            >
+              &ldquo;
+            </span>
+            <p className="font-display italic text-[22px] md:text-[24px] text-darkText leading-[1.45]">
+              Every home I list gets my full attention. I do not juggle 30 listings
+              at once. When I represent your home, it gets the focus it deserves.
+            </p>
+            {/* Thin gold line below */}
+            <div className="w-[80px] h-px bg-gold/30 mx-auto mt-8" />
+          </div>
         </div>
       </Reveal>
 
       {/* Benefits */}
-      <section className="section-pad bg-bgSection">
+      <section className="section-pad bg-warmWhite">
         <div className="container-x">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-14">
@@ -145,7 +161,7 @@ export default function SellPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-pad bg-warmWhite text-center">
+      <section className="section-pad bg-bgSection text-center">
         <div className="container-x max-w-2xl">
           <h2 className="h-display">
             Thinking About{" "}

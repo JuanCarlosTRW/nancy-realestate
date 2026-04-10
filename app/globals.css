@@ -45,8 +45,8 @@ html, body {
 }
 
 ::selection {
-  background: #E8D5B8;
-  color: #2C2218;
+  background: rgba(198, 169, 108, 0.25);
+  color: #1A1A1A;
 }
 
 main {

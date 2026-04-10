@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const STEPS = [
   {
     n: "01",
-    title: "Let's Talk First",
+    title: "Let\u2019s Talk First",
     body: "Before we look at a single home, I want to understand what you are really looking for. Neighborhood, lifestyle, budget, timeline. The more I know upfront, the less time we waste and the better the outcome.",
   },
   {
@@ -43,7 +43,7 @@ const STEPS = [
 const BENEFITS = [
   {
     icon: "MapPin",
-    title: "Neighborhoods You Won't Find in a Top-10 List",
+    title: "Neighborhoods You Won\u2019t Find in a Top-10 List",
     body: "I know Dallas neighborhoods that never make the best-of lists but should. The quiet streets with great schools, the blocks where values are climbing, the areas most agents overlook. Let me show you the ones that actually fit your life.",
   },
   {
@@ -53,7 +53,7 @@ const BENEFITS = [
   },
   {
     icon: "Hammer",
-    title: "Honest About What You're Looking At",
+    title: "Honest About What You\u2019re Looking At",
     body: "I was raised around construction. I will tell you the truth about a home. What is solid, what needs work, and what will cost you. No surprises after closing.",
   },
 ];
@@ -94,16 +94,21 @@ export default function BuyPage() {
               <AnimatedDivider className="w-16 mx-auto mt-8" />
             </div>
           </Reveal>
-          <div className="space-y-2">
+          <div className="space-y-0">
             {STEPS.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.08}>
-                <div className="grid grid-cols-[auto_1fr] gap-8 md:gap-12 py-10 border-b border-bordr last:border-0 items-start">
-                  <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full border border-gold/40 bg-bgSection">
-                    <span className="font-display text-gold text-[20px] md:text-[22px]">
+                <div className="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start">
+                  {/* Number column with connector line */}
+                  <div className="flex flex-col items-center">
+                    <span className="font-display text-[40px] md:text-[48px] text-gold/30 leading-none font-light select-none">
                       {s.n}
                     </span>
+                    {i < STEPS.length - 1 && (
+                      <div className="w-px flex-1 bg-gold/15 mt-3 min-h-[40px]" />
+                    )}
                   </div>
-                  <div>
+                  {/* Content */}
+                  <div className="pb-10 md:pb-12">
                     <h3 className="font-display text-[26px] md:text-[30px] text-darkText leading-tight">
                       {s.title}
                     </h3>
