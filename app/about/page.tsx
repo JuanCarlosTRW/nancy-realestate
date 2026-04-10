@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-// Icons removed for premium pillar design
 import GoldDivider from "@/components/ui/GoldDivider";
-import AnimatedDivider from "@/components/ui/AnimatedDivider";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import AboutHero from "@/components/about/AboutHero";
