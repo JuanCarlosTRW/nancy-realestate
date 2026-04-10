@@ -6,6 +6,10 @@ import { ArrowRight } from "lucide-react";
 import BlurText from "@/components/BlurText";
 import { IMG } from "@/lib/constants";
 
+// The intro overlay takes ~3.2s before it starts exiting (~1.2s exit).
+// Hero content should start animating around when the curtain begins lifting.
+const INTRO_OFFSET = 3.4;
+
 export default function Hero() {
   const prefersReduced = useReducedMotion();
 
@@ -42,14 +46,19 @@ export default function Hero() {
         <motion.p
           initial={prefersReduced ? {} : { opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: prefersReduced ? 0.2 : INTRO_OFFSET }}
           className="text-[11px] md:text-[12px] tracking-label uppercase font-medium text-goldLight mb-8"
         >
           Beam Real Estate · Dallas, Texas
         </motion.p>
 
         {/* Animated headline with BlurText */}
-        <div style={{ fontSize: "clamp(36px, 7vw, 84px)" }}>
+        <motion.div
+          initial={prefersReduced ? {} : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.1, delay: prefersReduced ? 0 : INTRO_OFFSET + 0.1 }}
+          style={{ fontSize: "clamp(36px, 7vw, 84px)" }}
+        >
           <BlurText
             text="Born Here. Built for This."
             delay={120}
@@ -57,19 +66,19 @@ export default function Hero() {
             direction="top"
             className="font-display font-light text-white leading-[1.02] justify-center"
           />
-        </div>
+        </motion.div>
 
         <motion.div
           initial={prefersReduced ? {} : { opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          transition={{ duration: 0.8, delay: prefersReduced ? 1.0 : INTRO_OFFSET + 0.8 }}
           className="gold-divider w-20 mx-auto mt-10 origin-center"
         />
 
         <motion.p
           initial={prefersReduced ? {} : { opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          transition={{ duration: 0.8, delay: prefersReduced ? 1.2 : INTRO_OFFSET + 1.0 }}
           className="text-white/85 text-[16px] md:text-[18px] font-light mt-10 max-w-xl mx-auto leading-[1.7]"
         >
           50+ years in Dallas. 22 years of professional precision. Now putting
@@ -79,7 +88,7 @@ export default function Hero() {
         <motion.div
           initial={prefersReduced ? {} : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
+          transition={{ duration: 0.8, delay: prefersReduced ? 1.5 : INTRO_OFFSET + 1.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-12"
         >
           {/* Primary CTA with gold shimmer */}

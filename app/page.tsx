@@ -1,3 +1,4 @@
+import HeroIntro from "@/components/home/HeroIntro";
 import Hero from "@/components/home/Hero";
 import TrustBar from "@/components/home/TrustBar";
 import WhyNancy from "@/components/home/WhyNancy";
@@ -10,6 +11,7 @@ import CTABanner from "@/components/layout/CTABanner";
 export default function Home() {
   return (
     <>
+      <HeroIntro />
       <Hero />
       <TrustBar />
       <WhyNancy />
