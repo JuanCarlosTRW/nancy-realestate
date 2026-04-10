@@ -7,18 +7,18 @@ import SpotlightCard from "@/components/SpotlightCard";
 const PILLARS = [
   {
     icon: MapPin,
-    title: "I Know Dallas Like Home — Because It Is",
-    body: "I\u2019ve lived in the DFW Metroplex for over 50 years. I watched this city grow from the ground up. When I talk about a neighborhood, I\u2019m not reading a report — I\u2019m remembering it.",
+    title: "I Know Dallas Like Home. Because It Is.",
+    body: "I have lived in the DFW Metroplex for over 50 years. When I talk about a neighborhood, I am not reading a report. I am remembering it. The schools my kids attended, the streets that flood, the blocks that have quietly doubled in value. That is the kind of knowledge you only get from living here your whole life.",
   },
   {
     icon: Users,
-    title: "22 Years of Navigating High-Stakes Moments",
-    body: "My career in human resources trained me to stay composed when things get complicated. Real estate transactions get emotional. I\u2019m the steady hand that keeps yours on track.",
+    title: "22 Years of Professional Experience",
+    body: "Before real estate, I spent over two decades in accounting and human resources, managing sensitive situations, difficult conversations, and high-stakes decisions with composure. Real estate transactions get emotional fast. I am the steady hand that keeps yours on track.",
   },
   {
     icon: Eye,
     title: "Detail-Oriented by Nature",
-    body: "I was raised around construction. I notice things others walk past. From the inspection to the contract, nothing slips through on my watch.",
+    body: "I was raised around construction. I notice things other agents walk right past. From the inspection report to the fine print in a contract, nothing slips through on my watch. That attention to detail protects you from surprises down the road.",
   },
 ];
 

@@ -35,6 +35,8 @@ export default function ContactForm() {
     );
   }
 
+  const hasError = state.message && !state.success;
+
   return (
     <div>
       <p className="label">Get in Touch</p>
@@ -47,6 +49,12 @@ export default function ContactForm() {
         No pressure, no sales pitch. Just tell me what you&apos;re thinking
         and I&apos;ll get back to you quickly.
       </p>
+
+      {hasError && (
+        <div className="mt-8 border border-red-300 rounded-[2px] p-5 bg-red-50/50">
+          <p className="text-[14px] text-red-800 font-light">{state.message}</p>
+        </div>
+      )}
 
       <form action={formAction} className="space-y-6 mt-10">
         <div>

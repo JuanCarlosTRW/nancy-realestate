@@ -42,7 +42,7 @@ export default function MeetAgent() {
               always wanted.
             </p>
             <p className="body-p mt-5">
-              Real estate lets me combine everything I&apos;m good at — knowing
+              Real estate lets me combine everything I&apos;m good at. Knowing
               Dallas, reading people, and making sure every detail is right.
             </p>
           </Reveal>

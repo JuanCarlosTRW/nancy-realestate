@@ -9,14 +9,14 @@ import BenefitCards from "@/components/ui/BenefitCards";
 export const metadata: Metadata = {
   title: "Buying a Home in Dallas | Nancy Musselman",
   description:
-    "Finding your Dallas home starts here. Work with Nancy Musselman — a Dallas agent with 50+ years in the DFW Metroplex.",
+    "Finding your Dallas home starts here. Work with Nancy Musselman, a Dallas agent with 50+ years in the DFW Metroplex.",
 };
 
 const STEPS = [
   {
     n: "01",
     title: "Let's Talk First",
-    body: "Before we look at a single home, I want to understand what you're really looking for — neighborhood, lifestyle, budget, timeline.",
+    body: "Before we look at a single home, I want to understand what you are really looking for. Neighborhood, lifestyle, budget, timeline.",
   },
   {
     n: "02",
@@ -26,12 +26,12 @@ const STEPS = [
   {
     n: "03",
     title: "Tour Homes Together",
-    body: "I know these neighborhoods personally. I'll point out what to look for — and what to watch out for.",
+    body: "I know these neighborhoods personally. I will point out what to look for, and what to watch out for.",
   },
   {
     n: "04",
     title: "Make a Strong Offer",
-    body: "When you're ready to make a move, I'll help you craft an offer that's competitive without overpaying.",
+    body: "In this market, the right offer is not just about price. It is about terms, timing, and knowing what the seller cares about. I will help you put together an offer that wins without leaving money on the table.",
   },
   {
     n: "05",
@@ -44,17 +44,17 @@ const BENEFITS = [
   {
     icon: "MapPin",
     title: "Neighborhoods You Won't Find in a Top-10 List",
-    body: "I know Dallas neighborhoods that never make the best-of lists — but should. Let me show you the quiet gems.",
+    body: "I know Dallas neighborhoods that never make the best-of lists, but should. Let me show you the quiet gems.",
   },
   {
     icon: "Users",
     title: "Steady Under Pressure",
-    body: "My HR background means I don't flinch when negotiations get tense. I stay composed so you can too.",
+    body: "My background in accounting and HR means I do not flinch when negotiations get tense. I stay composed so you can too.",
   },
   {
     icon: "Hammer",
     title: "Honest About What You're Looking At",
-    body: "I was raised around construction. I'll tell you the truth about a home — the good, the bad, and the expensive.",
+    body: "I was raised around construction. I will tell you the truth about a home. What is solid, what needs work, and what will cost you. No surprises after closing.",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function BuyPage() {
         label="For Buyers"
         titleStart="Finding Your Dallas Home"
         titleAccent="Starts Here"
-        subtitle="The right home in the right neighborhood — I know this city well enough to help you find both."
+        subtitle="The right home in the right neighborhood. I know this city well enough to help you find both."
       />
 
       {/* Visual */}

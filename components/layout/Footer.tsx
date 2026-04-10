@@ -22,8 +22,9 @@ export default function Footer() {
           </p>
           <p className="mt-6 text-[13px] leading-[1.9] font-light max-w-sm">
             Born and raised in the DFW Metroplex. Fifty-plus years of local
-            knowledge, twenty-two years of professional experience, and a
-            people-first approach to every transaction.
+            knowledge, twenty-two years of professional experience in
+            accounting and HR, and a people-first approach to every
+            transaction.
           </p>
         </div>
 

@@ -22,7 +22,7 @@ export default function AboutHero() {
         >
           A Dallasite, a Professional, and{" "}
           <span className="italic text-gold">
-            Someone Who Actually Cares
+            Someone Who Notices What Others Miss
           </span>
         </h1>
         <AnimatedDivider className="w-16 mt-8" />

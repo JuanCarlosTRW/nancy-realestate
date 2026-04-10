@@ -10,7 +10,7 @@ import BenefitCards from "@/components/ui/BenefitCards";
 export const metadata: Metadata = {
   title: "Selling Your Home in Dallas | Nancy Musselman",
   description:
-    "Sell your Dallas home with Nancy Musselman — strategic pricing, presentation, and professional execution from a lifelong Dallasite.",
+    "Sell your Dallas home with Nancy Musselman. Strategic pricing, presentation, and professional execution from a lifelong Dallasite.",
 };
 
 const STEPS = [
@@ -45,7 +45,7 @@ const BENEFITS = [
   {
     icon: "Scale",
     title: "Honest Pricing Advice",
-    body: "Not what you want to hear, but what the market will actually pay. That's how homes sell fast — and above ask.",
+    body: "Not what you want to hear, but what the market will actually pay. That is how homes sell fast, and above ask.",
   },
   {
     icon: "ClipboardCheck",
@@ -54,8 +54,8 @@ const BENEFITS = [
   },
   {
     icon: "Shield",
-    title: "Composed Under Pressure",
-    body: "If something unexpected comes up at inspection, I've seen it before. I keep the deal on the rails.",
+    title: "Calm When It Counts",
+    body: "Inspection surprises. Last-minute buyer demands. Appraisal issues. I have seen it all before, and I do not panic. I keep the deal moving and keep you informed without the drama.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function SellPage() {
         label="For Sellers"
         titleStart="Sell Your Dallas Home With"
         titleAccent="Someone Who Knows It"
-        subtitle="Pricing strategy, presentation, and professional execution — I'll handle it all."
+        subtitle="Pricing strategy, presentation, and professional execution. I will handle it all."
       />
 
       {/* Visual */}
@@ -116,6 +116,16 @@ export default function SellPage() {
           </div>
         </div>
       </section>
+
+      {/* Personal attention callout */}
+      <Reveal>
+        <div className="py-16 md:py-20 bg-warmWhite border-t border-bordr">
+          <p className="container-x max-w-3xl text-center font-display italic text-[22px] md:text-[28px] text-darkText leading-[1.45]">
+            Every home I list gets my full attention. I do not juggle 30 listings
+            at once. When I represent your home, it gets the focus it deserves.
+          </p>
+        </div>
+      </Reveal>
 
       {/* Benefits */}
       <section className="section-pad bg-bgSection">

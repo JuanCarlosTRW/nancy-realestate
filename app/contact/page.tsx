@@ -5,7 +5,7 @@ import ContactSidebar from "@/components/contact/ContactSidebar";
 export const metadata: Metadata = {
   title: "Contact Nancy Musselman | Dallas Real Estate",
   description:
-    "Get in touch with Nancy Musselman — Dallas real estate agent with Beam Real Estate. No pressure, no sales pitch.",
+    "Get in touch with Nancy Musselman, Dallas real estate agent with Beam Real Estate. No pressure, no sales pitch.",
 };
 
 export default function ContactPage() {

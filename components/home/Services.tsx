@@ -15,7 +15,7 @@ const CARDS = [
     icon: Key,
     label: "For Sellers",
     title: "Time to Sell?",
-    body: "Pricing it right, presenting it well, and getting it to the right buyers fast. I handle the details so you can focus on what's next.",
+    body: "Most homes sit on the market because they were overpriced from day one. I will tell you what your home is actually worth, prep it to show at its best, and get it in front of serious buyers fast. You focus on your next chapter. I will handle this one.",
     cta: "Get Your Home Sold",
     href: "/sell",
   },

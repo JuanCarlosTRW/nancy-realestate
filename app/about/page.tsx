@@ -10,24 +10,24 @@ import { IMG } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Nancy Musselman | Dallas Real Estate",
   description:
-    "Meet Nancy Musselman — a Dallasite with 50+ years in the DFW Metroplex and 22 years of HR experience, now putting it all to work for her clients.",
+    "Meet Nancy Musselman, a Dallasite with 50+ years in the DFW Metroplex and 22 years of professional experience, now putting it all to work for her clients.",
 };
 
 const FACTS = [
   {
     icon: MapPin,
     title: "50+ Years in DFW",
-    body: "Born and raised here. I know this city on a personal level.",
+    body: "I have watched neighborhoods transform over decades. I know which areas are rising, which are overpriced, and which streets to avoid. This is not research. It is a lifetime of paying attention.",
   },
   {
     icon: Users,
-    title: "22 Years in HR",
-    body: "Trained in composure, communication, and navigating complexity.",
+    title: "22 Years in Accounting and HR",
+    body: "Two decades of managing numbers, managing people, and managing difficult situations. Precision from accounting. Composure from HR. That training shows up every time a deal gets complicated.",
   },
   {
     icon: Eye,
     title: "Raised Around Construction",
-    body: "I notice what others miss — inside and outside a home.",
+    body: "I grew up on job sites. I see the foundation crack other agents step right over. I spot the patch job on the ceiling. When I walk through a home, I am reading the building, not just the listing.",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function AboutPage() {
               <div className="mt-10 space-y-6 body-p text-[16px]">
                 <p>
                   I was born and raised right where I live now. For over 50
-                  years, I&apos;ve watched the DFW Metroplex grow — the
+                  years, I&apos;ve watched the DFW Metroplex grow. The
                   neighborhoods, the highways, the communities. This isn&apos;t
                   a market I studied. It&apos;s the city I grew up in.
                 </p>
@@ -63,11 +63,19 @@ export default function AboutPage() {
                   easily. That last part matters more than most people realize
                   in real estate.
                 </p>
+
+                <blockquote className="border-l-2 border-gold/40 pl-6 my-10">
+                  <p className="font-display italic text-[22px] md:text-[26px] text-gold/80 leading-[1.4]">
+                    &ldquo;I don&apos;t get rattled easily. That last part
+                    matters more than most people realize in real estate.&rdquo;
+                  </p>
+                </blockquote>
+
                 <p>
-                  Before I became a REALTOR, I spent 22 years in human
-                  resources. That career taught me how to navigate complex,
+                  Before I became a REALTOR, I spent over two decades in
+                  accounting and human resources. That career taught me how to navigate complex,
                   high-stakes, emotionally charged situations with composure
-                  and professionalism — skills that translate directly to
+                  and professionalism. Skills that translate directly to
                   buying and selling homes.
                 </p>
                 <p>
@@ -75,12 +83,27 @@ export default function AboutPage() {
                   things that other agents walk right past. I notice the
                   details. I ask the questions that matter.
                 </p>
+
+                <blockquote className="border-l-2 border-gold/40 pl-6 my-10">
+                  <p className="font-display italic text-[22px] md:text-[26px] text-gold/80 leading-[1.4]">
+                    &ldquo;I notice the details. I ask the questions that
+                    matter.&rdquo;
+                  </p>
+                </blockquote>
+
                 <p>
                   Becoming a REALTOR was something I always wanted to do. I
-                  waited until the timing was right — until my kids were grown
+                  waited until the timing was right. Until my kids were grown
                   and I could give it everything. Now I&apos;m doing it, and I
                   love it. If you&apos;re thinking about buying or selling in
                   the DFW area, I&apos;d love to help.
+                </p>
+                <p>
+                  When I am not helping clients, you will probably find me on a
+                  long walk, spending time with family and friends, or planning
+                  my next trip. I love country and western music, jazz, and I am
+                  rooted in my faith. That is who I am outside of real estate,
+                  and it is the same person you get when we work together.
                 </p>
               </div>
             </Reveal>
