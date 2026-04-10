@@ -16,17 +16,17 @@ const STEPS = [
   {
     n: "01",
     title: "Let's Talk First",
-    body: "Before we look at a single home, I want to understand what you are really looking for. Neighborhood, lifestyle, budget, timeline.",
+    body: "Before we look at a single home, I want to understand what you are really looking for. Neighborhood, lifestyle, budget, timeline. The more I know upfront, the less time we waste and the better the outcome.",
   },
   {
     n: "02",
     title: "Get Pre-Approved",
-    body: "I'll connect you with trusted lenders in the Dallas area so you can move fast when the right home comes along.",
+    body: "I will connect you with trusted lenders in the Dallas area so you can move fast when the right home comes along. In this market, being pre-approved is not optional. It is what separates serious buyers from window shoppers.",
   },
   {
     n: "03",
     title: "Tour Homes Together",
-    body: "I know these neighborhoods personally. I will point out what to look for, and what to watch out for.",
+    body: "I know these neighborhoods personally. I will point out what to look for and what to watch out for. The things you will not notice in photos, I will catch in person.",
   },
   {
     n: "04",
@@ -36,7 +36,7 @@ const STEPS = [
   {
     n: "05",
     title: "Close With Confidence",
-    body: "From inspection to keys in hand, I track every detail so nothing falls through.",
+    body: "From inspection to keys in hand, I track every detail so nothing falls through. My background in accounting and HR means I manage the process with precision and keep you informed at every step.",
   },
 ];
 
@@ -44,7 +44,7 @@ const BENEFITS = [
   {
     icon: "MapPin",
     title: "Neighborhoods You Won't Find in a Top-10 List",
-    body: "I know Dallas neighborhoods that never make the best-of lists, but should. Let me show you the quiet gems.",
+    body: "I know Dallas neighborhoods that never make the best-of lists but should. The quiet streets with great schools, the blocks where values are climbing, the areas most agents overlook. Let me show you the ones that actually fit your life.",
   },
   {
     icon: "Users",

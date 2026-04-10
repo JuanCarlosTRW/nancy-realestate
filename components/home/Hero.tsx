@@ -72,8 +72,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="text-white/85 text-[16px] md:text-[18px] font-light mt-10 max-w-xl mx-auto leading-[1.7]"
         >
-          50+ years in Dallas. 22 years reading people. Now putting it all to
-          work for you.
+          50+ years in Dallas. 22 years of professional precision. Now putting
+          it all to work for you.
         </motion.p>
 
         <motion.div

@@ -17,27 +17,27 @@ const STEPS = [
   {
     n: "01",
     title: "Home Walkthrough",
-    body: "I'll come to your home, assess it honestly, and tell you exactly what it's worth and what to do before listing.",
+    body: "I will come to your home, assess it honestly, and tell you exactly what it is worth and what to do before listing. No sugarcoating. Just a clear plan to get you the best result.",
   },
   {
     n: "02",
     title: "Pricing Strategy",
-    body: "Overpricing is the #1 mistake sellers make. I'll price it right to attract serious buyers fast.",
+    body: "Overpricing is the number one mistake sellers make. It does not attract better offers. It drives buyers away. I will price it right from day one to attract serious buyers fast.",
   },
   {
     n: "03",
     title: "Presentation",
-    body: "From photos to listing copy, we'll present your home in its best light.",
+    body: "From professional photos to listing copy, we will present your home in its best light. I will tell you exactly what to fix and what to skip. No wasted money on upgrades buyers will not notice.",
   },
   {
     n: "04",
     title: "Marketing & Exposure",
-    body: "Your home goes on the MLS and gets in front of serious buyers actively searching in Dallas.",
+    body: "Your home goes on the MLS and gets in front of serious buyers actively searching in Dallas. I make sure the listing stands out, not just shows up.",
   },
   {
     n: "05",
     title: "Negotiate & Close",
-    body: "When offers come in, I handle the negotiation so you get the best possible outcome.",
+    body: "When offers come in, I handle the negotiation so you get the best possible outcome. My background in accounting and HR means I manage the numbers and the people with equal precision.",
   },
 ];
 
@@ -45,12 +45,12 @@ const BENEFITS = [
   {
     icon: "Scale",
     title: "Honest Pricing Advice",
-    body: "Not what you want to hear, but what the market will actually pay. That is how homes sell fast, and above ask.",
+    body: "Not what you want to hear, but what the market will actually pay. That is how homes sell fast and above ask.",
   },
   {
     icon: "ClipboardCheck",
     title: "Detail-Oriented Prep Guidance",
-    body: "I'll tell you exactly what to fix and what to skip. No wasted money on upgrades buyers won't notice.",
+    body: "I will tell you exactly what to fix and what to skip. No wasted money on upgrades that will not move the needle. Every dollar you spend on prep should come back at closing.",
   },
   {
     icon: "Shield",

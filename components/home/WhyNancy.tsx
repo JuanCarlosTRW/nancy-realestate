@@ -12,7 +12,7 @@ const PILLARS = [
   },
   {
     icon: Users,
-    title: "22 Years of Professional Experience",
+    title: "22 Years Before Real Estate Made Me Better At It",
     body: "Before real estate, I spent over two decades in accounting and human resources, managing sensitive situations, difficult conversations, and high-stakes decisions with composure. Real estate transactions get emotional fast. I am the steady hand that keeps yours on track.",
   },
   {
