@@ -46,8 +46,8 @@ export default function ContactForm() {
       </h2>
       <div className="gold-divider w-14 mt-6" />
       <p className="body-p mt-6 max-w-md">
-        No pressure, no sales pitch. Just tell me what you&apos;re thinking
-        and I&apos;ll get back to you quickly.
+        No commitment, no sales pitch. Tell me what you are thinking and I
+        will get back to you within 24 hours.
       </p>
 
       {hasError && (

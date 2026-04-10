@@ -49,7 +49,7 @@ const BENEFITS = [
   {
     icon: "Users",
     title: "Steady Under Pressure",
-    body: "My background in accounting and HR means I do not flinch when negotiations get tense. I stay composed so you can too.",
+    body: "My background in accounting and HR means I do not flinch when negotiations get tense. I stay composed so you can too. When a counteroffer comes in lower than expected or a deadline is tight, I keep a clear head so you can make confident decisions. That steadiness comes from two decades of navigating high-pressure professional situations.",
   },
   {
     icon: "Hammer",

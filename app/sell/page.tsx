@@ -45,7 +45,7 @@ const BENEFITS = [
   {
     icon: "Scale",
     title: "Honest Pricing Advice",
-    body: "Not what you want to hear, but what the market will actually pay. That is how homes sell fast and above ask.",
+    body: "Not what you want to hear, but what the market will actually pay. That is how homes sell fast and above ask. I study what comparable homes actually sold for, not just what they listed at. That precision is the difference between a bidding war and a stale listing.",
   },
   {
     icon: "ClipboardCheck",

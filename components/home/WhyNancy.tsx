@@ -28,7 +28,7 @@ export default function WhyNancy() {
   return (
     <section id="why-nancy" className="relative">
       {/* Section header */}
-      <div className="section-pad bg-warmWhite pb-10 md:pb-14">
+      <div className="pt-20 md:pt-28 pb-6 md:pb-8 px-6 md:px-12 lg:px-20 bg-warmWhite">
         <div className="container-x">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto">
@@ -43,21 +43,21 @@ export default function WhyNancy() {
         </div>
       </div>
 
-      {/* Immersive pillar blocks */}
+      {/* Immersive pillar blocks — two-column layout */}
       {PILLARS.map((p, i) => {
         const Icon = p.icon;
         const isAlt = i % 2 === 1;
         return (
           <div
             key={p.num}
-            className={`${isAlt ? "bg-bgSection" : "bg-warmWhite"}`}
+            className={isAlt ? "bg-bgSection" : "bg-warmWhite"}
           >
-            <div className="container-x py-16 md:py-24 px-6 md:px-12 lg:px-20">
+            <div className="container-x py-14 md:py-20 px-6 md:px-12 lg:px-20">
               <Reveal delay={0.05}>
-                <div className="max-w-3xl mx-auto md:mx-0">
-                  {/* Number + icon row */}
-                  <div className="flex items-center gap-5 mb-8">
-                    <span className="font-display text-[48px] md:text-[64px] text-gold/25 leading-none font-light select-none">
+                <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-6 md:gap-12 items-start max-w-4xl">
+                  {/* Left: Number + Icon */}
+                  <div className="flex md:flex-col items-center md:items-center gap-4 md:gap-3">
+                    <span className="font-display text-[56px] md:text-[72px] text-gold/20 leading-none font-light select-none">
                       {p.num}
                     </span>
                     <div className="inline-flex items-center justify-center w-11 h-11 border border-gold/40 rounded-full">
@@ -65,17 +65,16 @@ export default function WhyNancy() {
                     </div>
                   </div>
 
-                  {/* Heading */}
-                  <h3 className="font-display text-[28px] md:text-[36px] lg:text-[42px] text-darkText leading-[1.15] max-w-2xl">
-                    {p.title}
-                  </h3>
-
-                  <AnimatedDivider className="w-12 mt-6" />
-
-                  {/* Body */}
-                  <p className="body-p mt-8 text-[16px] md:text-[17px] leading-[1.8] max-w-2xl">
-                    {p.body}
-                  </p>
+                  {/* Right: Heading + Body */}
+                  <div>
+                    <h3 className="font-display text-[28px] md:text-[36px] lg:text-[42px] text-darkText leading-[1.15]">
+                      {p.title}
+                    </h3>
+                    <AnimatedDivider className="w-12 mt-6" />
+                    <p className="body-p mt-8 text-[16px] md:text-[17px] leading-[1.8] max-w-2xl">
+                      {p.body}
+                    </p>
+                  </div>
                 </div>
               </Reveal>
             </div>

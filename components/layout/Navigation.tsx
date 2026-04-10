@@ -54,18 +54,16 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-[11px] font-medium tracking-button uppercase transition-colors relative",
+                  "text-[11px] font-medium tracking-button uppercase transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:bg-gold after:transition-all after:duration-300",
                   active
-                    ? "text-gold"
+                    ? "text-gold after:w-full"
                     : solid
-                    ? "text-darkText hover:text-gold"
-                    : "text-white hover:text-goldLight"
+                    ? "text-darkText hover:text-gold after:w-0 hover:after:w-full"
+                    : "text-white hover:text-goldLight after:w-0 hover:after:w-full"
                 )}
               >
                 {item.label}
-                {active && (
-                  <span className="absolute -bottom-2 left-0 right-0 h-px bg-gold" />
-                )}
+                {/* Active indicator now handled via after: pseudo-element */}
               </Link>
             );
           })}

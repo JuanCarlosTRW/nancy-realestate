@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
 
 type Hood = {
@@ -50,7 +50,7 @@ const HOODS: Hood[] = [
 
 function NeighborhoodCard({ hood }: { hood: Hood }) {
   return (
-    <article className="group relative w-full h-full overflow-hidden rounded-[2px] border border-bordr shadow-warm hover:shadow-warmLg transition-all duration-500 cursor-default">
+    <article className="group relative w-full h-full overflow-hidden cursor-default">
       <Image
         src={hood.img}
         alt={`${hood.name} neighborhood`}
@@ -62,15 +62,17 @@ function NeighborhoodCard({ hood }: { hood: Hood }) {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)",
+            "linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)",
         }}
       />
-      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 z-10">
-        <h3 className="font-display font-light text-[20px] sm:text-[24px] md:text-[26px] text-white leading-[1.1]">
+      {/* Gold bottom border on hover */}
+      <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 z-10">
+        <h3 className="font-display font-light text-[20px] md:text-[22px] text-white leading-[1.1]">
           {hood.name}
         </h3>
         <div className="w-8 h-px bg-gradient-to-r from-gold to-transparent mt-2" />
-        <p className="text-[10px] md:text-[11px] text-goldLight/95 font-light mt-2 leading-[1.5]">
+        <p className="text-[12px] md:text-[13px] text-white/75 font-light mt-2 leading-[1.5]">
           {hood.descriptor}
         </p>
       </div>
@@ -80,10 +82,10 @@ function NeighborhoodCard({ hood }: { hood: Hood }) {
 
 export default function Neighborhoods() {
   return (
-    <section className="bg-bgSection overflow-hidden">
-      <ContainerScroll
-        titleComponent={
-          <>
+    <section className="section-pad bg-bgSection">
+      <div className="container-x">
+        <Reveal>
+          <div className="text-center max-w-2xl mx-auto mb-16">
             <p className="label">Dallas Neighborhoods</p>
             <h2 className="h-display mt-4">
               The City I&apos;ve Called Home for{" "}
@@ -94,27 +96,31 @@ export default function Neighborhoods() {
               stories behind them.
             </p>
             <AnimatedDivider className="w-16 mx-auto mt-8" />
-          </>
-        }
-      >
-        <div className="h-full w-full overflow-y-auto overflow-x-hidden p-3 md:p-5">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-            {HOODS.slice(0, 4).map((n) => (
-              <div key={n.name} className="h-[140px] sm:h-[180px] md:h-[200px]">
+          </div>
+        </Reveal>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {HOODS.slice(0, 4).map((n, i) => (
+            <Reveal key={n.name} delay={i * 0.08}>
+              <div className="h-[200px] sm:h-[220px] md:h-[280px]">
                 <NeighborhoodCard hood={n} />
               </div>
-            ))}
-          </div>
+            </Reveal>
+          ))}
+        </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4 mt-3 md:mt-4">
-            {HOODS.slice(4).map((n) => (
-              <div key={n.name} className="h-[140px] sm:h-[180px] md:h-[200px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
+          {HOODS.slice(4).map((n, i) => (
+            <Reveal key={n.name} delay={(i + 4) * 0.08}>
+              <div className="h-[200px] sm:h-[220px] md:h-[280px]">
                 <NeighborhoodCard hood={n} />
               </div>
-            ))}
-          </div>
+            </Reveal>
+          ))}
+        </div>
 
-          <p className="text-center text-[13px] font-light text-mediumText mt-6">
+        <Reveal delay={0.2}>
+          <p className="text-center text-[14px] font-light text-mediumText mt-14">
             Looking for a specific area?{" "}
             <Link
               href="/contact"
@@ -123,8 +129,8 @@ export default function Neighborhoods() {
               Let&apos;s talk
             </Link>
           </p>
-        </div>
-      </ContainerScroll>
+        </Reveal>
+      </div>
     </section>
   );
 }

@@ -9,7 +9,7 @@ export default function Testimonials() {
       <div className="container-x">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="label">Kind Words</p>
+            <p className="label">A Kind Word</p>
             <h2 className="h-display mt-4">
               What Clients <span className="italic text-gold">Are Saying</span>
             </h2>
