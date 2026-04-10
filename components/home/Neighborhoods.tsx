@@ -1,51 +1,45 @@
+import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 
 type Hood = {
   name: string;
   descriptor: string;
-  gradient: string;
+  img: string;
   featured?: boolean;
 };
 
-// Warm Texas tones — layered CSS gradients, no stock photos.
 const HOODS: Hood[] = [
   {
     name: "Bent Tree",
     descriptor: "Established luxury in North Dallas",
     featured: true,
-    gradient:
-      "radial-gradient(at 20% 20%, #C8A97E 0%, transparent 50%), radial-gradient(at 80% 80%, #8B4513 0%, transparent 55%), linear-gradient(135deg, #3A2A1A 0%, #1C1712 100%)",
+    img: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&q=80",
   },
   {
     name: "Highland Park",
     descriptor: "Dallas' most prestigious address",
-    gradient:
-      "radial-gradient(at 70% 20%, #D4B896 0%, transparent 55%), radial-gradient(at 10% 90%, #A8845A 0%, transparent 60%), linear-gradient(135deg, #2C2218 0%, #1C1712 100%)",
+    img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
   },
   {
     name: "Frisco",
     descriptor: "Fast-growing, family-friendly North Dallas",
-    gradient:
-      "radial-gradient(at 30% 70%, #C8A97E 0%, transparent 60%), radial-gradient(at 85% 15%, #5C4A38 0%, transparent 55%), linear-gradient(160deg, #2C2218 0%, #1C1712 100%)",
+    img: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=600&q=80",
   },
   {
     name: "Plano",
     descriptor: "Suburban excellence with big-city access",
-    gradient:
-      "radial-gradient(at 15% 30%, #A8845A 0%, transparent 55%), radial-gradient(at 75% 80%, #D4B896 0%, transparent 55%), linear-gradient(120deg, #3A2A1A 0%, #1C1712 100%)",
+    img: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
   },
   {
     name: "Richardson",
     descriptor: "Diverse, walkable, underrated gem",
-    gradient:
-      "radial-gradient(at 60% 40%, #8B4513 0%, transparent 60%), radial-gradient(at 20% 85%, #C8A97E 0%, transparent 55%), linear-gradient(140deg, #2C2218 0%, #1C1712 100%)",
+    img: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&q=80",
   },
   {
     name: "Uptown Dallas",
     descriptor: "Urban energy, walkable lifestyle",
-    gradient:
-      "radial-gradient(at 80% 30%, #D4B896 0%, transparent 55%), radial-gradient(at 25% 70%, #8B4513 0%, transparent 60%), linear-gradient(150deg, #2C2218 0%, #1C1712 100%)",
+    img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
   },
 ];
 
@@ -71,19 +65,16 @@ export default function Neighborhoods() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {HOODS.map((n, i) => (
             <Reveal key={n.name} delay={(i % 3) * 0.08}>
-              <article
-                className="group relative h-[300px] md:h-[340px] overflow-hidden rounded-[2px] border border-bordr shadow-warm hover:shadow-warmLg transition-all duration-500 cursor-default"
-                style={{ backgroundImage: n.gradient, backgroundSize: "cover" }}
-              >
-                {/* Grain texture for depth */}
-                <div
-                  className="absolute inset-0 opacity-[0.15] mix-blend-overlay pointer-events-none"
-                  style={{
-                    backgroundImage:
-                      "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
-                  }}
+              <article className="group relative h-[300px] md:h-[340px] overflow-hidden rounded-[2px] border border-bordr shadow-warm hover:shadow-warmLg transition-all duration-500 cursor-default">
+                <Image
+                  src={n.img}
+                  alt={`${n.name} neighborhood`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent" />
+                {/* Dark gradient overlay for text legibility */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
                 {n.featured && (
                   <div className="absolute top-5 right-5 z-10 text-[9px] tracking-label uppercase font-medium text-charcoal bg-gold px-3 py-1.5 rounded-[2px]">
@@ -91,7 +82,7 @@ export default function Neighborhoods() {
                   </div>
                 )}
 
-                <div className="absolute inset-x-0 bottom-0 p-7">
+                <div className="absolute inset-x-0 bottom-0 p-7 z-10">
                   <h3 className="font-display font-light text-[30px] md:text-[32px] text-white leading-[1.1]">
                     {n.name}
                   </h3>

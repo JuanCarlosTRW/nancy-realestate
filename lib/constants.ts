@@ -22,7 +22,6 @@ export const TREC_CPN_URL =
   "https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-4-1.pdf";
 
 export const IMG = {
-  // Nancy's real photo
-  nancy:
-    "https://static.wixstatic.com/media/0ce273_2f11c61db18d490a9f9e2cfa1e5b20ba~mv2.jpg",
+  // Nancy's photo — downloaded locally for reliability
+  nancy: "/images/nancy.jpg",
 };

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Scale, ClipboardCheck, Shield } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/layout/CTABanner";
@@ -67,6 +68,20 @@ export default function SellPage() {
         titleAccent="Someone Who Knows It"
         subtitle="Pricing strategy, presentation, and professional execution — I'll handle it all."
       />
+
+      {/* Visual */}
+      <Reveal>
+        <div className="relative w-full h-[320px] md:h-[420px] overflow-hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200"
+            alt="Beautifully staged home interior"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-warmWhite via-transparent to-warmWhite" />
+        </div>
+      </Reveal>
 
       {/* Process Steps */}
       <section className="section-pad bg-warmWhite">

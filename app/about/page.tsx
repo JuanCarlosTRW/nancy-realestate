@@ -34,9 +34,20 @@ const FACTS = [
 export default function AboutPage() {
   return (
     <>
-      {/* Simple elegant hero */}
-      <section className="bg-warmWhite pt-40 pb-16 md:pb-20 px-6 md:px-12">
-        <div className="container-x max-w-4xl">
+      {/* Simple elegant hero with subtle background */}
+      <section className="relative bg-warmWhite pt-40 pb-16 md:pb-20 px-6 md:px-12 overflow-hidden">
+        {/* Faded background image */}
+        <div className="absolute inset-0 opacity-[0.07]">
+          <Image
+            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+            aria-hidden="true"
+          />
+        </div>
+        <div className="container-x max-w-4xl relative z-10">
           <nav
             aria-label="Breadcrumb"
             className="text-[11px] tracking-button uppercase font-medium text-lightText mb-8"

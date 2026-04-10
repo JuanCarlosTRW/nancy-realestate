@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { MapPin, Users, Hammer } from "lucide-react";
 import PageHero from "@/components/PageHero";
-import CTABanner from "@/components/layout/CTABanner";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import GoldDivider from "@/components/ui/GoldDivider";
@@ -67,6 +67,20 @@ export default function BuyPage() {
         titleAccent="Starts Here"
         subtitle="The right home in the right neighborhood — I know this city well enough to help you find both."
       />
+
+      {/* Visual */}
+      <Reveal>
+        <div className="relative w-full h-[320px] md:h-[420px] overflow-hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200"
+            alt="Beautiful Dallas-style home exterior"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-warmWhite via-transparent to-warmWhite" />
+        </div>
+      </Reveal>
 
       {/* Process Steps */}
       <section className="section-pad bg-warmWhite">
@@ -154,7 +168,6 @@ export default function BuyPage() {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }
