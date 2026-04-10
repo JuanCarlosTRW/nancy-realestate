@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { NAV_ITEMS, NANCY_PHONE_TEL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -68,12 +69,9 @@ export default function Navigation() {
               </Link>
             );
           })}
-          <Link
-            href="/contact"
-            className="text-[11px] font-medium tracking-button uppercase px-6 py-2.5 transition-all rounded-[4px] bg-gold text-charcoal border border-gold hover:bg-goldDark hover:text-white"
-          >
+          <ShinyButton href="/contact" className="!px-6 !py-2.5">
             Let&apos;s Talk
-          </Link>
+          </ShinyButton>
         </nav>
 
         <div className="md:hidden flex items-center gap-4">

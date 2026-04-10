@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 import BlurText from "@/components/BlurText";
 import { IMG } from "@/lib/constants";
 
@@ -91,14 +91,13 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: prefersReduced ? 1.5 : INTRO_OFFSET + 1.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-12"
         >
-          {/* Primary CTA with gold shimmer */}
-          <Link
+          {/* Primary CTA with shiny effect */}
+          <ShinyButton
             href="/contact"
-            className="btn-shimmer group inline-flex items-center gap-3 bg-gold hover:bg-goldDark text-white w-full sm:w-auto px-10 py-[18px] text-[11px] tracking-button uppercase font-medium rounded-[4px] transition-all duration-500 hover:gap-5 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.5)] justify-center"
+            className="w-full sm:w-auto shadow-[0_20px_50px_-15px_rgba(0,0,0,0.5)]"
           >
-            <span>Let&apos;s Talk</span>
-            <ArrowRight size={16} className="transition-transform duration-500 group-hover:translate-x-1" />
-          </Link>
+            Let&apos;s Talk
+          </ShinyButton>
           <a
             href="#why-nancy"
             className="group inline-flex items-center gap-3 border border-white/50 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-goldLight text-white w-full sm:w-auto px-10 py-[18px] text-[11px] tracking-button uppercase font-medium rounded-[4px] transition-all duration-500 hover:gap-5 justify-center"

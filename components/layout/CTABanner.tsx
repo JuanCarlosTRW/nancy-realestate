@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/components/ui/Button";
+import { ShinyButton } from "@/components/ui/shiny-button";
 import { SparklesCore } from "@/components/ui/sparkles";
 
 export default function CTABanner({
@@ -47,9 +47,9 @@ export default function CTABanner({
         <p className="max-w-xl mx-auto text-[15px] leading-[1.9] font-light text-white/75 mb-10">
           {subtitle}
         </p>
-        <Button href={href} variant="gold">
+        <ShinyButton href={href}>
           {cta}
-        </Button>
+        </ShinyButton>
       </div>
     </section>
   );
