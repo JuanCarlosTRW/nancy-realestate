@@ -21,7 +21,7 @@ export default function CTABanner({
             "radial-gradient(ellipse at 50% 120%, rgba(200,169,126,0.22) 0%, rgba(28,23,18,0) 60%)",
         }}
       />
-      <div className="relative container-x px-6 md:px-12 py-24 md:py-28 text-center">
+      <div className="relative container-x px-6 md:px-12 py-16 md:py-20 text-center">
         <h2 className="font-display font-light text-4xl md:text-5xl text-white mb-6 leading-[1.1]">
           {title}
         </h2>

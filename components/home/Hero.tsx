@@ -24,7 +24,7 @@ export default function Hero() {
         {/* Warm dark overlay */}
         <div
           className="absolute inset-0"
-          style={{ background: "rgba(28, 23, 18, 0.55)" }}
+          style={{ background: "rgba(28, 23, 18, 0.38)" }}
         />
         {/* Bottom fade for CTA legibility */}
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent" />

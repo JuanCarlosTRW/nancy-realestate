@@ -70,12 +70,7 @@ export default function Navigation() {
           })}
           <Link
             href="/contact"
-            className={cn(
-              "text-[11px] font-medium tracking-button uppercase px-6 py-2.5 transition-all rounded-[4px]",
-              solid
-                ? "bg-gold text-white border border-gold hover:bg-goldDark"
-                : "bg-transparent text-white border border-white/70 hover:bg-white/10 hover:border-goldLight"
-            )}
+            className="text-[11px] font-medium tracking-button uppercase px-6 py-2.5 transition-all rounded-[4px] bg-gold text-charcoal border border-gold hover:bg-goldDark hover:text-white"
           >
             Let&apos;s Talk
           </Link>

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Scale, ClipboardCheck, Shield } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/layout/CTABanner";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import GoldDivider from "@/components/ui/GoldDivider";
+import AnimatedDivider from "@/components/ui/AnimatedDivider";
+import BenefitCards from "@/components/ui/BenefitCards";
 
 export const metadata: Metadata = {
   title: "Selling Your Home in Dallas | Nancy Musselman",
@@ -43,17 +43,17 @@ const STEPS = [
 
 const BENEFITS = [
   {
-    icon: Scale,
+    icon: "Scale",
     title: "Honest Pricing Advice",
     body: "Not what you want to hear, but what the market will actually pay. That's how homes sell fast — and above ask.",
   },
   {
-    icon: ClipboardCheck,
+    icon: "ClipboardCheck",
     title: "Detail-Oriented Prep Guidance",
     body: "I'll tell you exactly what to fix and what to skip. No wasted money on upgrades buyers won't notice.",
   },
   {
-    icon: Shield,
+    icon: "Shield",
     title: "Composed Under Pressure",
     body: "If something unexpected comes up at inspection, I've seen it before. I keep the deal on the rails.",
   },
@@ -73,8 +73,8 @@ export default function SellPage() {
       <Reveal>
         <div className="relative w-full h-[320px] md:h-[420px] overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200"
-            alt="Beautifully staged home interior"
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200"
+            alt="Luxury home interior staging"
             fill
             sizes="100vw"
             className="object-cover"
@@ -92,7 +92,7 @@ export default function SellPage() {
               <h2 className="h-display mt-4">
                 The Selling <span className="italic text-gold">Process</span>
               </h2>
-              <div className="gold-divider w-16 mx-auto mt-8" />
+              <AnimatedDivider className="w-16 mx-auto mt-8" />
             </div>
           </Reveal>
           <div className="space-y-2">
@@ -127,28 +127,10 @@ export default function SellPage() {
                 Working With{" "}
                 <span className="italic text-gold">Nancy</span>
               </h2>
-              <div className="gold-divider w-16 mx-auto mt-8" />
+              <AnimatedDivider className="w-16 mx-auto mt-8" />
             </div>
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {BENEFITS.map((b, i) => {
-              const Icon = b.icon;
-              return (
-                <Reveal key={b.title} delay={i * 0.1}>
-                  <div className="h-full p-10 bg-warmWhite border border-bordr rounded-[2px] shadow-warm">
-                    <div className="inline-flex items-center justify-center w-12 h-12 border border-gold/40 rounded-full mb-6">
-                      <Icon size={20} className="text-gold" strokeWidth={1.5} />
-                    </div>
-                    <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.25]">
-                      {b.title}
-                    </h3>
-                    <GoldDivider className="mt-4 w-10" />
-                    <p className="body-p mt-5">{b.body}</p>
-                  </div>
-                </Reveal>
-              );
-            })}
-          </div>
+          <BenefitCards benefits={BENEFITS} />
         </div>
       </section>
 
@@ -159,7 +141,7 @@ export default function SellPage() {
             Thinking About{" "}
             <span className="italic text-gold">Selling?</span>
           </h2>
-          <div className="gold-divider w-16 mx-auto mt-6" />
+          <AnimatedDivider className="w-16 mx-auto mt-6" />
           <p className="body-p mt-8">
             Start with a no-pressure conversation. I&apos;ll tell you exactly
             where your home stands.

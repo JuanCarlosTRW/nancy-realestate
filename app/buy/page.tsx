@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { MapPin, Users, Hammer } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import GoldDivider from "@/components/ui/GoldDivider";
+import AnimatedDivider from "@/components/ui/AnimatedDivider";
+import BenefitCards from "@/components/ui/BenefitCards";
 
 export const metadata: Metadata = {
   title: "Buying a Home in Dallas | Nancy Musselman",
@@ -42,17 +42,17 @@ const STEPS = [
 
 const BENEFITS = [
   {
-    icon: MapPin,
+    icon: "MapPin",
     title: "Neighborhoods You Won't Find in a Top-10 List",
     body: "I know Dallas neighborhoods that never make the best-of lists — but should. Let me show you the quiet gems.",
   },
   {
-    icon: Users,
+    icon: "Users",
     title: "Steady Under Pressure",
     body: "My HR background means I don't flinch when negotiations get tense. I stay composed so you can too.",
   },
   {
-    icon: Hammer,
+    icon: "Hammer",
     title: "Honest About What You're Looking At",
     body: "I was raised around construction. I'll tell you the truth about a home — the good, the bad, and the expensive.",
   },
@@ -72,8 +72,8 @@ export default function BuyPage() {
       <Reveal>
         <div className="relative w-full h-[320px] md:h-[420px] overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200"
-            alt="Beautiful Dallas-style home exterior"
+            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200"
+            alt="Modern luxury home exterior"
             fill
             sizes="100vw"
             className="object-cover"
@@ -91,7 +91,7 @@ export default function BuyPage() {
               <h2 className="h-display mt-4">
                 The Buying <span className="italic text-gold">Process</span>
               </h2>
-              <div className="gold-divider w-16 mx-auto mt-8" />
+              <AnimatedDivider className="w-16 mx-auto mt-8" />
             </div>
           </Reveal>
           <div className="space-y-2">
@@ -126,28 +126,10 @@ export default function BuyPage() {
                 Why Buyers Choose{" "}
                 <span className="italic text-gold">to Work With Me</span>
               </h2>
-              <div className="gold-divider w-16 mx-auto mt-8" />
+              <AnimatedDivider className="w-16 mx-auto mt-8" />
             </div>
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {BENEFITS.map((b, i) => {
-              const Icon = b.icon;
-              return (
-                <Reveal key={b.title} delay={i * 0.1}>
-                  <div className="h-full p-10 bg-warmWhite border border-bordr rounded-[2px] shadow-warm">
-                    <div className="inline-flex items-center justify-center w-12 h-12 border border-gold/40 rounded-full mb-6">
-                      <Icon size={20} className="text-gold" strokeWidth={1.5} />
-                    </div>
-                    <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.25]">
-                      {b.title}
-                    </h3>
-                    <GoldDivider className="mt-4 w-10" />
-                    <p className="body-p mt-5">{b.body}</p>
-                  </div>
-                </Reveal>
-              );
-            })}
-          </div>
+          <BenefitCards benefits={BENEFITS} />
         </div>
       </section>
 
@@ -158,7 +140,7 @@ export default function BuyPage() {
             Ready to Start{" "}
             <span className="italic text-gold">Your Search?</span>
           </h2>
-          <div className="gold-divider w-16 mx-auto mt-6" />
+          <AnimatedDivider className="w-16 mx-auto mt-6" />
           <p className="body-p mt-8">
             Tell me what you&apos;re looking for. I&apos;ll take it from there.
           </p>
