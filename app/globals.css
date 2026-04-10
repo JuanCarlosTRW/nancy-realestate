@@ -70,7 +70,7 @@ html { scroll-behavior: smooth; }
 }
 
 @layer components {
-  .section-pad { @apply px-6 md:px-12 lg:px-20 py-14 md:py-20; }
+  .section-pad { @apply px-6 md:px-12 lg:px-20 py-20 md:py-28; }
   .container-x { @apply max-w-7xl mx-auto; }
   .label { @apply text-[11px] font-medium tracking-label uppercase text-gold; }
   .h-display { @apply font-display font-normal text-darkText; font-size: clamp(32px, 4vw, 48px); line-height: 1.15; }

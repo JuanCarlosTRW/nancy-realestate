@@ -145,7 +145,7 @@ export default function BuyPage() {
             Tell me what you&apos;re looking for. I&apos;ll take it from there.
           </p>
           <div className="mt-10">
-            <Button href="/contact">Let&apos;s Talk</Button>
+            <Button href="/contact">Start Your Search</Button>
           </div>
         </div>
       </section>

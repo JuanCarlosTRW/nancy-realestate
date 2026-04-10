@@ -27,7 +27,8 @@ export default function AboutHero() {
         </h1>
         <AnimatedDivider className="w-16 mt-8" />
         <p className="body-p max-w-2xl mt-7 text-[17px]">
-          Here&apos;s a little about who I am and why I do this.
+          Fifty years of roots. Twenty-two years of professional discipline. A
+          lifetime of paying attention.
         </p>
       </div>
     </section>

@@ -5,7 +5,7 @@ import { SparklesCore } from "@/components/ui/sparkles";
 export default function CTABanner({
   title = "Ready to Make Your Move?",
   subtitle = "Whether you have one question or you're ready to start today, reach out. No pressure, no sales pitch.",
-  cta = "Reach Out to Nancy",
+  cta = "Let\u0027s Talk",
   href = "/contact",
 }: {
   title?: string;

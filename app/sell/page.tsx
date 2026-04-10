@@ -65,7 +65,7 @@ export default function SellPage() {
       <PageHero
         label="For Sellers"
         titleStart="Sell Your Dallas Home With"
-        titleAccent="Someone Who Knows It"
+        titleAccent="Someone Who Knows Every Street"
         subtitle="Pricing strategy, presentation, and professional execution. I will handle it all."
       />
 
@@ -157,7 +157,7 @@ export default function SellPage() {
             where your home stands.
           </p>
           <div className="mt-10">
-            <Button href="/contact">Request a Home Consultation</Button>
+            <Button href="/contact">Get Your Home&apos;s Value</Button>
           </div>
         </div>
       </section>

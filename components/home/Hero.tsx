@@ -103,7 +103,7 @@ export default function Hero() {
             href="#why-nancy"
             className="group inline-flex items-center gap-3 border border-white/50 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-goldLight text-white w-full sm:w-auto px-10 py-[18px] text-[11px] tracking-button uppercase font-medium rounded-[4px] transition-all duration-500 hover:gap-5 justify-center"
           >
-            <span>How I Can Help</span>
+            <span>See How I Help</span>
             <ArrowRight size={16} className="text-goldLight transition-transform duration-500 group-hover:translate-x-1" />
           </a>
         </motion.div>
