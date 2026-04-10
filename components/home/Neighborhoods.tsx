@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Reveal from "@/components/ui/Reveal";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
-import TiltCard from "@/components/ui/TiltCard";
 
 type Hood = {
   name: string;
@@ -49,103 +48,73 @@ const HOODS: Hood[] = [
   },
 ];
 
+function NeighborhoodCard({ hood }: { hood: Hood }) {
+  return (
+    <article className="group relative w-full h-full overflow-hidden rounded-[2px] border border-bordr shadow-warm hover:shadow-warmLg transition-all duration-500 cursor-default">
+      <Image
+        src={hood.img}
+        alt={`${hood.name} neighborhood`}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        className="object-cover transition-transform duration-700 group-hover:scale-105"
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)",
+        }}
+      />
+      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 z-10">
+        <h3 className="font-display font-light text-[20px] sm:text-[24px] md:text-[26px] text-white leading-[1.1]">
+          {hood.name}
+        </h3>
+        <div className="w-8 h-px bg-gradient-to-r from-gold to-transparent mt-2" />
+        <p className="text-[10px] md:text-[11px] text-goldLight/95 font-light mt-2 leading-[1.5]">
+          {hood.descriptor}
+        </p>
+      </div>
+    </article>
+  );
+}
+
 export default function Neighborhoods() {
   return (
-    <section className="section-pad bg-bgSection">
-      <div className="container-x">
-        <Reveal>
-          <div className="text-center max-w-2xl mx-auto mb-16">
+    <section className="bg-bgSection overflow-hidden">
+      <ContainerScroll
+        titleComponent={
+          <>
             <p className="label">Dallas Neighborhoods</p>
             <h2 className="h-display mt-4">
               The City I&apos;ve Called Home for{" "}
               <span className="italic text-gold">50+ Years</span>
             </h2>
-            <p className="body-p mt-6">
+            <p className="body-p mt-6 max-w-2xl mx-auto">
               From North Dallas to Colleyville, I know these streets and the
               stories behind them.
             </p>
             <AnimatedDivider className="w-16 mx-auto mt-8" />
+          </>
+        }
+      >
+        <div className="h-full w-full overflow-y-auto overflow-x-hidden p-3 md:p-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {HOODS.slice(0, 4).map((n) => (
+              <div key={n.name} className="h-[140px] sm:h-[180px] md:h-[200px]">
+                <NeighborhoodCard hood={n} />
+              </div>
+            ))}
           </div>
-        </Reveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-          {HOODS.slice(0, 4).map((n, i) => (
-            <Reveal key={n.name} delay={(i % 4) * 0.08}>
-              <TiltCard
-                rotateAmplitude={6}
-                scaleOnHover={1.03}
-                className="h-[200px] sm:h-[280px] md:h-[340px]"
-              >
-                <article className="group relative w-full h-full overflow-hidden rounded-[2px] border border-bordr shadow-warm hover:shadow-warmLg transition-all duration-500 cursor-default">
-                  <Image
-                    src={n.img}
-                    alt={`${n.name} neighborhood`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background:
-                        "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)",
-                    }}
-                  />
-                  <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7 z-10">
-                    <h3 className="font-display font-light text-[24px] sm:text-[28px] md:text-[30px] text-white leading-[1.1]">
-                      {n.name}
-                    </h3>
-                    <div className="w-8 h-px bg-gradient-to-r from-gold to-transparent mt-3" />
-                    <p className="text-[11px] md:text-[12px] text-goldLight/95 font-light mt-3 leading-[1.5]">
-                      {n.descriptor}
-                    </p>
-                  </div>
-                </article>
-              </TiltCard>
-            </Reveal>
-          ))}
-        </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4 mt-3 md:mt-4">
+            {HOODS.slice(4).map((n) => (
+              <div key={n.name} className="h-[140px] sm:h-[180px] md:h-[200px]">
+                <NeighborhoodCard hood={n} />
+              </div>
+            ))}
+          </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 mt-5 md:mt-6">
-          {HOODS.slice(4).map((n, i) => (
-            <Reveal key={n.name} delay={(i % 3) * 0.08}>
-              <TiltCard
-                rotateAmplitude={6}
-                scaleOnHover={1.03}
-                className="h-[200px] sm:h-[280px] md:h-[340px]"
-              >
-                <article className="group relative w-full h-full overflow-hidden rounded-[2px] border border-bordr shadow-warm hover:shadow-warmLg transition-all duration-500 cursor-default">
-                  <Image
-                    src={n.img}
-                    alt={`${n.name} neighborhood`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background:
-                        "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)",
-                    }}
-                  />
-                  <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7 z-10">
-                    <h3 className="font-display font-light text-[24px] sm:text-[30px] md:text-[32px] text-white leading-[1.1]">
-                      {n.name}
-                    </h3>
-                    <div className="w-8 h-px bg-gradient-to-r from-gold to-transparent mt-3" />
-                    <p className="text-[11px] md:text-[12px] text-goldLight/95 font-light mt-3 leading-[1.5]">
-                      {n.descriptor}
-                    </p>
-                  </div>
-                </article>
-              </TiltCard>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal delay={0.2}>
-          <p className="text-center text-[14px] font-light text-mediumText mt-14">
+          <p className="text-center text-[13px] font-light text-mediumText mt-6">
             Looking for a specific area?{" "}
             <Link
               href="/contact"
@@ -154,8 +123,8 @@ export default function Neighborhoods() {
               Let&apos;s talk
             </Link>
           </p>
-        </Reveal>
-      </div>
+        </div>
+      </ContainerScroll>
     </section>
   );
 }
