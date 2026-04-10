@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { MapPin, Users, Eye } from "lucide-react";
 import GoldDivider from "@/components/ui/GoldDivider";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
+import AboutHero from "@/components/about/AboutHero";
 import { IMG } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -34,46 +34,7 @@ const FACTS = [
 export default function AboutPage() {
   return (
     <>
-      {/* Simple elegant hero with subtle background */}
-      <section className="relative bg-warmWhite pt-40 pb-16 md:pb-20 px-6 md:px-12 overflow-hidden">
-        {/* Faded background image */}
-        <div className="absolute inset-0 opacity-[0.07]">
-          <Image
-            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover"
-            aria-hidden="true"
-          />
-        </div>
-        <div className="container-x max-w-4xl relative z-10">
-          <nav
-            aria-label="Breadcrumb"
-            className="text-[11px] tracking-button uppercase font-medium text-lightText mb-8"
-          >
-            <Link href="/" className="hover:text-gold">
-              Home
-            </Link>
-            <span className="mx-3 text-gold">/</span>
-            <span className="text-darkText">About</span>
-          </nav>
-          <p className="label">About Nancy</p>
-          <h1
-            className="font-display font-light text-darkText mt-4 leading-[1.05]"
-            style={{ fontSize: "clamp(40px, 5.5vw, 68px)" }}
-          >
-            A Dallasite, a Professional, and{" "}
-            <span className="italic text-gold">
-              Someone Who Actually Cares
-            </span>
-          </h1>
-          <GoldDivider className="mt-8 w-16" />
-          <p className="body-p max-w-2xl mt-8 text-[17px]">
-            Here&apos;s a little about who I am and why I do this.
-          </p>
-        </div>
-      </section>
+      <AboutHero />
 
       {/* Bio: two-column text + photo */}
       <section className="section-pad bg-bgSection">
@@ -152,7 +113,7 @@ export default function AboutPage() {
                 What I Bring{" "}
                 <span className="italic text-gold">to the Table</span>
               </h2>
-              <div className="gold-divider w-16 mx-auto mt-8" />
+              <GoldDivider className="mt-8 w-16" />
             </div>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -167,7 +128,7 @@ export default function AboutPage() {
                     <h3 className="font-display text-2xl text-darkText">
                       {f.title}
                     </h3>
-                    <div className="gold-divider w-10 mx-auto mt-5" />
+                    <GoldDivider className="mt-5 w-10 mx-auto" />
                     <p className="body-p mt-6">{f.body}</p>
                   </div>
                 </Reveal>
@@ -184,7 +145,7 @@ export default function AboutPage() {
             Let&apos;s Start With{" "}
             <span className="italic text-gold">a Conversation</span>
           </h2>
-          <div className="gold-divider w-16 mx-auto mt-6" />
+          <GoldDivider className="mt-6 w-16 mx-auto" />
           <p className="body-p mt-8">
             No commitment, no pressure. Just tell me what you&apos;re thinking.
           </p>

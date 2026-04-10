@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import GoldDivider from "@/components/ui/GoldDivider";
+import AnimatedDivider from "@/components/ui/AnimatedDivider";
 import Reveal from "@/components/ui/Reveal";
 import { IMG } from "@/lib/constants";
 
@@ -32,7 +32,7 @@ export default function MeetAgent() {
               A Dallasite{" "}
               <span className="italic text-gold">Through and Through</span>
             </h2>
-            <GoldDivider className="mt-6 w-16" />
+            <AnimatedDivider className="mt-6 w-16" />
           </Reveal>
           <Reveal delay={0.1}>
             <p className="body-p mt-8">

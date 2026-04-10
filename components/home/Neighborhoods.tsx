@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
+import AnimatedDivider from "@/components/ui/AnimatedDivider";
+import TiltCard from "@/components/ui/TiltCard";
 
 type Hood = {
   name: string;
@@ -18,7 +21,7 @@ const HOODS: Hood[] = [
   },
   {
     name: "Highland Park",
-    descriptor: "Dallas' most prestigious address",
+    descriptor: "Dallas\u2019 most prestigious address",
     img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
   },
   {
@@ -58,40 +61,52 @@ export default function Neighborhoods() {
               From Highland Park to Frisco, I know these streets — and the
               stories behind them.
             </p>
-            <div className="gold-divider w-16 mx-auto mt-8" />
+            <AnimatedDivider className="w-16 mx-auto mt-8" />
           </div>
         </Reveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {HOODS.map((n, i) => (
             <Reveal key={n.name} delay={(i % 3) * 0.08}>
-              <article className="group relative h-[300px] md:h-[340px] overflow-hidden rounded-[2px] border border-bordr shadow-warm hover:shadow-warmLg transition-all duration-500 cursor-default">
-                <Image
-                  src={n.img}
-                  alt={`${n.name} neighborhood`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                {/* Dark gradient overlay for text legibility */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <TiltCard
+                rotateAmplitude={6}
+                scaleOnHover={1.03}
+                className="h-[200px] sm:h-[280px] md:h-[340px]"
+              >
+                <article className="group relative w-full h-full overflow-hidden rounded-[2px] border border-bordr shadow-warm hover:shadow-warmLg transition-all duration-500 cursor-default">
+                  <Image
+                    src={n.img}
+                    alt={`${n.name} neighborhood`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Dark gradient overlay */}
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)",
+                    }}
+                  />
 
-                {n.featured && (
-                  <div className="absolute top-5 right-5 z-10 text-[9px] tracking-label uppercase font-medium text-charcoal bg-gold px-3 py-1.5 rounded-[2px]">
-                    Featured Sale
+                  {n.featured && (
+                    <div className="absolute top-4 right-4 z-10 text-[9px] tracking-label uppercase font-medium text-charcoal bg-gold px-3 py-1.5 rounded-[2px]">
+                      Featured Sale
+                    </div>
+                  )}
+
+                  <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7 z-10">
+                    <h3 className="font-display font-light text-[24px] sm:text-[30px] md:text-[32px] text-white leading-[1.1]">
+                      {n.name}
+                    </h3>
+                    <div className="w-8 h-px bg-gradient-to-r from-gold to-transparent mt-3" />
+                    <p className="text-[11px] md:text-[12px] text-goldLight/95 font-light mt-3 leading-[1.5]">
+                      {n.descriptor}
+                    </p>
                   </div>
-                )}
-
-                <div className="absolute inset-x-0 bottom-0 p-7 z-10">
-                  <h3 className="font-display font-light text-[30px] md:text-[32px] text-white leading-[1.1]">
-                    {n.name}
-                  </h3>
-                  <div className="gold-divider w-8 mt-3" />
-                  <p className="text-[11px] md:text-[12px] text-goldLight/95 font-light mt-3 leading-[1.5]">
-                    {n.descriptor}
-                  </p>
-                </div>
-              </article>
+                </article>
+              </TiltCard>
             </Reveal>
           ))}
         </div>
