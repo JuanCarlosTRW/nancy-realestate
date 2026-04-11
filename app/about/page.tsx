@@ -54,9 +54,9 @@ export default function AboutPage() {
     <>
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
       <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&q=80"
-        imageAlt="Beautiful residential home in Dallas Texas"
-        overlayOpacity={0.65}
+        imageSrc="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1920&q=80"
+        imageAlt="Traditional American suburban home in Dallas Texas"
+        overlayOpacity={0.7}
       >
         <p className="label mb-4 !text-gold">Meet Nancy</p>
         <h1
@@ -69,7 +69,7 @@ export default function AboutPage() {
             I Know Every Street, Every Story, Every Neighborhood.
           </span>
         </h1>
-        <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/80 max-w-xl mx-auto leading-[1.7]">
+        <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
           50+ years in DFW. 22 years of precision behind every decision.
         </p>
       </ParallaxHero>
@@ -79,7 +79,7 @@ export default function AboutPage() {
         <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
           {/* Photo — left */}
           <Reveal>
-            <div className="relative w-full max-w-[460px] mx-auto pr-4 pb-4">
+            <div className="relative w-full max-w-[460px] mx-auto pr-5 pb-5">
               <div className="relative z-10 aspect-[3/4] overflow-hidden shadow-warmLg">
                 <Image
                   src={IMG.nancy}
@@ -90,7 +90,7 @@ export default function AboutPage() {
                 />
               </div>
               {/* Decorative gold offset border */}
-              <div className="absolute -bottom-0 -right-0 z-0 h-full w-full border-2 border-gold hidden md:block" />
+              <div className="absolute bottom-0 right-0 z-0 h-full w-full border-2 border-gold hidden md:block" />
             </div>
           </Reveal>
 
@@ -192,8 +192,8 @@ export default function AboutPage() {
                 <div className="group relative h-full border border-bordr bg-white p-8 md:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm overflow-hidden">
                   {/* Watermark number */}
                   <span
-                    className="absolute -top-2 -left-1 font-display text-[96px] font-extralight leading-none text-gold pointer-events-none select-none"
-                    style={{ opacity: 0.12 }}
+                    className="absolute -top-4 -left-2 font-display text-[120px] font-extralight leading-none text-gold pointer-events-none select-none"
+                    style={{ opacity: 0.08 }}
                     aria-hidden="true"
                   >
                     {skill.number}
@@ -250,7 +250,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {NEIGHBORHOODS.map((hood, i) => (
               <Reveal key={hood.name} delay={i * 0.06}>
-                <div className="group relative h-full border border-white/10 bg-white/5 backdrop-blur-sm p-6 transition-all duration-500 hover:-translate-y-1 hover:border-gold/30 hover:bg-white/10 overflow-hidden">
+                <div className="group relative flex min-h-[140px] flex-col h-full border border-white/10 bg-white/5 backdrop-blur-sm p-6 transition-all duration-500 hover:-translate-y-1 hover:border-gold/30 hover:bg-white/10 overflow-hidden">
                   <h3 className="font-display text-[20px] text-white leading-[1.2] mb-1">
                     {hood.name}
                   </h3>
