@@ -15,15 +15,15 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-charcoal hero-noise">
-      {/* Nancy photo background with parallax on desktop */}
+      {/* Luxury property background */}
       <div className="absolute inset-0 hero-parallax">
         <Image
-          src={IMG.nancy}
-          alt="Nancy Musselman, Dallas real estate agent"
+          src={IMG.hero}
+          alt="Luxury Dallas home with infinity pool at sunset"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_20%]"
+          className="object-cover object-center"
         />
         {/* Warm dark overlay */}
         <div

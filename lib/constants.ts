@@ -24,4 +24,6 @@ export const TREC_CPN_URL =
 export const IMG = {
   // Nancy's photo — downloaded locally for reliability
   nancy: "/images/nancy.jpg",
+  // Hero background — luxury property lifestyle
+  hero: "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=2000&auto=format&fit=crop",
 };
