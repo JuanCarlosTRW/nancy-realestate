@@ -7,6 +7,7 @@ import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
 import { BorderBeam } from "@/components/ui/border-beam";
+import CTASparkles from "@/components/home/CTASparkles";
 import { IMG, NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -572,15 +573,8 @@ export default function Home() {
 
       {/* ─── SECTION 9: CTA (DARK) ────────────────────────────────── */}
       <section className="relative px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal overflow-hidden">
-        {/* Subtle dot texture overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, rgba(200,169,126,0.8) 1px, transparent 1px)",
-            backgroundSize: "20px 20px",
-          }}
-        />
+        {/* Gold sparkle / snow effect */}
+        <CTASparkles />
         <div className="relative z-10 container-x max-w-2xl mx-auto text-center">
           <Reveal>
             <p className="label !text-gold">Your Next Step</p>
