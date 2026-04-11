@@ -101,17 +101,7 @@ export default function Footer() {
         </div>
         <div className="container-x px-6 md:px-12 pb-6 flex flex-col md:flex-row justify-between gap-2 text-[11px] text-white/50">
           <p>© {new Date().getFullYear()} Nancy Musselman. All rights reserved.</p>
-          <p>
-            Designed by{" "}
-            <a
-              href="https://clientgrowth.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gold hover:text-goldLight"
-            >
-              Client Growth
-            </a>
-          </p>
+          <p>&nbsp;</p>
         </div>
       </div>
     </footer>
