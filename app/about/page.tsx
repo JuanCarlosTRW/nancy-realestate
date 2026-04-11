@@ -17,16 +17,22 @@ const FACTS = [
     num: "01",
     title: "50+ Years in DFW",
     body: "I have watched neighborhoods transform over decades. I know which areas are rising, which are overpriced, and which streets to avoid. This is not research. It is a lifetime of paying attention.",
+    quote:
+      "\u201CThis is not research. It is a lifetime of paying attention.\u201D",
   },
   {
     num: "02",
     title: "22 Years in Accounting and HR",
     body: "Two decades of managing numbers, managing people, and managing difficult situations. Precision from accounting. Composure from HR. That training shows up every time a deal gets complicated.",
+    quote:
+      "\u201CPrecision from accounting. Composure from HR.\u201D",
   },
   {
     num: "03",
     title: "Raised Around Construction",
     body: "I grew up on job sites. I see the foundation crack other agents step right over. I spot the patch job on the ceiling. When I walk through a home, I am reading the building, not just the listing.",
+    quote:
+      "\u201CWhen I walk through a home, I am reading the building, not just the listing.\u201D",
   },
 ];
 
@@ -99,15 +105,17 @@ export default function AboutPage() {
                 </p>
 
                 {/* Visual break before personal paragraph */}
-                <div className="w-16 h-px bg-gold/25 mx-auto my-10" />
+                <div className="w-20 h-px bg-gold/25 mx-auto mt-12 mb-6" />
 
-                <p>
-                  When I am not helping clients, you will probably find me on a
-                  long walk, spending time with family and friends, or planning
-                  my next trip. I love country and western music, jazz, and I am
-                  rooted in my faith. That is who I am outside of real estate,
-                  and it is the same person you get when we work together.
-                </p>
+                <div className="border-l-2 border-gold/20 pl-6">
+                  <p>
+                    When I am not helping clients, you will probably find me on a
+                    long walk, spending time with family and friends, or planning
+                    my next trip. I love country and western music, jazz, and I am
+                    rooted in my faith. That is who I am outside of real estate,
+                    and it is the same person you get when we work together.
+                  </p>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -129,7 +137,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* What I Bring to the Table — Pillar format */}
+      {/* What I Bring to the Table — Editorial split with pull quotes */}
       <section className="relative">
         <div className="pt-20 md:pt-28 pb-6 md:pb-8 px-6 md:px-12 lg:px-20 bg-warmWhite">
           <div className="container-x">
@@ -153,26 +161,46 @@ export default function AboutPage() {
               key={f.num}
               className={isAlt ? "bg-bgSection" : "bg-warmWhite"}
             >
-              <div className="container-x py-16 md:py-20 px-6 md:px-12 lg:px-20">
+              <div className="container-x py-14 md:py-20 px-6 md:px-12 lg:px-20">
                 <Reveal delay={i * 0.12}>
-                  <div className="relative max-w-4xl">
-                    {/* Decorative watermark number */}
-                    <span
-                      className="font-display text-[80px] md:text-[120px] text-gold/[0.12] leading-none font-light select-none absolute -top-4 md:-top-6 -left-2 md:-left-4 pointer-events-none"
-                      aria-hidden="true"
+                  <div
+                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-6xl mx-auto`}
+                  >
+                    {/* Text column */}
+                    <div
+                      className={`relative ${isAlt ? "md:order-2" : "md:order-1"}`}
                     >
-                      {f.num}
-                    </span>
+                      {/* Decorative watermark number */}
+                      <span
+                        className="font-display text-[100px] md:text-[160px] text-gold/[0.08] leading-none font-normal select-none absolute -top-6 md:-top-12 -left-2 md:-left-4 pointer-events-none"
+                        aria-hidden="true"
+                      >
+                        {f.num}
+                      </span>
 
-                    <div className="relative z-10 pt-8 md:pt-10">
-                      <h3 className="font-display text-[28px] md:text-[36px] lg:text-[42px] text-darkText leading-[1.15]">
+                      {/* Heading */}
+                      <h3 className="font-display text-[28px] md:text-[34px] lg:text-[40px] text-darkText leading-[1.15] relative z-10 pt-8 md:pt-12">
                         {f.title}
                       </h3>
-                      {/* Thin gold line separator */}
+
+                      {/* Thin gold line */}
                       <div className="w-[50px] h-[2px] bg-gold/50 mt-6" />
-                      <p className="body-p mt-8 text-[16px] md:text-[17px] leading-[1.8] max-w-2xl">
+
+                      {/* Body copy */}
+                      <p className="body-p mt-8 text-[15px] md:text-[16px] leading-[1.8] max-w-xl">
                         {f.body}
                       </p>
+                    </div>
+
+                    {/* Pull quote column */}
+                    <div
+                      className={`flex items-center ${isAlt ? "md:order-1" : "md:order-2"}`}
+                    >
+                      <blockquote className="border-l-4 border-gold/40 pl-8 md:pl-10 py-4">
+                        <p className="font-display italic text-[20px] md:text-[24px] text-darkText/80 leading-[1.5]">
+                          {f.quote}
+                        </p>
+                      </blockquote>
                     </div>
                   </div>
                 </Reveal>

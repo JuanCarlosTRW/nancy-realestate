@@ -53,7 +53,7 @@ export default function WhyNancy() {
             key={p.num}
             className={isAlt ? "bg-bgSection" : "bg-warmWhite"}
           >
-            <div className="container-x py-20 md:py-28 px-6 md:px-12 lg:px-20">
+            <div className="container-x py-14 md:py-20 px-6 md:px-12 lg:px-20">
               <Reveal delay={0.05}>
                 <div
                   className={`grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-6xl mx-auto ${
@@ -66,7 +66,7 @@ export default function WhyNancy() {
                   >
                     {/* Decorative watermark number */}
                     <span
-                      className="font-display text-[80px] md:text-[140px] text-gold/[0.12] leading-none font-light select-none absolute -top-4 md:-top-8 -left-2 md:-left-4 pointer-events-none"
+                      className="font-display text-[100px] md:text-[160px] text-gold/[0.08] leading-none font-normal select-none absolute -top-6 md:-top-12 -left-2 md:-left-4 pointer-events-none"
                       aria-hidden="true"
                     >
                       {p.num}
