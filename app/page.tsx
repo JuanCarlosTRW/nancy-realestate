@@ -89,7 +89,7 @@ export default function Home() {
           className="font-display font-light text-white leading-[1.08] max-w-3xl mx-auto"
           style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
         >
-          Your Home Search, Handled.
+          Your DFW Home Search.
           <br />
           <span
             className="italic text-gold"
@@ -97,13 +97,13 @@ export default function Home() {
               fontFamily: "var(--font-accent, 'Playfair Display', serif)",
             }}
           >
-            Your Sale, Protected.
+            Handled by Someone Who&apos;s Been Here All Along.
           </span>
         </h1>
         <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
-          50+ years of local knowledge. 22 years of professional precision. One
-          agent who treats your transaction like it&apos;s the only one that
-          matters &mdash; because it is.
+          I grew up on these streets. I raised my family in these
+          neighborhoods. When I guide you through buying or selling a home,
+          I&apos;m not learning the area &mdash; I&apos;m remembering it.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button href="/contact" variant="gold">
@@ -123,7 +123,7 @@ export default function Home() {
               50+ Years
             </p>
             <p className="mt-2 text-[11px] tracking-label uppercase font-medium text-white/50">
-              Rooted in DFW
+              Calling DFW Home
             </p>
           </div>
           <div className="hidden md:block w-px h-12 bg-gold/30" />
@@ -132,7 +132,7 @@ export default function Home() {
               22 Years
             </p>
             <p className="mt-2 text-[11px] tracking-label uppercase font-medium text-white/50">
-              Professional Precision
+              Of Reading People and Details
             </p>
           </div>
           <div className="hidden md:block w-px h-12 bg-gold/30" />
@@ -219,9 +219,8 @@ export default function Home() {
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 text-[15px]">
-                Every client gets the same thing: my full attention, my honest
-                opinion, and the peace of mind that comes from knowing someone
-                is watching every detail.
+                I take on a handful of clients at a time. That means you get
+                my full attention &mdash; not a fraction of it.
               </p>
             </div>
           </Reveal>
@@ -272,8 +271,8 @@ export default function Home() {
         <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
           {/* Photo — left with gold offset border */}
           <Reveal>
-            <div className="relative w-full max-w-[420px] mx-auto" style={{ paddingBottom: "20px", paddingRight: "20px" }}>
-              <div className="relative z-10 aspect-[3/4] w-full overflow-hidden shadow-warmLg">
+            <div className="relative w-full max-w-[420px] mx-auto">
+              <div className="aspect-[3/4] w-full overflow-hidden shadow-warmLg">
                 <Image
                   src={IMG.nancy}
                   alt="Nancy Musselman, Dallas real estate agent"
@@ -282,10 +281,6 @@ export default function Home() {
                   className="object-cover object-top"
                 />
               </div>
-              <div
-                className="absolute bottom-0 right-0 z-0 aspect-[3/4] w-full border-2"
-                style={{ borderColor: "var(--primary, #a67c52)" }}
-              />
             </div>
           </Reveal>
 
@@ -384,8 +379,8 @@ export default function Home() {
             <div className="group border border-bordr bg-white overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
               <div className="relative h-[240px] md:h-[280px] overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80"
-                  alt="Warm staged bedroom interior for home sellers"
+                  src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80"
+                  alt="Bright kitchen interior staged for home sellers"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.03]"
@@ -540,7 +535,7 @@ export default function Home() {
               className="font-display font-light text-white leading-[1.1] mt-4"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
-              You Deserve an Agent Who Puts You First.
+              Let&apos;s Start With a Conversation.
               <br />
               <span
                 className="italic text-gold"
@@ -549,12 +544,13 @@ export default function Home() {
                     "var(--font-accent, 'Playfair Display', serif)",
                 }}
               >
-                Let&apos;s Start There.
+                No Pressure. Just Clarity.
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
-              No pressure. No pitch. Just a real conversation about what you
-              need and how I can help you get there with confidence.
+              Tell me what you&apos;re looking for, what&apos;s worrying you,
+              and where you want to end up. I&apos;ll tell you honestly what I
+              can do &mdash; and what to watch out for.
             </p>
             <div className="mt-10">
               <Button href="/contact" variant="gold">
