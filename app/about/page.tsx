@@ -71,8 +71,9 @@ export default function AboutPage() {
 
                 <blockquote className="border-l-2 border-gold/40 pl-6 my-10">
                   <p className="font-display italic text-[22px] md:text-[26px] text-gold/80 leading-[1.4]">
-                    &ldquo;I don&apos;t get rattled easily. That last part
-                    matters more than most people realize in real estate.&rdquo;
+                    &ldquo;Most agents have never had to fire someone, deliver
+                    hard news to a boardroom, or hold a company together through
+                    a crisis. I have.&rdquo;
                   </p>
                 </blockquote>
 
@@ -91,8 +92,9 @@ export default function AboutPage() {
 
                 <blockquote className="border-l-2 border-gold/40 pl-6 my-10">
                   <p className="font-display italic text-[22px] md:text-[26px] text-gold/80 leading-[1.4]">
-                    &ldquo;I notice the details. I ask the questions that
-                    matter.&rdquo;
+                    &ldquo;Other agents see a beautiful kitchen. I see the patch
+                    job on the ceiling and the foundation crack behind the
+                    pantry.&rdquo;
                   </p>
                 </blockquote>
 
@@ -104,8 +106,21 @@ export default function AboutPage() {
                   the DFW area, I&apos;d love to help.
                 </p>
 
+                {/* Second Nancy photo — contextual/casual */}
+                <div className="mt-12 mb-10">
+                  <div className="relative w-full max-w-[500px] aspect-[3/2] overflow-hidden border border-bordr">
+                    <Image
+                      src={IMG.nancy}
+                      alt="Nancy Musselman in Dallas"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 500px"
+                      className="object-cover object-center"
+                    />
+                  </div>
+                </div>
+
                 {/* Visual break before personal paragraph */}
-                <div className="w-20 h-px bg-gold/25 mx-auto mt-12 mb-6" />
+                <div className="w-20 h-px bg-gold/25 mx-auto mt-6 mb-6" />
 
                 <div className="border-l-2 border-gold/20 pl-6">
                   <p>

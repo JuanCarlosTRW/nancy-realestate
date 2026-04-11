@@ -24,7 +24,7 @@ const HOODS: Hood[] = [
   {
     name: "Preston Hollow",
     descriptor: "One of Dallas's most sought-after addresses",
-    img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
   },
   {
     name: "Frisco",
@@ -39,7 +39,7 @@ const HOODS: Hood[] = [
   {
     name: "Grapevine",
     descriptor: "Historic charm with modern convenience",
-    img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600&q=80",
   },
   {
     name: "Colleyville",

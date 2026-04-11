@@ -36,14 +36,11 @@ export default function MeetAgent() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="body-p mt-8">
-              I didn&apos;t become a REALTOR by accident. I spent decades
-              watching this city grow, raising my family here, and waiting for
-              the right moment. When my kids grew up, I finally did what I
-              always wanted.
-            </p>
-            <p className="body-p mt-5">
-              Real estate lets me combine everything I&apos;m good at. Knowing
-              Dallas, reading people, and making sure every detail is right.
+              I did not become a REALTOR by accident. I spent decades watching
+              this city grow, raising my family here, and waiting for the right
+              moment. Real estate lets me combine everything I am good
+              at&nbsp;&mdash; knowing Dallas, reading people, and making sure
+              every detail is right.
             </p>
           </Reveal>
 
