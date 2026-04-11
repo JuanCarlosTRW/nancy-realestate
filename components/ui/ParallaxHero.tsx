@@ -20,14 +20,14 @@ export default function ParallaxHero({
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start end", "end start"],
+    offset: ["start start", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
     <div
       ref={container}
-      className="relative w-full overflow-hidden h-[50vh] md:h-[70vh]"
+      className="relative w-full overflow-hidden h-[60vh] md:h-[75vh]"
     >
       {/* Parallax background image */}
       <motion.div className="absolute inset-0 h-[130%] w-full" style={{ y }}>
@@ -45,7 +45,7 @@ export default function ParallaxHero({
       <div
         className="absolute inset-0 z-[1]"
         style={{
-          background: `linear-gradient(to bottom, rgba(28, 23, 18, ${overlayOpacity}), rgba(28, 23, 18, ${overlayOpacity + 0.1}))`,
+          background: `linear-gradient(to bottom, rgba(28, 23, 18, ${overlayOpacity}), rgba(28, 23, 18, ${overlayOpacity + 0.15}))`,
         }}
       />
 

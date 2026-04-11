@@ -55,8 +55,8 @@ export default function AboutPage() {
     <>
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
       <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80"
-        imageAlt="Dallas Texas skyline at dusk"
+        imageSrc="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
+        imageAlt="Beautiful home exterior in Dallas Texas"
         overlayOpacity={0.5}
       >
         <p className="label mb-4 !text-gold">About Nancy</p>
@@ -83,8 +83,7 @@ export default function AboutPage() {
           {/* Photo — left */}
           <Reveal>
             <div className="relative w-full max-w-[460px] mx-auto">
-              {/* Decorative border accent */}
-              <div className="absolute -bottom-3 -right-3 h-full w-full border-2 border-gold/40 hidden md:block" />
+              <div className="absolute -bottom-3 -right-3 h-full w-full border-2 border-gold/30 hidden md:block" />
               <div className="relative aspect-[3/4] overflow-hidden shadow-warmLg">
                 <Image
                   src={IMG.nancy}
@@ -139,6 +138,27 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ─── Gold divider ─────────────────────────────────────────── */}
+      <div
+        className="mx-auto h-px w-full max-w-6xl"
+        style={{ background: "linear-gradient(90deg, transparent, #C8A97E, transparent)" }}
+      />
+
+      {/* ─── ACCENT QUOTE ─────────────────────────────────────────── */}
+      <section className="bg-charcoal px-6 py-16 md:py-20">
+        <Reveal>
+          <p
+            className="mx-auto max-w-3xl text-center text-xl md:text-3xl lg:text-4xl font-normal italic leading-relaxed text-white/90"
+            style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}
+          >
+            &ldquo;I didn&apos;t start a new career.
+            <br />
+            I finally started the one{" "}
+            <span className="text-gold">I was always meant for.</span>&rdquo;
+          </p>
+        </Reveal>
+      </section>
+
       {/* ─── SECTION 3: SKILL CARDS ───────────────────────────────── */}
       <section className="section-pad bg-warmWhite">
         <div className="container-x max-w-6xl mx-auto">
@@ -160,9 +180,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {SKILLS.map((skill, i) => (
               <Reveal key={skill.number} delay={i * 0.12}>
-                <div className="group relative h-full border border-bordr bg-bgSection p-8 md:p-10 transition-all duration-500 hover:-translate-y-1">
-                  {/* Number accent */}
-                  <span className="block font-display text-[48px] font-extralight text-gold/40 mb-4">
+                <div className="group relative h-full border border-bordr bg-white p-8 md:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm overflow-hidden">
+                  <span className="block font-display text-[60px] font-extralight text-gold/20 mb-4 leading-none">
                     {skill.number}
                   </span>
                   <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.2] mb-4">
@@ -171,7 +190,6 @@ export default function AboutPage() {
                   <p className="body-p text-[14px] md:text-[15px] leading-[1.8]">
                     {skill.description}
                   </p>
-                  {/* Bottom border accent on hover */}
                   <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                 </div>
               </Reveal>
@@ -180,20 +198,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ─── SECTION 4: NEIGHBORHOODS ─────────────────────────────── */}
-      <section className="section-pad bg-bgSection">
+      {/* ─── Gold divider ─────────────────────────────────────────── */}
+      <div
+        className="mx-auto h-px w-full max-w-6xl"
+        style={{ background: "linear-gradient(90deg, transparent, #C8A97E, transparent)" }}
+      />
+
+      {/* ─── SECTION 4: NEIGHBORHOODS (DARK) ──────────────────────── */}
+      <section className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal">
         <div className="container-x max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <p className="label">Where I Work</p>
-              <h2 className="h-display mt-4">
+              <p className="label !text-gold">Where I Work</p>
+              <h2
+                className="font-display font-light text-white leading-[1.1] mt-4"
+                style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
+              >
                 The Neighborhoods I Know{" "}
-                <span className="italic text-gold">
+                <br className="hidden md:block" />
+                <span
+                  className="italic text-gold"
+                  style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}
+                >
                   Because I&apos;ve Lived the Change
                 </span>
               </h2>
-              <AnimatedDivider className="w-16 mx-auto mt-8" />
-              <p className="body-p mt-6 text-[15px]">
+              <div className="gold-divider w-16 mx-auto mt-8" />
+              <p className="mt-6 text-[15px] font-light text-white/60">
                 50+ years of watching DFW transform gives you a perspective no
                 MLS search can replicate.
               </p>
@@ -203,17 +234,16 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {NEIGHBORHOODS.map((hood, i) => (
               <Reveal key={hood.name} delay={i * 0.06}>
-                <div className="group relative h-full border border-bordr bg-warmWhite p-6 transition-all duration-500 hover:-translate-y-1 overflow-hidden">
-                  <h3 className="font-display text-[20px] text-darkText leading-[1.2] mb-1">
+                <div className="group relative h-full border border-white/10 bg-white/5 backdrop-blur-sm p-6 transition-all duration-500 hover:-translate-y-1 hover:border-gold/30 hover:bg-white/10 overflow-hidden">
+                  <h3 className="font-display text-[20px] text-white leading-[1.2] mb-1">
                     {hood.name}
                   </h3>
                   <p className="text-[11px] tracking-label uppercase font-medium text-gold mb-2">
                     {hood.tagline}
                   </p>
-                  <p className="text-[14px] font-light italic text-mediumText leading-[1.6]">
+                  <p className="text-[14px] font-light italic text-white/50 leading-[1.6]">
                     {hood.detail}
                   </p>
-                  {/* Hover accent */}
                   <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                 </div>
               </Reveal>
@@ -224,39 +254,50 @@ export default function AboutPage() {
 
       {/* ─── SECTION 5: TESTIMONIAL ───────────────────────────────── */}
       <section className="section-pad bg-warmWhite">
-        <div className="container-x max-w-3xl mx-auto text-center">
+        <div className="container-x max-w-3xl mx-auto">
           <Reveal>
-            <p className="label">What My Clients Say</p>
+            <div className="border border-bordr bg-white p-10 md:p-14 text-center shadow-sm">
+              <p className="label mb-6">What My Clients Say</p>
 
-            {/* Large opening quote mark */}
-            <span
-              className="block font-display text-[80px] md:text-[100px] font-light text-gold/30 leading-none mt-6 -mb-4 select-none"
-              aria-hidden="true"
-            >
-              &ldquo;
-            </span>
+              <span
+                className="block text-[80px] md:text-[100px] font-light text-gold/30 leading-none -mb-4 select-none"
+                style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}
+                aria-hidden="true"
+              >
+                &ldquo;
+              </span>
 
-            <blockquote className="font-display italic text-[20px] md:text-[24px] text-darkText leading-[1.6] mb-8">
-              Nancy made our dream home on the Preston Trails Golf Course in
-              Bent Tree a reality. Her attention to detail, patience through
-              every step, and genuine care for what we wanted made all the
-              difference. She wasn&apos;t just our agent &mdash; she felt like
-              family guiding us home.
-            </blockquote>
+              <blockquote
+                className="italic text-[20px] md:text-[24px] text-darkText leading-[1.6] mb-8"
+                style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}
+              >
+                Nancy made our dream home on the Preston Trails Golf Course in
+                Bent Tree a reality. Her attention to detail, patience through
+                every step, and genuine care for what we wanted made all the
+                difference. She wasn&apos;t just our agent &mdash; she felt like
+                family guiding us home.
+              </blockquote>
 
-            <div className="w-[60px] h-px bg-gold/40 mx-auto mb-5" />
+              <div className="w-[60px] h-px bg-gold/40 mx-auto mb-5" />
 
-            <p className="text-[13px] tracking-button uppercase font-medium text-darkText">
-              Bent Tree Homebuyer
-            </p>
-            <p className="text-[11px] tracking-label uppercase text-gold mt-1 font-light">
-              Preston Trails Golf Course, Dallas
-            </p>
+              <p className="text-[13px] tracking-button uppercase font-medium text-darkText">
+                Bent Tree Homebuyer
+              </p>
+              <p className="text-[11px] tracking-label uppercase text-gold mt-1 font-light">
+                Preston Trails Golf Course, Dallas
+              </p>
+            </div>
           </Reveal>
         </div>
       </section>
 
-      {/* ─── SECTION 6: CTA ───────────────────────────────────────── */}
+      {/* ─── Gold divider ─────────────────────────────────────────── */}
+      <div
+        className="mx-auto h-px w-full max-w-6xl"
+        style={{ background: "linear-gradient(90deg, transparent, #C8A97E, transparent)" }}
+      />
+
+      {/* ─── SECTION 6: CTA (DARK) ────────────────────────────────── */}
       <section className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal">
         <div className="container-x max-w-2xl mx-auto text-center">
           <Reveal>
