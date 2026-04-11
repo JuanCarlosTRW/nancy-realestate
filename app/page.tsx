@@ -58,7 +58,7 @@ const HOODS = [
   {
     name: "Flower Mound",
     descriptor: "Top-rated schools and a small-town feel",
-    img: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80",
   },
   {
     name: "Grapevine",
@@ -93,7 +93,7 @@ export default function Home() {
           className="font-display font-light text-white leading-[1.08] max-w-3xl mx-auto"
           style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
         >
-          Your Home. Your Neighborhood.
+          Your Next Chapter Starts
           <br />
           <span
             className="italic text-gold"
@@ -101,13 +101,14 @@ export default function Home() {
               fontFamily: "var(--font-accent, 'Playfair Display', serif)",
             }}
           >
-            I&apos;ll Know It Before You Walk In.
+            With the Right Guide.
           </span>
         </h1>
         <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
-          50+ years in DFW. 22 years reading people and catching details.
-          When I walk a home with you, I&apos;m not learning the area
-          &mdash; I&apos;m remembering it.
+          Whether you&apos;re buying your first home or selling the one your
+          kids grew up in &mdash; you deserve someone who knows these
+          neighborhoods, catches what others miss, and puts your interests
+          first. Every time.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button href="/contact" variant="gold">
@@ -239,7 +240,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {CARDS.map((card, i) => (
               <Reveal key={card.number} delay={i * 0.12}>
-                <div className="group relative h-full min-h-[260px] flex flex-col overflow-hidden border border-bordr bg-white p-8 md:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
+                <div className="group relative h-full min-h-[280px] flex flex-col overflow-hidden border border-bordr bg-white p-8 md:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-lg">
                   <span
                     className="absolute -top-6 -left-3 font-display text-[150px] font-thin leading-none select-none"
                     style={{
@@ -362,32 +363,34 @@ export default function Home() {
           {/* Buy Card */}
           <Reveal>
             <div className="group border border-bordr bg-white overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
-              <div className="relative h-[240px] md:h-[280px] overflow-hidden">
+              <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80"
-                  alt="Warm American home exterior in Dallas neighborhood"
+                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
+                  alt="House keys in hand — the dream of buying a home"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.03]"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <p className="absolute bottom-5 left-6 text-[11px] tracking-label uppercase font-medium text-gold">
                   For Buyers
                 </p>
               </div>
-              <div className="p-8 md:p-10">
-                <h3 className="font-display text-[26px] md:text-[28px] text-darkText leading-tight">
-                  Find the Right Home &mdash; Not Just Any Home
-                </h3>
-                <p className="body-p mt-4 text-[14px] md:text-[15px]">
-                  Finding the right home in Dallas takes more than browsing
-                  listings. It takes someone who knows which streets to skip,
-                  which neighborhoods are climbing, and what a listing photo
-                  isn&apos;t showing you.
-                </p>
+              <div className="flex min-h-[200px] flex-col justify-between p-6 md:p-8">
+                <div>
+                  <h3 className="font-display text-[24px] md:text-[26px] text-darkText leading-tight mb-3">
+                    Find the Right Home &mdash; Not Just Any Home
+                  </h3>
+                  <p className="body-p text-[14px] md:text-[15px]">
+                    Finding the right home in Dallas takes more than browsing
+                    listings. It takes someone who knows which streets to skip,
+                    which neighborhoods are climbing, and what a listing photo
+                    isn&apos;t showing you.
+                  </p>
+                </div>
                 <Link
                   href="/buy"
-                  className="mt-6 inline-block text-[12px] tracking-button uppercase font-medium text-gold hover:text-goldDark transition-colors"
+                  className="mt-4 inline-block text-[12px] tracking-button uppercase font-medium text-gold hover:text-goldDark transition-colors"
                 >
                   Start Your Search &rarr;
                 </Link>
@@ -398,32 +401,34 @@ export default function Home() {
           {/* Sell Card */}
           <Reveal delay={0.1}>
             <div className="group border border-bordr bg-white overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
-              <div className="relative h-[240px] md:h-[280px] overflow-hidden">
+              <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80"
-                  alt="Bright kitchen interior staged for home sellers"
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
+                  alt="Real estate SOLD sign — the seller dream outcome"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.03]"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <p className="absolute bottom-5 left-6 text-[11px] tracking-label uppercase font-medium text-gold">
                   For Sellers
                 </p>
               </div>
-              <div className="p-8 md:p-10">
-                <h3 className="font-display text-[26px] md:text-[28px] text-darkText leading-tight">
-                  Price It Right. Prep It Smart. Sell It Fast.
-                </h3>
-                <p className="body-p mt-4 text-[14px] md:text-[15px]">
-                  Most homes sit on the market because they were overpriced from
-                  day one. I will price it based on what actually sold, prep it
-                  for what buyers actually notice, and get it in front of
-                  serious buyers fast.
-                </p>
+              <div className="flex min-h-[200px] flex-col justify-between p-6 md:p-8">
+                <div>
+                  <h3 className="font-display text-[24px] md:text-[26px] text-darkText leading-tight mb-3">
+                    Price It Right. Prep It Smart. Sell It Fast.
+                  </h3>
+                  <p className="body-p text-[14px] md:text-[15px]">
+                    Most homes sit on the market because they were overpriced
+                    from day one. I will price it based on what actually sold,
+                    prep it for what buyers actually notice, and get it in front
+                    of serious buyers fast.
+                  </p>
+                </div>
                 <Link
                   href="/sell"
-                  className="mt-6 inline-block text-[12px] tracking-button uppercase font-medium text-gold hover:text-goldDark transition-colors"
+                  className="mt-4 inline-block text-[12px] tracking-button uppercase font-medium text-gold hover:text-goldDark transition-colors"
                 >
                   Get Your Home Sold &rarr;
                 </Link>
