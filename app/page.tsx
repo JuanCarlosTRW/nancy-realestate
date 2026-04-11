@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import HeroIntro from "@/components/home/HeroIntro";
 import ParallaxHero from "@/components/ui/ParallaxHero";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
@@ -76,6 +77,9 @@ const HOODS = [
 export default function Home() {
   return (
     <>
+      {/* ─── CINEMATIC INTRO OVERLAY ─────────────────────────────── */}
+      <HeroIntro />
+
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
       <ParallaxHero
         imageSrc="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80"
@@ -89,7 +93,7 @@ export default function Home() {
           className="font-display font-light text-white leading-[1.08] max-w-3xl mx-auto"
           style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
         >
-          Your DFW Home Search.
+          Your Home. Your Neighborhood.
           <br />
           <span
             className="italic text-gold"
@@ -97,13 +101,13 @@ export default function Home() {
               fontFamily: "var(--font-accent, 'Playfair Display', serif)",
             }}
           >
-            Handled by Someone Who&apos;s Been Here All Along.
+            I&apos;ll Know It Before You Walk In.
           </span>
         </h1>
         <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
-          I grew up on these streets. I raised my family in these
-          neighborhoods. When I guide you through buying or selling a home,
-          I&apos;m not learning the area &mdash; I&apos;m remembering it.
+          50+ years in DFW. 22 years reading people and catching details.
+          When I walk a home with you, I&apos;m not learning the area
+          &mdash; I&apos;m remembering it.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button href="/contact" variant="gold">
@@ -146,6 +150,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ─── Micro authority line ────────────────────────────────── */}
+      <div className="bg-warmWhite py-4 text-center md:py-6">
+        <p className="font-sans text-xs font-medium uppercase tracking-[0.2em] text-mediumText/70">
+          Trusted by families across Bent Tree, Plano, Richardson, and North Dallas
+        </p>
+      </div>
 
       {/* ─── SECTION 3: TESTIMONIAL — PROOF EARLY (LIGHT) ─────────── */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-warmWhite">
@@ -320,20 +331,29 @@ export default function Home() {
       </section>
 
       {/* ─── SECTION 6: ACCENT QUOTE (DARK) ───────────────────────── */}
-      <section className="bg-charcoal px-6 py-14 md:py-20">
-        <Reveal>
-          <p
-            className="mx-auto max-w-3xl text-center text-2xl md:text-3xl lg:text-4xl font-normal italic leading-relaxed text-white"
-            style={{
-              fontFamily: "var(--font-accent, 'Playfair Display', serif)",
-            }}
-          >
-            Some people sell houses.
-            <br />
-            I help people{" "}
-            <span className="text-gold">come home.</span>
-          </p>
-        </Reveal>
+      <section className="bg-charcoal px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <Reveal>
+            {/* Top decorative line */}
+            <div className="mx-auto mb-8 h-px w-16 bg-gold" />
+
+            <p
+              className="text-3xl font-normal italic leading-relaxed text-white md:text-4xl lg:text-5xl"
+              style={{
+                fontFamily:
+                  "var(--font-accent, 'Playfair Display', serif)",
+              }}
+            >
+              Some people sell houses.
+              <br />
+              I help people{" "}
+              <span className="text-gold">come home.</span>
+            </p>
+
+            {/* Bottom decorative line */}
+            <div className="mx-auto mt-8 h-px w-16 bg-gold" />
+          </Reveal>
+        </div>
       </section>
 
       {/* ─── SECTION 7: BUY / SELL DUAL CARDS (LIGHT) ─────────────── */}
@@ -357,12 +377,13 @@ export default function Home() {
               </div>
               <div className="p-8 md:p-10">
                 <h3 className="font-display text-[26px] md:text-[28px] text-darkText leading-tight">
-                  Ready to Buy?
+                  Find the Right Home &mdash; Not Just Any Home
                 </h3>
                 <p className="body-p mt-4 text-[14px] md:text-[15px]">
                   Finding the right home in Dallas takes more than browsing
-                  Zillow. It takes someone who knows which streets to avoid and
-                  which neighborhoods are quietly becoming the next big thing.
+                  listings. It takes someone who knows which streets to skip,
+                  which neighborhoods are climbing, and what a listing photo
+                  isn&apos;t showing you.
                 </p>
                 <Link
                   href="/buy"
@@ -392,12 +413,13 @@ export default function Home() {
               </div>
               <div className="p-8 md:p-10">
                 <h3 className="font-display text-[26px] md:text-[28px] text-darkText leading-tight">
-                  Time to Sell?
+                  Price It Right. Prep It Smart. Sell It Fast.
                 </h3>
                 <p className="body-p mt-4 text-[14px] md:text-[15px]">
                   Most homes sit on the market because they were overpriced from
-                  day one. I will price it right, prep it well, and get it in
-                  front of serious buyers fast.
+                  day one. I will price it based on what actually sold, prep it
+                  for what buyers actually notice, and get it in front of
+                  serious buyers fast.
                 </p>
                 <Link
                   href="/sell"
@@ -535,7 +557,7 @@ export default function Home() {
               className="font-display font-light text-white leading-[1.1] mt-4"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
-              Let&apos;s Start With a Conversation.
+              Tell Me What You Need.
               <br />
               <span
                 className="italic text-gold"
@@ -544,13 +566,12 @@ export default function Home() {
                     "var(--font-accent, 'Playfair Display', serif)",
                 }}
               >
-                No Pressure. Just Clarity.
+                I&apos;ll Tell You What Actually Makes Sense.
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
-              Tell me what you&apos;re looking for, what&apos;s worrying you,
-              and where you want to end up. I&apos;ll tell you honestly what I
-              can do &mdash; and what to watch out for.
+              No sales pitch. No pressure. Just an honest conversation about
+              your goals and a clear plan for how to get there.
             </p>
             <div className="mt-10">
               <Button href="/contact" variant="gold">
