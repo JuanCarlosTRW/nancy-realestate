@@ -1,44 +1,10 @@
 import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
-import { Quote } from "lucide-react";
-
-const TESTIMONIALS = [
-  {
-    photo:
-      "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&q=80",
-    photoAlt: "Bent Tree neighborhood, Dallas",
-    quote:
-      "Nancy made the entire process of buying our home in Bent Tree incredibly smooth. She was detail-oriented, always available, and made us feel taken care of every step of the way.",
-    name: "The Martinez Family",
-    subtitle: "Bought Their Home in Bent Tree",
-    placeholder: false,
-  },
-  {
-    photo:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
-    photoAlt: "Preston Hollow home exterior",
-    quote:
-      "We looked at over twenty homes before Nancy found the one. She knew exactly which streets to focus on and which to skip. That saved us months.",
-    name: "The Richardson Family",
-    subtitle: "Bought in Preston Hollow",
-    placeholder: true,
-  },
-  {
-    photo:
-      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=600&auto=format&fit=crop",
-    photoAlt: "North Dallas home exterior",
-    quote:
-      "Nancy priced our home correctly from day one. We had three offers in the first week. Her advice on what to fix and what to leave alone saved us thousands in unnecessary renovations.",
-    name: "The Okafor Family",
-    subtitle: "Sold Their Home in North Dallas",
-    placeholder: true,
-  },
-];
 
 export default function Testimonials() {
   return (
-    <section className="section-pad bg-warmWhite">
+    <section className="section-pad bg-bgSection">
       <div className="container-x">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto mb-14">
@@ -50,50 +16,57 @@ export default function Testimonials() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {TESTIMONIALS.map((t, i) => (
-            <Reveal key={t.name} delay={i * 0.1}>
-              {/* PLACEHOLDER: Replace with real testimonial from Nancy */}
-              {t.placeholder && (
-                <span className="hidden">
-                  {/* PLACEHOLDER: Replace with real testimonial from Nancy */}
-                </span>
-              )}
-              <div className="h-full bg-bgSection border border-bordr overflow-hidden flex flex-col">
-                {/* Photo */}
-                <div className="relative h-[220px] md:h-[200px]">
-                  <Image
-                    src={t.photo}
-                    alt={t.photoAlt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
-                  />
-                </div>
+        <Reveal delay={0.1}>
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[45%_55%] gap-0 overflow-hidden">
+            {/* Left — property photo */}
+            <div className="relative h-[250px] md:h-auto md:min-h-[450px]">
+              <Image
+                src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80"
+                alt="Bent Tree neighborhood, Dallas"
+                fill
+                sizes="(max-width: 768px) 100vw, 45vw"
+                className="object-cover"
+              />
+            </div>
 
-                {/* Content */}
-                <div className="p-8 md:p-8 flex flex-col flex-1">
-                  <Quote
-                    size={28}
-                    className="text-gold/40 mb-4 shrink-0"
-                    strokeWidth={1}
-                  />
-                  <p className="font-display italic text-[17px] md:text-[18px] text-darkText leading-[1.5] flex-1">
-                    {t.quote}
-                  </p>
-                  <div className="mt-6 pt-6 border-t border-bordr">
-                    <p className="text-[12px] tracking-button uppercase font-medium text-darkText">
-                      {t.name}
-                    </p>
-                    <p className="text-[11px] tracking-label uppercase font-medium text-gold mt-1">
-                      {t.subtitle}
-                    </p>
-                  </div>
-                </div>
+            {/* Right — testimonial content */}
+            <div className="bg-warmWhite p-8 md:p-14 lg:pl-14 lg:pr-16 flex flex-col justify-center relative">
+              {/* Decorative quotation mark */}
+              <span
+                className="font-display text-[80px] md:text-[120px] text-goldLight/30 leading-none select-none absolute top-4 md:top-6 right-6 md:right-10 pointer-events-none"
+                aria-hidden="true"
+              >
+                &ldquo;
+              </span>
+
+              <p
+                className="font-display italic text-darkText leading-[1.6] relative z-10"
+                style={{ fontSize: "clamp(20px, 2.5vw, 26px)" }}
+              >
+                Nancy made the entire process of buying our home in Bent Tree
+                incredibly smooth. She was detail-oriented, always available,
+                and made us feel taken care of every step of the way.
+              </p>
+
+              <div className="w-[60px] h-px bg-gold/30 mt-8" />
+
+              <div className="mt-6">
+                <p className="text-[13px] tracking-[0.15em] uppercase font-semibold text-darkText">
+                  The Martinez Family
+                </p>
+                <p className="text-[11px] tracking-[0.1em] uppercase text-goldLight mt-1">
+                  Bought Their Home in Bent Tree
+                </p>
               </div>
-            </Reveal>
-          ))}
-        </div>
+
+              {/* Client photo placeholder */}
+              <div className="mt-8">
+                {/* PLACEHOLDER: Replace with Martinez family photo */}
+                <div className="w-[60px] h-[60px] rounded-full border-2 border-gold bg-bordr/50 overflow-hidden" />
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

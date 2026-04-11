@@ -5,11 +5,13 @@ import { SparklesCore } from "@/components/ui/sparkles";
 export default function CTABanner({
   title = "Ready to Make Your Move?",
   subtitle = "Whether you have one question or you're ready to start today, reach out. No pressure, no sales pitch.",
+  commitment,
   cta = "Let\u0027s Talk",
   href = "/contact",
 }: {
   title?: string;
   subtitle?: string;
+  commitment?: string;
   cta?: string;
   href?: string;
 }) {
@@ -44,9 +46,15 @@ export default function CTABanner({
           {title}
         </h2>
         <div className="gold-divider w-16 mx-auto mb-8" />
-        <p className="max-w-xl mx-auto text-[15px] leading-[1.9] font-light text-white/75 mb-10">
+        <p className="max-w-xl mx-auto text-[15px] leading-[1.9] font-light text-white/75 mb-6">
           {subtitle}
         </p>
+        {commitment && (
+          <p className="font-display italic text-[18px] text-goldLight mb-10">
+            {commitment}
+          </p>
+        )}
+        {!commitment && <div className="mb-4" />}
         <ShinyButton href={href}>
           {cta}
         </ShinyButton>

@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
+import InteractiveSplitSection from "@/components/ui/InteractiveSplitSection";
 
 export const metadata: Metadata = {
   title: "Buying a Home in Dallas | Nancy Musselman",
@@ -15,48 +16,59 @@ const STEPS = [
   {
     n: "01",
     title: "Let\u2019s Talk First",
-    body: "Before we look at a single home, I want to understand what you are really looking for. Neighborhood, lifestyle, budget, timeline. The more I know upfront, the better the outcome.",
+    body: "Most buyers start by scrolling listings online for months. That is backwards. I start by understanding what actually matters to you \u2014 not just bedrooms and budget, but the street you want to live on, the commute you can tolerate, and the neighborhood that fits how your family actually lives. The more honest this conversation is, the fewer wrong houses we waste time on.",
   },
   {
     n: "02",
     title: "Get Pre-Approved",
-    body: "I will connect you with trusted lenders in the Dallas area so you can move fast when the right home comes along. In this market, being pre-approved is not optional. It is what separates serious buyers from window shoppers.",
+    body: "In this market, a home you love will not wait for your financing to catch up. I will connect you with lenders I trust in the Dallas area so you are ready to move the same day you find the right one. Being pre-approved is not just smart \u2014 it is the difference between getting the house and watching someone else get it.",
   },
   {
     n: "03",
     title: "Tour Homes Together",
-    body: "I know these neighborhoods personally. I will point out what to look for and what to watch out for. The things you will not notice in photos, I will catch in person.",
+    body: "I do not just open doors and let you wander. I grew up around construction. I will point out the things you will not notice in photos \u2014 the water stain that means a roof problem, the slope in the floor that means foundation work, the renovation that looks beautiful but was done without permits. That is the difference between buying a home and buying a problem.",
   },
   {
     n: "04",
     title: "Make a Strong Offer",
-    body: "In this market, the right offer is not just about price. It is about terms, timing, and knowing what the seller cares about. I will help you put together an offer that wins without leaving money on the table.",
+    body: "The right offer is not just about price. It is about terms, timing, and knowing what the seller actually cares about. My background in HR taught me how to read people and negotiate situations where both sides feel good about the outcome. I will help you win the house without overpaying for it.",
   },
   {
     n: "05",
     title: "Close With Confidence",
-    body: "From inspection to keys in hand, I track every detail so nothing falls through. My background in accounting and HR means I manage the process with precision and keep you informed at every step.",
+    body: "Between the accepted offer and the keys in your hand, a hundred things can go sideways. Inspection issues, appraisal gaps, title problems, lender delays. I have spent twenty-two years managing complex, high-stakes situations where the details matter and the timeline is tight. From contract to close, nothing slips through on my watch.",
   },
 ];
 
-const PILLARS = [
+const SPLIT_ITEMS = [
   {
-    num: "01",
-    title: "Neighborhoods You Will Not Find on a Top-10 List",
-    body: "I know Dallas neighborhoods that never make the best-of lists but should. The quiet streets with great schools, the blocks where values are climbing, the areas most agents overlook. Let me show you the ones that actually fit your life.",
-    quote: "\u201CThe best neighborhoods are not always the most famous ones.\u201D",
+    label: "Neighborhoods You Will Not Find on a Top-10 List",
+    image:
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop",
+    imageAlt: "Charming Dallas residential street",
+    description:
+      "I know Dallas neighborhoods that never make the best-of lists but should. The quiet streets with great schools, the blocks where values are climbing, the areas most agents overlook. Let me show you the ones that actually fit your life.",
+    pullQuote:
+      "The best neighborhoods are not always the most famous ones.",
   },
   {
-    num: "02",
-    title: "Steady Under Pressure",
-    body: "My background in accounting and HR means I do not flinch when negotiations get tense. I stay composed so you can too. When a counteroffer comes in lower than expected or a deadline is tight, I keep a clear head so you can make confident decisions. That steadiness comes from two decades of navigating high-pressure professional situations.",
-    quote: "\u201CI am the calm in the room when everyone else is not.\u201D",
+    label: "Steady Under Pressure",
+    image:
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
+    imageAlt: "Calm professional interior",
+    description:
+      "My background in accounting and HR means I do not flinch when negotiations get tense. When a counteroffer comes in lower than expected or a deadline is tight, I keep a clear head so you can make confident decisions. That steadiness comes from two decades of navigating high-pressure professional situations.",
+    pullQuote:
+      "I am the calm in the room when everyone else is not.",
   },
   {
-    num: "03",
-    title: "Honest About What You Are Looking At",
-    body: "I was raised around construction. I will tell you the truth about a home. What is solid, what needs work, and what will cost you. No surprises after closing.",
-    quote: "\u201CI read the building, not just the listing.\u201D",
+    label: "Honest About What You Are Looking At",
+    image:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+    imageAlt: "Home construction detail",
+    description:
+      "I was raised around construction. I will tell you the truth about a home. What is solid, what needs work, and what will cost you. No surprises after closing.",
+    pullQuote: "I read the building, not just the listing.",
   },
 ];
 
@@ -100,7 +112,6 @@ export default function BuyPage() {
             {STEPS.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.08}>
                 <div className="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start">
-                  {/* Number column with connector line */}
                   <div className="flex flex-col items-center">
                     <span className="font-display text-[40px] md:text-[48px] text-gold/30 leading-none font-light select-none">
                       {s.n}
@@ -109,7 +120,6 @@ export default function BuyPage() {
                       <div className="w-px flex-1 bg-gold/15 mt-3 min-h-[40px]" />
                     )}
                   </div>
-                  {/* Content */}
                   <div className="pb-10 md:pb-12">
                     <h3 className="font-display text-[26px] md:text-[30px] text-darkText leading-tight">
                       {s.title}
@@ -123,96 +133,38 @@ export default function BuyPage() {
         </div>
       </section>
 
-      {/* Neighborhood lifestyle photo */}
-      <Reveal>
-        <div className="container-x px-6 md:px-12 lg:px-20 py-4">
-          <div className="relative w-full h-[250px] md:h-[400px] overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1400&auto=format&fit=crop"
-              alt="Beautiful residential street in Preston Hollow, Dallas"
-              fill
-              sizes="(max-width: 768px) 100vw, 1200px"
-              className="object-cover"
-            />
-          </div>
-          <p className="text-[12px] text-lightText mt-3 tracking-wide">
-            Preston Hollow, Dallas
-          </p>
+      {/* What I Catch — micro-section */}
+      <section className="py-16 md:py-20 bg-bgSection px-6 md:px-12">
+        <div className="container-x max-w-[700px] text-center">
+          <Reveal>
+            <p className="label mb-8">The Details Matter</p>
+            <p className="body-p text-[15px] leading-[1.8] text-mediumText">
+              I grew up on job sites watching my family build homes from the
+              ground up. That means when I walk through a property with you, I am
+              not just looking at countertops and paint colors. I am checking the
+              foundation, the roof line, the drainage, the electrical panel, the
+              water heater age, and the quality of every renovation. I see the
+              things that do not show up in listing photos &mdash; and the things
+              that will show up on your inspection report.
+            </p>
+          </Reveal>
         </div>
-      </Reveal>
-
-      {/* Why Buyers Choose Nancy — Editorial Pillars */}
-      <section className="relative">
-        <div className="pt-20 md:pt-28 pb-6 md:pb-8 px-6 md:px-12 lg:px-20 bg-bgSection">
-          <div className="container-x">
-            <Reveal>
-              <div className="text-center max-w-2xl mx-auto">
-                <p className="label">Why Nancy</p>
-                <h2 className="h-display mt-4">
-                  Why Buyers Choose{" "}
-                  <span className="italic text-gold">to Work With Me</span>
-                </h2>
-                <AnimatedDivider className="w-16 mx-auto mt-8" />
-              </div>
-            </Reveal>
-          </div>
-        </div>
-
-        {PILLARS.map((p, i) => {
-          const isAlt = i % 2 === 1;
-          return (
-            <div
-              key={p.num}
-              className={isAlt ? "bg-warmWhite" : "bg-bgSection"}
-            >
-              <div className="container-x py-14 md:py-20 px-6 md:px-12 lg:px-20">
-                <Reveal delay={0.05}>
-                  <div
-                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-6xl mx-auto`}
-                  >
-                    {/* Text column */}
-                    <div
-                      className={`relative ${isAlt ? "md:order-2" : "md:order-1"}`}
-                    >
-                      <span
-                        className="font-display text-[100px] md:text-[160px] text-gold/[0.08] leading-none font-normal select-none absolute -top-6 md:-top-12 -left-2 md:-left-4 pointer-events-none"
-                        aria-hidden="true"
-                      >
-                        {p.num}
-                      </span>
-                      <h3 className="font-display text-[28px] md:text-[34px] lg:text-[40px] text-darkText leading-[1.15] relative z-10 pt-8 md:pt-12">
-                        {p.title}
-                      </h3>
-                      <div className="w-[50px] h-[2px] bg-gold/50 mt-6" />
-                      <p className="body-p mt-8 text-[15px] md:text-[16px] leading-[1.8] max-w-xl">
-                        {p.body}
-                      </p>
-                    </div>
-
-                    {/* Pull quote column */}
-                    <div
-                      className={`flex items-center ${isAlt ? "md:order-1" : "md:order-2"}`}
-                    >
-                      <blockquote className="border-l-4 border-gold/40 pl-8 md:pl-10 py-4">
-                        <p className="font-display italic text-[20px] md:text-[24px] text-darkText/80 leading-[1.5]">
-                          {p.quote}
-                        </p>
-                      </blockquote>
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
-            </div>
-          );
-        })}
       </section>
 
+      {/* Why Buyers Choose Nancy — Interactive Split */}
+      <InteractiveSplitSection
+        sectionLabel="Why Nancy"
+        sectionTitle="Why Buyers Choose"
+        sectionTitleAccent="to Work With Me"
+        items={SPLIT_ITEMS}
+      />
+
       {/* Buyer Testimonial */}
-      <section className="section-pad bg-warmWhite">
+      <section className="section-pad bg-bgSection">
         <div className="container-x max-w-4xl">
           <Reveal>
             {/* PLACEHOLDER: Replace with real testimonial from Nancy */}
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-0 bg-bgSection border border-bordr overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-0 bg-warmWhite border border-bordr overflow-hidden">
               <div className="relative h-[260px] md:h-auto min-h-[320px]">
                 <Image
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
@@ -243,7 +195,7 @@ export default function BuyPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-pad bg-bgSection text-center">
+      <section className="section-pad bg-warmWhite text-center">
         <div className="container-x max-w-2xl">
           <h2 className="h-display">
             Ready to Start{" "}
@@ -253,12 +205,14 @@ export default function BuyPage() {
           <p className="body-p mt-8">
             Tell me the neighborhood. I will show you what no listing site will.
           </p>
+          <p className="font-display italic text-[18px] text-goldLight mt-6">
+            I will not show you a single home until I understand exactly what you are looking for.
+          </p>
           <div className="mt-10">
             <Button href="/contact">Start Your Search</Button>
           </div>
         </div>
       </section>
-
     </>
   );
 }

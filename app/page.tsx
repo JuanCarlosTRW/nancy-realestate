@@ -21,7 +21,9 @@ export default function Home() {
       <Services />
       <Neighborhoods />
       <Testimonials />
-      <CTABanner />
+      <CTABanner
+        commitment="No sales pitch. No pressure. Just an honest conversation about what you need."
+      />
     </>
   );
 }

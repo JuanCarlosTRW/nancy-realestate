@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/layout/CTABanner";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
+import InteractiveSplitSection from "@/components/ui/InteractiveSplitSection";
 
 export const metadata: Metadata = {
   title: "Selling Your Home in Dallas | Nancy Musselman",
@@ -15,48 +16,57 @@ const STEPS = [
   {
     n: "01",
     title: "Home Walkthrough",
-    body: "I will come to your home, assess it honestly, and tell you exactly what it is worth and what to do before listing. No sugarcoating. Just a clear plan to get you the best result.",
+    body: "I will come to your home and tell you exactly what it is worth and why. No inflated number to win your listing. No lowball to make myself look good later. I will also tell you what to fix before we list and what to leave alone \u2014 because the wrong renovation can cost you thousands with zero return.",
   },
   {
     n: "02",
     title: "Pricing Strategy",
-    body: "Overpricing is the number one mistake sellers make. It does not attract better offers. It drives buyers away. I will price it right from day one to attract serious buyers fast.",
+    body: "Overpricing is the number one mistake sellers make, and most agents let it happen because they do not want the uncomfortable conversation. I will have that conversation. I study what comparable homes actually sold for \u2014 not what they were listed at. The right price on day one attracts multiple offers. The wrong price leads to price drops and a stale listing that buyers ignore.",
   },
   {
     n: "03",
     title: "Presentation",
-    body: "From professional photos to listing copy, we will present your home in its best light. I will tell you exactly what to fix and what to skip. No wasted money on upgrades buyers will not notice.",
+    body: "Buyers decide in the first ten seconds whether a home feels right. From professional photography to listing copy that highlights what makes your home worth it, I will make sure those ten seconds work in your favor. I will tell you exactly which rooms to stage and which ones just need to be clean.",
   },
   {
     n: "04",
-    title: "Marketing & Exposure",
-    body: "Your home goes on the MLS and gets in front of serious buyers actively searching in Dallas. I make sure the listing stands out, not just shows up.",
+    title: "Marketing and Exposure",
+    body: "Your home goes on the MLS and gets in front of every serious buyer actively searching in Dallas. But I do not just post it and wait. I make sure the listing stands out \u2014 the right photos, the right description, the right price \u2014 so it gets saved, shared, and scheduled for showings, not scrolled past.",
   },
   {
     n: "05",
-    title: "Negotiate & Close",
-    body: "When offers come in, I handle the negotiation so you get the best possible outcome. My background in accounting and HR means I manage the numbers and the people with equal precision.",
+    title: "Negotiate and Close",
+    body: "When offers come in, the real work starts. Counteroffers, inspection negotiations, appraisal disputes, buyer financing issues \u2014 I have spent twenty-two years in professional environments where high-stakes conversations and tight deadlines were the job. I handle the negotiation so you get the best possible outcome without the stress of doing it yourself.",
   },
 ];
 
-const PILLARS = [
+const SPLIT_ITEMS = [
   {
-    num: "01",
-    title: "Honest Pricing Advice",
-    body: "Not what you want to hear, but what the market will actually pay. That is how homes sell fast and above ask. I study what comparable homes actually sold for, not just what they listed at. That precision is the difference between a bidding war and a stale listing.",
-    quote: "\u201CI price based on what sold, not what was listed.\u201D",
+    label: "Honest Pricing Advice",
+    image:
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
+    imageAlt: "Beautiful staged living room",
+    description:
+      "Not what you want to hear, but what the market will actually pay. I study what comparable homes actually sold for, not just what they listed at. That precision is the difference between a bidding war and a stale listing.",
+    pullQuote: "I price based on what sold, not what was listed.",
   },
   {
-    num: "02",
-    title: "Detail-Oriented Prep Guidance",
-    body: "I will tell you exactly what to fix and what to skip. No wasted money on upgrades that will not move the needle. Every dollar you spend on prep should come back at closing.",
-    quote: "\u201CEvery dollar on prep should come back at closing.\u201D",
+    label: "Detail-Oriented Prep Guidance",
+    image:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+    imageAlt: "Home staging interior design",
+    description:
+      "I will tell you exactly what to fix and what to skip. No wasted money on upgrades that will not move the needle. Every dollar you spend on prep should come back at closing.",
+    pullQuote: "Every dollar on prep should come back at closing.",
   },
   {
-    num: "03",
-    title: "Calm When It Counts",
-    body: "Inspection surprises. Last-minute buyer demands. Appraisal issues. I have seen it all before, and I do not panic. I keep the deal moving and keep you informed without the drama.",
-    quote: "\u201CI have seen it before. I do not panic.\u201D",
+    label: "Calm When It Counts",
+    image:
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=1200&auto=format&fit=crop",
+    imageAlt: "Professional meeting setting",
+    description:
+      "Inspection surprises. Last-minute buyer demands. Appraisal issues. I have seen it all before, and I do not panic. I keep the deal moving and keep you informed without the drama.",
+    pullQuote: "I have seen it before. I do not panic.",
   },
 ];
 
@@ -100,7 +110,6 @@ export default function SellPage() {
             {STEPS.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.08}>
                 <div className="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start">
-                  {/* Number column with connector line */}
                   <div className="flex flex-col items-center">
                     <span className="font-display text-[40px] md:text-[48px] text-gold/30 leading-none font-light select-none">
                       {s.n}
@@ -109,7 +118,6 @@ export default function SellPage() {
                       <div className="w-px flex-1 bg-gold/15 mt-3 min-h-[40px]" />
                     )}
                   </div>
-                  {/* Content */}
                   <div className="pb-10 md:pb-12">
                     <h3 className="font-display text-[26px] md:text-[30px] text-darkText leading-tight">
                       {s.title}
@@ -123,11 +131,10 @@ export default function SellPage() {
         </div>
       </section>
 
-      {/* Personal attention callout — elevated pullout quote */}
+      {/* Personal attention callout */}
       <Reveal>
         <div className="py-20 md:py-24 bg-bgSection px-6 md:px-12">
           <div className="container-x max-w-[700px] text-center">
-            {/* Decorative quotation mark */}
             <span
               className="block font-display text-[100px] md:text-[120px] text-gold/15 leading-none select-none -mb-6 md:-mb-8"
               aria-hidden="true"
@@ -138,95 +145,18 @@ export default function SellPage() {
               Every home I list gets my full attention. I do not juggle 30 listings
               at once. When I represent your home, it gets the focus it deserves.
             </p>
-            {/* Thin gold line below */}
             <div className="w-[80px] h-px bg-gold/30 mx-auto mt-8" />
           </div>
         </div>
       </Reveal>
 
-      {/* Staged home photo */}
-      <Reveal>
-        <div className="container-x px-6 md:px-12 lg:px-20 py-4">
-          <div className="relative w-full h-[250px] md:h-[400px] overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1400&auto=format&fit=crop"
-              alt="Beautifully staged luxury home interior"
-              fill
-              sizes="(max-width: 768px) 100vw, 1200px"
-              className="object-cover"
-            />
-          </div>
-          <p className="text-[12px] text-lightText mt-3 tracking-wide">
-            Presenting your home at its best
-          </p>
-        </div>
-      </Reveal>
-
-      {/* Working With Nancy — Editorial Pillars */}
-      <section className="relative">
-        <div className="pt-20 md:pt-28 pb-6 md:pb-8 px-6 md:px-12 lg:px-20 bg-warmWhite">
-          <div className="container-x">
-            <Reveal>
-              <div className="text-center max-w-2xl mx-auto">
-                <p className="label">What Sellers Get</p>
-                <h2 className="h-display mt-4">
-                  Working With{" "}
-                  <span className="italic text-gold">Nancy</span>
-                </h2>
-                <AnimatedDivider className="w-16 mx-auto mt-8" />
-              </div>
-            </Reveal>
-          </div>
-        </div>
-
-        {PILLARS.map((p, i) => {
-          const isAlt = i % 2 === 1;
-          return (
-            <div
-              key={p.num}
-              className={isAlt ? "bg-bgSection" : "bg-warmWhite"}
-            >
-              <div className="container-x py-14 md:py-20 px-6 md:px-12 lg:px-20">
-                <Reveal delay={0.05}>
-                  <div
-                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-6xl mx-auto`}
-                  >
-                    {/* Text column */}
-                    <div
-                      className={`relative ${isAlt ? "md:order-2" : "md:order-1"}`}
-                    >
-                      <span
-                        className="font-display text-[100px] md:text-[160px] text-gold/[0.08] leading-none font-normal select-none absolute -top-6 md:-top-12 -left-2 md:-left-4 pointer-events-none"
-                        aria-hidden="true"
-                      >
-                        {p.num}
-                      </span>
-                      <h3 className="font-display text-[28px] md:text-[34px] lg:text-[40px] text-darkText leading-[1.15] relative z-10 pt-8 md:pt-12">
-                        {p.title}
-                      </h3>
-                      <div className="w-[50px] h-[2px] bg-gold/50 mt-6" />
-                      <p className="body-p mt-8 text-[15px] md:text-[16px] leading-[1.8] max-w-xl">
-                        {p.body}
-                      </p>
-                    </div>
-
-                    {/* Pull quote column */}
-                    <div
-                      className={`flex items-center ${isAlt ? "md:order-1" : "md:order-2"}`}
-                    >
-                      <blockquote className="border-l-4 border-gold/40 pl-8 md:pl-10 py-4">
-                        <p className="font-display italic text-[20px] md:text-[24px] text-darkText/80 leading-[1.5]">
-                          {p.quote}
-                        </p>
-                      </blockquote>
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
-            </div>
-          );
-        })}
-      </section>
+      {/* Working With Nancy — Interactive Split */}
+      <InteractiveSplitSection
+        sectionLabel="What Sellers Get"
+        sectionTitle="Working With"
+        sectionTitleAccent="Nancy"
+        items={SPLIT_ITEMS}
+      />
 
       {/* Seller Testimonial */}
       <section className="section-pad bg-bgSection">
@@ -263,7 +193,10 @@ export default function SellPage() {
         </div>
       </section>
 
-      <CTABanner />
+      <CTABanner
+        subtitle="Whether you have one question or you are ready to start today, reach out. No pressure, no sales pitch."
+        commitment="I will tell you what your home is worth and why \u2014 even if it is not what you want to hear."
+      />
     </>
   );
 }

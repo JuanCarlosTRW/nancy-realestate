@@ -4,6 +4,7 @@ import GoldDivider from "@/components/ui/GoldDivider";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import AboutHero from "@/components/about/AboutHero";
+import InteractiveSplitSection from "@/components/ui/InteractiveSplitSection";
 import { IMG } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -12,27 +13,34 @@ export const metadata: Metadata = {
     "Meet Nancy Musselman, a Dallasite with 50+ years in the DFW Metroplex and 22 years of professional experience, now putting it all to work for her clients.",
 };
 
-const FACTS = [
+const SPLIT_ITEMS = [
   {
-    num: "01",
-    title: "50+ Years in DFW",
-    body: "I have watched neighborhoods transform over decades. I know which areas are rising, which are overpriced, and which streets to avoid. This is not research. It is a lifetime of paying attention.",
-    quote:
-      "\u201CThis is not research. It is a lifetime of paying attention.\u201D",
+    label: "50+ Years in DFW",
+    image:
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop",
+    imageAlt: "Dallas skyline and residential neighborhood",
+    description:
+      "I have watched neighborhoods transform over decades. I know which areas are rising, which are overpriced, and which streets to avoid. This is not research. It is a lifetime of paying attention.",
+    pullQuote: "This is not research. It is a lifetime of paying attention.",
   },
   {
-    num: "02",
-    title: "22 Years in Accounting and HR",
-    body: "Two decades of managing numbers, managing people, and managing difficult situations. Precision from accounting. Composure from HR. That training shows up every time a deal gets complicated.",
-    quote:
-      "\u201CPrecision from accounting. Composure from HR.\u201D",
+    label: "22 Years in Accounting and HR",
+    image:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+    imageAlt: "Professional workspace environment",
+    description:
+      "Two decades of managing numbers, managing people, and managing difficult situations. Precision from accounting. Composure from HR. That training shows up every time a deal gets complicated.",
+    pullQuote: "Precision from accounting. Composure from HR.",
   },
   {
-    num: "03",
-    title: "Raised Around Construction",
-    body: "I grew up on job sites. I see the foundation crack other agents step right over. I spot the patch job on the ceiling. When I walk through a home, I am reading the building, not just the listing.",
-    quote:
-      "\u201CWhen I walk through a home, I am reading the building, not just the listing.\u201D",
+    label: "Raised Around Construction",
+    image:
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=1200&auto=format&fit=crop",
+    imageAlt: "Home exterior craftsman detail",
+    description:
+      "I grew up on job sites. I see the foundation crack other agents step right over. I spot the patch job on the ceiling. When I walk through a home, I am reading the building, not just the listing.",
+    pullQuote:
+      "When I walk through a home, I am reading the building, not just the listing.",
   },
 ];
 
@@ -152,78 +160,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* What I Bring to the Table — Editorial split with pull quotes */}
-      <section className="relative">
-        <div className="pt-20 md:pt-28 pb-6 md:pb-8 px-6 md:px-12 lg:px-20 bg-warmWhite">
-          <div className="container-x">
-            <Reveal>
-              <div className="text-center max-w-2xl mx-auto">
-                <p className="label">Quick Facts</p>
-                <h2 className="h-display mt-4">
-                  What I Bring{" "}
-                  <span className="italic text-gold">to the Table</span>
-                </h2>
-                <GoldDivider className="mt-8 w-16" />
-              </div>
-            </Reveal>
-          </div>
-        </div>
-
-        {FACTS.map((f, i) => {
-          const isAlt = i % 2 === 1;
-          return (
-            <div
-              key={f.num}
-              className={isAlt ? "bg-bgSection" : "bg-warmWhite"}
-            >
-              <div className="container-x py-14 md:py-20 px-6 md:px-12 lg:px-20">
-                <Reveal delay={i * 0.12}>
-                  <div
-                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-6xl mx-auto`}
-                  >
-                    {/* Text column */}
-                    <div
-                      className={`relative ${isAlt ? "md:order-2" : "md:order-1"}`}
-                    >
-                      {/* Decorative watermark number */}
-                      <span
-                        className="font-display text-[100px] md:text-[160px] text-gold/[0.08] leading-none font-normal select-none absolute -top-6 md:-top-12 -left-2 md:-left-4 pointer-events-none"
-                        aria-hidden="true"
-                      >
-                        {f.num}
-                      </span>
-
-                      {/* Heading */}
-                      <h3 className="font-display text-[28px] md:text-[34px] lg:text-[40px] text-darkText leading-[1.15] relative z-10 pt-8 md:pt-12">
-                        {f.title}
-                      </h3>
-
-                      {/* Thin gold line */}
-                      <div className="w-[50px] h-[2px] bg-gold/50 mt-6" />
-
-                      {/* Body copy */}
-                      <p className="body-p mt-8 text-[15px] md:text-[16px] leading-[1.8] max-w-xl">
-                        {f.body}
-                      </p>
-                    </div>
-
-                    {/* Pull quote column */}
-                    <div
-                      className={`flex items-center ${isAlt ? "md:order-1" : "md:order-2"}`}
-                    >
-                      <blockquote className="border-l-4 border-gold/40 pl-8 md:pl-10 py-4">
-                        <p className="font-display italic text-[20px] md:text-[24px] text-darkText/80 leading-[1.5]">
-                          {f.quote}
-                        </p>
-                      </blockquote>
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
-            </div>
-          );
-        })}
-      </section>
+      {/* What I Bring to the Table — Interactive Split */}
+      <InteractiveSplitSection
+        sectionLabel="Quick Facts"
+        sectionTitle="What I Bring"
+        sectionTitleAccent="to the Table"
+        items={SPLIT_ITEMS}
+      />
 
       {/* Warm CTA */}
       <section className="section-pad bg-bgSection text-center">
@@ -235,6 +178,9 @@ export default function AboutPage() {
           <GoldDivider className="mt-6 w-16 mx-auto" />
           <p className="body-p mt-8">
             No commitment, no pressure. Just tell me what you&apos;re thinking.
+          </p>
+          <p className="font-display italic text-[18px] text-goldLight mt-6">
+            If I am not the right fit, I will tell you that too.
           </p>
           <div className="mt-10">
             <Button href="/contact">Contact Nancy</Button>
