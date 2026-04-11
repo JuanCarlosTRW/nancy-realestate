@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import GoldDivider from "@/components/ui/GoldDivider";
-import Button from "@/components/ui/Button";
+import ParallaxHero from "@/components/ui/ParallaxHero";
 import Reveal from "@/components/ui/Reveal";
-import AboutHero from "@/components/about/AboutHero";
-import InteractiveSplitSection from "@/components/ui/InteractiveSplitSection";
-import { IMG } from "@/lib/constants";
+import AnimatedDivider from "@/components/ui/AnimatedDivider";
+import Button from "@/components/ui/Button";
+import { IMG, NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About Nancy Musselman | Dallas Real Estate",
@@ -13,178 +12,283 @@ export const metadata: Metadata = {
     "Meet Nancy Musselman, a Dallasite with 50+ years in the DFW Metroplex and 22 years of professional experience, now putting it all to work for her clients.",
 };
 
-const SPLIT_ITEMS = [
+/* ── Data ──────────────────────────────────────────────────────────── */
+
+const SKILLS = [
   {
-    label: "50+ Years in DFW",
-    image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop",
-    imageAlt: "Dallas skyline and residential neighborhood",
+    number: "01",
+    title: "I Read People, Not Scripts",
     description:
-      "I have watched neighborhoods transform over decades. I know which areas are rising, which are overpriced, and which streets to avoid. This is not research. It is a lifetime of paying attention.",
-    pullQuote: "This is not research. It is a lifetime of paying attention.",
+      "Twenty-two years in HR taught me to listen before I speak, understand what someone actually needs (not just what they say), and navigate tough conversations without anyone feeling steamrolled. In real estate, that means better negotiations, smoother closings, and an agent who genuinely hears you.",
   },
   {
-    label: "22 Years in Accounting and HR",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
-    imageAlt: "Professional workspace environment",
+    number: "02",
+    title: "Details Don\u2019t Slip Past Me",
     description:
-      "Two decades of managing numbers, managing people, and managing difficult situations. Precision from accounting. Composure from HR. That training shows up every time a deal gets complicated.",
-    pullQuote: "Precision from accounting. Composure from HR.",
+      "Between my accounting background and growing up around construction, I see what most people miss. I catch the line items that don\u2019t add up in a contract and the foundation crack hiding behind fresh paint. You get a second set of eyes that\u2019s been trained to protect you.",
   },
   {
-    label: "Raised Around Construction",
-    image:
-      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=1200&auto=format&fit=crop",
-    imageAlt: "Home exterior craftsman detail",
+    number: "03",
+    title: "Calm When It Counts",
     description:
-      "I grew up on job sites. I see the foundation crack other agents step right over. I spot the patch job on the ceiling. When I walk through a home, I am reading the building, not just the listing.",
-    pullQuote:
-      "When I walk through a home, I am reading the building, not just the listing.",
+      "Real estate transactions get stressful. Deals fall through, inspections surface surprises, timelines shift. I\u2019ve spent two decades handling high-pressure workplace situations with poise. You\u2019ll never see me panic \u2014 and that steadiness is contagious when things get complicated.",
   },
 ];
+
+const NEIGHBORHOODS = [
+  { name: "Bent Tree", tagline: "Preston Trails Golf Course & established family living", detail: "Where I helped my first buyers find their dream home." },
+  { name: "Richardson", tagline: "Top-rated schools & Telecom Corridor opportunities", detail: "A city I\u2019ve watched evolve from quiet suburb to thriving hub." },
+  { name: "Plano", tagline: "Legacy West, dining, and master-planned communities", detail: "From open fields to one of the best cities in Texas." },
+  { name: "North Dallas", tagline: "Central location with quick access to everything", detail: "The neighborhood I know like the back of my hand." },
+  { name: "Carrollton", tagline: "Affordable charm minutes from Dallas & Plano", detail: "One of DFW\u2019s best-kept secrets for value and community." },
+  { name: "Preston Hollow", tagline: "Mature trees, estate lots, and quiet prestige", detail: "Where Dallas history lives on every street." },
+  { name: "Frisco", tagline: "Explosive growth, new construction, and young energy", detail: "The fastest-growing city in America \u2014 and I\u2019ve watched every phase." },
+  { name: "Flower Mound", tagline: "Lakeside living with top Lewisville ISD schools", detail: "Small-town feel with big-city convenience." },
+  { name: "Grapevine", tagline: "Historic Main Street charm near DFW Airport", detail: "Wine trails, festivals, and real Texas character." },
+  { name: "Colleyville", tagline: "Upscale suburban living in the heart of DFW", detail: "Where families put down roots and stay." },
+];
+
+/* ── Page ───────────────────────────────────────────────────────────── */
 
 export default function AboutPage() {
   return (
     <>
-      <AboutHero />
+      {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
+      <ParallaxHero
+        imageSrc="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80"
+        imageAlt="Dallas Texas skyline at dusk"
+        overlayOpacity={0.5}
+      >
+        <p className="label mb-4 !text-gold">About Nancy</p>
+        <h1
+          className="font-display font-light text-white leading-[1.08] max-w-3xl mx-auto"
+          style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
+        >
+          Born Here. Raised Here.
+          <br />
+          <span className="italic text-gold">
+            Ready to Help You Find Home Here.
+          </span>
+        </h1>
+        <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/80 max-w-xl mx-auto leading-[1.7]">
+          Five decades of DFW roots. Twenty-two years of professional precision.
+          <br className="hidden md:block" />
+          A lifetime of wanting to do exactly this.
+        </p>
+      </ParallaxHero>
 
-      {/* Bio: two-column text + photo */}
+      {/* ─── SECTION 2: ORIGIN STORY ──────────────────────────────── */}
       <section className="section-pad bg-bgSection">
-        <div className="container-x grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-12 md:gap-20 items-start">
-          <div>
-            <Reveal>
-              <p className="label">My Story</p>
-              <h2 className="h-display mt-4">
-                Born Here.{" "}
-                <span className="italic text-gold">Still Here.</span>
-              </h2>
-              <GoldDivider className="mt-6 w-14" />
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="mt-10 space-y-6 body-p text-[16px]">
-                <p>
-                  I was born and raised right where I live now. For over 50
-                  years, I&apos;ve watched the DFW Metroplex grow. The
-                  neighborhoods, the highways, the communities. This isn&apos;t
-                  a market I studied. It&apos;s the city I grew up in.
-                </p>
-                <p>
-                  People who know me say I&apos;m always the one who wants to
-                  help. That&apos;s always been true. I&apos;m a natural
-                  multitasker, detail-oriented, and I don&apos;t get rattled
-                  easily. That last part matters more than most people realize
-                  in real estate.
-                </p>
-
-                <blockquote className="border-l-2 border-gold/40 pl-6 my-10">
-                  <p className="font-display italic text-[22px] md:text-[26px] text-gold/80 leading-[1.4]">
-                    &ldquo;Most agents have never had to fire someone, deliver
-                    hard news to a boardroom, or hold a company together through
-                    a crisis. I have.&rdquo;
-                  </p>
-                </blockquote>
-
-                <p>
-                  Before I became a REALTOR, I spent over two decades in
-                  accounting and human resources. That career taught me how to navigate complex,
-                  high-stakes, emotionally charged situations with composure
-                  and professionalism. Skills that translate directly to
-                  buying and selling homes.
-                </p>
-                <p>
-                  I was also raised around construction, which means I see
-                  things that other agents walk right past. I notice the
-                  details. I ask the questions that matter.
-                </p>
-
-                <blockquote className="border-l-2 border-gold/40 pl-6 my-10">
-                  <p className="font-display italic text-[22px] md:text-[26px] text-gold/80 leading-[1.4]">
-                    &ldquo;Other agents see a beautiful kitchen. I see the patch
-                    job on the ceiling and the foundation crack behind the
-                    pantry.&rdquo;
-                  </p>
-                </blockquote>
-
-                <p>
-                  Becoming a REALTOR was something I always wanted to do. I
-                  waited until the timing was right. Until my kids were grown
-                  and I could give it everything. Now I&apos;m doing it, and I
-                  love it. If you&apos;re thinking about buying or selling in
-                  the DFW area, I&apos;d love to help.
-                </p>
-
-                {/* Second Nancy photo — contextual/casual */}
-                <div className="mt-12 mb-10">
-                  <div className="relative w-full max-w-[500px] aspect-[3/2] overflow-hidden border border-bordr">
-                    <Image
-                      src={IMG.nancy}
-                      alt="Nancy Musselman in Dallas"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 500px"
-                      className="object-cover object-center"
-                    />
-                  </div>
-                </div>
-
-                {/* Visual break before personal paragraph */}
-                <div className="w-20 h-px bg-gold/25 mx-auto mt-6 mb-6" />
-
-                <div className="border-l-2 border-gold/20 pl-6">
-                  <p>
-                    When I am not helping clients, you will probably find me on a
-                    long walk, spending time with family and friends, or planning
-                    my next trip. I love country and western music, jazz, and I am
-                    rooted in my faith. That is who I am outside of real estate,
-                    and it is the same person you get when we work together.
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-
-          <Reveal delay={0.2}>
-            <div className="relative w-full max-w-[440px] mx-auto md:sticky md:top-28">
-              <div className="absolute -inset-4 border border-gold/30 rounded-[2px] hidden md:block" />
-              <div className="relative aspect-[4/5] bg-cream rounded-[2px] overflow-hidden shadow-warmLg">
+        <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
+          {/* Photo — left */}
+          <Reveal>
+            <div className="relative w-full max-w-[460px] mx-auto">
+              {/* Decorative border accent */}
+              <div className="absolute -bottom-3 -right-3 h-full w-full border-2 border-gold/40 hidden md:block" />
+              <div className="relative aspect-[3/4] overflow-hidden shadow-warmLg">
                 <Image
                   src={IMG.nancy}
-                  alt="Nancy Musselman"
+                  alt="Nancy Musselman, Dallas real estate agent"
                   fill
-                  sizes="(max-width: 768px) 100vw, 440px"
+                  sizes="(max-width: 768px) 100vw, 460px"
                   className="object-cover object-top"
                 />
               </div>
             </div>
           </Reveal>
+
+          {/* Story — right */}
+          <Reveal delay={0.15}>
+            <p className="label">My Story</p>
+            <h2 className="h-display mt-4">
+              50+ Years of Watching{" "}
+              <span className="italic text-gold">This City Become Home</span>
+            </h2>
+            <AnimatedDivider className="w-14 mt-6" />
+
+            <div className="mt-10 space-y-5 body-p text-[15px] md:text-[16px] leading-[1.85]">
+              <p>
+                I was born and raised right where I live now. For over fifty
+                years, I&apos;ve watched the DFW metroplex grow from open land
+                into one of the most dynamic communities in Texas. I know which
+                streets flood after a storm. I know which neighborhoods have
+                transformed and which ones have stayed exactly the same. That
+                kind of knowledge doesn&apos;t come from a license &mdash; it
+                comes from living it.
+              </p>
+              <p>
+                Before real estate, I spent 22 years in human resources and
+                accounting. Two decades of reading people, navigating difficult
+                conversations, catching details others miss, and staying composed
+                under pressure. I didn&apos;t leave that career behind &mdash; I
+                brought every bit of it with me.
+              </p>
+              <p>
+                I always wanted to be a Realtor. But life, career, and raising
+                my kids came first. Now my kids are grown, the timing was finally
+                right, and I&apos;m doing what I&apos;ve always wanted to
+                do &mdash; helping people find the right home in the city I know
+                better than almost anyone.
+              </p>
+              <p>
+                Rooted in my faith, grounded in this city, and driven by genuine
+                love for helping people. That&apos;s who I am.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* What I Bring to the Table — Interactive Split */}
-      <InteractiveSplitSection
-        sectionLabel="Quick Facts"
-        sectionTitle="What I Bring"
-        sectionTitleAccent="to the Table"
-        items={SPLIT_ITEMS}
-      />
+      {/* ─── SECTION 3: SKILL CARDS ───────────────────────────────── */}
+      <section className="section-pad bg-warmWhite">
+        <div className="container-x max-w-6xl mx-auto">
+          <Reveal>
+            <div className="text-center max-w-2xl mx-auto mb-14">
+              <p className="label">Why Work With Me</p>
+              <h2 className="h-display mt-4">
+                22 Years Before Real Estate{" "}
+                <span className="italic text-gold">Made Me Better At It</span>
+              </h2>
+              <AnimatedDivider className="w-16 mx-auto mt-8" />
+              <p className="body-p mt-6 text-[15px]">
+                Most agents learn people skills on the job. I walked in with 22
+                years of them.
+              </p>
+            </div>
+          </Reveal>
 
-      {/* Warm CTA */}
-      <section className="section-pad bg-bgSection text-center">
-        <div className="container-x max-w-2xl">
-          <h2 className="h-display">
-            Let&apos;s Start With{" "}
-            <span className="italic text-gold">a Conversation</span>
-          </h2>
-          <GoldDivider className="mt-6 w-16 mx-auto" />
-          <p className="body-p mt-8">
-            No commitment, no pressure. Just tell me what you&apos;re thinking.
-          </p>
-          <p className="font-display italic text-[18px] text-goldLight mt-6">
-            If I am not the right fit, I will tell you that too.
-          </p>
-          <div className="mt-10">
-            <Button href="/contact">Contact Nancy</Button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {SKILLS.map((skill, i) => (
+              <Reveal key={skill.number} delay={i * 0.12}>
+                <div className="group relative h-full border border-bordr bg-bgSection p-8 md:p-10 transition-all duration-500 hover:-translate-y-1">
+                  {/* Number accent */}
+                  <span className="block font-display text-[48px] font-extralight text-gold/40 mb-4">
+                    {skill.number}
+                  </span>
+                  <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.2] mb-4">
+                    {skill.title}
+                  </h3>
+                  <p className="body-p text-[14px] md:text-[15px] leading-[1.8]">
+                    {skill.description}
+                  </p>
+                  {/* Bottom border accent on hover */}
+                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+                </div>
+              </Reveal>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* ─── SECTION 4: NEIGHBORHOODS ─────────────────────────────── */}
+      <section className="section-pad bg-bgSection">
+        <div className="container-x max-w-6xl mx-auto">
+          <Reveal>
+            <div className="text-center max-w-2xl mx-auto mb-14">
+              <p className="label">Where I Work</p>
+              <h2 className="h-display mt-4">
+                The Neighborhoods I Know{" "}
+                <span className="italic text-gold">
+                  Because I&apos;ve Lived the Change
+                </span>
+              </h2>
+              <AnimatedDivider className="w-16 mx-auto mt-8" />
+              <p className="body-p mt-6 text-[15px]">
+                50+ years of watching DFW transform gives you a perspective no
+                MLS search can replicate.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {NEIGHBORHOODS.map((hood, i) => (
+              <Reveal key={hood.name} delay={i * 0.06}>
+                <div className="group relative h-full border border-bordr bg-warmWhite p-6 transition-all duration-500 hover:-translate-y-1 overflow-hidden">
+                  <h3 className="font-display text-[20px] text-darkText leading-[1.2] mb-1">
+                    {hood.name}
+                  </h3>
+                  <p className="text-[11px] tracking-label uppercase font-medium text-gold mb-2">
+                    {hood.tagline}
+                  </p>
+                  <p className="text-[14px] font-light italic text-mediumText leading-[1.6]">
+                    {hood.detail}
+                  </p>
+                  {/* Hover accent */}
+                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── SECTION 5: TESTIMONIAL ───────────────────────────────── */}
+      <section className="section-pad bg-warmWhite">
+        <div className="container-x max-w-3xl mx-auto text-center">
+          <Reveal>
+            <p className="label">What My Clients Say</p>
+
+            {/* Large opening quote mark */}
+            <span
+              className="block font-display text-[80px] md:text-[100px] font-light text-gold/30 leading-none mt-6 -mb-4 select-none"
+              aria-hidden="true"
+            >
+              &ldquo;
+            </span>
+
+            <blockquote className="font-display italic text-[20px] md:text-[24px] text-darkText leading-[1.6] mb-8">
+              Nancy made our dream home on the Preston Trails Golf Course in
+              Bent Tree a reality. Her attention to detail, patience through
+              every step, and genuine care for what we wanted made all the
+              difference. She wasn&apos;t just our agent &mdash; she felt like
+              family guiding us home.
+            </blockquote>
+
+            <div className="w-[60px] h-px bg-gold/40 mx-auto mb-5" />
+
+            <p className="text-[13px] tracking-button uppercase font-medium text-darkText">
+              Bent Tree Homebuyer
+            </p>
+            <p className="text-[11px] tracking-label uppercase text-gold mt-1 font-light">
+              Preston Trails Golf Course, Dallas
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── SECTION 6: CTA ───────────────────────────────────────── */}
+      <section className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal">
+        <div className="container-x max-w-2xl mx-auto text-center">
+          <Reveal>
+            <p className="label !text-gold">Let&apos;s Talk</p>
+            <h2
+              className="font-display font-light text-white leading-[1.1] mt-4"
+              style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
+            >
+              Whether You&apos;re Buying, Selling,
+              <br />
+              <span className="italic text-gold">or Just Have Questions</span>
+            </h2>
+            <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
+              No pressure, no pitch. Just a real conversation about your goals
+              and how I can help. I&apos;d love to hear what you&apos;re looking
+              for.
+            </p>
+            <div className="mt-10">
+              <Button href="/contact" variant="gold">
+                Start a Conversation
+              </Button>
+            </div>
+            <p className="mt-6 text-[14px] text-white/50">
+              Or call directly:{" "}
+              <a
+                href={`tel:${NANCY_PHONE_TEL}`}
+                className="text-gold underline underline-offset-4 hover:text-goldLight transition-colors"
+              >
+                {NANCY_PHONE}
+              </a>
+            </p>
+          </Reveal>
         </div>
       </section>
     </>
