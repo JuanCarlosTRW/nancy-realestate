@@ -18,18 +18,18 @@ export const metadata: Metadata = {
 const CARDS = [
   {
     number: "01",
-    title: "I Know Dallas Like Home",
-    body: "I have lived in the DFW metroplex for over fifty years. When I talk about a neighborhood, I am not reading a report \u2014 I am remembering it. The schools my kids attended, the streets that flood, the blocks that have quietly doubled in value. That is the kind of knowledge you only get from living here your whole life.",
+    title: "You\u2019ll See Homes Others Miss",
+    body: "I have lived in DFW for over fifty years. I know the neighborhoods most agents overlook \u2014 the quiet streets with great schools, the blocks where values are climbing, the areas that are about to become the next big thing. You get the benefit of a lifetime of local knowledge, not just an MLS search.",
   },
   {
     number: "02",
-    title: "Steady Under Pressure",
-    body: "Real estate transactions get complicated. Deals shift, inspections surprise, timelines move. I spent twenty-two years in human resources and accounting \u2014 environments where high-stakes decisions and tight deadlines were daily. That composure carries into every negotiation and every closing I handle.",
+    title: "You\u2019ll Never Feel Rushed or Pressured",
+    body: "I don\u2019t push clients toward a decision to close a deal faster. Twenty-two years in professional environments taught me that the best outcomes come from clear thinking, not urgency. Whether it takes two weeks or two months, you move at the pace that\u2019s right for you.",
   },
   {
     number: "03",
-    title: "Detail-Oriented by Training",
-    body: "I grew up around construction and spent decades in careers where missing a detail had real consequences. When I walk a property, I see what most people miss \u2014 the foundation issue behind the fresh paint, the line items that don\u2019t add up, the renovation done without permits. You get a second set of eyes trained to protect you.",
+    title: "Nothing Gets Past Us",
+    body: "I grew up around construction and spent decades in careers where missing a detail had real consequences. When I walk a property, I see what most people miss. When I review a contract, I catch what doesn\u2019t add up. You get a second set of trained eyes on every part of the process.",
   },
 ];
 
@@ -83,13 +83,13 @@ export default function Home() {
         overlayOpacity={0.6}
       >
         <p className="label mb-4 !text-gold">
-          Beam Real Estate &middot; Dallas, Texas
+          Dallas &middot; Fort Worth &middot; North Texas
         </p>
         <h1
           className="font-display font-light text-white leading-[1.08] max-w-3xl mx-auto"
           style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
         >
-          I Know Every Street, Every Story,
+          Your Home Search, Handled.
           <br />
           <span
             className="italic text-gold"
@@ -97,12 +97,13 @@ export default function Home() {
               fontFamily: "var(--font-accent, 'Playfair Display', serif)",
             }}
           >
-            Every Neighborhood.
+            Your Sale, Protected.
           </span>
         </h1>
         <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
-          50+ years in DFW. 22 years of professional precision. The kind of
-          attention your home gets when you&apos;re not one of thirty clients.
+          50+ years of local knowledge. 22 years of professional precision. One
+          agent who treats your transaction like it&apos;s the only one that
+          matters &mdash; because it is.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button href="/contact" variant="gold">
@@ -117,48 +118,95 @@ export default function Home() {
       {/* ─── SECTION 2: STATS BAR (DARK) ──────────────────────────── */}
       <section className="bg-charcoal border-y border-white/5 px-6 md:px-12">
         <div className="container-x max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-0 py-8 md:py-10">
-          {/* Stat 1 */}
           <div className="flex-1 text-center">
             <p className="font-display text-[28px] md:text-[32px] font-light text-white leading-none">
               50+ Years
             </p>
             <p className="mt-2 text-[11px] tracking-label uppercase font-medium text-white/50">
-              In the DFW Metroplex
+              Rooted in DFW
             </p>
           </div>
-          {/* Divider */}
           <div className="hidden md:block w-px h-12 bg-gold/30" />
-          {/* Stat 2 */}
           <div className="flex-1 text-center">
             <p className="font-display text-[28px] md:text-[32px] font-light text-white leading-none">
               22 Years
             </p>
             <p className="mt-2 text-[11px] tracking-label uppercase font-medium text-white/50">
-              Professional Experience
+              Professional Precision
             </p>
           </div>
-          {/* Divider */}
           <div className="hidden md:block w-px h-12 bg-gold/30" />
-          {/* Stat 3 */}
           <div className="flex-1 text-center">
             <p className="font-display text-[28px] md:text-[32px] font-light text-white leading-none">
               Beam Real Estate
             </p>
             <p className="mt-2 text-[11px] tracking-label uppercase font-medium text-white/50">
-              Licensed Agent &middot; TX #844625
+              Licensed &middot; TX #844625
             </p>
           </div>
         </div>
       </section>
 
-      {/* ─── SECTION 3: THE NANCY DIFFERENCE — 3 CARDS (LIGHT) ────── */}
-      <section className="pt-14 pb-20 md:pt-20 md:pb-28 px-6 md:px-12 lg:px-20 bg-warmWhite">
+      {/* ─── SECTION 3: TESTIMONIAL — PROOF EARLY (LIGHT) ─────────── */}
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-warmWhite">
+        <div className="container-x max-w-3xl mx-auto">
+          <Reveal>
+            <div className="border border-bordr bg-white p-8 md:p-12 text-center shadow-sm">
+              <p className="label mb-4">Don&apos;t Take My Word for It</p>
+
+              <span
+                className="block text-[80px] md:text-[100px] font-light text-gold/30 leading-none -mb-4 select-none"
+                style={{
+                  fontFamily:
+                    "var(--font-accent, 'Playfair Display', serif)",
+                }}
+                aria-hidden="true"
+              >
+                &ldquo;
+              </span>
+
+              <blockquote
+                className="italic text-[20px] md:text-[24px] text-darkText leading-[1.6] mb-8"
+                style={{
+                  fontFamily:
+                    "var(--font-accent, 'Playfair Display', serif)",
+                }}
+              >
+                Nancy made the entire process of buying our home in Bent Tree
+                incredibly smooth. She was detail-oriented, always available,
+                and made us feel taken care of every step of the way.
+              </blockquote>
+
+              <div className="w-[60px] h-px bg-gold/40 mx-auto mb-5" />
+
+              <p className="text-[13px] tracking-button uppercase font-medium text-darkText">
+                The Martinez Family
+              </p>
+              <p className="text-[11px] tracking-label uppercase text-gold mt-1 font-light">
+                Bought Their Home in Bent Tree
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── Gold divider ─────────────────────────────────────────── */}
+      <div
+        className="mx-auto h-px w-full max-w-4xl"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, #C8A97E, transparent)",
+        }}
+      />
+
+      {/* ─── SECTION 4: WHAT YOU CAN EXPECT — 3 CARDS (LIGHT) ─────── */}
+      <section className="pt-14 pb-20 md:pt-20 md:pb-28 px-6 md:px-12 lg:px-20 bg-bgSection">
         <div className="container-x max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <p className="label">Why Nancy</p>
+              <p className="label">What You Can Expect</p>
               <h2 className="h-display mt-4">
-                Local Knowledge. Professional Edge.{" "}
+                Working With Me Feels Different.{" "}
                 <span
                   className="italic text-gold"
                   style={{
@@ -166,13 +214,14 @@ export default function Home() {
                       "var(--font-accent, 'Playfair Display', serif)",
                   }}
                 >
-                  Personal Attention.
+                  Here&apos;s How.
                 </span>
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 text-[15px]">
-                What makes working with me different from working with anyone
-                else.
+                Every client gets the same thing: my full attention, my honest
+                opinion, and the peace of mind that comes from knowing someone
+                is watching every detail.
               </p>
             </div>
           </Reveal>
@@ -218,12 +267,12 @@ export default function Home() {
         }}
       />
 
-      {/* ─── SECTION 4: ABOUT NANCY (LIGHT) ───────────────────────── */}
-      <section className="section-pad bg-bgSection">
+      {/* ─── SECTION 5: ABOUT NANCY (LIGHT) ───────────────────────── */}
+      <section className="section-pad bg-warmWhite">
         <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
-          {/* Photo — left */}
+          {/* Photo — left with gold offset border */}
           <Reveal>
-            <div className="relative w-full max-w-[420px] mx-auto">
+            <div className="relative w-full max-w-[420px] mx-auto" style={{ paddingBottom: "20px", paddingRight: "20px" }}>
               <div className="relative z-10 aspect-[3/4] w-full overflow-hidden shadow-warmLg">
                 <Image
                   src={IMG.nancy}
@@ -233,6 +282,10 @@ export default function Home() {
                   className="object-cover object-top"
                 />
               </div>
+              <div
+                className="absolute bottom-0 right-0 z-0 aspect-[3/4] w-full border-2"
+                style={{ borderColor: "var(--primary, #a67c52)" }}
+              />
             </div>
           </Reveal>
 
@@ -271,7 +324,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── SECTION 5: ACCENT QUOTE (DARK) ───────────────────────── */}
+      {/* ─── SECTION 6: ACCENT QUOTE (DARK) ───────────────────────── */}
       <section className="bg-charcoal px-6 py-14 md:py-20">
         <Reveal>
           <p
@@ -288,7 +341,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* ─── SECTION 6: BUY / SELL DUAL CARDS (LIGHT) ─────────────── */}
+      {/* ─── SECTION 7: BUY / SELL DUAL CARDS (LIGHT) ─────────────── */}
       <section className="section-pad bg-warmWhite">
         <div className="container-x max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Buy Card */}
@@ -372,7 +425,7 @@ export default function Home() {
         }}
       />
 
-      {/* ─── SECTION 7: NEIGHBORHOODS GRID (LIGHT) ────────────────── */}
+      {/* ─── SECTION 8: NEIGHBORHOODS GRID (LIGHT) ────────────────── */}
       <section className="section-pad bg-bgSection">
         <div className="container-x">
           <Reveal>
@@ -478,58 +531,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Gold divider ─────────────────────────────────────────── */}
-      <div
-        className="mx-auto h-px w-full max-w-4xl"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent, #C8A97E, transparent)",
-        }}
-      />
-
-      {/* ─── SECTION 8: TESTIMONIAL (LIGHT) ───────────────────────── */}
-      <section className="py-14 md:py-20 px-6 md:px-12 lg:px-20 bg-warmWhite">
-        <div className="container-x max-w-3xl mx-auto">
-          <Reveal>
-            <div className="border border-bordr bg-white p-8 md:p-12 text-center shadow-sm">
-              <p className="label mb-4">A Kind Word</p>
-
-              <span
-                className="block text-[80px] md:text-[100px] font-light text-gold/30 leading-none -mb-4 select-none"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-                aria-hidden="true"
-              >
-                &ldquo;
-              </span>
-
-              <blockquote
-                className="italic text-[20px] md:text-[24px] text-darkText leading-[1.6] mb-8"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-              >
-                Nancy made the entire process of buying our home in Bent Tree
-                incredibly smooth. She was detail-oriented, always available,
-                and made us feel taken care of every step of the way.
-              </blockquote>
-
-              <div className="w-[60px] h-px bg-gold/40 mx-auto mb-5" />
-
-              <p className="text-[13px] tracking-button uppercase font-medium text-darkText">
-                The Martinez Family
-              </p>
-              <p className="text-[11px] tracking-label uppercase text-gold mt-1 font-light">
-                Bought Their Home in Bent Tree
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* ─── SECTION 9: CTA (DARK) ────────────────────────────────── */}
       <section className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal">
         <div className="container-x max-w-2xl mx-auto text-center">
@@ -539,7 +540,7 @@ export default function Home() {
               className="font-display font-light text-white leading-[1.1] mt-4"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
-              The Right Agent Makes the Difference.
+              You Deserve an Agent Who Puts You First.
               <br />
               <span
                 className="italic text-gold"
@@ -548,7 +549,7 @@ export default function Home() {
                     "var(--font-accent, 'Playfair Display', serif)",
                 }}
               >
-                Let&apos;s Make Sure You Have One.
+                Let&apos;s Start There.
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
