@@ -79,8 +79,8 @@ export default function AboutPage() {
         <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
           {/* Photo — left */}
           <Reveal>
-            <div className="relative w-full max-w-[460px] mx-auto pr-5 pb-5">
-              <div className="relative z-10 aspect-[3/4] overflow-hidden shadow-warmLg">
+            <div className="relative w-full max-w-[460px] mx-auto" style={{ paddingBottom: "20px", paddingRight: "20px" }}>
+              <div className="relative z-10 aspect-[3/4] w-full overflow-hidden shadow-warmLg">
                 <Image
                   src={IMG.nancy}
                   alt="Nancy Musselman, Dallas real estate agent"
@@ -90,7 +90,7 @@ export default function AboutPage() {
                 />
               </div>
               {/* Decorative gold offset border */}
-              <div className="absolute bottom-0 right-0 z-0 h-full w-full border-2 border-gold hidden md:block" />
+              <div className="absolute bottom-0 right-0 z-0 aspect-[3/4] w-full border-2 border-gold hidden md:block" />
             </div>
           </Reveal>
 
@@ -151,7 +151,7 @@ export default function AboutPage() {
       />
 
       {/* ─── ACCENT QUOTE ─────────────────────────────────────────── */}
-      <section className="bg-charcoal px-6 py-16 md:py-24">
+      <section className="bg-charcoal px-6 py-12 md:py-16">
         <Reveal>
           <p
             className="mx-auto max-w-3xl text-center text-2xl md:text-4xl lg:text-5xl font-normal italic leading-relaxed text-white"
@@ -166,7 +166,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── SECTION 3: SKILL CARDS ───────────────────────────────── */}
-      <section className="section-pad bg-warmWhite">
+      <section className="pt-14 pb-20 md:pt-20 md:pb-28 px-6 md:px-12 lg:px-20 bg-warmWhite">
         <div className="container-x max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-14">
@@ -192,14 +192,14 @@ export default function AboutPage() {
                 <div className="group relative h-full border border-bordr bg-white p-8 md:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm overflow-hidden">
                   {/* Watermark number */}
                   <span
-                    className="absolute -top-4 -left-2 font-display text-[120px] font-extralight leading-none text-gold pointer-events-none select-none"
-                    style={{ opacity: 0.08 }}
+                    className="absolute -top-6 -left-3 font-display text-[150px] font-thin leading-none select-none"
+                    style={{ color: "#C8A97E", opacity: 0.06, pointerEvents: "none", zIndex: 0 }}
                     aria-hidden="true"
                   >
                     {skill.number}
                   </span>
                   <div className="relative z-10">
-                    <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.2] mb-4 mt-8">
+                    <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.2] mb-4 mt-6">
                       {skill.title}
                     </h3>
                     <p className="body-p text-[14px] md:text-[15px] leading-[1.8]">
