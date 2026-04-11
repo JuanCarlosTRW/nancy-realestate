@@ -79,7 +79,10 @@ export default function AboutPage() {
         <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
           {/* Photo — left */}
           <Reveal>
-            <div className="relative w-full max-w-[460px] mx-auto" style={{ paddingBottom: "20px", paddingRight: "20px" }}>
+            <div className="relative w-full max-w-[460px] mx-auto">
+              {/* Gold offset border — behind photo, shifted down-right */}
+              <div className="absolute top-5 left-5 w-full h-full border-2 border-gold z-0 hidden md:block" />
+              {/* Nancy's photo — on top */}
               <div className="relative z-10 aspect-[3/4] w-full overflow-hidden shadow-warmLg">
                 <Image
                   src={IMG.nancy}
@@ -89,8 +92,6 @@ export default function AboutPage() {
                   className="object-cover object-top"
                 />
               </div>
-              {/* Decorative gold offset border */}
-              <div className="absolute bottom-0 right-0 z-0 aspect-[3/4] w-full border-2 border-gold hidden md:block" />
             </div>
           </Reveal>
 
