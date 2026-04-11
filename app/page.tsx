@@ -6,6 +6,7 @@ import ParallaxHero from "@/components/ui/ParallaxHero";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
+import { BorderBeam } from "@/components/ui/border-beam";
 import { IMG, NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -362,7 +363,15 @@ export default function Home() {
         <div className="container-x max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Buy Card */}
           <Reveal>
-            <div className="group border border-bordr bg-white overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
+            <div className="group relative border border-bordr bg-white overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
+              <BorderBeam
+                size={250}
+                duration={12}
+                delay={0}
+                colorFrom="#C8A97E"
+                colorTo="#A8845A"
+                borderWidth={1.5}
+              />
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
@@ -400,7 +409,15 @@ export default function Home() {
 
           {/* Sell Card */}
           <Reveal delay={0.1}>
-            <div className="group border border-bordr bg-white overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
+            <div className="group relative border border-bordr bg-white overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
+              <BorderBeam
+                size={250}
+                duration={12}
+                delay={6}
+                colorFrom="#C8A97E"
+                colorTo="#A8845A"
+                borderWidth={1.5}
+              />
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
