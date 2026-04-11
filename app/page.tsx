@@ -106,10 +106,8 @@ export default function Home() {
           </span>
         </h1>
         <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
-          Whether you&apos;re buying your first home or selling the one your
-          kids grew up in &mdash; you deserve someone who knows these
-          neighborhoods, catches what others miss, and puts your interests
-          first. Every time.
+          You deserve someone who knows these neighborhoods and puts your
+          interests first. Every time.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button href="/contact" variant="gold">
@@ -241,9 +239,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {CARDS.map((card, i) => (
               <Reveal key={card.number} delay={i * 0.12}>
-                <div className="group relative h-full min-h-[280px] flex flex-col overflow-hidden border border-bordr bg-white p-8 md:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-lg">
+                <div className="group relative h-full min-h-[280px] flex flex-col overflow-hidden border border-bordr bg-white p-8 md:p-10 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-gold/40">
                   <span
-                    className="absolute -top-6 -left-3 font-display text-[150px] font-thin leading-none select-none"
+                    className="absolute -top-6 -left-3 font-display text-[150px] font-thin leading-none select-none transition-opacity duration-500 group-hover:opacity-[0.12]"
                     style={{
                       color: "#C8A97E",
                       opacity: 0.06,
@@ -255,14 +253,14 @@ export default function Home() {
                     {card.number}
                   </span>
                   <div className="relative z-10">
-                    <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.2] mb-4 mt-6">
+                    <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.2] mb-4 mt-6 transition-colors duration-300 group-hover:text-gold">
                       {card.title}
                     </h3>
                     <p className="body-p text-[14px] md:text-[15px] leading-[1.8]">
                       {card.body}
                     </p>
                   </div>
-                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+                  <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                 </div>
               </Reveal>
             ))}
@@ -285,7 +283,7 @@ export default function Home() {
           {/* Photo — left with gold offset border */}
           <Reveal>
             <div className="relative w-full max-w-[420px] mx-auto">
-              <div className="aspect-[3/4] w-full overflow-hidden shadow-warmLg">
+              <div className="aspect-[3/4] w-full overflow-hidden border border-bordr shadow-lg">
                 <Image
                   src={IMG.nancy}
                   alt="Nancy Musselman, Dallas real estate agent"
@@ -363,7 +361,7 @@ export default function Home() {
         <div className="container-x max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Buy Card */}
           <Reveal>
-            <div className="group relative border border-bordr bg-white overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
+            <div className="group relative overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
               <BorderBeam
                 size={250}
                 duration={12}
@@ -374,18 +372,19 @@ export default function Home() {
               />
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
-                  alt="House keys in hand — the dream of buying a home"
+                  src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80"
+                  alt="Happy couple standing in front of their new home"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <p className="absolute bottom-5 left-6 text-[11px] tracking-label uppercase font-medium text-gold">
-                  For Buyers
-                </p>
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/50 to-transparent p-4 pt-12">
+                  <span className="text-[11px] tracking-label uppercase font-medium text-white">
+                    For Buyers
+                  </span>
+                </div>
               </div>
-              <div className="flex min-h-[200px] flex-col justify-between p-6 md:p-8">
+              <div className="flex min-h-[220px] flex-col justify-between border border-bordr border-t-0 bg-white p-6 md:p-8">
                 <div>
                   <h3 className="font-display text-[24px] md:text-[26px] text-darkText leading-tight mb-3">
                     Find the Right Home &mdash; Not Just Any Home
@@ -409,7 +408,7 @@ export default function Home() {
 
           {/* Sell Card */}
           <Reveal delay={0.1}>
-            <div className="group relative border border-bordr bg-white overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
+            <div className="group relative overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
               <BorderBeam
                 size={250}
                 duration={12}
@@ -420,18 +419,19 @@ export default function Home() {
               />
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
-                  alt="Real estate SOLD sign — the seller dream outcome"
+                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80"
+                  alt="Beautifully staged bedroom — a seller-ready home"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <p className="absolute bottom-5 left-6 text-[11px] tracking-label uppercase font-medium text-gold">
-                  For Sellers
-                </p>
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/50 to-transparent p-4 pt-12">
+                  <span className="text-[11px] tracking-label uppercase font-medium text-white">
+                    For Sellers
+                  </span>
+                </div>
               </div>
-              <div className="flex min-h-[200px] flex-col justify-between p-6 md:p-8">
+              <div className="flex min-h-[220px] flex-col justify-between border border-bordr border-t-0 bg-white p-6 md:p-8">
                 <div>
                   <h3 className="font-display text-[24px] md:text-[26px] text-darkText leading-tight mb-3">
                     Price It Right. Prep It Smart. Sell It Fast.
@@ -493,7 +493,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
             {HOODS.slice(0, 4).map((hood, i) => (
               <Reveal key={hood.name} delay={i * 0.08}>
-                <div className="relative h-[200px] sm:h-[240px] md:h-[300px] overflow-hidden group cursor-default">
+                <div className="relative aspect-[4/3] w-full overflow-hidden group cursor-default">
                   <Image
                     src={hood.img}
                     alt={`${hood.name} neighborhood`}
@@ -526,7 +526,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-2">
             {HOODS.slice(4).map((hood, i) => (
               <Reveal key={hood.name} delay={(i + 4) * 0.08}>
-                <div className="relative h-[200px] sm:h-[240px] md:h-[300px] overflow-hidden group cursor-default">
+                <div className="relative aspect-[4/3] w-full overflow-hidden group cursor-default">
                   <Image
                     src={hood.img}
                     alt={`${hood.name} neighborhood`}
@@ -571,8 +571,17 @@ export default function Home() {
       </section>
 
       {/* ─── SECTION 9: CTA (DARK) ────────────────────────────────── */}
-      <section className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal">
-        <div className="container-x max-w-2xl mx-auto text-center">
+      <section className="relative px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal overflow-hidden">
+        {/* Subtle dot texture overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.04]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, rgba(200,169,126,0.8) 1px, transparent 1px)",
+            backgroundSize: "20px 20px",
+          }}
+        />
+        <div className="relative z-10 container-x max-w-2xl mx-auto text-center">
           <Reveal>
             <p className="label !text-gold">Your Next Step</p>
             <h2

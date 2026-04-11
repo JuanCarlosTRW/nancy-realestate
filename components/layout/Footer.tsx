@@ -1,6 +1,4 @@
-"use client";
 import Link from "next/link";
-import { SparklesCore } from "@/components/ui/sparkles";
 import {
   NAV_ITEMS,
   NANCY_LEGAL_NAME,
@@ -15,22 +13,8 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-charcoal text-white/70 mt-0 overflow-hidden">
-      {/* Sparkle / snow effect */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none">
-        <SparklesCore
-          id="footer-sparkles"
-          background="transparent"
-          minSize={0.3}
-          maxSize={1.2}
-          particleDensity={40}
-          className="w-full h-full"
-          particleColor="#C8A97E"
-          speed={0.8}
-        />
-      </div>
-
-      <div className="relative z-10 container-x px-6 md:px-12 py-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="bg-charcoal text-white/70 mt-0">
+      <div className="container-x px-6 md:px-12 py-20 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
           <p className="font-display text-3xl text-white">Nancy Musselman</p>
           <p className="text-[10px] tracking-label uppercase font-medium text-gold mt-2">
@@ -88,7 +72,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="relative z-10 border-t border-white/10">
+      <div className="border-t border-white/10">
         <div className="container-x px-6 md:px-12 py-6 text-[10px] text-white/50 leading-[1.9]">
           <p className="mb-2">
             Texas law requires all license holders to provide clients with:
