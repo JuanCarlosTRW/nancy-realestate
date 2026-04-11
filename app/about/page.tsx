@@ -80,10 +80,7 @@ export default function AboutPage() {
           {/* Photo — left */}
           <Reveal>
             <div className="relative w-full max-w-[460px] mx-auto">
-              {/* Gold offset border — behind photo, shifted down-right */}
-              <div className="absolute top-5 left-5 w-full h-full border-2 border-gold z-0 hidden md:block" />
-              {/* Nancy's photo — on top */}
-              <div className="relative z-10 aspect-[3/4] w-full overflow-hidden shadow-warmLg">
+              <div className="relative aspect-[3/4] w-full overflow-hidden shadow-warmLg">
                 <Image
                   src={IMG.nancy}
                   alt="Nancy Musselman, Dallas real estate agent"
