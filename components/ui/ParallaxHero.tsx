@@ -15,7 +15,6 @@ export default function ParallaxHero({
   imageSrc,
   imageAlt,
   children,
-  overlayOpacity = 0.55,
 }: ParallaxHeroProps) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -27,7 +26,7 @@ export default function ParallaxHero({
   return (
     <div
       ref={container}
-      className="relative w-full overflow-hidden h-[60vh] md:h-[75vh]"
+      className="relative w-full overflow-hidden min-h-[85vh] md:min-h-screen"
     >
       {/* Parallax background image */}
       <motion.div className="absolute inset-0 h-[130%] w-full" style={{ y }}>
@@ -41,16 +40,22 @@ export default function ParallaxHero({
         />
       </motion.div>
 
-      {/* Warm dark overlay */}
+      {/* Cinematic vignette overlay — reveals photo in middle, darker at edges */}
       <div
         className="absolute inset-0 z-[1]"
         style={{
-          background: `linear-gradient(to bottom, rgba(28, 23, 18, ${overlayOpacity}), rgba(28, 23, 18, ${overlayOpacity + 0.15}))`,
+          background: `linear-gradient(
+            to bottom,
+            rgba(26, 21, 16, 0.4) 0%,
+            rgba(26, 21, 16, 0.15) 30%,
+            rgba(26, 21, 16, 0.2) 55%,
+            rgba(26, 21, 16, 0.75) 100%
+          )`,
         }}
       />
 
-      {/* Content */}
-      <div className="relative z-[2] flex h-full w-full flex-col items-center justify-center px-6 text-center">
+      {/* Content — pushed to bottom third for cinematic feel */}
+      <div className="relative z-[2] flex h-full min-h-[85vh] md:min-h-screen w-full flex-col items-center justify-end px-6 pb-24 md:pb-32 text-center">
         {children}
       </div>
     </div>

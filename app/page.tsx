@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroIntro from "@/components/home/HeroIntro";
 import ParallaxHero from "@/components/ui/ParallaxHero";
-import Button from "@/components/ui/Button";
+
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
 import { BorderBeam } from "@/components/ui/border-beam";
@@ -82,18 +82,18 @@ export default function Home() {
       {/* ─── CINEMATIC INTRO OVERLAY ─────────────────────────────── */}
       <HeroIntro />
 
-      {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
+      {/* ─── SECTION 1: PARALLAX HERO — Full viewport cinematic ──── */}
       <ParallaxHero
         imageSrc="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80"
         imageAlt="Warm staged living room interior in Dallas Texas"
         overlayOpacity={0.6}
       >
-        <p className="label mb-4 !text-gold">
+        <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold mb-6">
           Dallas &middot; Fort Worth &middot; North Texas
         </p>
         <h1
-          className="font-display font-light text-white leading-[1.08] max-w-3xl mx-auto"
-          style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
+          className="font-display font-light text-white max-w-3xl mx-auto"
+          style={{ fontSize: "clamp(3rem, 5.5vw, 4.5rem)", lineHeight: 1.1 }}
         >
           Your Next Chapter Starts
           <br />
@@ -101,97 +101,120 @@ export default function Home() {
             className="italic text-gold"
             style={{
               fontFamily: "var(--font-accent, 'Playfair Display', serif)",
+              fontSize: "clamp(3.2rem, 6vw, 5rem)",
             }}
           >
             With the Right Guide.
           </span>
         </h1>
-        {/* Part 2: Updated sub-headline */}
-        <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
+        <p className="mt-6 text-[0.95rem] font-light text-white/80 max-w-xl mx-auto leading-[1.7]">
           Born and raised in DFW. Twenty-two years catching what others miss.
           Your home search deserves that kind of attention.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button href="/contact" variant="gold">
+          {/* Primary CTA — solid gold, dark text */}
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-8 py-[14px] text-[0.75rem] font-medium tracking-[0.15em] uppercase bg-gold text-charcoal hover:bg-goldLight transition-all duration-300"
+            style={{ borderRadius: "2px" }}
+          >
             Let&apos;s Talk
-          </Button>
-          <Button href="/buy" variant="outline-white">
+          </Link>
+          {/* Secondary CTA — glass outline */}
+          <Link
+            href="/buy"
+            className="inline-flex items-center justify-center px-8 py-[14px] text-[0.75rem] font-medium tracking-[0.15em] uppercase text-white border border-white/40 hover:border-white/80 hover:bg-white/5 transition-all duration-300"
+            style={{ borderRadius: "2px" }}
+          >
             See How I Help &rarr;
-          </Button>
+          </Link>
         </div>
       </ParallaxHero>
 
-      {/* ─── SECTION 2: STATS BAR (DARK) ──────────────────────────── */}
-      <section className="bg-charcoal border-y border-white/5 px-6 md:px-12">
-        <div className="container-x max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-0 py-8 md:py-10">
-          <div className="flex-1 text-center">
-            <p className="font-display text-[28px] md:text-[32px] font-light text-white leading-none">
-              50+ Years
-            </p>
-            {/* Part 3: Updated copy */}
-            <p className="mt-2 text-[11px] tracking-label uppercase font-medium text-white/50">
-              Born &amp; Raised in DFW
-            </p>
+      {/* ─── SECTION 2: STATS BAR (DARK) — Elevated presentation ── */}
+      <section className="bg-charcoal px-6 md:px-12">
+        <Reveal y={16}>
+          <div className="container-x max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-0 py-12 md:py-14">
+            <div className="flex-1 text-center">
+              <p
+                className="font-display font-light text-white leading-none"
+                style={{ fontSize: "2.25rem" }}
+              >
+                50+ Years
+              </p>
+              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/40">
+                Born &amp; Raised in DFW
+              </p>
+            </div>
+            <div className="hidden md:block w-px h-10 bg-gold/30" />
+            <div className="flex-1 text-center">
+              <p
+                className="font-display font-light text-white leading-none"
+                style={{ fontSize: "2.25rem" }}
+              >
+                22 Years
+              </p>
+              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/40">
+                In Professional Contracts &amp; Details
+              </p>
+            </div>
+            <div className="hidden md:block w-px h-10 bg-gold/30" />
+            <div className="flex-1 text-center">
+              <p
+                className="font-display font-light text-white leading-none"
+                style={{ fontSize: "2.25rem" }}
+              >
+                Beam Real Estate
+              </p>
+              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/40">
+                Licensed &middot; TX #844625
+              </p>
+            </div>
           </div>
-          <div className="hidden md:block w-px h-12 bg-gold/30" />
-          <div className="flex-1 text-center">
-            <p className="font-display text-[28px] md:text-[32px] font-light text-white leading-none">
-              22 Years
-            </p>
-            {/* Part 3: Updated copy */}
-            <p className="mt-2 text-[11px] tracking-label uppercase font-medium text-white/50">
-              In Professional Contracts &amp; Details
-            </p>
-          </div>
-          <div className="hidden md:block w-px h-12 bg-gold/30" />
-          <div className="flex-1 text-center">
-            <p className="font-display text-[28px] md:text-[32px] font-light text-white leading-none">
-              Beam Real Estate
-            </p>
-            <p className="mt-2 text-[11px] tracking-label uppercase font-medium text-white/50">
-              Licensed &middot; TX #844625
-            </p>
-          </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ─── Micro authority line ────────────────────────────────── */}
-      <div className="bg-warmWhite py-4 text-center md:py-6">
-        <p className="font-sans text-xs font-medium uppercase tracking-[0.2em] text-mediumText/70">
-          Trusted by families across Bent Tree, Plano, Richardson, and North Dallas
-        </p>
+      <div className="bg-warmWhite py-4 text-center md:py-12">
+        <Reveal y={12}>
+          <p className="font-sans text-[0.65rem] font-medium uppercase tracking-[0.2em] text-mediumText/60">
+            Trusted by families across Bent Tree, Plano, Richardson, and North Dallas
+          </p>
+        </Reveal>
       </div>
 
       {/* ─── Gold divider ─────────────────────────────────────────── */}
       <div
         className="mx-auto h-px w-full max-w-4xl"
         style={{
-          background:
-            "linear-gradient(90deg, transparent, #C8A97E, transparent)",
+          background: "linear-gradient(90deg, transparent, #C8A97E, transparent)",
         }}
       />
 
-      {/* ─── SECTION 3: WHAT YOU CAN EXPECT — 3 CARDS (LIGHT) ─────── */}
-      {/* Part 1: Moved UP — value props before testimonial */}
-      <section className="pt-14 pb-20 md:pt-20 md:pb-28 px-6 md:px-12 lg:px-20 bg-bgSection">
+      {/* ─── SECTION 3: WHAT YOU CAN EXPECT — Premium cards ──────── */}
+      <section className="py-20 md:py-24 px-6 md:px-12 lg:px-20 bg-bgSection">
         <div className="container-x max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <p className="label">What You Can Expect</p>
-              <h2 className="h-display mt-4">
+              <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold">
+                What You Can Expect
+              </p>
+              <h2
+                className="font-display font-normal text-darkText mt-4"
+                style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.15 }}
+              >
                 Working With Me Feels Different.{" "}
                 <span
                   className="italic text-gold"
                   style={{
-                    fontFamily:
-                      "var(--font-accent, 'Playfair Display', serif)",
+                    fontFamily: "var(--font-accent, 'Playfair Display', serif)",
                   }}
                 >
                   Here&apos;s How.
                 </span>
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
-              <p className="body-p mt-6 text-[15px]">
+              <p className="mt-6 text-[0.9rem] font-light leading-[1.7] text-mediumText">
                 I take on a handful of clients at a time. That means you get
                 my full attention &mdash; not a fraction of it.
               </p>
@@ -200,13 +223,19 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {CARDS.map((card, i) => (
-              <Reveal key={card.number} delay={i * 0.12}>
-                <div className="group relative h-full min-h-[280px] flex flex-col overflow-hidden border border-bordr bg-white p-8 md:p-10 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-gold/40">
+              <Reveal key={card.number} delay={i * 0.15}>
+                <div
+                  className="group relative h-full min-h-[280px] flex flex-col overflow-hidden p-10 md:p-12 transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg border border-gold/[0.12] hover:border-gold/25"
+                  style={{
+                    background: "#FFFCF5",
+                    borderRadius: "4px",
+                  }}
+                >
+                  {/* Gold number watermark — top right */}
                   <span
-                    className="absolute -top-6 -left-3 font-display text-[150px] font-thin leading-none select-none transition-opacity duration-500 group-hover:opacity-[0.12]"
+                    className="absolute -top-2 right-3 font-display text-[8rem] font-light leading-none select-none transition-all duration-500 group-hover:text-gold/[0.12]"
                     style={{
-                      color: "#C8A97E",
-                      opacity: 0.06,
+                      color: "rgba(196, 169, 108, 0.06)",
                       pointerEvents: "none",
                       zIndex: 0,
                     }}
@@ -215,14 +244,18 @@ export default function Home() {
                     {card.number}
                   </span>
                   <div className="relative z-10">
-                    <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.2] mb-4 mt-6 transition-colors duration-300 group-hover:text-gold">
+                    <h3
+                      className="font-display font-medium text-darkText leading-[1.2] mb-4 mt-4 transition-colors duration-300 group-hover:text-gold"
+                      style={{ fontSize: "1.35rem" }}
+                    >
                       {card.title}
                     </h3>
-                    <p className="body-p text-[14px] md:text-[15px] leading-[1.8]">
+                    <p className="text-[0.9rem] font-light leading-[1.7] text-mediumText">
                       {card.body}
                     </p>
                   </div>
-                  <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+                  {/* Bottom gold accent bar */}
+                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                 </div>
               </Reveal>
             ))}
@@ -234,25 +267,35 @@ export default function Home() {
       <div
         className="mx-auto h-px w-full max-w-4xl"
         style={{
-          background:
-            "linear-gradient(90deg, transparent, #C8A97E, transparent)",
+          background: "linear-gradient(90deg, transparent, #C8A97E, transparent)",
         }}
       />
 
-      {/* ─── SECTION 4: TESTIMONIAL — PROOF AFTER VALUE PROPS ─────── */}
-      {/* Part 1: Moved DOWN — testimonial validates what value props promised */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-warmWhite">
+      {/* ─── SECTION 4: TESTIMONIAL — Editorial treatment ─────────── */}
+      <section className="py-20 md:py-24 px-6 md:px-12 lg:px-20 bg-warmWhite">
         <div className="container-x max-w-3xl mx-auto">
           <Reveal>
-            <div className="border border-bordr bg-white p-8 md:p-12 text-center shadow-sm">
-              <p className="label mb-4">Don&apos;t Take My Word for It</p>
+            <div
+              className="text-center"
+              style={{
+                background: "#FFFCF5",
+                border: "1px solid rgba(196, 169, 108, 0.1)",
+                borderRadius: "4px",
+                padding: "56px 32px",
+                boxShadow: "0 4px 24px rgba(26, 21, 16, 0.04)",
+              }}
+            >
+              <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold mb-6">
+                Don&apos;t Take My Word for It
+              </p>
 
-              {/* Part 5: Strengthened gold on quote marks */}
+              {/* Decorative quote mark */}
               <span
-                className="block text-[80px] md:text-[100px] font-light text-gold/40 leading-none -mb-4 select-none"
+                className="block text-[4rem] font-light leading-none -mb-2 select-none"
                 style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
+                  fontFamily: "var(--font-accent, 'Playfair Display', serif)",
+                  color: "#C8A97E",
+                  opacity: 0.4,
                 }}
                 aria-hidden="true"
               >
@@ -260,10 +303,10 @@ export default function Home() {
               </span>
 
               <blockquote
-                className="italic text-[20px] md:text-[24px] text-darkText leading-[1.6] mb-8"
+                className="italic text-darkText leading-[1.7] mb-0 max-w-[680px] mx-auto"
                 style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
+                  fontFamily: "var(--font-accent, 'Playfair Display', serif)",
+                  fontSize: "1.35rem",
                 }}
               >
                 Nancy made the entire process of buying our home in Bent Tree
@@ -271,13 +314,16 @@ export default function Home() {
                 and made us feel taken care of every step of the way.
               </blockquote>
 
-              {/* Part 5: Stronger gold divider between quote and attribution */}
-              <div className="w-[60px] h-px bg-gold mx-auto mb-5" />
+              {/* Gold divider — attribution separator */}
+              <div
+                className="mx-auto my-7"
+                style={{ width: "40px", height: "1px", background: "#C8A97E" }}
+              />
 
-              <p className="text-[13px] tracking-button uppercase font-medium text-darkText">
+              <p className="text-[0.75rem] tracking-[0.2em] uppercase font-semibold text-darkText">
                 The Martinez Family
               </p>
-              <p className="text-[11px] tracking-label uppercase text-lightText mt-1 font-light">
+              <p className="text-[0.65rem] tracking-[0.15em] uppercase text-gold mt-1 font-light">
                 Bought Their Home in Bent Tree
               </p>
             </div>
@@ -289,72 +335,74 @@ export default function Home() {
       <div
         className="mx-auto h-px w-full max-w-4xl"
         style={{
-          background:
-            "linear-gradient(90deg, transparent, #C8A97E, transparent)",
+          background: "linear-gradient(90deg, transparent, #C8A97E, transparent)",
         }}
       />
 
-      {/* ─── SECTION 5: ABOUT NANCY (LIGHT) ───────────────────────── */}
-      <section className="section-pad bg-warmWhite">
-        <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
-          {/* Photo — left with gold offset border */}
-          <Reveal>
-            <div className="relative w-full max-w-[420px] mx-auto">
-              <div className="aspect-[3/4] w-full overflow-hidden border border-bordr shadow-lg">
-                <Image
-                  src={IMG.nancy}
-                  alt="Nancy Musselman, Dallas real estate agent"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 420px"
-                  className="object-cover object-top"
-                />
-              </div>
+      {/* ─── SECTION 5: ABOUT NANCY — Full-bleed editorial split ─── */}
+      <section className="bg-bgSection">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          {/* Photo — full-bleed left */}
+          <Reveal y={0} className="relative">
+            <div className="relative w-full h-[400px] md:h-auto md:min-h-[600px] overflow-hidden">
+              <Image
+                src={IMG.nancy}
+                alt="Nancy Musselman, Dallas real estate agent"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-top"
+              />
             </div>
           </Reveal>
 
-          {/* Text — right */}
-          <Reveal delay={0.15}>
-            <p className="label">About Nancy</p>
-            <h2 className="h-display mt-4">
-              A Dallasite{" "}
-              <span
-                className="italic text-gold"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-              >
-                Through and Through
-              </span>
-            </h2>
-            <AnimatedDivider className="w-14 mt-6" />
-            {/* Part 6: Updated About Nancy copy */}
-            <div className="mt-10 space-y-5 body-p text-[15px] md:text-[16px] leading-[1.85]">
-              <p>
-                I did not become a REALTOR by accident. I spent decades watching
-                this city grow, raising my family here, and building a career
-                where missing a detail had real consequences. Real estate lets me
-                combine everything I am good at &mdash; knowing Dallas, reading
-                people, and making sure every contract, every negotiation, and
-                every detail is right.
+          {/* Text — right side with generous padding */}
+          <div className="flex flex-col justify-center px-8 py-12 md:px-16 md:py-20 lg:px-20 bg-bgSection">
+            <Reveal delay={0.15}>
+              <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold mb-4">
+                About Nancy
               </p>
-            </div>
-            <Link
-              href="/about"
-              className="mt-8 inline-block text-[12px] tracking-button uppercase font-medium text-gold hover:text-goldDark transition-colors"
-            >
-              Read My Story &rarr;
-            </Link>
-          </Reveal>
+              <h2
+                className="font-display font-normal text-darkText"
+                style={{ fontSize: "clamp(2rem, 3.5vw, 2.75rem)", lineHeight: 1.2 }}
+              >
+                A Dallasite{" "}
+                <span
+                  className="italic text-gold"
+                  style={{
+                    fontFamily: "var(--font-accent, 'Playfair Display', serif)",
+                  }}
+                >
+                  Through and Through
+                </span>
+              </h2>
+              <AnimatedDivider className="w-14 mt-6" />
+              <div className="mt-8 space-y-5 text-[0.9rem] font-light leading-[1.8] text-mediumText">
+                <p>
+                  I did not become a REALTOR by accident. I spent decades watching
+                  this city grow, raising my family here, and building a career
+                  where missing a detail had real consequences. Real estate lets me
+                  combine everything I am good at &mdash; knowing Dallas, reading
+                  people, and making sure every contract, every negotiation, and
+                  every detail is right.
+                </p>
+              </div>
+              <Link
+                href="/about"
+                className="mt-8 inline-flex items-center gap-2 text-[0.7rem] tracking-[0.2em] uppercase font-medium text-gold hover:text-goldDark hover:gap-3 transition-all duration-300"
+              >
+                Read My Story <span>&rarr;</span>
+              </Link>
+            </Reveal>
+          </div>
         </div>
       </section>
 
-      {/* ─── SECTION 6: BUY / SELL DUAL CARDS (LIGHT) ─────────────── */}
-      <section className="section-pad bg-warmWhite">
+      {/* ─── SECTION 6: BUY / SELL DUAL CARDS ─────────────────────── */}
+      <section className="py-20 md:py-24 px-6 md:px-12 lg:px-20 bg-warmWhite">
         <div className="container-x max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Buy Card */}
           <Reveal>
-            <div className="group relative overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
+            <div className="group relative overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-warm" style={{ borderRadius: "4px" }}>
               <BorderBeam
                 size={250}
                 duration={12}
@@ -369,20 +417,24 @@ export default function Home() {
                   alt="Happy couple standing in front of their new home"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.04]"
                 />
-                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/50 to-transparent p-4 pt-12">
-                  <span className="text-[11px] tracking-label uppercase font-medium text-white">
+                {/* Badge overlay */}
+                <div
+                  className="absolute bottom-4 left-4 px-4 py-1.5 backdrop-blur-sm"
+                  style={{ background: "rgba(26, 21, 16, 0.85)", borderRadius: "2px" }}
+                >
+                  <span className="text-[0.6rem] tracking-[0.2em] uppercase font-medium text-white">
                     For Buyers
                   </span>
                 </div>
               </div>
               <div className="flex min-h-[220px] flex-col justify-between border border-bordr border-t-0 bg-white p-6 md:p-8">
                 <div>
-                  <h3 className="font-display text-[24px] md:text-[26px] text-darkText leading-tight mb-3">
+                  <h3 className="font-display font-medium text-[1.35rem] md:text-[1.5rem] text-darkText leading-tight mb-3">
                     Find the Right Home &mdash; Not Just Any Home
                   </h3>
-                  <p className="body-p text-[14px] md:text-[15px]">
+                  <p className="text-[0.9rem] font-light leading-[1.7] text-mediumText">
                     Finding the right home in Dallas takes more than browsing
                     listings. It takes someone who knows which streets to skip,
                     which neighborhoods are climbing, and what a listing photo
@@ -391,9 +443,9 @@ export default function Home() {
                 </div>
                 <Link
                   href="/buy"
-                  className="mt-4 inline-block text-[12px] tracking-button uppercase font-medium text-gold hover:text-goldDark transition-colors"
+                  className="mt-4 inline-flex items-center gap-2 text-[0.7rem] tracking-[0.2em] uppercase font-medium text-gold hover:text-goldDark hover:gap-3 transition-all duration-300"
                 >
-                  Start Your Search &rarr;
+                  Start Your Search <span>&rarr;</span>
                 </Link>
               </div>
             </div>
@@ -401,7 +453,7 @@ export default function Home() {
 
           {/* Sell Card */}
           <Reveal delay={0.1}>
-            <div className="group relative overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm">
+            <div className="group relative overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-warm" style={{ borderRadius: "4px" }}>
               <BorderBeam
                 size={250}
                 duration={12}
@@ -416,20 +468,23 @@ export default function Home() {
                   alt="Beautifully staged bedroom — a seller-ready home"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.04]"
                 />
-                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/50 to-transparent p-4 pt-12">
-                  <span className="text-[11px] tracking-label uppercase font-medium text-white">
+                <div
+                  className="absolute bottom-4 left-4 px-4 py-1.5 backdrop-blur-sm"
+                  style={{ background: "rgba(26, 21, 16, 0.85)", borderRadius: "2px" }}
+                >
+                  <span className="text-[0.6rem] tracking-[0.2em] uppercase font-medium text-white">
                     For Sellers
                   </span>
                 </div>
               </div>
               <div className="flex min-h-[220px] flex-col justify-between border border-bordr border-t-0 bg-white p-6 md:p-8">
                 <div>
-                  <h3 className="font-display text-[24px] md:text-[26px] text-darkText leading-tight mb-3">
+                  <h3 className="font-display font-medium text-[1.35rem] md:text-[1.5rem] text-darkText leading-tight mb-3">
                     Price It Right. Prep It Smart. Sell It Fast.
                   </h3>
-                  <p className="body-p text-[14px] md:text-[15px]">
+                  <p className="text-[0.9rem] font-light leading-[1.7] text-mediumText">
                     Most homes sit on the market because they were overpriced
                     from day one. I will price it based on what actually sold,
                     prep it for what buyers actually notice, and get it in front
@@ -438,9 +493,9 @@ export default function Home() {
                 </div>
                 <Link
                   href="/sell"
-                  className="mt-4 inline-block text-[12px] tracking-button uppercase font-medium text-gold hover:text-goldDark transition-colors"
+                  className="mt-4 inline-flex items-center gap-2 text-[0.7rem] tracking-[0.2em] uppercase font-medium text-gold hover:text-goldDark hover:gap-3 transition-all duration-300"
                 >
-                  Get Your Home Sold &rarr;
+                  Get Your Home Sold <span>&rarr;</span>
                 </Link>
               </div>
             </div>
@@ -452,30 +507,33 @@ export default function Home() {
       <div
         className="mx-auto h-px w-full max-w-4xl"
         style={{
-          background:
-            "linear-gradient(90deg, transparent, #C8A97E, transparent)",
+          background: "linear-gradient(90deg, transparent, #C8A97E, transparent)",
         }}
       />
 
-      {/* ─── SECTION 7: NEIGHBORHOODS GRID (LIGHT) ────────────────── */}
-      <section className="section-pad bg-bgSection">
+      {/* ─── SECTION 7: NEIGHBORHOODS GRID — Immersive cards ──────── */}
+      <section className="py-20 md:py-24 px-6 md:px-12 lg:px-20 bg-bgSection">
         <div className="container-x">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <p className="label">Dallas Neighborhoods</p>
-              <h2 className="h-display mt-4">
+              <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold">
+                Dallas Neighborhoods
+              </p>
+              <h2
+                className="font-display font-normal text-darkText mt-4"
+                style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.15 }}
+              >
                 The City I&apos;ve Called Home for{" "}
                 <span
                   className="italic text-gold"
                   style={{
-                    fontFamily:
-                      "var(--font-accent, 'Playfair Display', serif)",
+                    fontFamily: "var(--font-accent, 'Playfair Display', serif)",
                   }}
                 >
                   50+ Years
                 </span>
               </h2>
-              <p className="body-p mt-6 max-w-2xl mx-auto">
+              <p className="mt-6 text-[0.9rem] font-light leading-[1.7] text-mediumText max-w-2xl mx-auto">
                 From North Dallas to Colleyville, I know these streets and the
                 stories behind them.
               </p>
@@ -483,7 +541,8 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          {/* Top row: 4 columns */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
             {HOODS.slice(0, 4).map((hood, i) => (
               <Reveal key={hood.name} delay={i * 0.08}>
                 <div className="relative aspect-[4/3] w-full overflow-hidden group cursor-default">
@@ -491,23 +550,25 @@ export default function Home() {
                     src={hood.img}
                     alt={`${hood.name} neighborhood`}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.06]"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.06]"
                   />
                   <div
-                    className="absolute inset-0"
+                    className="absolute inset-0 transition-opacity duration-400 group-hover:opacity-80"
                     style={{
-                      background:
-                        "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.25) 40%, transparent 100%)",
+                      background: "linear-gradient(to top, rgba(26,21,16,0.75) 0%, rgba(26,21,16,0.2) 50%, transparent 100%)",
                     }}
                   />
                   <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 z-10">
-                    <h3 className="font-display font-medium text-[22px] md:text-[24px] text-white leading-[1.1]">
+                    <h3
+                      className="font-display font-medium text-white leading-[1.1]"
+                      style={{ fontSize: "1.5rem", textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
+                    >
                       {hood.name}
                     </h3>
-                    <div className="w-[30px] group-hover:w-[60px] h-[2px] bg-gold mt-2 mb-2 transition-all duration-500" />
-                    <p className="text-[12px] text-white/80 font-light leading-[1.5] tracking-[0.02em]">
+                    <div className="w-6 group-hover:w-12 h-[2px] bg-gold mt-2 mb-2 transition-all duration-500" />
+                    <p className="text-[0.75rem] text-white/80 font-light leading-[1.5]">
                       {hood.descriptor}
                     </p>
                   </div>
@@ -516,7 +577,8 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-2">
+          {/* Bottom row: 3 columns */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 mt-1">
             {HOODS.slice(4).map((hood, i) => (
               <Reveal key={hood.name} delay={(i + 4) * 0.08}>
                 <div className="relative aspect-[4/3] w-full overflow-hidden group cursor-default">
@@ -524,23 +586,25 @@ export default function Home() {
                     src={hood.img}
                     alt={`${hood.name} neighborhood`}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.06]"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.06]"
                   />
                   <div
-                    className="absolute inset-0"
+                    className="absolute inset-0 transition-opacity duration-400 group-hover:opacity-80"
                     style={{
-                      background:
-                        "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.25) 40%, transparent 100%)",
+                      background: "linear-gradient(to top, rgba(26,21,16,0.75) 0%, rgba(26,21,16,0.2) 50%, transparent 100%)",
                     }}
                   />
                   <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 z-10">
-                    <h3 className="font-display font-medium text-[22px] md:text-[24px] text-white leading-[1.1]">
+                    <h3
+                      className="font-display font-medium text-white leading-[1.1]"
+                      style={{ fontSize: "1.5rem", textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
+                    >
                       {hood.name}
                     </h3>
-                    <div className="w-[30px] group-hover:w-[60px] h-[2px] bg-gold mt-2 mb-2 transition-all duration-500" />
-                    <p className="text-[12px] text-white/80 font-light leading-[1.5] tracking-[0.02em]">
+                    <div className="w-6 group-hover:w-12 h-[2px] bg-gold mt-2 mb-2 transition-all duration-500" />
+                    <p className="text-[0.75rem] text-white/80 font-light leading-[1.5]">
                       {hood.descriptor}
                     </p>
                   </div>
@@ -550,7 +614,7 @@ export default function Home() {
           </div>
 
           <Reveal delay={0.2}>
-            <p className="text-center text-[14px] font-light text-mediumText mt-14">
+            <p className="text-center text-[0.85rem] font-light text-mediumText mt-14">
               Looking for a specific area?{" "}
               <Link
                 href="/contact"
@@ -563,19 +627,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── SECTION 8: ACCENT QUOTE (DARK) — Emotional closer ────── */}
-      {/* Part 1: Moved to just above final CTA */}
-      <section className="bg-charcoal px-6 py-20 md:py-28">
+      {/* ─── SECTION 8: ACCENT QUOTE — Cinematic moment ──────────── */}
+      <section className="bg-charcoal px-6" style={{ padding: "100px 24px" }}>
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            {/* Part 7: Decorative gold line — 40px width, 24px spacing */}
-            <div className="mx-auto mb-6 h-px w-10 bg-gold" />
+            {/* Gold divider above */}
+            <div
+              className="mx-auto mb-10"
+              style={{ width: "40px", height: "1.5px", background: "#C8A97E" }}
+            />
 
             <p
-              className="text-3xl font-normal italic leading-relaxed text-white md:text-4xl lg:text-5xl"
+              className="font-normal italic text-warmWhite"
               style={{
-                fontFamily:
-                  "var(--font-accent, 'Playfair Display', serif)",
+                fontFamily: "var(--font-accent, 'Playfair Display', serif)",
+                fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
+                lineHeight: 1.4,
               }}
             >
               Some people sell houses.
@@ -585,48 +652,56 @@ export default function Home() {
             </p>
 
             {/* Bottom decorative line */}
-            <div className="mx-auto mt-8 h-px w-10 bg-gold" />
+            <div
+              className="mx-auto mt-10"
+              style={{ width: "40px", height: "1.5px", background: "#C8A97E" }}
+            />
           </Reveal>
         </div>
       </section>
 
-      {/* ─── SECTION 9: CTA (DARK) ────────────────────────────────── */}
-      <section className="relative px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal overflow-hidden">
+      {/* ─── SECTION 9: CTA (DARK) — Warm + compelling ────────────── */}
+      <section className="relative px-6 md:px-12 lg:px-20 bg-charcoal overflow-hidden" style={{ paddingTop: "100px", paddingBottom: "80px" }}>
         {/* Gold sparkle / snow effect */}
         <CTASparkles />
         <div className="relative z-10 container-x max-w-2xl mx-auto text-center">
           <Reveal>
-            <p className="label !text-gold">Your Next Step</p>
+            <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold mb-5">
+              Your Next Step
+            </p>
             <h2
-              className="font-display font-light text-white leading-[1.1] mt-4"
-              style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
+              className="font-display font-normal text-warmWhite leading-[1.1] mt-4"
+              style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)" }}
             >
               Tell Me What You Need.
               <br />
               <span
                 className="italic text-gold"
                 style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
+                  fontFamily: "var(--font-accent, 'Playfair Display', serif)",
                 }}
               >
                 I&apos;ll Tell You What Actually Makes Sense.
               </span>
             </h2>
-            <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
+            <p className="mt-6 text-[0.95rem] font-light text-white/60 leading-[1.6] max-w-[500px] mx-auto">
               No sales pitch. No pressure. Just an honest conversation about
               your goals and a clear plan for how to get there.
             </p>
             <div className="mt-10">
-              <Button href="/contact" variant="gold">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-10 py-4 text-[0.75rem] font-medium tracking-[0.15em] uppercase bg-gold text-charcoal hover:bg-goldLight hover:scale-[1.02] transition-all duration-300"
+                style={{ borderRadius: "2px" }}
+              >
                 Start a Conversation
-              </Button>
+              </Link>
             </div>
-            <p className="mt-6 text-[14px] text-white/50">
+            <p className="mt-6 text-[0.85rem] text-white/40">
               Or call directly:{" "}
               <a
                 href={`tel:${NANCY_PHONE_TEL}`}
-                className="text-gold underline underline-offset-4 hover:text-goldLight transition-colors"
+                className="text-white/60 underline underline-offset-[3px] hover:text-gold transition-colors duration-200"
               >
                 {NANCY_PHONE}
               </a>
