@@ -54,9 +54,9 @@ export default function AboutPage() {
     <>
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
       <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1920&q=80"
-        imageAlt="Traditional American suburban home in Dallas Texas"
-        overlayOpacity={0.7}
+        imageSrc="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=3840&q=80"
+        imageAlt="Luxury home exterior at twilight in Dallas Texas"
+        overlayOpacity={0.45}
       >
         <p className="label mb-4 !text-gold">Meet Nancy</p>
         <h1
@@ -126,8 +126,8 @@ export default function AboutPage() {
               </div>
 
               <p>
-                Before real estate, I spent 22 years in human resources and
-                accounting. Two decades of reading people, navigating
+                Before real estate, I spent 22 years in accounting and
+                human resources. Two decades of reading people, navigating
                 high-stakes conversations, catching details others miss, and
                 staying composed when it matters most.
               </p>

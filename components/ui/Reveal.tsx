@@ -16,7 +16,7 @@ export default function Reveal({
   once?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once, amount: 0.15 });
+  const inView = useInView(ref, { once, amount: 0.05 });
   return (
     <motion.div
       ref={ref}

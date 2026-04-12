@@ -48,24 +48,6 @@ const STEPS = [
   },
 ];
 
-const CARDS = [
-  {
-    number: "01",
-    title: "I Know Where Value Actually Lives",
-    body: "I know Dallas neighborhoods most agents overlook. The quiet streets with great schools, the blocks where values are climbing, the areas most agents drive past. Fifty years of living here means I don\u2019t rely on market reports to tell me what a neighborhood feels like \u2014 I already know.",
-  },
-  {
-    number: "02",
-    title: "I Stay Clear When Things Get Complicated",
-    body: "When negotiations get tense, when inspections surface surprises, when timelines shift \u2014 I stay level. Twenty-two years of high-stakes professional experience means I don\u2019t panic, I don\u2019t rush, and I don\u2019t let emotions drive decisions. You get an agent whose steadiness is contagious.",
-  },
-  {
-    number: "03",
-    title: "I Tell You What Others Won\u2019t",
-    body: "If something is wrong with a home, I will tell you. If a neighborhood doesn\u2019t match what you described wanting, I will say so. I would rather lose a deal than let you make a decision you\u2019ll regret. That\u2019s not just a philosophy \u2014 it\u2019s how I\u2019ve operated my entire career.",
-  },
-];
-
 /* ── Page ───────────────────────────────────────────────────────────── */
 
 export default function BuyPage() {
@@ -73,9 +55,9 @@ export default function BuyPage() {
     <>
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
       <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80"
+        imageSrc="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=3840&q=80"
         imageAlt="Warm home interior with natural light in Dallas Texas"
-        overlayOpacity={0.6}
+        overlayOpacity={0.45}
       >
         <p className="label mb-4 !text-gold">For Buyers</p>
         <h1
@@ -217,64 +199,6 @@ export default function BuyPage() {
           </div>
         </div>
       </section>
-
-      {/* ─── SECTION 5: HOW I THINK (3 CARDS — LIGHT) ─────────────── */}
-      <section className="pt-14 pb-20 md:pt-20 md:pb-28 px-6 md:px-12 lg:px-20 bg-warmWhite">
-        <div className="container-x max-w-6xl mx-auto">
-          <Reveal>
-            <div className="text-center max-w-2xl mx-auto mb-14">
-              <p className="label">Why It Matters Who Walks With You</p>
-              <h2 className="h-display mt-4">
-                How I Think When I Walk a Property
-              </h2>
-              <AnimatedDivider className="w-16 mx-auto mt-8" />
-              <p className="body-p mt-6 text-[15px]">
-                Three things set me apart from agents who just open doors.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {CARDS.map((card, i) => (
-              <Reveal key={card.number} delay={i * 0.12}>
-                <div className={`group relative h-full border border-bordr bg-white p-8 md:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm overflow-hidden ${i === 2 ? "md:col-span-2" : ""}`}>
-                  {/* Watermark number */}
-                  <span
-                    className="absolute -top-6 -left-3 font-display text-[150px] font-thin leading-none select-none"
-                    style={{
-                      color: "#C8A97E",
-                      opacity: 0.06,
-                      pointerEvents: "none",
-                      zIndex: 0,
-                    }}
-                    aria-hidden="true"
-                  >
-                    {card.number}
-                  </span>
-                  <div className="relative z-10">
-                    <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.2] mb-4 mt-6">
-                      {card.title}
-                    </h3>
-                    <p className="body-p text-[14px] md:text-[15px] leading-[1.8]">
-                      {card.body}
-                    </p>
-                  </div>
-                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Gold divider ─────────────────────────────────────────── */}
-      <div
-        className="mx-auto h-px w-full max-w-4xl"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent, #C8A97E, transparent)",
-        }}
-      />
 
       {/* ─── CTA (DARK) ─────────────────────────────────────────────── */}
       <section className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal">

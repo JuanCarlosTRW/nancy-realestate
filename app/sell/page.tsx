@@ -48,24 +48,6 @@ const STEPS = [
   },
 ];
 
-const CARDS = [
-  {
-    number: "01",
-    title: "Honesty Before Everything",
-    body: "I will tell you what your home is worth \u2014 not what you want to hear. I study what comparable homes actually sold for, not what they were listed at. That precision is the difference between a bidding war and a stale listing. You deserve the truth on day one, not a correction on day sixty.",
-  },
-  {
-    number: "02",
-    title: "Preparation That Protects Your Equity",
-    body: "I grew up around construction. I will walk your home and tell you exactly what to fix, what to stage, and what to leave alone. The wrong renovation before listing can cost thousands with zero return. The right preparation can add tens of thousands to your final price.",
-  },
-  {
-    number: "03",
-    title: "Calm, Focused Negotiation",
-    body: "When offers come in, emotions run high. That is when mistakes happen \u2014 accepting too fast, rejecting too quickly, missing leverage you did not know you had. Twenty-two years of professional negotiation experience means I stay clear-headed when it matters most. Your outcome is too important for emotional decisions.",
-  },
-];
-
 /* ── Page ───────────────────────────────────────────────────────────── */
 
 export default function SellPage() {
@@ -73,9 +55,9 @@ export default function SellPage() {
     <>
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
       <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
+        imageSrc="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=3840&q=80"
         imageAlt="Warm suburban home front view with traditional style in Dallas Texas"
-        overlayOpacity={0.6}
+        overlayOpacity={0.45}
       >
         <p className="label mb-4 !text-gold">For Sellers</p>
         <h1
@@ -263,59 +245,6 @@ export default function SellPage() {
         </div>
       </section>
 
-      {/* ─── SECTION 5: WHAT YOU GET — 3 CARDS (LIGHT) ────────────── */}
-      <section className="pt-14 pb-20 md:pt-20 md:pb-28 px-6 md:px-12 lg:px-20 bg-warmWhite">
-        <div className="container-x max-w-6xl mx-auto">
-          <Reveal>
-            <div className="text-center max-w-2xl mx-auto mb-14">
-              <p className="label">The Difference</p>
-              <h2 className="h-display mt-4" style={{ fontWeight: 400 }}>
-                What You Get When I Represent{" "}
-                <span className="italic text-gold" style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}>
-                  Your Home
-                </span>
-              </h2>
-              <AnimatedDivider className="w-16 mx-auto mt-8" />
-              <p className="body-p mt-6 text-[15px]">
-                Three things that change how your sale goes.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="max-w-3xl mx-auto">
-            {CARDS.map((card, i) => (
-              <Reveal key={card.number} delay={i * 0.12}>
-                <div
-                  className="grid grid-cols-[60px_1fr] gap-5 items-start py-7 md:py-9"
-                  style={i < CARDS.length - 1 ? { borderBottom: "1px solid rgba(196, 169, 108, 0.12)" } : {}}
-                >
-                  <span className="font-display text-[2rem] font-light leading-none select-none" style={{ color: "rgba(196, 169, 108, 0.25)" }}>
-                    {card.number}
-                  </span>
-                  <div>
-                    <h3 className="font-display text-[1.3rem] leading-[1.2] mb-3" style={{ fontWeight: 600, color: "#1A1510" }}>
-                      {card.title}
-                    </h3>
-                    <p className="text-[0.9rem] font-light leading-[1.8]" style={{ color: "#2A211C" }}>
-                      {card.body}
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Gold divider ─────────────────────────────────────────── */}
-      <div
-        className="mx-auto h-px w-full max-w-4xl"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent, #C8A97E, transparent)",
-        }}
-      />
-
       {/* ─── CTA (DARK) ─────────────────────────────────────────────── */}
       <section className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal">
         <div className="container-x max-w-3xl mx-auto text-center">
@@ -332,9 +261,9 @@ export default function SellPage() {
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
-              That honesty is exactly why my sellers don&apos;t sit on the
-              market. Let&apos;s start with a real conversation about your
-              home, your timeline, and your goals.
+              That honesty is the foundation of how I work. Let&apos;s
+              start with a real conversation about your home, your
+              timeline, and your goals.
             </p>
             <div className="mt-10">
               <Button href="/contact" variant="gold">

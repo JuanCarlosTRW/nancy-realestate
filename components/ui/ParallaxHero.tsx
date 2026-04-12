@@ -15,6 +15,7 @@ export default function ParallaxHero({
   imageSrc,
   imageAlt,
   children,
+  overlayOpacity = 0.5,
 }: ParallaxHeroProps) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -36,33 +37,21 @@ export default function ParallaxHero({
           fill
           priority
           sizes="100vw"
-          className="object-cover ken-burns"
+          className="object-cover object-center ken-burns"
         />
       </motion.div>
 
-      {/* Cinematic vignette overlay */}
+      {/* Bottom gradient for text readability — scaled by overlayOpacity */}
       <div
         className="absolute inset-0 z-[1]"
         style={{
           background: `linear-gradient(
             to bottom,
-            rgba(20, 16, 12, 0.3) 0%,
-            rgba(20, 16, 12, 0.15) 30%,
-            rgba(20, 16, 12, 0.2) 50%,
-            rgba(20, 16, 12, 0.65) 100%
-          )`,
-        }}
-      />
-
-      {/* Part 2A: Radial spotlight darkening behind text zone for crisp readability */}
-      <div
-        className="absolute inset-0 z-[1]"
-        style={{
-          background: `radial-gradient(
-            ellipse 60% 50% at center 65%,
-            rgba(18, 14, 10, 0.6) 0%,
-            rgba(18, 14, 10, 0.3) 50%,
-            transparent 100%
+            transparent 0%,
+            transparent 35%,
+            rgba(20, 16, 12, ${0.4 * overlayOpacity}) 60%,
+            rgba(20, 16, 12, ${0.8 * overlayOpacity}) 85%,
+            rgba(20, 16, 12, ${0.92 * overlayOpacity}) 100%
           )`,
         }}
       />

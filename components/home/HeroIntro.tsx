@@ -8,7 +8,12 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
  * to reveal the main hero section underneath.
  */
 export default function HeroIntro() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(() => {
+    if (typeof window !== "undefined") {
+      return !sessionStorage.getItem("heroIntroSeen");
+    }
+    return true;
+  });
   const prefersReduced = useReducedMotion();
 
   useEffect(() => {
@@ -16,10 +21,14 @@ export default function HeroIntro() {
       setShow(false);
       return;
     }
+    if (!show) return;
     // Total intro duration: text appears over ~2s, holds for ~1.2s, then exits
-    const timer = setTimeout(() => setShow(false), 3200);
+    const timer = setTimeout(() => {
+      setShow(false);
+      sessionStorage.setItem("heroIntroSeen", "1");
+    }, 3200);
     return () => clearTimeout(timer);
-  }, [prefersReduced]);
+  }, [prefersReduced, show]);
 
   // Lock scroll while intro is visible
   useEffect(() => {
