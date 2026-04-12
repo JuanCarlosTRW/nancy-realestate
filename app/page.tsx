@@ -106,9 +106,10 @@ export default function Home() {
             With the Right Guide.
           </span>
         </h1>
+        {/* Part 2: Updated sub-headline */}
         <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
-          You deserve someone who knows these neighborhoods and puts your
-          interests first. Every time.
+          Born and raised in DFW. Twenty-two years catching what others miss.
+          Your home search deserves that kind of attention.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button href="/contact" variant="gold">
@@ -127,8 +128,9 @@ export default function Home() {
             <p className="font-display text-[28px] md:text-[32px] font-light text-white leading-none">
               50+ Years
             </p>
+            {/* Part 3: Updated copy */}
             <p className="mt-2 text-[11px] tracking-label uppercase font-medium text-white/50">
-              Calling DFW Home
+              Born &amp; Raised in DFW
             </p>
           </div>
           <div className="hidden md:block w-px h-12 bg-gold/30" />
@@ -136,8 +138,9 @@ export default function Home() {
             <p className="font-display text-[28px] md:text-[32px] font-light text-white leading-none">
               22 Years
             </p>
+            {/* Part 3: Updated copy */}
             <p className="mt-2 text-[11px] tracking-label uppercase font-medium text-white/50">
-              Of Reading People and Details
+              In Professional Contracts &amp; Details
             </p>
           </div>
           <div className="hidden md:block w-px h-12 bg-gold/30" />
@@ -159,49 +162,6 @@ export default function Home() {
         </p>
       </div>
 
-      {/* ─── SECTION 3: TESTIMONIAL — PROOF EARLY (LIGHT) ─────────── */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-warmWhite">
-        <div className="container-x max-w-3xl mx-auto">
-          <Reveal>
-            <div className="border border-bordr bg-white p-8 md:p-12 text-center shadow-sm">
-              <p className="label mb-4">Don&apos;t Take My Word for It</p>
-
-              <span
-                className="block text-[80px] md:text-[100px] font-light text-gold/30 leading-none -mb-4 select-none"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-                aria-hidden="true"
-              >
-                &ldquo;
-              </span>
-
-              <blockquote
-                className="italic text-[20px] md:text-[24px] text-darkText leading-[1.6] mb-8"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-              >
-                Nancy made the entire process of buying our home in Bent Tree
-                incredibly smooth. She was detail-oriented, always available,
-                and made us feel taken care of every step of the way.
-              </blockquote>
-
-              <div className="w-[60px] h-px bg-gold/40 mx-auto mb-5" />
-
-              <p className="text-[13px] tracking-button uppercase font-medium text-darkText">
-                The Martinez Family
-              </p>
-              <p className="text-[11px] tracking-label uppercase text-gold mt-1 font-light">
-                Bought Their Home in Bent Tree
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* ─── Gold divider ─────────────────────────────────────────── */}
       <div
         className="mx-auto h-px w-full max-w-4xl"
@@ -211,7 +171,8 @@ export default function Home() {
         }}
       />
 
-      {/* ─── SECTION 4: WHAT YOU CAN EXPECT — 3 CARDS (LIGHT) ─────── */}
+      {/* ─── SECTION 3: WHAT YOU CAN EXPECT — 3 CARDS (LIGHT) ─────── */}
+      {/* Part 1: Moved UP — value props before testimonial */}
       <section className="pt-14 pb-20 md:pt-20 md:pb-28 px-6 md:px-12 lg:px-20 bg-bgSection">
         <div className="container-x max-w-6xl mx-auto">
           <Reveal>
@@ -278,6 +239,61 @@ export default function Home() {
         }}
       />
 
+      {/* ─── SECTION 4: TESTIMONIAL — PROOF AFTER VALUE PROPS ─────── */}
+      {/* Part 1: Moved DOWN — testimonial validates what value props promised */}
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-warmWhite">
+        <div className="container-x max-w-3xl mx-auto">
+          <Reveal>
+            <div className="border border-bordr bg-white p-8 md:p-12 text-center shadow-sm">
+              <p className="label mb-4">Don&apos;t Take My Word for It</p>
+
+              {/* Part 5: Strengthened gold on quote marks */}
+              <span
+                className="block text-[80px] md:text-[100px] font-light text-gold/40 leading-none -mb-4 select-none"
+                style={{
+                  fontFamily:
+                    "var(--font-accent, 'Playfair Display', serif)",
+                }}
+                aria-hidden="true"
+              >
+                &ldquo;
+              </span>
+
+              <blockquote
+                className="italic text-[20px] md:text-[24px] text-darkText leading-[1.6] mb-8"
+                style={{
+                  fontFamily:
+                    "var(--font-accent, 'Playfair Display', serif)",
+                }}
+              >
+                Nancy made the entire process of buying our home in Bent Tree
+                incredibly smooth. She was detail-oriented, always available,
+                and made us feel taken care of every step of the way.
+              </blockquote>
+
+              {/* Part 5: Stronger gold divider between quote and attribution */}
+              <div className="w-[60px] h-px bg-gold mx-auto mb-5" />
+
+              <p className="text-[13px] tracking-button uppercase font-medium text-darkText">
+                The Martinez Family
+              </p>
+              <p className="text-[11px] tracking-label uppercase text-lightText mt-1 font-light">
+                Bought Their Home in Bent Tree
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── Gold divider ─────────────────────────────────────────── */}
+      <div
+        className="mx-auto h-px w-full max-w-4xl"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, #C8A97E, transparent)",
+        }}
+      />
+
       {/* ─── SECTION 5: ABOUT NANCY (LIGHT) ───────────────────────── */}
       <section className="section-pad bg-warmWhite">
         <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
@@ -312,12 +328,14 @@ export default function Home() {
               </span>
             </h2>
             <AnimatedDivider className="w-14 mt-6" />
+            {/* Part 6: Updated About Nancy copy */}
             <div className="mt-10 space-y-5 body-p text-[15px] md:text-[16px] leading-[1.85]">
               <p>
                 I did not become a REALTOR by accident. I spent decades watching
-                this city grow, raising my family here, and waiting for the
-                right moment. Real estate lets me combine everything I am good
-                at &mdash; knowing Dallas, reading people, and making sure
+                this city grow, raising my family here, and building a career
+                where missing a detail had real consequences. Real estate lets me
+                combine everything I am good at &mdash; knowing Dallas, reading
+                people, and making sure every contract, every negotiation, and
                 every detail is right.
               </p>
             </div>
@@ -331,33 +349,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── SECTION 6: ACCENT QUOTE (DARK) ───────────────────────── */}
-      <section className="bg-charcoal px-6 py-20 md:py-28">
-        <div className="mx-auto max-w-3xl text-center">
-          <Reveal>
-            {/* Top decorative line */}
-            <div className="mx-auto mb-8 h-px w-16 bg-gold" />
-
-            <p
-              className="text-3xl font-normal italic leading-relaxed text-white md:text-4xl lg:text-5xl"
-              style={{
-                fontFamily:
-                  "var(--font-accent, 'Playfair Display', serif)",
-              }}
-            >
-              Some people sell houses.
-              <br />
-              I help people{" "}
-              <span className="text-gold">come home.</span>
-            </p>
-
-            {/* Bottom decorative line */}
-            <div className="mx-auto mt-8 h-px w-16 bg-gold" />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ─── SECTION 7: BUY / SELL DUAL CARDS (LIGHT) ─────────────── */}
+      {/* ─── SECTION 6: BUY / SELL DUAL CARDS (LIGHT) ─────────────── */}
       <section className="section-pad bg-warmWhite">
         <div className="container-x max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Buy Card */}
@@ -465,7 +457,7 @@ export default function Home() {
         }}
       />
 
-      {/* ─── SECTION 8: NEIGHBORHOODS GRID (LIGHT) ────────────────── */}
+      {/* ─── SECTION 7: NEIGHBORHOODS GRID (LIGHT) ────────────────── */}
       <section className="section-pad bg-bgSection">
         <div className="container-x">
           <Reveal>
@@ -567,6 +559,33 @@ export default function Home() {
                 Let&apos;s talk
               </Link>
             </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── SECTION 8: ACCENT QUOTE (DARK) — Emotional closer ────── */}
+      {/* Part 1: Moved to just above final CTA */}
+      <section className="bg-charcoal px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <Reveal>
+            {/* Part 7: Decorative gold line — 40px width, 24px spacing */}
+            <div className="mx-auto mb-6 h-px w-10 bg-gold" />
+
+            <p
+              className="text-3xl font-normal italic leading-relaxed text-white md:text-4xl lg:text-5xl"
+              style={{
+                fontFamily:
+                  "var(--font-accent, 'Playfair Display', serif)",
+              }}
+            >
+              Some people sell houses.
+              <br />
+              I help people{" "}
+              <span className="text-gold">come home.</span>
+            </p>
+
+            {/* Bottom decorative line */}
+            <div className="mx-auto mt-8 h-px w-10 bg-gold" />
           </Reveal>
         </div>
       </section>
