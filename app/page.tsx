@@ -92,16 +92,16 @@ export default function Home() {
         imageAlt="Warm staged living room interior in Dallas Texas"
         overlayOpacity={0.6}
       >
-        <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold mb-6">
+        <p className="text-[0.7rem] font-medium tracking-[0.25em] uppercase mb-6" style={{ color: "rgba(255, 255, 255, 0.85)", textShadow: "0 1px 8px rgba(0, 0, 0, 0.4)" }}>
           Dallas &middot; Fort Worth &middot; North Texas
         </p>
         {/* Part 2C: headline with text-shadow for definition */}
         <h1
-          className="font-display font-light text-white max-w-3xl mx-auto"
+          className="font-display font-light text-white max-w-[750px] mx-auto"
           style={{
             fontSize: "clamp(3rem, 5.5vw, 4.5rem)",
             lineHeight: 1.1,
-            textShadow: "0 2px 20px rgba(0, 0, 0, 0.2)",
+            textShadow: "0 2px 16px rgba(0, 0, 0, 0.3)",
           }}
         >
           Your Next Chapter Starts
@@ -117,7 +117,7 @@ export default function Home() {
           </span>
         </h1>
         {/* Part 2B: brighter sub-headline */}
-        <p className="mt-6 text-[0.95rem] font-light max-w-xl mx-auto leading-[1.7]" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
+        <p className="mt-6 text-[1rem] font-light max-w-xl mx-auto leading-[1.7]" style={{ color: "rgba(255, 255, 255, 0.92)", textShadow: "0 1px 12px rgba(0, 0, 0, 0.4)" }}>
           Born and raised in DFW. Twenty-two years catching what others miss.
           Your home search deserves that kind of attention.
         </p>
@@ -125,11 +125,11 @@ export default function Home() {
           {/* Part 5A: Hero primary CTA — assertive gold */}
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center text-[0.8rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-goldLight hover:-translate-y-[2px] transition-all duration-300"
+            className="inline-flex items-center justify-center text-[0.8rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-[#D4B87A] hover:-translate-y-[2px] transition-all duration-300"
             style={{
               borderRadius: "2px",
-              padding: "16px 36px",
-              boxShadow: "0 4px 16px rgba(0, 0, 0, 0.15)",
+              padding: "16px 40px",
+              boxShadow: "0 4px 20px rgba(196, 169, 108, 0.3)",
             }}
           >
             Let&apos;s Talk
@@ -161,7 +161,7 @@ export default function Home() {
               <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
                 Born &amp; Raised in DFW
               </p>
-              <p className="mt-1.5 text-[0.7rem] italic font-light" style={{ color: "#9E8E7A" }}>
+              <p className="mt-1.5 text-[0.8rem] italic font-light" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
                 I know what others overlook
               </p>
             </div>
@@ -173,7 +173,7 @@ export default function Home() {
               <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
                 In Professional Contracts &amp; Details
               </p>
-              <p className="mt-1.5 text-[0.7rem] italic font-light" style={{ color: "#9E8E7A" }}>
+              <p className="mt-1.5 text-[0.8rem] italic font-light" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
                 Fewer surprises. Cleaner closings.
               </p>
             </div>
@@ -185,7 +185,7 @@ export default function Home() {
               <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
                 Licensed &middot; TX #844625
               </p>
-              <p className="mt-1.5 text-[0.7rem] italic font-light" style={{ color: "#9E8E7A" }}>
+              <p className="mt-1.5 text-[0.8rem] italic font-light" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
                 Full brokerage support behind every transaction.
               </p>
             </div>
@@ -222,7 +222,7 @@ export default function Home() {
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               {/* Part 1A: darker section subtext */}
-              <p className="mt-6 text-[0.9rem] font-light leading-[1.7]" style={{ color: "#4A3F35" }}>
+              <p className="mt-6 text-[0.9rem] font-light leading-[1.7]" style={{ color: "#3D342B" }}>
                 I take on a handful of clients at a time. That means you get
                 my full attention &mdash; not a fraction of it.
               </p>
@@ -238,8 +238,8 @@ export default function Home() {
                 >
                   {/* Gold number watermark — top right */}
                   <span
-                    className="absolute -top-2 right-3 font-display text-[8rem] font-light leading-none select-none transition-all duration-500 group-hover:text-gold/[0.12]"
-                    style={{ color: "rgba(196, 169, 108, 0.06)", pointerEvents: "none", zIndex: 0 }}
+                    className="absolute -top-2 right-3 font-display text-[7rem] font-extralight leading-none select-none transition-colors duration-400 group-hover:text-gold/[0.15]"
+                    style={{ color: "rgba(196, 169, 108, 0.07)", pointerEvents: "none", zIndex: 0 }}
                     aria-hidden="true"
                   >
                     {card.number}
@@ -264,44 +264,6 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ─── Gold divider ─────────────────────────────────────────── */}
-      <div className="mx-auto h-px w-full max-w-4xl" style={{ background: "linear-gradient(90deg, transparent, #C8A97E, transparent)" }} />
-
-      {/* ─── SECTION 4: TESTIMONIAL ───────────────────────────────── */}
-      <section className="py-20 md:py-24 px-6 md:px-12 lg:px-20 bg-warmWhite">
-        <div className="container-x max-w-3xl mx-auto">
-          <Reveal>
-            <div
-              className="text-center"
-              style={{
-                background: "#FFFCF5",
-                border: "1px solid rgba(196, 169, 108, 0.1)",
-                borderRadius: "4px",
-                padding: "56px 32px",
-                boxShadow: "0 4px 24px rgba(26, 21, 16, 0.04)",
-              }}
-            >
-              <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold mb-6">
-                Client Experiences
-              </p>
-
-              <div
-                className="mx-auto max-w-[520px]"
-                style={{
-                  border: "1px dashed rgba(196, 169, 108, 0.3)",
-                  borderRadius: "4px",
-                  padding: "48px 32px",
-                }}
-              >
-                <p className="text-[1rem] font-light italic text-center" style={{ color: "#9E8E7A" }}>
-                  &#123; Testimonial Placeholder &mdash; Real client testimonial will be added here &#125;
-                </p>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
 
@@ -560,7 +522,7 @@ export default function Home() {
       </section>
 
       {/* ─── SECTION 8: ACCENT QUOTE — Part 6D: tighter gap ─────── */}
-      <section className="bg-charcoal px-6" style={{ paddingTop: "60px", paddingBottom: "32px" }}>
+      <section className="bg-charcoal px-6" style={{ paddingTop: "48px", paddingBottom: "24px" }}>
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
             <div className="mx-auto mb-10" style={{ width: "40px", height: "1.5px", background: "#C8A97E" }} />
@@ -584,7 +546,7 @@ export default function Home() {
       </section>
 
       {/* ─── SECTION 9: CTA (DARK) — Part 6D: tighter gap ─────────── */}
-      <section className="relative px-6 md:px-12 lg:px-20 bg-charcoal overflow-hidden" style={{ paddingTop: "40px", paddingBottom: "80px" }}>
+      <section className="relative px-6 md:px-12 lg:px-20 bg-charcoal overflow-hidden" style={{ paddingTop: "48px", paddingBottom: "80px" }}>
         <CTASparkles />
         <div className="relative z-10 container-x max-w-2xl mx-auto text-center">
           <Reveal>

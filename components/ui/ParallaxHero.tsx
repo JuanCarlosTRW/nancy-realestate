@@ -59,10 +59,10 @@ export default function ParallaxHero({
         className="absolute inset-0 z-[1]"
         style={{
           background: `radial-gradient(
-            ellipse at center 70%,
-            rgba(20, 16, 12, 0.5) 0%,
-            rgba(20, 16, 12, 0.2) 50%,
-            transparent 80%
+            ellipse 60% 50% at center 65%,
+            rgba(18, 14, 10, 0.6) 0%,
+            rgba(18, 14, 10, 0.3) 50%,
+            transparent 100%
           )`,
         }}
       />

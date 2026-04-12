@@ -73,8 +73,8 @@ export default function SellPage() {
     <>
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
       <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
-        imageAlt="Modern suburban home exterior with landscaped yard in Dallas Texas"
+        imageSrc="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
+        imageAlt="Warm suburban home front view with traditional style in Dallas Texas"
         overlayOpacity={0.6}
       >
         <p className="label mb-4 !text-gold">For Sellers</p>
@@ -190,7 +190,7 @@ export default function SellPage() {
                   className={`grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start ${i % 2 === 1 ? "bg-[#F0EBE2] -mx-4 px-4 md:-mx-8 md:px-8 py-6 rounded" : ""}`}
                 >
                   <div className="flex flex-col items-center">
-                    <span className="font-display text-[3.5rem] text-gold/20 leading-none font-extralight select-none">
+                    <span className="font-display text-[3.5rem] leading-none font-extralight select-none" style={{ color: "rgba(196, 169, 108, 0.22)" }}>
                       {s.n}
                     </span>
                     {i < STEPS.length - 1 && (
@@ -203,7 +203,7 @@ export default function SellPage() {
                     </h3>
                     <p className="body-p mt-4 max-w-2xl">{s.body}</p>
                     {s.closing && (
-                      <p className="mt-4 font-sans text-xs font-medium italic tracking-wide text-gold">
+                      <p className="mt-4 font-display text-[0.95rem] italic" style={{ color: "#B8975E" }}>
                         {s.closing}
                       </p>
                     )}
@@ -255,8 +255,11 @@ export default function SellPage() {
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-14">
               <p className="label">The Difference</p>
-              <h2 className="h-display mt-4">
-                What You Get When I Represent Your Home
+              <h2 className="h-display mt-4" style={{ fontWeight: 400 }}>
+                What You Get When I Represent{" "}
+                <span className="italic text-gold" style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}>
+                  Your Home
+                </span>
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 text-[15px]">
@@ -276,7 +279,7 @@ export default function SellPage() {
                     {card.number}
                   </span>
                   <div>
-                    <h3 className="font-display text-[1.25rem] text-darkText leading-[1.2] mb-3" style={{ fontWeight: 500 }}>
+                    <h3 className="font-display text-[1.3rem] leading-[1.2] mb-3" style={{ fontWeight: 600, color: "#1A1510" }}>
                       {card.title}
                     </h3>
                     <p className="text-[0.9rem] font-light leading-[1.8]" style={{ color: "#2A211C" }}>
@@ -299,28 +302,7 @@ export default function SellPage() {
         }}
       />
 
-      {/* ─── SECTION 6: TESTIMONIAL (LIGHT) ───────────────────────── */}
-      <section className="py-14 md:py-20 px-6 md:px-12 lg:px-20 bg-bgSection">
-        <div className="container-x max-w-3xl mx-auto">
-          <Reveal>
-            <div
-              className="text-center"
-              style={{
-                border: "1px dashed rgba(196, 169, 108, 0.3)",
-                borderRadius: "4px",
-                padding: "48px 32px",
-              }}
-            >
-              <p className="label mb-4">Client Experiences</p>
-              <p className="text-[1rem] font-light italic" style={{ color: "#9E8E7A" }}>
-                &#123; Testimonial Placeholder &mdash; Real client testimonial will be added here &#125;
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ─── SECTION 7: CTA (DARK) ────────────────────────────────── */}
+      {/* ─── CTA (DARK) ─────────────────────────────────────────────── */}
       <section className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal">
         <div className="container-x max-w-2xl mx-auto text-center">
           <Reveal>
