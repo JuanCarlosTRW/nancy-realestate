@@ -68,7 +68,7 @@ export default function ParallaxHero({
       />
 
       {/* Content — pushed to bottom third for cinematic feel */}
-      <div className="relative z-[2] flex h-full min-h-[80vh] md:min-h-[90vh] w-full flex-col items-center justify-end pb-[60px] md:pb-[100px] px-6 text-center">
+      <div className="relative z-[2] flex h-full min-h-[80vh] md:min-h-[90vh] w-full flex-col items-center justify-end pb-[80px] md:pb-[140px] px-6 text-center">
         <div className="max-w-[800px] w-full">
           {children}
         </div>

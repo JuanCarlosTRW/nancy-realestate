@@ -548,7 +548,7 @@ export default function Home() {
       {/* ─── SECTION 9: CTA (DARK) — Part 6D: tighter gap ─────────── */}
       <section className="relative px-6 md:px-12 lg:px-20 bg-charcoal overflow-hidden" style={{ paddingTop: "48px", paddingBottom: "80px" }}>
         <CTASparkles />
-        <div className="relative z-10 container-x max-w-2xl mx-auto text-center">
+        <div className="relative z-10 container-x max-w-3xl mx-auto text-center">
           <Reveal>
             <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold mb-5">
               Your Next Step

@@ -296,7 +296,7 @@ export default function BuyPage() {
 
       {/* ─── CTA (DARK) ─────────────────────────────────────────────── */}
       <section className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal">
-        <div className="container-x max-w-2xl mx-auto text-center">
+        <div className="container-x max-w-3xl mx-auto text-center">
           <Reveal>
             <p className="label !text-gold">Your Next Step</p>
             <h2
