@@ -203,7 +203,7 @@ export default function SellPage() {
                     </h3>
                     <p className="body-p mt-4 max-w-2xl">{s.body}</p>
                     {s.closing && (
-                      <p className="mt-4 font-display text-[0.95rem] italic" style={{ color: "#B8975E" }}>
+                      <p className="mt-4 font-display text-[0.95rem] italic" style={{ color: "#A8893F" }}>
                         {s.closing}
                       </p>
                     )}

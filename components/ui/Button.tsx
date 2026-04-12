@@ -13,7 +13,7 @@ interface Props {
 }
 
 const styles: Record<Variant, string> = {
-  gold: "bg-gold text-charcoal border border-gold hover:bg-[#D4B87A] hover:-translate-y-[2px] shadow-[0_4px_20px_rgba(196,169,108,0.25)] hover:shadow-[0_6px_28px_rgba(196,169,108,0.35)]",
+  gold: "bg-gold text-charcoal border border-gold hover:bg-[#D4B87A] hover:-translate-y-[2px] shadow-[0_6px_28px_rgba(196,169,108,0.3)] hover:shadow-[0_8px_36px_rgba(196,169,108,0.45)]",
   outline:
     "bg-transparent text-gold border border-gold hover:bg-gold hover:text-white hover:-translate-y-[3px]",
   "outline-white":

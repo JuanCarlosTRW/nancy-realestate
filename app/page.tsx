@@ -97,18 +97,18 @@ export default function Home() {
         </p>
         {/* Part 2C: headline with text-shadow for definition */}
         <h1
-          className="font-display font-light text-white max-w-[750px] mx-auto"
+          className="font-display font-light text-white mx-auto"
           style={{
             fontSize: "clamp(3rem, 5.5vw, 4.5rem)",
             lineHeight: 1.1,
             textShadow: "0 2px 16px rgba(0, 0, 0, 0.3)",
           }}
         >
-          Your Next Chapter Starts
-          <br />
+          <span style={{ display: "block" }}>Your Next Chapter Starts</span>
           <span
             className="italic text-gold"
             style={{
+              display: "block",
               fontFamily: "var(--font-accent, 'Playfair Display', serif)",
               fontSize: "clamp(3.2rem, 6vw, 5rem)",
             }}
@@ -125,11 +125,11 @@ export default function Home() {
           {/* Part 5A: Hero primary CTA — assertive gold */}
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center text-[0.8rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-[#D4B87A] hover:-translate-y-[2px] transition-all duration-300"
+            className="inline-flex items-center justify-center text-[0.8rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-[#D4B87A] hover:-translate-y-[2px] hover:shadow-[0_8px_32px_rgba(196,169,108,0.5)] transition-all duration-300"
             style={{
               borderRadius: "2px",
               padding: "16px 40px",
-              boxShadow: "0 4px 20px rgba(196, 169, 108, 0.3)",
+              boxShadow: "0 4px 24px rgba(196, 169, 108, 0.35)",
             }}
           >
             Let&apos;s Talk
@@ -572,11 +572,11 @@ export default function Home() {
             <div className="mt-10">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center text-[0.85rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-goldLight hover:scale-[1.03] transition-all duration-300"
+                className="inline-flex items-center justify-center text-[0.85rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-[#D4B87A] hover:-translate-y-[2px] hover:shadow-[0_8px_36px_rgba(196,169,108,0.45)] transition-all duration-300"
                 style={{
                   borderRadius: "2px",
                   padding: "18px 48px",
-                  boxShadow: "0 6px 24px rgba(196, 169, 108, 0.25)",
+                  boxShadow: "0 6px 28px rgba(196, 169, 108, 0.3)",
                 }}
               >
                 Start a Conversation
