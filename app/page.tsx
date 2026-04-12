@@ -337,8 +337,8 @@ export default function Home() {
                 <BorderBeam size={250} duration={12} delay={0} colorFrom="#C8A97E" colorTo="#A8845A" borderWidth={1.5} />
                 <div className="relative aspect-[16/10] w-full overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80"
-                    alt="Happy couple standing in front of their new home"
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                    alt="Warm suburban home with traditional style in Dallas Texas"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.04]"
@@ -376,8 +376,8 @@ export default function Home() {
                 <BorderBeam size={250} duration={12} delay={6} colorFrom="#C8A97E" colorTo="#A8845A" borderWidth={1.5} />
                 <div className="relative aspect-[16/10] w-full overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80"
-                    alt="Beautifully staged bedroom — a seller-ready home"
+                    src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80"
+                    alt="Craftsman-style home with warm tones in Dallas neighborhood"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.04]"
@@ -522,7 +522,7 @@ export default function Home() {
       </section>
 
       {/* ─── SECTION 8: ACCENT QUOTE — Part 6D: tighter gap ─────── */}
-      <section className="bg-charcoal px-6" style={{ paddingTop: "48px", paddingBottom: "24px" }}>
+      <section className="bg-charcoal px-6" style={{ paddingTop: "80px", paddingBottom: "48px" }}>
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
             <div className="mx-auto mb-10" style={{ width: "40px", height: "1.5px", background: "#C8A97E" }} />

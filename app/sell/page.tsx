@@ -308,7 +308,7 @@ export default function SellPage() {
           <Reveal>
             <p className="label !text-gold">Your Home&apos;s Next Chapter</p>
             <h2
-              className="font-display font-light text-white leading-[1.1] mt-4"
+              className="font-display font-light text-white leading-[1.1] mt-4 max-w-[700px] mx-auto"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
               I&apos;ll Tell You What Your Home Is Worth.

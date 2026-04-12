@@ -264,7 +264,7 @@ export default function AboutPage() {
           <Reveal>
             <p className="label !text-gold">Your Next Move</p>
             <h2
-              className="font-display font-light text-white leading-[1.1] mt-4"
+              className="font-display font-light text-white leading-[1.1] mt-4 max-w-[700px] mx-auto"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
               The Right Agent Makes the Difference.
