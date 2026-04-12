@@ -189,9 +189,11 @@ export default function BuyPage() {
           <div className="space-y-0">
             {STEPS.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1}>
-                <div className="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start">
+                <div
+                  className={`grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start ${i % 2 === 1 ? "bg-[#F0EBE2] -mx-4 px-4 md:-mx-8 md:px-8 py-6 rounded" : ""}`}
+                >
                   <div className="flex flex-col items-center">
-                    <span className="font-display text-[40px] md:text-[48px] text-gold/30 leading-none font-light select-none">
+                    <span className="font-display text-[3.5rem] text-gold/20 leading-none font-extralight select-none">
                       {s.n}
                     </span>
                     {i < STEPS.length - 1 && (
@@ -199,7 +201,7 @@ export default function BuyPage() {
                     )}
                   </div>
                   <div className="pb-10 md:pb-12">
-                    <h3 className="font-display text-[26px] md:text-[30px] text-darkText leading-tight">
+                    <h3 className="font-display text-[1.4rem] md:text-[1.6rem] text-darkText leading-tight" style={{ fontWeight: 500 }}>
                       {s.title}
                     </h3>
                     <p className="body-p mt-4 max-w-2xl">{s.body}</p>
@@ -241,16 +243,7 @@ export default function BuyPage() {
             <div className="text-center max-w-2xl mx-auto mb-14">
               <p className="label">Why It Matters Who Walks With You</p>
               <h2 className="h-display mt-4">
-                How I Think{" "}
-                <span
-                  className="italic text-gold"
-                  style={{
-                    fontFamily:
-                      "var(--font-accent, 'Playfair Display', serif)",
-                  }}
-                >
-                  When I Walk a Property
-                </span>
+                How I Think When I Walk a Property
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 text-[15px]">
@@ -259,10 +252,10 @@ export default function BuyPage() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {CARDS.map((card, i) => (
               <Reveal key={card.number} delay={i * 0.12}>
-                <div className="group relative h-full border border-bordr bg-white p-8 md:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm overflow-hidden">
+                <div className={`group relative h-full border border-bordr bg-white p-8 md:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm overflow-hidden ${i === 2 ? "md:col-span-2" : ""}`}>
                   {/* Watermark number */}
                   <span
                     className="absolute -top-6 -left-3 font-display text-[150px] font-thin leading-none select-none"
@@ -305,43 +298,17 @@ export default function BuyPage() {
       <section className="py-14 md:py-20 px-6 md:px-12 lg:px-20 bg-bgSection">
         <div className="container-x max-w-3xl mx-auto">
           <Reveal>
-            <div className="border border-bordr bg-white p-8 md:p-12 text-center shadow-sm">
-              <p className="label mb-4">From a Real Search</p>
-              <p className="text-[14px] font-light text-mediumText mb-6">
-                Not every search takes twenty homes. But the right agent knows
-                which ones to skip.
-              </p>
-
-              <span
-                className="block text-[80px] md:text-[100px] font-light text-gold/30 leading-none -mb-4 select-none"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-                aria-hidden="true"
-              >
-                &ldquo;
-              </span>
-
-              <blockquote
-                className="italic text-[20px] md:text-[24px] text-darkText leading-[1.6] mb-8"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-              >
-                We looked at over twenty homes before Nancy found the one. She
-                knew exactly which streets to focus on and which to skip. That
-                saved us months.
-              </blockquote>
-
-              <div className="w-[60px] h-px bg-gold/40 mx-auto mb-5" />
-
-              <p className="text-[13px] tracking-button uppercase font-medium text-darkText">
-                The Richardson Family
-              </p>
-              <p className="text-[11px] tracking-label uppercase text-gold mt-1 font-light">
-                Bought in Preston Hollow
+            <div
+              className="text-center"
+              style={{
+                border: "1px dashed rgba(196, 169, 108, 0.3)",
+                borderRadius: "4px",
+                padding: "48px 32px",
+              }}
+            >
+              <p className="label mb-4">Client Experiences</p>
+              <p className="text-[1rem] font-light italic" style={{ color: "#9E8E7A" }}>
+                &#123; Testimonial Placeholder &mdash; Real client testimonial will be added here &#125;
               </p>
             </div>
           </Reveal>
@@ -359,13 +326,7 @@ export default function BuyPage() {
             >
               Tell Me What You&apos;re Looking For.
               <br />
-              <span
-                className="italic text-gold"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-              >
+              <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
                 I&apos;ll Tell You What&apos;s Worth Seeing.
               </span>
             </h2>
@@ -378,7 +339,7 @@ export default function BuyPage() {
                 Start Your Search
               </Button>
             </div>
-            <p className="mt-6 text-[14px] text-white/50">
+            <p className="mt-6 text-[14px] text-white/60">
               Or call directly:{" "}
               <a
                 href={`tel:${NANCY_PHONE_TEL}`}

@@ -45,7 +45,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${jost.variable} ${playfair.variable}`}>
-      <body className="font-sans bg-warmWhite text-mediumText">
+      <body className="font-sans bg-warmWhite text-darkText">
         <Navigation />
         <main>{children}</main>
         <Footer />

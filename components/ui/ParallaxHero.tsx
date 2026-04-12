@@ -26,7 +26,7 @@ export default function ParallaxHero({
   return (
     <div
       ref={container}
-      className="relative w-full overflow-hidden min-h-[85vh] md:min-h-screen"
+      className="relative w-full overflow-hidden min-h-[80vh] md:min-h-[90vh]"
     >
       {/* Parallax background image */}
       <motion.div className="absolute inset-0 h-[130%] w-full" style={{ y }}>
@@ -46,10 +46,10 @@ export default function ParallaxHero({
         style={{
           background: `linear-gradient(
             to bottom,
-            rgba(26, 21, 16, 0.4) 0%,
-            rgba(26, 21, 16, 0.15) 30%,
-            rgba(26, 21, 16, 0.2) 55%,
-            rgba(26, 21, 16, 0.75) 100%
+            rgba(20, 16, 12, 0.3) 0%,
+            rgba(20, 16, 12, 0.15) 30%,
+            rgba(20, 16, 12, 0.2) 50%,
+            rgba(20, 16, 12, 0.65) 100%
           )`,
         }}
       />
@@ -59,17 +59,19 @@ export default function ParallaxHero({
         className="absolute inset-0 z-[1]"
         style={{
           background: `radial-gradient(
-            ellipse at center bottom,
-            rgba(20, 16, 12, 0.55) 0%,
-            rgba(20, 16, 12, 0.25) 60%,
-            transparent 100%
+            ellipse at center 70%,
+            rgba(20, 16, 12, 0.5) 0%,
+            rgba(20, 16, 12, 0.2) 50%,
+            transparent 80%
           )`,
         }}
       />
 
       {/* Content — pushed to bottom third for cinematic feel */}
-      <div className="relative z-[2] flex h-full min-h-[85vh] md:min-h-screen w-full flex-col items-center justify-center px-6 text-center">
-        {children}
+      <div className="relative z-[2] flex h-full min-h-[80vh] md:min-h-[90vh] w-full flex-col items-center justify-center px-6 text-center">
+        <div className="max-w-[700px] w-full">
+          {children}
+        </div>
       </div>
     </div>
   );

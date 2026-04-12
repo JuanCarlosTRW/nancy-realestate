@@ -73,8 +73,8 @@ export default function SellPage() {
     <>
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
       <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80"
-        imageAlt="Beautifully staged warm living room interior in Dallas Texas"
+        imageSrc="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
+        imageAlt="Modern suburban home exterior with landscaped yard in Dallas Texas"
         overlayOpacity={0.6}
       >
         <p className="label mb-4 !text-gold">For Sellers</p>
@@ -186,9 +186,11 @@ export default function SellPage() {
           <div className="space-y-0">
             {STEPS.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1}>
-                <div className="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start">
+                <div
+                  className={`grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start ${i % 2 === 1 ? "bg-[#F0EBE2] -mx-4 px-4 md:-mx-8 md:px-8 py-6 rounded" : ""}`}
+                >
                   <div className="flex flex-col items-center">
-                    <span className="font-display text-[40px] md:text-[48px] text-gold/30 leading-none font-light select-none">
+                    <span className="font-display text-[3.5rem] text-gold/20 leading-none font-extralight select-none">
                       {s.n}
                     </span>
                     {i < STEPS.length - 1 && (
@@ -196,7 +198,7 @@ export default function SellPage() {
                     )}
                   </div>
                   <div className="pb-10 md:pb-12">
-                    <h3 className="font-display text-[26px] md:text-[30px] text-darkText leading-tight">
+                    <h3 className="font-display text-[1.4rem] md:text-[1.6rem] text-darkText leading-tight" style={{ fontWeight: 500 }}>
                       {s.title}
                     </h3>
                     <p className="body-p mt-4 max-w-2xl">{s.body}</p>
@@ -213,32 +215,36 @@ export default function SellPage() {
         </div>
       </section>
 
-      {/* ─── SECTION 4: ACCENT QUOTE (DARK) ───────────────────────── */}
-      <section className="bg-charcoal px-6 py-14 md:py-20">
-        <div className="container-x max-w-[700px] text-center">
+      {/* ─── SECTION 4: PROOF STRIP (DARK) ─────────────────────────── */}
+      <section className="px-6 md:px-12 lg:px-20 py-14 md:py-20" style={{ background: "#1C1814" }}>
+        <div className="container-x max-w-5xl mx-auto">
           <Reveal>
-            <span
-              className="block text-[100px] md:text-[120px] font-light text-gold/15 leading-none select-none -mb-6 md:-mb-8"
-              style={{
-                fontFamily:
-                  "var(--font-accent, 'Playfair Display', serif)",
-              }}
-              aria-hidden="true"
-            >
-              &ldquo;
-            </span>
-            <p
-              className="text-xl md:text-2xl lg:text-3xl italic text-white leading-relaxed"
-              style={{
-                fontFamily:
-                  "var(--font-accent, 'Playfair Display', serif)",
-              }}
-            >
-              Every home I list gets my full attention. I do not juggle 30
-              listings at once. When I represent your home, it gets the focus
-              it deserves.
-            </p>
-            <div className="w-[80px] h-px bg-gold/30 mx-auto mt-8" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+              <div className="text-center py-10 md:py-12 px-6 md:px-8" style={{ borderRight: "1px solid rgba(196, 169, 108, 0.1)" }}>
+                <p className="text-[0.65rem] font-medium tracking-[0.2em] uppercase text-gold mb-4">
+                  Full Attention
+                </p>
+                <p className="text-[0.85rem] font-light leading-[1.7]" style={{ color: "rgba(250, 247, 242, 0.7)" }}>
+                  I don&apos;t juggle 30 listings. Your home gets my full focus from listing to closing.
+                </p>
+              </div>
+              <div className="text-center py-10 md:py-12 px-6 md:px-8" style={{ borderRight: "1px solid rgba(196, 169, 108, 0.1)" }}>
+                <p className="text-[0.65rem] font-medium tracking-[0.2em] uppercase text-gold mb-4">
+                  Honest Pricing
+                </p>
+                <p className="text-[0.85rem] font-light leading-[1.7]" style={{ color: "rgba(250, 247, 242, 0.7)" }}>
+                  I price based on what sold, not what you want to hear. That precision attracts offers instead of silence.
+                </p>
+              </div>
+              <div className="text-center py-10 md:py-12 px-6 md:px-8">
+                <p className="text-[0.65rem] font-medium tracking-[0.2em] uppercase text-gold mb-4">
+                  22 Years of Calm Negotiation
+                </p>
+                <p className="text-[0.85rem] font-light leading-[1.7]" style={{ color: "rgba(250, 247, 242, 0.7)" }}>
+                  High-stakes experience means I stay level when it matters most.
+                </p>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -250,16 +256,7 @@ export default function SellPage() {
             <div className="text-center max-w-2xl mx-auto mb-14">
               <p className="label">The Difference</p>
               <h2 className="h-display mt-4">
-                What You Get When I Represent{" "}
-                <span
-                  className="italic text-gold"
-                  style={{
-                    fontFamily:
-                      "var(--font-accent, 'Playfair Display', serif)",
-                  }}
-                >
-                  Your Home
-                </span>
+                What You Get When I Represent Your Home
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 text-[15px]">
@@ -268,32 +265,24 @@ export default function SellPage() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-3xl mx-auto">
             {CARDS.map((card, i) => (
               <Reveal key={card.number} delay={i * 0.12}>
-                <div className="group relative h-full min-h-[280px] flex flex-col border border-bordr bg-white p-8 md:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm overflow-hidden">
-                  {/* Watermark number */}
-                  <span
-                    className="absolute -top-6 -left-3 font-display text-[150px] font-thin leading-none select-none"
-                    style={{
-                      color: "#C8A97E",
-                      opacity: 0.06,
-                      pointerEvents: "none",
-                      zIndex: 0,
-                    }}
-                    aria-hidden="true"
-                  >
+                <div
+                  className="grid grid-cols-[60px_1fr] gap-5 items-start py-7 md:py-9"
+                  style={i < CARDS.length - 1 ? { borderBottom: "1px solid rgba(196, 169, 108, 0.12)" } : {}}
+                >
+                  <span className="font-display text-[2rem] font-light leading-none select-none" style={{ color: "rgba(196, 169, 108, 0.25)" }}>
                     {card.number}
                   </span>
-                  <div className="relative z-10">
-                    <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.2] mb-4 mt-6">
+                  <div>
+                    <h3 className="font-display text-[1.25rem] text-darkText leading-[1.2] mb-3" style={{ fontWeight: 500 }}>
                       {card.title}
                     </h3>
-                    <p className="body-p text-[14px] md:text-[15px] leading-[1.8]">
+                    <p className="text-[0.9rem] font-light leading-[1.8]" style={{ color: "#2A211C" }}>
                       {card.body}
                     </p>
                   </div>
-                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                 </div>
               </Reveal>
             ))}
@@ -314,42 +303,17 @@ export default function SellPage() {
       <section className="py-14 md:py-20 px-6 md:px-12 lg:px-20 bg-bgSection">
         <div className="container-x max-w-3xl mx-auto">
           <Reveal>
-            <div className="border border-bordr bg-white p-8 md:p-12 text-center shadow-sm">
-              <p className="label mb-4">From a Real Sale</p>
-              <p className="text-[14px] font-light text-mediumText mb-6">
-                Priced right. Prepped smart. Three offers in the first week.
-              </p>
-
-              <span
-                className="block text-[80px] md:text-[100px] font-light text-gold/30 leading-none -mb-4 select-none"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-                aria-hidden="true"
-              >
-                &ldquo;
-              </span>
-
-              <blockquote
-                className="italic text-[20px] md:text-[24px] text-darkText leading-[1.6] mb-8"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-              >
-                Nancy priced our home correctly from day one. We had three
-                offers in the first week. Her advice on what to fix and what to
-                leave alone saved us thousands in unnecessary renovations.
-              </blockquote>
-
-              <div className="w-[60px] h-px bg-gold/40 mx-auto mb-5" />
-
-              <p className="text-[13px] tracking-button uppercase font-medium text-darkText">
-                The Okafor Family
-              </p>
-              <p className="text-[11px] tracking-label uppercase text-gold mt-1 font-light">
-                Sold Their Home in North Dallas
+            <div
+              className="text-center"
+              style={{
+                border: "1px dashed rgba(196, 169, 108, 0.3)",
+                borderRadius: "4px",
+                padding: "48px 32px",
+              }}
+            >
+              <p className="label mb-4">Client Experiences</p>
+              <p className="text-[1rem] font-light italic" style={{ color: "#9E8E7A" }}>
+                &#123; Testimonial Placeholder &mdash; Real client testimonial will be added here &#125;
               </p>
             </div>
           </Reveal>
@@ -367,13 +331,7 @@ export default function SellPage() {
             >
               I&apos;ll Tell You What Your Home Is Worth.
               <br />
-              <span
-                className="italic text-gold"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-              >
+              <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
                 Even If It&apos;s Not What You Want to Hear.
               </span>
             </h2>
@@ -387,7 +345,7 @@ export default function SellPage() {
                 Let&apos;s Talk About Your Home
               </Button>
             </div>
-            <p className="mt-6 text-[14px] text-white/50">
+            <p className="mt-6 text-[14px] text-white/60">
               Or call directly:{" "}
               <a
                 href={`tel:${NANCY_PHONE_TEL}`}

@@ -60,13 +60,13 @@ export default function AboutPage() {
       >
         <p className="label mb-4 !text-gold">Meet Nancy</p>
         <h1
-          className="font-display font-light text-white leading-[1.08] max-w-3xl mx-auto"
-          style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
+          className="font-display font-light text-white leading-[1.08] max-w-[650px] mx-auto"
+          style={{ fontSize: "clamp(36px, 5.5vw, 64px)", textShadow: "0 2px 16px rgba(0,0,0,0.3)" }}
         >
           Born Here. Raised Here.
           <br />
-          <span className="italic text-gold">
-            I Know Every Street, Every Story, Every Neighborhood.
+          <span className="italic text-gold" style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}>
+            I Know Every Street and Story.
           </span>
         </h1>
         <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
@@ -115,7 +115,7 @@ export default function AboutPage() {
               </p>
 
               {/* Pull quote */}
-              <div className="my-8 border-l-2 border-gold pl-6">
+              <div className="my-8 border-l-[4px] border-gold pl-6 py-5 rounded-r" style={{ background: "rgba(196, 169, 108, 0.03)" }}>
                 <p className="font-display text-[20px] md:text-[24px] italic text-darkText leading-[1.4]">
                   I didn&apos;t leave my career behind &mdash; I brought every
                   bit of it with me.
@@ -170,10 +170,7 @@ export default function AboutPage() {
             <div className="text-center max-w-2xl mx-auto mb-14">
               <p className="label">The Edge</p>
               <h2 className="h-display mt-4">
-                22 Years of Reading People, Catching Details,{" "}
-                <span className="italic text-gold">
-                  and Staying Calm Under Pressure.
-                </span>
+                22 Years of Reading People and Catching Details.
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 text-[15px]">
@@ -184,27 +181,22 @@ export default function AboutPage() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-4xl mx-auto">
             {SKILLS.map((skill, i) => (
               <Reveal key={skill.number} delay={i * 0.12}>
-                <div className="group relative h-full border border-bordr bg-white p-8 md:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-warm overflow-hidden">
-                  {/* Watermark number */}
-                  <span
-                    className="absolute -top-6 -left-3 font-display text-[150px] font-thin leading-none select-none"
-                    style={{ color: "#C8A97E", opacity: 0.06, pointerEvents: "none", zIndex: 0 }}
-                    aria-hidden="true"
-                  >
+                <div
+                  className="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr_1.5fr] gap-4 md:gap-6 items-start py-8 md:py-10"
+                  style={i < SKILLS.length - 1 ? { borderBottom: "1px solid rgba(196, 169, 108, 0.15)" } : {}}
+                >
+                  <span className="font-display text-[2.5rem] font-light leading-none select-none" style={{ color: "rgba(196, 169, 108, 0.2)" }}>
                     {skill.number}
                   </span>
-                  <div className="relative z-10">
-                    <h3 className="font-display text-[22px] md:text-[24px] text-darkText leading-[1.2] mb-4 mt-6">
-                      {skill.title}
-                    </h3>
-                    <p className="body-p text-[14px] md:text-[15px] leading-[1.8]">
-                      {skill.description}
-                    </p>
-                  </div>
-                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+                  <h3 className="font-display text-[1.3rem] text-darkText leading-[1.2]" style={{ fontWeight: 500 }}>
+                    {skill.title}
+                  </h3>
+                  <p className="text-[0.9rem] font-light leading-[1.8] col-span-full md:col-span-1" style={{ color: "#2A211C" }}>
+                    {skill.description}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -238,7 +230,7 @@ export default function AboutPage() {
                 </span>
               </h2>
               <div className="gold-divider w-16 mx-auto mt-8" />
-              <p className="mt-6 text-[15px] font-light text-white/60">
+              <p className="mt-6 text-[15px] font-light text-white/70">
                 Market data tells you what a house sold for. Living here for 50+
                 years tells you why &mdash; and what&apos;s coming next.
               </p>
@@ -255,7 +247,7 @@ export default function AboutPage() {
                   <p className="text-[11px] tracking-label uppercase font-medium text-gold mb-2">
                     {hood.tagline}
                   </p>
-                  <p className="text-[14px] font-light italic text-white/50 leading-[1.6]">
+                  <p className="text-[14px] font-light italic text-white/60 leading-[1.6]">
                     {hood.detail}
                   </p>
                   <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
@@ -270,38 +262,17 @@ export default function AboutPage() {
       <section className="py-14 md:py-20 px-6 md:px-12 lg:px-20 bg-warmWhite">
         <div className="container-x max-w-3xl mx-auto">
           <Reveal>
-            <div className="border border-bordr bg-white p-8 md:p-12 text-center shadow-sm">
-              <p className="label mb-4">Proof, Not Promises</p>
-              <p className="text-[14px] font-light text-mediumText mb-6">
-                Real results from a real transaction in Bent Tree, Dallas.
-              </p>
-
-              <span
-                className="block text-[80px] md:text-[100px] font-light text-gold/30 leading-none -mb-4 select-none"
-                style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}
-                aria-hidden="true"
-              >
-                &ldquo;
-              </span>
-
-              <blockquote
-                className="italic text-[20px] md:text-[24px] text-darkText leading-[1.6] mb-8"
-                style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}
-              >
-                Nancy made our dream home on the Preston Trails Golf Course in
-                Bent Tree a reality. Her attention to detail, patience through
-                every step, and genuine care for what we wanted made all the
-                difference. She wasn&apos;t just our agent &mdash; she felt like
-                family guiding us home.
-              </blockquote>
-
-              <div className="w-[60px] h-px bg-gold/40 mx-auto mb-5" />
-
-              <p className="text-[13px] tracking-button uppercase font-medium text-darkText">
-                Bent Tree Homebuyer
-              </p>
-              <p className="text-[11px] tracking-label uppercase text-gold mt-1 font-light">
-                Preston Trails Golf Course, Dallas
+            <div
+              className="text-center"
+              style={{
+                border: "1px dashed rgba(196, 169, 108, 0.3)",
+                borderRadius: "4px",
+                padding: "48px 32px",
+              }}
+            >
+              <p className="label mb-4">Client Experiences</p>
+              <p className="text-[1rem] font-light italic" style={{ color: "#9E8E7A" }}>
+                &#123; Testimonial Placeholder &mdash; Real client testimonial will be added here &#125;
               </p>
             </div>
           </Reveal>
@@ -325,10 +296,7 @@ export default function AboutPage() {
             >
               The Right Agent Makes the Difference.
               <br />
-              <span
-                className="italic text-gold"
-                style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}
-              >
+              <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
                 Let&apos;s Make Sure You Have One.
               </span>
             </h2>
@@ -341,7 +309,7 @@ export default function AboutPage() {
                 Start a Conversation
               </Button>
             </div>
-            <p className="mt-6 text-[14px] text-white/50">
+            <p className="mt-6 text-[14px] text-white/60">
               Or call directly:{" "}
               <a
                 href={`tel:${NANCY_PHONE_TEL}`}

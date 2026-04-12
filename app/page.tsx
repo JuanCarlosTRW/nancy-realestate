@@ -158,7 +158,7 @@ export default function Home() {
               <p className="font-display font-light text-white leading-none" style={{ fontSize: "2.25rem" }}>
                 50+ Years
               </p>
-              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/50">
+              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
                 Born &amp; Raised in DFW
               </p>
               <p className="mt-1.5 text-[0.7rem] italic font-light" style={{ color: "#9E8E7A" }}>
@@ -170,7 +170,7 @@ export default function Home() {
               <p className="font-display font-light text-white leading-none" style={{ fontSize: "2.25rem" }}>
                 22 Years
               </p>
-              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/50">
+              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
                 In Professional Contracts &amp; Details
               </p>
               <p className="mt-1.5 text-[0.7rem] italic font-light" style={{ color: "#9E8E7A" }}>
@@ -182,7 +182,7 @@ export default function Home() {
               <p className="font-display font-light text-white leading-none" style={{ fontSize: "2.25rem" }}>
                 Beam Real Estate
               </p>
-              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/50">
+              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
                 Licensed &middot; TX #844625
               </p>
               <p className="mt-1.5 text-[0.7rem] italic font-light" style={{ color: "#9E8E7A" }}>
@@ -234,7 +234,7 @@ export default function Home() {
               <Reveal key={card.number} delay={i * 0.15}>
                 <div
                   className="group relative h-full min-h-[280px] flex flex-col overflow-hidden p-10 md:p-12 transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg border border-gold/[0.12] hover:border-gold/25"
-                  style={{ background: "#FFFCF5", borderRadius: "4px" }}
+                  style={{ background: "#FFFCF5", borderRadius: "4px", ...(i === 0 ? { borderTop: "3px solid #C8A97E" } : {}) }}
                 >
                   {/* Gold number watermark — top right */}
                   <span
@@ -285,40 +285,22 @@ export default function Home() {
               }}
             >
               <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold mb-6">
-                Don&apos;t Take My Word for It
+                Client Experiences
               </p>
 
-              <span
-                className="block text-[4rem] font-light leading-none -mb-2 select-none"
-                style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)", color: "#C8A97E", opacity: 0.4 }}
-                aria-hidden="true"
+              <div
+                className="mx-auto max-w-[520px]"
+                style={{
+                  border: "1px dashed rgba(196, 169, 108, 0.3)",
+                  borderRadius: "4px",
+                  padding: "48px 32px",
+                }}
               >
-                &ldquo;
-              </span>
-
-              <blockquote
-                className="italic text-darkText leading-[1.7] mb-0 max-w-[680px] mx-auto"
-                style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)", fontSize: "1.35rem" }}
-              >
-                Nancy made the entire process of buying our home in Bent Tree
-                incredibly smooth. She was detail-oriented, always available,
-                and made us feel taken care of every step of the way.
-              </blockquote>
-
-              <div className="mx-auto my-7" style={{ width: "40px", height: "1px", background: "#C8A97E" }} />
-
-              <p className="text-[0.75rem] tracking-[0.2em] uppercase font-semibold text-darkText">
-                The Martinez Family
-              </p>
-              <p className="text-[0.65rem] tracking-[0.15em] uppercase text-gold mt-1 font-light">
-                Bought Their Home in Bent Tree
-              </p>
+                <p className="text-[1rem] font-light italic text-center" style={{ color: "#9E8E7A" }}>
+                  &#123; Testimonial Placeholder &mdash; Real client testimonial will be added here &#125;
+                </p>
+              </div>
             </div>
-
-            {/* Part 7: Micro-proof line under testimonial */}
-            <p className="text-center mt-10 text-[0.7rem] tracking-[0.15em] uppercase" style={{ color: "#9E8E7A" }}>
-              Working with families across Bent Tree, Plano, Richardson, and North Dallas.
-            </p>
           </Reveal>
         </div>
       </section>
@@ -578,7 +560,7 @@ export default function Home() {
       </section>
 
       {/* ─── SECTION 8: ACCENT QUOTE — Part 6D: tighter gap ─────── */}
-      <section className="bg-charcoal px-6" style={{ paddingTop: "100px", paddingBottom: "60px" }}>
+      <section className="bg-charcoal px-6" style={{ paddingTop: "60px", paddingBottom: "32px" }}>
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
             <div className="mx-auto mb-10" style={{ width: "40px", height: "1.5px", background: "#C8A97E" }} />
@@ -602,7 +584,7 @@ export default function Home() {
       </section>
 
       {/* ─── SECTION 9: CTA (DARK) — Part 6D: tighter gap ─────────── */}
-      <section className="relative px-6 md:px-12 lg:px-20 bg-charcoal overflow-hidden" style={{ paddingTop: "60px", paddingBottom: "80px" }}>
+      <section className="relative px-6 md:px-12 lg:px-20 bg-charcoal overflow-hidden" style={{ paddingTop: "40px", paddingBottom: "80px" }}>
         <CTASparkles />
         <div className="relative z-10 container-x max-w-2xl mx-auto text-center">
           <Reveal>
@@ -615,7 +597,7 @@ export default function Home() {
             >
               Tell Me What You Need.
               <br />
-              <span className="italic text-gold" style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}>
+              <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
                 I&apos;ll Tell You What Actually Makes Sense.
               </span>
             </h2>
@@ -639,7 +621,7 @@ export default function Home() {
               </Link>
             </div>
             {/* Part 1B: brighter phone text */}
-            <p className="mt-6 text-[0.85rem]" style={{ color: "rgba(250, 247, 242, 0.5)" }}>
+            <p className="mt-6 text-[0.85rem]" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
               Or call directly:{" "}
               <a
                 href={`tel:${NANCY_PHONE_TEL}`}

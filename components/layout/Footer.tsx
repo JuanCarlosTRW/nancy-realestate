@@ -121,7 +121,9 @@ export default function Footer() {
         </div>
         <div className="container-x px-6 md:px-12 pb-8 flex flex-col md:flex-row justify-between gap-2 text-[0.65rem]" style={{ color: "rgba(250, 247, 242, 0.2)" }}>
           <p>&copy; {new Date().getFullYear()} Nancy Musselman. All rights reserved.</p>
-          <p>&nbsp;</p>
+          <p>Designed by{" "}
+            <span className="text-gold">Client Growth</span>
+          </p>
         </div>
       </div>
     </footer>

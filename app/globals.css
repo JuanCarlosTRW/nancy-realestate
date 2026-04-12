@@ -76,8 +76,8 @@ html { scroll-behavior: smooth; }
   .label { @apply text-[11px] font-medium tracking-label uppercase text-gold; }
   .h-display { @apply font-display font-normal text-darkText; font-size: clamp(32px, 4vw, 48px); line-height: 1.15; }
   .h-hero { @apply font-display font-light text-darkText; font-size: clamp(40px, 6vw, 76px); line-height: 1.05; }
-  .body-p { @apply text-[15px] leading-[1.9] text-mediumText font-light; }
-  .btn-base { @apply inline-flex items-center justify-center px-8 py-4 text-[12px] font-medium tracking-button uppercase transition-all duration-300; border-radius: 4px; }
+  .body-p { @apply text-[15px] leading-[1.9] font-light; color: #2A211C; }
+  .btn-base { @apply inline-flex items-center justify-center px-10 py-4 text-[0.8rem] font-semibold tracking-[0.12em] uppercase transition-all duration-300; border-radius: 2px; }
   .btn-base:hover { box-shadow: 0 0 20px rgba(200, 169, 126, 0.2), 0 4px 12px rgba(0,0,0,0.08); }
   .gold-divider { background: linear-gradient(90deg, transparent, #C8A97E, transparent); height: 1px; }
   .card-warm { @apply bg-warmWhite border border-bordr; border-radius: 2px; box-shadow: 0 20px 40px -20px rgba(140,100,60,0.12); }
