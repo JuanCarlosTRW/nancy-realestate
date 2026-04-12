@@ -4,7 +4,7 @@ import ParallaxHero from "@/components/ui/ParallaxHero";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
 import Button from "@/components/ui/Button";
-import { IMG, NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
+import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About Nancy Musselman | Dallas Real Estate",
@@ -80,13 +80,13 @@ export default function AboutPage() {
           {/* Photo — left */}
           <Reveal>
             <div className="relative w-full max-w-[460px] mx-auto">
-              <div className="relative aspect-[3/4] w-full overflow-hidden shadow-warmLg">
+              <div className="relative aspect-[3/4] w-full overflow-hidden shadow-warmLg bg-[#F5F0E8]">
                 <Image
-                  src={IMG.nancy}
+                  src="https://static.wixstatic.com/media/62f926_766a1173e5ca4be3b924f45b485947ac~mv2.png"
                   alt="Nancy Musselman, Dallas real estate agent"
                   fill
                   sizes="(max-width: 768px) 100vw, 460px"
-                  className="object-cover object-top"
+                  className="object-contain object-top"
                 />
               </div>
             </div>

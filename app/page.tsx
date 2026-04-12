@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HeroIntro from "@/components/home/HeroIntro";
-import ParallaxHero from "@/components/ui/ParallaxHero";
+import SplitHero from "@/components/home/SplitHero";
 
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
@@ -98,68 +98,8 @@ export default function Home() {
       {/* ─── CINEMATIC INTRO OVERLAY ─────────────────────────────── */}
       <HeroIntro />
 
-      {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
-      <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80"
-        imageAlt="Warm staged living room interior in Dallas Texas"
-        overlayOpacity={0.6}
-      >
-        <p className="text-[0.7rem] font-medium tracking-[0.25em] uppercase mb-6" style={{ color: "rgba(255, 255, 255, 0.85)", textShadow: "0 1px 8px rgba(0, 0, 0, 0.4)" }}>
-          Dallas &middot; Fort Worth &middot; North Texas
-        </p>
-        {/* Part 2C: headline with text-shadow for definition */}
-        <h1
-          className="font-display font-light text-white mx-auto"
-          style={{
-            fontSize: "clamp(3rem, 5.5vw, 4.5rem)",
-            lineHeight: 1.1,
-            textShadow: "0 2px 16px rgba(0, 0, 0, 0.3)",
-          }}
-        >
-          <span style={{ display: "block" }}>Your Next Chapter Starts</span>
-          <span
-            className="italic text-gold"
-            style={{
-              display: "block",
-              fontFamily: "var(--font-accent, 'Playfair Display', serif)",
-              fontSize: "clamp(3.2rem, 6vw, 5rem)",
-            }}
-          >
-            With the Right Guide.
-          </span>
-        </h1>
-        {/* Part 2B: brighter sub-headline */}
-        <p className="mt-6 text-[1rem] font-light max-w-xl mx-auto leading-[1.7]" style={{ color: "rgba(255, 255, 255, 0.92)", textShadow: "0 1px 12px rgba(0, 0, 0, 0.4)" }}>
-          Born and raised in DFW. Twenty-two years catching what others miss.
-          Your home search deserves that kind of attention.
-        </p>
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          {/* Part 5A: Hero primary CTA — assertive gold */}
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center text-[0.8rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-[#D4B87A] hover:-translate-y-[2px] hover:shadow-[0_8px_32px_rgba(196,169,108,0.5)] transition-all duration-300"
-            style={{
-              borderRadius: "2px",
-              padding: "16px 40px",
-              boxShadow: "0 4px 24px rgba(196, 169, 108, 0.35)",
-            }}
-          >
-            Let&apos;s Talk
-          </Link>
-          {/* Part 2D: secondary CTA — brighter border */}
-          <Link
-            href="/buy"
-            className="inline-flex items-center justify-center text-[0.8rem] font-medium tracking-[0.12em] uppercase text-white hover:bg-white/5 hover:-translate-y-[2px] transition-all duration-300"
-            style={{
-              borderRadius: "2px",
-              padding: "16px 36px",
-              border: "1px solid rgba(255,255,255,0.7)",
-            }}
-          >
-            See How I Help &rarr;
-          </Link>
-        </div>
-      </ParallaxHero>
+      {/* ─── SECTION 1: SPLIT HERO ───────────────────────────────── */}
+      <SplitHero />
 
       {/* ─── SECTION 2: STATS BAR (DARK) ──────────────────────────── */}
       <StatsBar />
