@@ -36,7 +36,7 @@ export default function ParallaxHero({
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover ken-burns"
         />
       </motion.div>
 

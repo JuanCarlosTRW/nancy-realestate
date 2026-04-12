@@ -115,8 +115,11 @@ export default function AboutPage() {
               </p>
 
               {/* Pull quote */}
-              <div className="my-8 border-l-[4px] border-gold pl-6 py-5 rounded-r" style={{ background: "rgba(196, 169, 108, 0.03)" }}>
-                <p className="font-display text-[20px] md:text-[24px] italic text-darkText leading-[1.4]">
+              <div className="my-10 pl-6 border-l-2 border-gold">
+                <p
+                  className="font-display italic text-darkText"
+                  style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.75rem)", lineHeight: 1.5 }}
+                >
                   I didn&apos;t leave my career behind &mdash; I brought every
                   bit of it with me.
                 </p>
@@ -210,14 +213,14 @@ export default function AboutPage() {
         style={{ background: "linear-gradient(90deg, transparent, #C8A97E, transparent)" }}
       />
 
-      {/* ─── SECTION 4: NEIGHBORHOODS (DARK) ──────────────────────── */}
-      <section className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal">
+      {/* ─── SECTION 4: NEIGHBORHOODS ─────────────────────────────── */}
+      <section id="neighborhoods" className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-bgSection">
         <div className="container-x max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <p className="label !text-gold">Local Intelligence</p>
+              <p className="label">Local Intelligence</p>
               <h2
-                className="font-display font-light text-white leading-[1.1] mt-4"
+                className="font-display font-light text-darkText leading-[1.1] mt-4"
                 style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
               >
                 I Don&apos;t Just Know These Neighborhoods.
@@ -230,7 +233,7 @@ export default function AboutPage() {
                 </span>
               </h2>
               <div className="gold-divider w-16 mx-auto mt-8" />
-              <p className="mt-6 text-[15px] font-light text-white/70">
+              <p className="mt-6 text-[15px] font-light text-mediumText">
                 Market data tells you what a house sold for. Living here for 50+
                 years tells you why &mdash; and what&apos;s coming next.
               </p>
@@ -240,14 +243,14 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {NEIGHBORHOODS.map((hood, i) => (
               <Reveal key={hood.name} delay={i * 0.06}>
-                <div className="group relative flex min-h-[140px] flex-col h-full border border-white/10 bg-white/5 backdrop-blur-sm p-6 transition-all duration-500 hover:-translate-y-1 hover:border-gold/30 hover:bg-white/10 overflow-hidden">
-                  <h3 className="font-display text-[20px] text-white leading-[1.2] mb-1">
+                <div className="group relative flex min-h-[140px] flex-col h-full border border-bordr bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:border-gold/30 hover:shadow-warm overflow-hidden">
+                  <h3 className="font-display text-[20px] text-darkText leading-[1.2] mb-1">
                     {hood.name}
                   </h3>
                   <p className="text-[11px] tracking-label uppercase font-medium text-gold mb-2">
                     {hood.tagline}
                   </p>
-                  <p className="text-[14px] font-light italic text-white/60 leading-[1.6]">
+                  <p className="text-[14px] font-light italic text-lightText leading-[1.6]">
                     {hood.detail}
                   </p>
                   <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />

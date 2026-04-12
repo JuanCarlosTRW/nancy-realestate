@@ -142,6 +142,31 @@ html { scroll-behavior: smooth; }
   .hero-parallax { background-attachment: fixed; }
 }
 
+/* Ken Burns slow zoom on hero images */
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+.ken-burns {
+  animation: kenBurns 20s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ken-burns { animation: none; }
+}
+
+/* Signature quote grain texture */
+.quote-grain {
+  position: relative;
+}
+.quote-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
 /* Grain overlay for cream sections */
 .grain::before {
   content: "";

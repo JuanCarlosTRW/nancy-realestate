@@ -218,24 +218,6 @@ export default function BuyPage() {
         </div>
       </section>
 
-      {/* ─── SECTION 4: THE DETAILS MATTER (DARK) ─────────────────── */}
-      <section className="px-6 md:px-12 lg:px-20 py-16 md:py-24 bg-charcoal">
-        <div className="container-x max-w-[700px] text-center">
-          <Reveal>
-            <p className="label !text-gold mb-8">The Details Matter</p>
-            <p className="text-[15px] md:text-[16px] leading-[1.85] font-light text-white/70">
-              I grew up on job sites watching my family build homes from the
-              ground up. When I walk through a property with you, I am not just
-              looking at countertops and paint colors. I am checking the
-              foundation, the roof line, the drainage, the electrical panel, the
-              water heater age, and the quality of every renovation. I see the
-              things that do not show up in listing photos &mdash; and the
-              things that will show up on your inspection report.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
       {/* ─── SECTION 5: HOW I THINK (3 CARDS — LIGHT) ─────────────── */}
       <section className="pt-14 pb-20 md:pt-20 md:pb-28 px-6 md:px-12 lg:px-20 bg-warmWhite">
         <div className="container-x max-w-6xl mx-auto">

@@ -18,7 +18,7 @@ function SubmitButton() {
 }
 
 const inputCls =
-  "w-full bg-warmWhite border border-bordr rounded-[2px] px-4 py-3 text-[14px] text-darkText font-light focus:outline-none focus:border-gold transition-colors";
+  "w-full bg-warmWhite border border-bordr rounded-[2px] px-4 py-3 text-[14px] text-darkText font-light focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-colors";
 const labelCls =
   "block text-[11px] tracking-button uppercase font-medium text-mediumText mb-2";
 
@@ -46,9 +46,21 @@ export default function ContactForm() {
       </h2>
       <div className="gold-divider w-14 mt-6" />
       <p className="body-p mt-6 max-w-md">
-        No commitment, no sales pitch. Tell me what you are thinking and I
-        will get back to you within 24 hours.
+        Whether you&apos;re six months away or ready tomorrow, I&apos;d love to
+        hear what&apos;s on your mind.
       </p>
+
+      <div className="flex flex-wrap gap-4 mt-4 mb-2">
+        <span className="text-[0.7rem] tracking-[0.1em] uppercase text-lightText flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-gold/60" /> No obligation
+        </span>
+        <span className="text-[0.7rem] tracking-[0.1em] uppercase text-lightText flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-gold/60" /> I respond personally
+        </span>
+        <span className="text-[0.7rem] tracking-[0.1em] uppercase text-lightText flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-gold/60" /> Within 24 hours
+        </span>
+      </div>
 
       {hasError && (
         <div className="mt-8 border border-red-300 rounded-[2px] p-5 bg-red-50/50">
@@ -118,6 +130,23 @@ export default function ContactForm() {
           I typically respond within 24 hours.
         </p>
       </form>
+
+      <div className="mt-10 pt-8 border-t border-bordr">
+        <p className="text-[0.65rem] font-medium tracking-[0.2em] uppercase text-gold mb-4">
+          What Happens Next
+        </p>
+        <div className="space-y-3">
+          <p className="text-[0.85rem] font-light text-mediumText">
+            <span className="font-medium text-darkText">1.</span> You reach out here or call me directly.
+          </p>
+          <p className="text-[0.85rem] font-light text-mediumText">
+            <span className="font-medium text-darkText">2.</span> I respond within 24 hours &mdash; personally, not a team.
+          </p>
+          <p className="text-[0.85rem] font-light text-mediumText">
+            <span className="font-medium text-darkText">3.</span> We have an honest conversation about your goals and what makes sense.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

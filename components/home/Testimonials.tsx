@@ -43,9 +43,10 @@ export default function Testimonials() {
                 className="font-display italic text-darkText leading-[1.6] relative z-10"
                 style={{ fontSize: "clamp(20px, 2.5vw, 26px)" }}
               >
-                Nancy made the entire process of buying our home in Bent Tree
-                incredibly smooth. She was detail-oriented, always available,
-                and made us feel taken care of every step of the way.
+                Nancy helped us find our home on the Preston Trails Golf Course
+                in Bent Tree. She was incredibly detail-oriented &mdash; she caught
+                things during walkthroughs that we never would have noticed. She
+                made us feel like we were her only clients.
               </p>
 
               <div className="w-[60px] h-px bg-gold/30 mt-8" />
@@ -55,7 +56,7 @@ export default function Testimonials() {
                   The Martinez Family
                 </p>
                 <p className="text-[11px] tracking-[0.1em] uppercase text-goldLight mt-1">
-                  Bought Their Home in Bent Tree
+                  Homeowners &mdash; Preston Trails, Bent Tree
                 </p>
               </div>
 

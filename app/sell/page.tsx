@@ -153,6 +153,20 @@ export default function SellPage() {
                 I price based on what sold, not what you want to hear.
               </p>
             </div>
+
+            {/* Pricing comparison visual */}
+            <div className="grid grid-cols-2 gap-6 mt-12 max-w-lg mx-auto">
+              <div className="text-center p-6 rounded" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <p className="text-[0.65rem] tracking-[0.15em] uppercase font-medium" style={{ color: "rgba(196, 90, 90, 0.8)" }}>Overpriced Listing</p>
+                <p className="font-display text-2xl text-white mt-2">90+ Days</p>
+                <p className="text-[0.8rem] text-white/50 mt-1 font-light">Price drops. Stale listing. Desperate look.</p>
+              </div>
+              <div className="text-center p-6 rounded" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(200,169,126,0.3)" }}>
+                <p className="text-[0.65rem] tracking-[0.15em] uppercase text-gold font-medium">Right Price, Day One</p>
+                <p className="font-display text-2xl text-white mt-2">14&ndash;30 Days</p>
+                <p className="text-[0.8rem] text-white/50 mt-1 font-light">Multiple showings. Strong offers. Clean close.</p>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>

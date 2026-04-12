@@ -8,6 +8,8 @@ import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
 import { BorderBeam } from "@/components/ui/border-beam";
 import CTASparkles from "@/components/home/CTASparkles";
+import Testimonials from "@/components/home/Testimonials";
+import StatsBar from "@/components/home/StatsBar";
 import { IMG, NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -75,6 +77,16 @@ const HOODS = [
     name: "Colleyville",
     descriptor: "Quiet luxury in the heart of DFW",
     img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
+  },
+  {
+    name: "Richardson",
+    descriptor: "Top-rated schools and a thriving tech corridor",
+    img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
+  },
+  {
+    name: "Plano",
+    descriptor: "Legacy West, great dining, and master-planned communities",
+    img: "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
   },
 ];
 
@@ -150,55 +162,14 @@ export default function Home() {
       </ParallaxHero>
 
       {/* ─── SECTION 2: STATS BAR (DARK) ──────────────────────────── */}
-      <section className="bg-charcoal px-6 md:px-12">
-        <Reveal y={16}>
-          <div className="container-x max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-0 py-12 md:py-14">
-            {/* Part 3: Outcome-oriented stats with third micro-line */}
-            <div className="flex-1 text-center">
-              <p className="font-display font-light text-white leading-none" style={{ fontSize: "2.25rem" }}>
-                50+ Years
-              </p>
-              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
-                Born &amp; Raised in DFW
-              </p>
-              <p className="mt-1.5 text-[0.8rem] italic font-light" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
-                I know what others overlook
-              </p>
-            </div>
-            <div className="hidden md:block w-px h-10 bg-gold/30" />
-            <div className="flex-1 text-center">
-              <p className="font-display font-light text-white leading-none" style={{ fontSize: "2.25rem" }}>
-                22 Years
-              </p>
-              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
-                In Professional Contracts &amp; Details
-              </p>
-              <p className="mt-1.5 text-[0.8rem] italic font-light" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
-                Fewer surprises. Cleaner closings.
-              </p>
-            </div>
-            <div className="hidden md:block w-px h-10 bg-gold/30" />
-            <div className="flex-1 text-center">
-              <p className="font-display font-light text-white leading-none" style={{ fontSize: "2.25rem" }}>
-                Beam Real Estate
-              </p>
-              <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
-                Licensed &middot; TX #844625
-              </p>
-              <p className="mt-1.5 text-[0.8rem] italic font-light" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
-                Full brokerage support behind every transaction.
-              </p>
-            </div>
-          </div>
-        </Reveal>
-      </section>
+      <StatsBar />
 
       {/* ─── Micro authority line ────────────────────────────────── */}
       <div className="bg-warmWhite py-4 text-center md:py-12">
         <Reveal y={12}>
           {/* Part 1A: darker trust line text */}
           <p className="font-sans text-[0.65rem] font-medium uppercase tracking-[0.2em]" style={{ color: "#4A3F35" }}>
-            Trusted by families across Bent Tree, Plano, Richardson, and North Dallas
+            Serving families across Bent Tree, Plano, Richardson, and North Dallas
           </p>
         </Reveal>
       </div>
@@ -304,12 +275,14 @@ export default function Home() {
               {/* Part 1A: darker body text */}
               <div className="mt-8 space-y-5 text-[0.9rem] font-light leading-[1.8]" style={{ color: "#2A211C" }}>
                 <p>
-                  I did not become a REALTOR by accident. I spent decades watching
-                  this city grow, raising my family here, and building a career
-                  where missing a detail had real consequences. Real estate lets me
-                  combine everything I am good at &mdash; knowing Dallas, reading
-                  people, and making sure every contract, every negotiation, and
-                  every detail is right.
+                  I did not become a REALTOR by accident. I was born and raised
+                  right here in DFW and have watched this city grow for over fifty
+                  years. Before real estate, I spent twenty-two years in accounting
+                  and human resources &mdash; two decades of reading people,
+                  catching details others miss, and staying composed when it matters
+                  most. Real estate lets me combine everything I am good at &mdash;
+                  knowing Dallas, reading people, and making sure every contract,
+                  every negotiation, and every detail is right.
                 </p>
               </div>
               {/* Part 5C: assertive arrow link */}
@@ -440,44 +413,11 @@ export default function Home() {
             </div>
           </Reveal>
 
-          {/* Part 9: Stronger gradients and larger text on neighborhood cards */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
-            {HOODS.slice(0, 4).map((hood, i) => (
-              <Reveal key={hood.name} delay={i * 0.08}>
-                <div className="relative aspect-[4/3] w-full overflow-hidden group cursor-default">
-                  <Image
-                    src={hood.img}
-                    alt={`${hood.name} neighborhood`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.06]"
-                  />
-                  <div
-                    className="absolute inset-0 transition-opacity duration-400 group-hover:opacity-80"
-                    style={{ background: "linear-gradient(to top, rgba(20,16,12,0.8) 0%, rgba(20,16,12,0.35) 45%, transparent 100%)" }}
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 z-10">
-                    <h3
-                      className="font-display font-medium text-white leading-[1.1]"
-                      style={{ fontSize: "1.6rem", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
-                    >
-                      {hood.name}
-                    </h3>
-                    <div className="w-6 group-hover:w-12 h-[2px] bg-gold mt-2 mb-2 transition-all duration-500" />
-                    <p className="text-[0.8rem] font-light leading-[1.5]" style={{ color: "rgba(255,255,255,0.85)" }}>
-                      {hood.descriptor}
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 mt-1">
-            {HOODS.slice(4).map((hood, i) => (
-              <Reveal key={hood.name} delay={(i + 4) * 0.08}>
-                <div className="relative aspect-[4/3] w-full overflow-hidden group cursor-default">
+          {/* Neighborhood cards — 3x3 grid with hover link to About */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
+            {HOODS.map((hood, i) => (
+              <Reveal key={hood.name} delay={i * 0.06}>
+                <Link href="/about#neighborhoods" className="block relative aspect-[4/3] w-full overflow-hidden group cursor-pointer">
                   <Image
                     src={hood.img}
                     alt={`${hood.name} neighborhood`}
@@ -490,6 +430,9 @@ export default function Home() {
                     style={{ background: "linear-gradient(to top, rgba(20,16,12,0.8) 0%, rgba(20,16,12,0.35) 45%, transparent 100%)" }}
                   />
                   <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <span className="absolute top-4 right-4 text-[0.6rem] tracking-[0.15em] uppercase text-white/0 group-hover:text-white/70 transition-all duration-500 z-10">
+                    Explore &rarr;
+                  </span>
                   <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 z-10">
                     <h3
                       className="font-display font-medium text-white leading-[1.1]"
@@ -502,7 +445,7 @@ export default function Home() {
                       {hood.descriptor}
                     </p>
                   </div>
-                </div>
+                </Link>
               </Reveal>
             ))}
           </div>
@@ -521,16 +464,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── SECTION 8: ACCENT QUOTE — Part 6D: tighter gap ─────── */}
-      <section className="bg-charcoal px-6" style={{ paddingTop: "80px", paddingBottom: "48px" }}>
-        <div className="mx-auto max-w-3xl text-center">
+      {/* ─── SECTION 8: TESTIMONIAL ──────────────────────────────── */}
+      <Testimonials />
+
+      {/* ─── SECTION 9: ACCENT QUOTE — Amplified signature moment ── */}
+      <section className="bg-charcoal px-6 quote-grain" style={{ paddingTop: "120px", paddingBottom: "120px" }}>
+        <div className="mx-auto max-w-3xl text-center relative z-10">
           <Reveal>
             <div className="mx-auto mb-10" style={{ width: "40px", height: "1.5px", background: "#C8A97E" }} />
             <p
               className="font-normal italic"
               style={{
                 fontFamily: "var(--font-accent, 'Playfair Display', serif)",
-                fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
+                fontSize: "clamp(2.2rem, 5vw, 3.75rem)",
                 lineHeight: 1.4,
                 color: "#FAF7F2",
               }}
