@@ -77,7 +77,7 @@ export default function Navigation() {
           {/* CTA button — solid gold, visually pops */}
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-5 py-2 text-[0.7rem] font-medium tracking-[0.15em] uppercase bg-gold text-charcoal hover:bg-goldLight transition-all duration-300"
+            className="inline-flex items-center justify-center px-6 py-2.5 text-[0.7rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-goldLight transition-all duration-300"
             style={{ borderRadius: "2px" }}
           >
             Let&apos;s Talk

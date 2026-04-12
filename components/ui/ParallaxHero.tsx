@@ -40,7 +40,7 @@ export default function ParallaxHero({
         />
       </motion.div>
 
-      {/* Cinematic vignette overlay — reveals photo in middle, darker at edges */}
+      {/* Cinematic vignette overlay */}
       <div
         className="absolute inset-0 z-[1]"
         style={{
@@ -50,6 +50,19 @@ export default function ParallaxHero({
             rgba(26, 21, 16, 0.15) 30%,
             rgba(26, 21, 16, 0.2) 55%,
             rgba(26, 21, 16, 0.75) 100%
+          )`,
+        }}
+      />
+
+      {/* Part 2A: Radial spotlight darkening behind text zone for crisp readability */}
+      <div
+        className="absolute inset-0 z-[1]"
+        style={{
+          background: `radial-gradient(
+            ellipse at center bottom,
+            rgba(20, 16, 12, 0.55) 0%,
+            rgba(20, 16, 12, 0.25) 60%,
+            transparent 100%
           )`,
         }}
       />
