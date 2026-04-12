@@ -50,9 +50,9 @@ export default function SplitHero() {
       />
 
       {/* ── Content wrapper ──────────────────────────────────────── */}
-      <div className="relative z-[2] flex flex-col-reverse md:flex-row items-center md:items-stretch w-full min-h-[80vh] md:min-h-[90vh]">
+      <div className="relative z-[2] flex flex-row items-stretch w-full min-h-[80vh] md:min-h-[90vh]">
         {/* ── Left column: Text + CTAs ───────────────────────────── */}
-        <div className="w-full md:w-[55%] flex flex-col justify-center text-center md:text-left px-6 md:pl-16 lg:pl-24 md:pr-8 py-12 md:py-0">
+        <div className="w-full md:w-[55%] flex flex-col justify-center text-center md:text-left px-6 md:pl-16 lg:pl-24 md:pr-8 py-16 md:py-0">
           {/* Eyebrow */}
           <p
             className="text-[0.7rem] font-medium tracking-[0.25em] uppercase mb-5"
@@ -132,8 +132,8 @@ export default function SplitHero() {
           </div>
         </div>
 
-        {/* ── Right column: Nancy's cutout photo ─────────────────── */}
-        <div className="relative w-full md:w-[45%] z-[3] flex items-end justify-center pt-24 md:pt-0">
+        {/* ── Right column: Nancy's cutout photo (desktop only) ──── */}
+        <div className="relative hidden md:flex md:w-[45%] z-[3] items-end justify-center">
           {/* Subtle warm glow behind Nancy */}
           <div
             className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-[70%] pointer-events-none"
