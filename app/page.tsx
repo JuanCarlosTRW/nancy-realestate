@@ -157,6 +157,9 @@ export default function Home() {
                       style={{ fontSize: "1.45rem", fontWeight: 600 }}
                     >
                       {card.title}
+                      {card.number === "03" && (
+                        <span className="smiley-animate" aria-hidden="true" style={{ color: "#C8A97E" }}>&#9786;</span>
+                      )}
                     </h3>
                     {/* Part 4A+B: bold hook + lighter body */}
                     <p className="text-[0.9rem] leading-[1.7]">

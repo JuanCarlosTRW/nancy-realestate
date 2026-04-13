@@ -167,6 +167,23 @@ html { scroll-behavior: smooth; }
   pointer-events: none;
 }
 
+/* Animated smiley — subtle pulse-fade loop */
+@keyframes smileyPulse {
+  0%, 100% { opacity: 0; transform: scale(0.85); }
+  20%, 80% { opacity: 1; transform: scale(1); }
+}
+.smiley-animate {
+  display: inline-block;
+  animation: smileyPulse 3.5s ease-in-out infinite;
+  margin-left: 6px;
+  vertical-align: baseline;
+  font-size: 0.85em;
+  line-height: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .smiley-animate { animation: none; opacity: 1; }
+}
+
 /* Grain overlay for cream sections */
 .grain::before {
   content: "";
