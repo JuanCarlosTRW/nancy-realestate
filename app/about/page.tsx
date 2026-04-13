@@ -9,7 +9,7 @@ import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Nancy Musselman | Dallas Real Estate",
   description:
-    "Meet Nancy Musselman, a Dallasite with 50+ years in the DFW Metroplex and 22 years of professional experience, now putting it all to work for her clients.",
+    "Meet Nancy Musselman, a Dallasite with 50+ years in the DFW Metroplex and two decades of professional experience, now putting it all to work for her clients.",
 };
 
 /* ── Data ──────────────────────────────────────────────────────────── */
@@ -19,13 +19,13 @@ const SKILLS = [
     number: "01",
     title: "I Hear What You\u2019re Not Saying",
     description:
-      "Twenty-two years in HR taught me to listen before I speak, understand what someone actually needs (not just what they say), and navigate tough conversations without anyone feeling steamrolled. In real estate, that means better negotiations, smoother closings, and an agent who genuinely hears you.",
+      "My years in HR taught me to listen before I speak, understand what someone actually needs (not just what they say), and navigate tough conversations without anyone feeling steamrolled. In real estate, that means better negotiations, smoother closings, and an agent who genuinely hears you.",
   },
   {
     number: "02",
-    title: "Trained to Catch What Others Miss",
+    title: "Trained to Catch What Matters",
     description:
-      "Between my accounting background and growing up around construction, I see what most people miss. I catch the line items that don\u2019t add up in a contract and the foundation crack hiding behind fresh paint. You get a second set of eyes that\u2019s been trained to protect you.",
+      "Between my accounting background and growing up around construction, I pay close attention to what matters. Careful negotiations, line items that don\u2019t add up in a contract, and the foundation crack hiding behind fresh paint. You get a second set of eyes trained to protect your interests.",
   },
   {
     number: "03",
@@ -36,14 +36,13 @@ const SKILLS = [
 ];
 
 const NEIGHBORHOODS = [
-  { name: "Bent Tree", tagline: "Preston Trails Golf Course & established family living", detail: "Where I helped my first buyers find their dream home." },
-  { name: "Richardson", tagline: "Top-rated schools & Telecom Corridor opportunities", detail: "A city I\u2019ve watched evolve from quiet suburb to thriving hub." },
+  { name: "Richardson", tagline: "Telecom Corridor opportunities & steady growth", detail: "A city I\u2019ve watched evolve from quiet suburb to thriving hub." },
   { name: "Plano", tagline: "Legacy West, dining, and master-planned communities", detail: "From open fields to one of the best cities in Texas." },
   { name: "North Dallas", tagline: "Central location with quick access to everything", detail: "The neighborhood I know like the back of my hand." },
   { name: "Carrollton", tagline: "Affordable charm minutes from Dallas & Plano", detail: "One of DFW\u2019s best-kept secrets for value and community." },
   { name: "Preston Hollow", tagline: "Mature trees, estate lots, and quiet prestige", detail: "Where Dallas history lives on every street." },
   { name: "Frisco", tagline: "Explosive growth, new construction, and young energy", detail: "The fastest-growing city in America \u2014 and I\u2019ve watched every phase." },
-  { name: "Flower Mound", tagline: "Lakeside living with top Lewisville ISD schools", detail: "Small-town feel with big-city convenience." },
+  { name: "Flower Mound", tagline: "Lakeside living with small-town charm", detail: "Small-town feel with big-city convenience." },
   { name: "Grapevine", tagline: "Historic Main Street charm near DFW Airport", detail: "Wine trails, festivals, and real Texas character." },
 ];
 
@@ -107,12 +106,6 @@ export default function AboutPage() {
                 years, I&apos;ve watched the DFW metroplex grow from open land
                 into one of the most dynamic communities in Texas.
               </p>
-              <p>
-                I know which streets flood after a storm. I know which
-                neighborhoods have transformed and which ones have stayed
-                exactly the same. That kind of knowledge doesn&apos;t come from
-                a license &mdash; it comes from living it.
-              </p>
 
               {/* Pull quote */}
               <div className="my-10 pl-6 border-l-2 border-gold">
@@ -126,9 +119,9 @@ export default function AboutPage() {
               </div>
 
               <p>
-                Before real estate, I spent 22 years in accounting and
-                human resources. Two decades of reading people, navigating
-                high-stakes conversations, catching details others miss, and
+                Before real estate, I spent two decades in accounting and
+                human resources. Years of reading people, navigating
+                high-stakes conversations, catching every detail, and
                 staying composed when it matters most.
               </p>
               <p>
@@ -173,7 +166,7 @@ export default function AboutPage() {
             <div className="text-center max-w-2xl mx-auto mb-14">
               <p className="label">The Edge</p>
               <h2 className="h-display mt-4">
-                22 Years of Reading People and Catching Details.
+                Years of Reading People and Catching Details.
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 text-[15px]">

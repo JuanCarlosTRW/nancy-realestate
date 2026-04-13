@@ -29,7 +29,7 @@ const STEPS = [
   {
     n: "03",
     title: "I Show You What You Won\u2019t See Online",
-    body: "I do not just open doors and let you wander. I grew up around construction. I will point out the things you will not notice in photos \u2014 the water stain that means a roof problem, the slope in the floor that means foundation work, the renovation that looks beautiful but was done without permits. That is the difference between buying a home and buying a problem.",
+    body: "I do not just open doors and let you wander. I grew up around construction. I will point out the things you will not notice in photos \u2014 the water stain that means a roof problem, the slope in the floor that means foundation work. That is the difference between buying a home and buying a problem.",
     closing:
       "Listing photos show you the best angles. I show you the full picture.",
   },
@@ -42,7 +42,7 @@ const STEPS = [
   {
     n: "05",
     title: "Nothing Slips Between Contract and Keys",
-    body: "Between the accepted offer and the keys in your hand, a hundred things can go sideways. Inspection issues, appraisal gaps, title problems, lender delays. I have spent twenty-two years managing complex, high-stakes situations where the details matter and the timeline is tight. From contract to close, nothing slips through on my watch.",
+    body: "Between the accepted offer and the keys in your hand, a hundred things can go sideways. Inspection issues, appraisal gaps, title problems, lender delays. My career managing complex, high-stakes situations means I know when details matter and when the timeline is tight. From contract to close, nothing slips through on my watch.",
     closing:
       "Most deals don\u2019t fall apart at the beginning. They fall apart in the details.",
   },
@@ -114,11 +114,11 @@ export default function BuyPage() {
               </p>
               <p>
                 The street that floods every spring. The roof line that tells a
-                story the seller didn&apos;t mention. The renovation that looks
-                beautiful but was done without permits.
+                story the seller didn&apos;t mention. The aging HVAC system
+                that&apos;s about to become a five-figure problem.
               </p>
               <p>
-                I grew up around construction. I spent 22 years in careers where
+                I grew up around construction. I spent years in careers where
                 details were non-negotiable. When I walk a property, I&apos;m
                 not just looking at what&apos;s there &mdash; I&apos;m looking
                 for what&apos;s wrong, what&apos;s hidden, and what&apos;s
@@ -212,7 +212,7 @@ export default function BuyPage() {
               Tell Me What You&apos;re Looking For.
               <br />
               <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
-                I&apos;ll Tell You What&apos;s Worth Seeing.
+                I&apos;ll Help You Find What Matches.
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">

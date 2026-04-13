@@ -17,20 +17,20 @@ const STEPS = [
   {
     n: "01",
     title: "I Walk Your Home Like a Buyer Would",
-    body: "I will come to your home and tell you exactly what it is worth and why. No inflated number to win your listing. No lowball to make myself look good later. I will also tell you what to fix before we list and what to leave alone \u2014 because the wrong renovation can cost you thousands with zero return.",
+    body: "I\u2019ll prepare a detailed Comparative Market Analysis so you can see exactly where your home stands \u2014 based on what comparable homes actually sold for, not what they were listed at. No inflated number to win your listing. No lowball to make myself look good later. I\u2019ll also recommend what to fix before we list and what to leave alone \u2014 because the wrong renovation can cost you thousands with zero return.",
     closing:
       "I see your home through a buyer\u2019s eyes before they ever walk in.",
   },
   {
     n: "02",
     title: "Price It Right From Day One",
-    body: "Overpricing is the number one mistake sellers make, and most agents let it happen because they do not want the uncomfortable conversation. I will have that conversation. I study what comparable homes actually sold for \u2014 not what they were listed at. The right price on day one attracts multiple offers. The wrong price leads to price drops and a stale listing that buyers ignore.",
+    body: "Overpricing is the number one mistake sellers make, and it usually happens because no one wants the uncomfortable conversation. I will have that conversation. I study what comparable homes actually sold for \u2014 not what they were listed at. The right price on day one attracts multiple offers. The wrong price leads to price drops and a stale listing that buyers ignore.",
     closing: "The right price attracts. The wrong price repels.",
   },
   {
     n: "03",
     title: "Make Buyers Feel It in the First Ten Seconds",
-    body: "Buyers decide in the first ten seconds whether a home feels right. From professional photography to listing copy that highlights what makes your home worth it, I will make sure those ten seconds work in your favor. I will tell you exactly which rooms to stage and which ones just need to be clean.",
+    body: "Buyers decide in the first ten seconds whether a home feels right. From professional photography to listing copy that highlights what makes your home worth it, I will make sure those ten seconds work in your favor. I\u2019ll recommend which rooms to stage and which ones just need to be clean.",
     closing: "You never get a second chance at a first showing.",
   },
   {
@@ -41,10 +41,10 @@ const STEPS = [
   },
   {
     n: "05",
-    title: "I Handle the Negotiation So You Don\u2019t Have To",
-    body: "When offers come in, the real work starts. Counteroffers, inspection negotiations, appraisal disputes, buyer financing issues \u2014 I have spent twenty-two years in professional environments where high-stakes conversations and tight deadlines were the job. I handle the negotiation so you get the best possible outcome without the stress of doing it yourself.",
+    title: "I Walk You Through Every Offer",
+    body: "When offers come in, the real work starts. Counteroffers, inspection negotiations, appraisal disputes, buyer financing issues \u2014 my background in accounting and HR means years of high-stakes conversations and tight deadlines were the job. I bring every offer to you, walk you through the details, and help you negotiate from a position of strength.",
     closing:
-      "I negotiate like your equity depends on it \u2014 because it does.",
+      "I prepare you to negotiate like your equity depends on it \u2014 because it does.",
   },
 ];
 
@@ -113,9 +113,10 @@ export default function SellPage() {
                 looks desperate instead of desirable.
               </p>
               <p>
-                I will not inflate your number to win your listing. I will tell
-                you what your home is actually worth, based on what comparable
-                homes actually sold for &mdash; not what they were listed at.
+                I will not inflate your number to win your listing. I prepare
+                a detailed Comparative Market Analysis based on what comparable
+                homes actually sold for &mdash; not what they were listed at
+                &mdash; so you can price with confidence.
               </p>
               <p>
                 That conversation is uncomfortable. But it is the single most
@@ -132,7 +133,7 @@ export default function SellPage() {
                     "var(--font-accent, 'Playfair Display', serif)",
                 }}
               >
-                I price based on what sold, not what you want to hear.
+                I give you the data. You make the decision.
               </p>
             </div>
 
@@ -229,12 +230,12 @@ export default function SellPage() {
                   Honest Pricing
                 </p>
                 <p className="text-[0.85rem] font-light leading-[1.7]" style={{ color: "rgba(250, 247, 242, 0.7)" }}>
-                  I price based on what sold, not what you want to hear. That precision attracts offers instead of silence.
+                  I prepare a Comparative Market Analysis so you can price with confidence &mdash; based on what actually sold.
                 </p>
               </div>
               <div className="text-center py-10 md:py-12 px-6 md:px-8">
                 <p className="text-[0.65rem] font-medium tracking-[0.2em] uppercase text-gold mb-4">
-                  22 Years of Calm Negotiation
+                  Decades of Calm Negotiation
                 </p>
                 <p className="text-[0.85rem] font-light leading-[1.7]" style={{ color: "rgba(250, 247, 242, 0.7)" }}>
                   High-stakes experience means I stay level when it matters most.
@@ -254,10 +255,10 @@ export default function SellPage() {
               className="font-display font-light text-white leading-[1.1] mt-4 max-w-[700px] mx-auto"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
-              I&apos;ll Tell You What Your Home Is Worth.
+              Let&apos;s Find Out What Your Home Is Worth.
               <br />
               <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
-                Even If It&apos;s Not What You Want to Hear.
+                With Data You Can Trust.
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">

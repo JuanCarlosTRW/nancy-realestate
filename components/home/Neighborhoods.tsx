@@ -33,18 +33,13 @@ const HOODS: Hood[] = [
   },
   {
     name: "Flower Mound",
-    descriptor: "Top-rated schools and a small-town feel",
+    descriptor: "Lakeside living with a small-town feel",
     img: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&q=80",
   },
   {
     name: "Grapevine",
     descriptor: "Historic charm with modern convenience",
     img: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600&q=80",
-  },
-  {
-    name: "Colleyville",
-    descriptor: "Quiet luxury in the heart of DFW",
-    img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80",
   },
 ];
 
@@ -93,26 +88,16 @@ export default function Neighborhoods() {
               <span className="italic text-gold">50+ Years</span>
             </h2>
             <p className="body-p mt-6 max-w-2xl mx-auto">
-              From North Dallas to Colleyville, I know these streets and the
+              From North Dallas to Flower Mound, I know these streets and the
               stories behind them.
             </p>
             <AnimatedDivider className="w-16 mx-auto mt-8" />
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
-          {HOODS.slice(0, 4).map((n, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          {HOODS.map((n, i) => (
             <Reveal key={n.name} delay={i * 0.08}>
-              <div className="h-[200px] sm:h-[240px] md:h-[300px]">
-                <NeighborhoodCard hood={n} />
-              </div>
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-2">
-          {HOODS.slice(4).map((n, i) => (
-            <Reveal key={n.name} delay={(i + 4) * 0.08}>
               <div className="h-[200px] sm:h-[240px] md:h-[300px]">
                 <NeighborhoodCard hood={n} />
               </div>

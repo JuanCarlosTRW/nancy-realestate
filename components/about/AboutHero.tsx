@@ -22,12 +22,12 @@ export default function AboutHero() {
         >
           A Dallasite, a Professional, and{" "}
           <span className="italic text-gold">
-            Someone Who Notices What Others Miss
+            Someone Who Pays Attention
           </span>
         </h1>
         <AnimatedDivider className="w-16 mt-8" />
         <p className="body-p max-w-2xl mt-7 text-[17px]">
-          Fifty years of roots. Twenty-two years of professional discipline. A
+          Fifty years of roots. Two decades of professional discipline. A
           lifetime of paying attention.
         </p>
       </div>

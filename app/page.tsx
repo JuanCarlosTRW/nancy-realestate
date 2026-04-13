@@ -15,7 +15,7 @@ import { IMG, NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Nancy Musselman | Dallas Real Estate Agent | Beam Real Estate",
   description:
-    "Nancy Musselman — a lifelong Dallasite with 50+ years in DFW and 22 years of professional experience. Buying or selling, I see what others miss.",
+    "Nancy Musselman — a lifelong Dallasite with 50+ years in DFW and 22 years of professional experience. Buying or selling, detail and care in every transaction.",
 };
 
 /* ── Data ──────────────────────────────────────────────────────────── */
@@ -24,21 +24,21 @@ export const metadata: Metadata = {
 const CARDS = [
   {
     number: "01",
-    title: "You\u2019ll See Homes Others Miss",
+    title: "You\u2019ll See Homes With Fresh Eyes",
     hook: "I have lived in DFW for over fifty years.",
-    body: "I know the quiet streets most agents drive past, the blocks where values are climbing, and the areas about to become the next big thing. A lifetime of local knowledge \u2014 not just an MLS search.",
+    body: "I know the quiet streets worth a second look, the blocks where values are climbing, and the areas about to become the next big thing. A lifetime of local knowledge \u2014 not just an MLS search.",
   },
   {
     number: "02",
     title: "You\u2019ll Never Feel Rushed or Pressured",
     hook: "I don\u2019t push clients toward a decision to close a deal faster.",
-    body: "Twenty-two years in professional environments taught me that the best outcomes come from clear thinking, not urgency. You move at the pace that\u2019s right for you.",
+    body: "My years of professional experience taught me that the best outcomes come from clear thinking, not urgency. You move at the pace that\u2019s right for you.",
   },
   {
     number: "03",
     title: "Nothing Gets Past Us",
     hook: "I grew up around construction and spent decades where missing a detail had real consequences.",
-    body: "When I walk a property, I see what most people miss. When I review a contract, I catch what doesn\u2019t add up. A second set of trained eyes on every part of the process.",
+    body: "When I walk a property, I pay close attention to what matters. When I review a contract, I catch what doesn\u2019t add up. A second set of trained eyes on every part of the process.",
   },
 ];
 
@@ -65,7 +65,7 @@ const HOODS = [
   },
   {
     name: "Flower Mound",
-    descriptor: "Top-rated schools and a small-town feel",
+    descriptor: "Lakeside living with a small-town feel",
     img: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80",
   },
   {
@@ -74,13 +74,8 @@ const HOODS = [
     img: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&q=80",
   },
   {
-    name: "Colleyville",
-    descriptor: "Quiet luxury in the heart of DFW",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
-  },
-  {
     name: "Richardson",
-    descriptor: "Top-rated schools and a thriving tech corridor",
+    descriptor: "A thriving tech corridor with strong community roots",
     img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
   },
   {
@@ -109,7 +104,7 @@ export default function Home() {
         <Reveal y={12}>
           {/* Part 1A: darker trust line text */}
           <p className="font-sans text-[0.65rem] font-medium uppercase tracking-[0.2em]" style={{ color: "#4A3F35" }}>
-            Serving families across Bent Tree, Plano, Richardson, and North Dallas
+            Serving families across North Texas &mdash; Plano, Richardson, and North Dallas
           </p>
         </Reveal>
       </div>
@@ -134,7 +129,7 @@ export default function Home() {
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               {/* Part 1A: darker section subtext */}
               <p className="mt-6 text-[0.9rem] font-light leading-[1.7]" style={{ color: "#3D342B" }}>
-                I take on a handful of clients at a time. That means you get
+                I don&apos;t take on too many clients at a time. That means you get
                 my full attention &mdash; not a fraction of it.
               </p>
             </div>
@@ -217,9 +212,9 @@ export default function Home() {
                 <p>
                   I did not become a REALTOR by accident. I was born and raised
                   right here in DFW and have watched this city grow for over fifty
-                  years. Before real estate, I spent twenty-two years in accounting
-                  and human resources &mdash; two decades of reading people,
-                  catching details others miss, and staying composed when it matters
+                  years. Before real estate, I spent two decades in accounting
+                  and human resources &mdash; years of reading people,
+                  catching every detail, and staying composed when it matters
                   most. Real estate lets me combine everything I am good at &mdash;
                   knowing Dallas, reading people, and making sure every contract,
                   every negotiation, and every detail is right.
@@ -306,9 +301,9 @@ export default function Home() {
                     </h3>
                     <p className="text-[0.9rem] font-light leading-[1.7]" style={{ color: "#2A211C" }}>
                       Most homes sit on the market because they were overpriced
-                      from day one. I will price it based on what actually sold,
-                      prep it for what buyers actually notice, and get it in front
-                      of serious buyers fast.
+                      from day one. I prepare a Comparative Market Analysis so
+                      you can price it right, prep it for what buyers actually
+                      notice, and get it in front of serious buyers fast.
                     </p>
                   </div>
                   <Link
@@ -346,7 +341,7 @@ export default function Home() {
                 </span>
               </h2>
               <p className="mt-6 text-[0.9rem] font-light leading-[1.7]" style={{ color: "#4A3F35" }}>
-                From North Dallas to Colleyville, I know these streets and the
+                From North Dallas to Flower Mound, I know these streets and the
                 stories behind them.
               </p>
               <AnimatedDivider className="w-16 mt-8" />
@@ -446,7 +441,7 @@ export default function Home() {
               Tell Me What You Need.
               <br />
               <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
-                I&apos;ll Tell You What Actually Makes Sense.
+                Let&apos;s Figure Out Your Next Move Together.
               </span>
             </h2>
             {/* Part 1B: brighter body text on dark bg */}

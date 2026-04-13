@@ -53,7 +53,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-9" aria-label="Primary">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-9" aria-label="Primary">
           {NAV_ITEMS.filter((i) => i.href !== "/contact").map((item) => {
             const active = pathname === item.href;
             return (
