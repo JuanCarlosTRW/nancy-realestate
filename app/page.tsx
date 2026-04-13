@@ -263,9 +263,9 @@ export default function Home() {
                     </h3>
                     <p className="text-[0.9rem] font-light leading-[1.7]" style={{ color: "#2A211C" }}>
                       Finding the right home in Dallas takes more than browsing
-                      listings. It takes someone who knows which streets to skip,
-                      which neighborhoods are climbing, and what a listing photo
-                      isn&apos;t showing you.
+                      listings. It takes someone who knows the neighborhoods,
+                      understands what&apos;s behind the listing photos, and can
+                      point out what matters during a walkthrough.
                     </p>
                   </div>
                   <Link

@@ -17,7 +17,7 @@ const STEPS = [
   {
     n: "01",
     title: "I Walk Your Home Like a Buyer Would",
-    body: "I\u2019ll prepare a detailed Comparative Market Analysis so you can see exactly where your home stands \u2014 based on what comparable homes actually sold for, not what they were listed at. No inflated number to win your listing. No lowball to make myself look good later. I\u2019ll also recommend what to fix before we list and what to leave alone \u2014 because the wrong renovation can cost you thousands with zero return.",
+    body: "I\u2019ll prepare a detailed Comparative Market Analysis so you can see exactly where your home stands \u2014 based on what comparable homes actually sold for, not what they were listed at. No inflated number to win your listing. No lowball to make myself look good later. I\u2019ll also share recommendations on what may be worth addressing before we list and what to leave alone \u2014 because the wrong renovation can cost you thousands with zero return.",
     closing:
       "I see your home through a buyer\u2019s eyes before they ever walk in.",
   },

@@ -7,7 +7,7 @@ const CARDS = [
   {
     label: "For Buyers",
     title: "Ready to Buy?",
-    body: "Finding the right home in Dallas takes more than browsing Zillow. It takes someone who knows which streets to avoid and which neighborhoods are quietly becoming the next big thing.",
+    body: "Finding the right home in Dallas takes more than browsing Zillow. It takes someone who knows the neighborhoods and can point out what matters during every walkthrough.",
     cta: "Start Your Search",
     href: "/buy",
     image:

@@ -31,7 +31,7 @@ const SKILLS = [
     number: "03",
     title: "Steady Hands in a Stressful Process",
     description:
-      "Real estate transactions get stressful. Deals fall through, inspections surface surprises, timelines shift. I\u2019ve spent two decades handling high-pressure workplace situations with poise. You\u2019ll never see me panic \u2014 and that steadiness is contagious when things get complicated.",
+      "Real estate transactions get stressful. Deals fall through, inspections surface surprises, timelines shift. My career navigating high-pressure workplace situations taught me poise. You\u2019ll never see me panic \u2014 and that steadiness is contagious when things get complicated.",
   },
 ];
 

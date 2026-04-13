@@ -76,9 +76,8 @@ export default function BuyPage() {
           </span>
         </h1>
         <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
-          The right home in the right neighborhood. I know this city well enough
-          to find both &mdash; and experienced enough to spot what
-          doesn&apos;t belong.
+          I know this city well enough to help you find the right home
+          in the right neighborhood.
         </p>
       </ParallaxHero>
 
@@ -113,9 +112,9 @@ export default function BuyPage() {
                 the most are the things you never noticed.
               </p>
               <p>
-                The street that floods every spring. The roof line that tells a
-                story the seller didn&apos;t mention. The aging HVAC system
-                that&apos;s about to become a five-figure problem.
+                The roof line that tells a story the seller didn&apos;t
+                mention. The aging HVAC system that&apos;s about to become
+                a five-figure problem.
               </p>
               <p>
                 I grew up around construction. I spent years in careers where
