@@ -75,8 +75,8 @@ export default function GoldParticleHero() {
 
         {/* Rotating italic phrase */}
         <div
-          className="relative mx-auto max-w-3xl overflow-hidden"
-          style={{ height: "clamp(50px, 7vw, 80px)", marginTop: "0.15em" }}
+          className="relative mx-auto max-w-3xl"
+          style={{ height: "clamp(90px, 14vw, 150px)", marginTop: "0.15em" }}
         >
           <AnimatePresence mode="wait">
             <motion.span
