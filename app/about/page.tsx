@@ -170,7 +170,7 @@ export default function AboutPage() {
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 text-[15px]">
-                Before I ever opened a lockbox, I spent two decades where
+                Before I ever opened a lockbox, I spent years in careers where
                 precision and people skills weren&apos;t optional &mdash; they
                 were the job.
               </p>

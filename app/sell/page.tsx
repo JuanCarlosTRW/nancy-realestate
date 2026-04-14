@@ -24,7 +24,7 @@ const STEPS = [
   {
     n: "02",
     title: "Price It Right From Day One",
-    body: "Overpricing is the number one mistake sellers make, and it usually happens because no one wants the uncomfortable conversation. I will have that conversation. I study what comparable homes actually sold for \u2014 not what they were listed at. The right price on day one attracts multiple offers. The wrong price leads to price drops and a stale listing that buyers ignore.",
+    body: "Overpricing is the number one mistake sellers make, and it usually happens because no one wants the uncomfortable conversation. I make sure you have all the information before that conversation. I study what comparable homes actually sold for \u2014 not what they were listed at. The right price on day one attracts multiple offers. The wrong price leads to price drops and a stale listing that buyers ignore.",
     closing: "The right price attracts. The wrong price repels.",
   },
   {

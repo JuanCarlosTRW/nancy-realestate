@@ -120,8 +120,8 @@ export default function BuyPage() {
                 I grew up around construction. I spent years in careers where
                 details were non-negotiable. When I walk a property, I&apos;m
                 not just looking at what&apos;s there &mdash; I&apos;m looking
-                for what&apos;s wrong, what&apos;s hidden, and what&apos;s
-                going to cost you later.
+                for what might need attention, what&apos;s easy to overlook,
+                and what could cost you down the road.
               </p>
             </div>
 
