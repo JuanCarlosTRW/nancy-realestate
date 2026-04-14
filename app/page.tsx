@@ -10,7 +10,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import CTASparkles from "@/components/home/CTASparkles";
 import Testimonials from "@/components/home/Testimonials";
 import StatsBar from "@/components/home/StatsBar";
-import { IMG, NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
+import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Nancy Musselman | Dallas Real Estate Agent | Beam Real Estate",
@@ -140,7 +140,7 @@ export default function Home() {
               <Reveal key={card.number} delay={i * 0.15}>
                 <div
                   className="group relative h-full min-h-[280px] flex flex-col overflow-hidden p-10 md:p-12 transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg border border-gold/[0.12] hover:border-gold/25"
-                  style={{ background: "#FFFCF5", borderRadius: "4px", ...(i === 0 ? { borderTop: "3px solid #C8A97E" } : {}) }}
+                  style={{ background: "#FFFCF5", borderRadius: "4px", borderTop: "3px solid #C8A97E" }}
                 >
                   {/* Gold number watermark — top right */}
                   <span
@@ -183,7 +183,7 @@ export default function Home() {
           <Reveal y={0} className="relative">
             <div className="relative w-full h-[400px] md:h-auto md:min-h-[600px] overflow-hidden">
               <Image
-                src={IMG.nancy}
+                src="https://static.wixstatic.com/media/62f926_766a1173e5ca4be3b924f45b485947ac~mv2.png"
                 alt="Nancy Musselman, Dallas real estate agent"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

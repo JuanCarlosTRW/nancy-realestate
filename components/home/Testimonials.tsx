@@ -21,8 +21,8 @@ export default function Testimonials() {
             {/* Left — property photo */}
             <div className="relative h-[250px] md:h-auto md:min-h-[450px]">
               <Image
-                src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80"
-                alt="Bent Tree neighborhood, Dallas"
+                src="https://static.wixstatic.com/media/62f926_a22adc913a92483a81f67cd676406e51~mv2.png"
+                alt="Preston Trails Golf Course home, Bent Tree Dallas"
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
                 className="object-cover"
