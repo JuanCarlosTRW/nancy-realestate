@@ -81,7 +81,7 @@ export default function AboutPage() {
             <div className="relative w-full max-w-[460px] mx-auto">
               <div className="relative aspect-[3/4] w-full overflow-hidden shadow-warmLg bg-[#F5F0E8]">
                 <Image
-                  src="https://static.wixstatic.com/media/62f926_766a1173e5ca4be3b924f45b485947ac~mv2.png"
+                  src="https://static.wixstatic.com/media/62f926_e81e37a81dd94340b92c9d9db1eeae24~mv2.png"
                   alt="Nancy Musselman, Dallas real estate agent"
                   fill
                   sizes="(max-width: 768px) 100vw, 460px"
