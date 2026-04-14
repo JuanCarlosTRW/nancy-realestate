@@ -42,7 +42,7 @@ const STEPS = [
   {
     n: "05",
     title: "Nothing Slips Between Contract and Keys",
-    body: "Between the accepted offer and the keys in your hand, a hundred things can go sideways. Inspection issues, appraisal gaps, title problems, lender delays. My career managing complex, high-stakes situations means I know when details matter and when the timeline is tight. From contract to close, nothing slips through on my watch.",
+    body: "Between the accepted offer and the keys in your hand, a hundred things can go sideways. Inspection issues, appraisal gaps, title problems, lender delays. My career managing complex situations with tight deadlines means I know what to watch for and when to follow up. From contract to close, nothing slips through on my watch.",
     closing:
       "Most deals don\u2019t fall apart at the beginning. They fall apart in the details.",
   },
@@ -55,9 +55,9 @@ export default function BuyPage() {
     <>
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
       <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=3840&q=80"
-        imageAlt="Warm home interior with natural light in Dallas Texas"
-        overlayOpacity={0.45}
+        imageSrc="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=3840&q=80"
+        imageAlt="Warm living room interior with natural light"
+        overlayOpacity={0.6}
       >
         <p className="label mb-4 !text-gold">For Buyers</p>
         <h1

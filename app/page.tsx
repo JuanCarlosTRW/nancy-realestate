@@ -6,7 +6,6 @@ import SplitHero from "@/components/home/SplitHero";
 
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
-import { BorderBeam } from "@/components/ui/border-beam";
 import CTASparkles from "@/components/home/CTASparkles";
 import Testimonials from "@/components/home/Testimonials";
 import StatsBar from "@/components/home/StatsBar";
@@ -239,80 +238,71 @@ export default function Home() {
           <div className="mx-auto mb-12" style={{ width: "60px", height: "1px", background: "#C8A97E" }} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Buy Card — Part 10: gold bottom accent */}
+            {/* Buy Card */}
             <Reveal>
-              <div className="group relative overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-warm" style={{ borderRadius: "4px", borderBottom: "3px solid #C8A97E" }}>
-                <BorderBeam size={250} duration={12} delay={0} colorFrom="#C8A97E" colorTo="#A8845A" borderWidth={1.5} />
-                <div className="relative aspect-[16/10] w-full overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
-                    alt="Warm suburban home with traditional style in Dallas Texas"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.04]"
-                  />
-                  <div className="absolute bottom-4 left-4 px-4 py-1.5 backdrop-blur-sm" style={{ background: "rgba(26, 21, 16, 0.85)", borderRadius: "2px" }}>
-                    <span className="text-[0.6rem] tracking-[0.2em] uppercase font-medium text-white">For Buyers</span>
-                  </div>
+              <div
+                className="group relative flex flex-col justify-between overflow-hidden border border-gold/[0.12] hover:border-gold/25 bg-[#FFFCF5] p-10 md:p-12 min-h-[320px] transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg"
+                style={{ borderRadius: "4px", borderTop: "3px solid #C8A97E" }}
+              >
+                {/* Watermark */}
+                <span
+                  className="absolute -top-2 right-3 font-display text-[7rem] font-extralight leading-none select-none transition-colors duration-400 group-hover:text-gold/[0.15]"
+                  style={{ color: "rgba(196, 169, 108, 0.07)", pointerEvents: "none", zIndex: 0 }}
+                  aria-hidden="true"
+                >B</span>
+                <div className="relative z-10">
+                  <p className="text-[0.6rem] tracking-[0.2em] uppercase font-medium text-gold mb-4">For Buyers</p>
+                  <h3 className="font-display font-medium text-darkText leading-tight mb-4" style={{ fontSize: "1.45rem" }}>
+                    Find the Right Home &mdash; Not Just Any Home
+                  </h3>
+                  <p className="text-[0.9rem] font-light leading-[1.7]" style={{ color: "#2A211C" }}>
+                    Finding the right home in Dallas takes more than browsing
+                    listings. It takes someone who knows the neighborhoods,
+                    understands what&apos;s behind the listing photos, and can
+                    point out what matters during a walkthrough.
+                  </p>
                 </div>
-                <div className="flex min-h-[220px] flex-col justify-between border border-bordr border-t-0 bg-white p-6 md:p-8">
-                  <div>
-                    {/* Part 10: larger card heading */}
-                    <h3 className="font-display font-medium text-darkText leading-tight mb-3" style={{ fontSize: "1.5rem" }}>
-                      Find the Right Home &mdash; Not Just Any Home
-                    </h3>
-                    <p className="text-[0.9rem] font-light leading-[1.7]" style={{ color: "#2A211C" }}>
-                      Finding the right home in Dallas takes more than browsing
-                      listings. It takes someone who knows the neighborhoods,
-                      understands what&apos;s behind the listing photos, and can
-                      point out what matters during a walkthrough.
-                    </p>
-                  </div>
-                  <Link
-                    href="/buy"
-                    className="mt-4 relative inline-flex items-center gap-2 text-[0.7rem] tracking-[0.2em] uppercase font-semibold text-gold hover:text-goldDark hover:gap-[14px] transition-all duration-300 after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-px after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
-                  >
-                    Start Your Search <span>&rarr;</span>
-                  </Link>
-                </div>
+                <Link
+                  href="/buy"
+                  className="relative z-10 mt-6 inline-flex items-center gap-2 text-[0.7rem] tracking-[0.2em] uppercase font-semibold text-gold hover:text-goldDark hover:gap-[14px] transition-all duration-300 after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-px after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  Start Your Search <span>&rarr;</span>
+                </Link>
+                <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
               </div>
             </Reveal>
 
-            {/* Sell Card — Part 10: dark charcoal bottom accent */}
+            {/* Sell Card */}
             <Reveal delay={0.1}>
-              <div className="group relative overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-warm" style={{ borderRadius: "4px", borderBottom: "3px solid #2A211C" }}>
-                <BorderBeam size={250} duration={12} delay={6} colorFrom="#C8A97E" colorTo="#A8845A" borderWidth={1.5} />
-                <div className="relative aspect-[16/10] w-full overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80"
-                    alt="Craftsman-style home with warm tones in Dallas neighborhood"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.04]"
-                  />
-                  <div className="absolute bottom-4 left-4 px-4 py-1.5 backdrop-blur-sm" style={{ background: "rgba(26, 21, 16, 0.85)", borderRadius: "2px" }}>
-                    <span className="text-[0.6rem] tracking-[0.2em] uppercase font-medium text-white">For Sellers</span>
-                  </div>
+              <div
+                className="group relative flex flex-col justify-between overflow-hidden border border-gold/[0.12] hover:border-gold/25 bg-[#FFFCF5] p-10 md:p-12 min-h-[320px] transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg"
+                style={{ borderRadius: "4px", borderTop: "3px solid #C8A97E" }}
+              >
+                {/* Watermark */}
+                <span
+                  className="absolute -top-2 right-3 font-display text-[7rem] font-extralight leading-none select-none transition-colors duration-400 group-hover:text-gold/[0.15]"
+                  style={{ color: "rgba(196, 169, 108, 0.07)", pointerEvents: "none", zIndex: 0 }}
+                  aria-hidden="true"
+                >S</span>
+                <div className="relative z-10">
+                  <p className="text-[0.6rem] tracking-[0.2em] uppercase font-medium text-gold mb-4">For Sellers</p>
+                  <h3 className="font-display font-medium text-darkText leading-tight mb-4" style={{ fontSize: "1.45rem" }}>
+                    Price It Right. Prep It Smart. Sell It Fast.
+                  </h3>
+                  <p className="text-[0.9rem] font-light leading-[1.7]" style={{ color: "#2A211C" }}>
+                    Most homes sit on the market because they were overpriced
+                    from day one. I prepare a Comparative Market Analysis so
+                    you can price it right, prep it for what buyers actually
+                    notice, and get it in front of serious buyers fast.
+                  </p>
                 </div>
-                <div className="flex min-h-[220px] flex-col justify-between border border-bordr border-t-0 bg-white p-6 md:p-8">
-                  <div>
-                    <h3 className="font-display font-medium text-darkText leading-tight mb-3" style={{ fontSize: "1.5rem" }}>
-                      Price It Right. Prep It Smart. Sell It Fast.
-                    </h3>
-                    <p className="text-[0.9rem] font-light leading-[1.7]" style={{ color: "#2A211C" }}>
-                      Most homes sit on the market because they were overpriced
-                      from day one. I prepare a Comparative Market Analysis so
-                      you can price it right, prep it for what buyers actually
-                      notice, and get it in front of serious buyers fast.
-                    </p>
-                  </div>
-                  <Link
-                    href="/sell"
-                    className="mt-4 relative inline-flex items-center gap-2 text-[0.7rem] tracking-[0.2em] uppercase font-semibold text-gold hover:text-goldDark hover:gap-[14px] transition-all duration-300 after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-px after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
-                  >
-                    Get Your Home Sold <span>&rarr;</span>
-                  </Link>
-                </div>
+                <Link
+                  href="/sell"
+                  className="relative z-10 mt-6 inline-flex items-center gap-2 text-[0.7rem] tracking-[0.2em] uppercase font-semibold text-gold hover:text-goldDark hover:gap-[14px] transition-all duration-300 after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-px after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  Get Your Home Sold <span>&rarr;</span>
+                </Link>
+                <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
               </div>
             </Reveal>
           </div>
@@ -348,38 +338,22 @@ export default function Home() {
             </div>
           </Reveal>
 
-          {/* Neighborhood cards — 3x3 grid with hover link to About */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
+          {/* Neighborhood cards — text-only editorial grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {HOODS.map((hood, i) => (
               <Reveal key={hood.name} delay={i * 0.06}>
-                <Link href="/about#neighborhoods" className="block relative aspect-[4/3] w-full overflow-hidden group cursor-pointer">
-                  <Image
-                    src={hood.img}
-                    alt={`${hood.name} neighborhood`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.06]"
-                  />
-                  <div
-                    className="absolute inset-0 transition-opacity duration-400 group-hover:opacity-80"
-                    style={{ background: "linear-gradient(to top, rgba(20,16,12,0.8) 0%, rgba(20,16,12,0.35) 45%, transparent 100%)" }}
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <span className="absolute top-4 right-4 text-[0.6rem] tracking-[0.15em] uppercase text-white/0 group-hover:text-white/70 transition-all duration-500 z-10">
-                    Explore &rarr;
-                  </span>
-                  <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 z-10">
-                    <h3
-                      className="font-display font-medium text-white leading-[1.1]"
-                      style={{ fontSize: "1.6rem", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
-                    >
-                      {hood.name}
-                    </h3>
-                    <div className="w-6 group-hover:w-12 h-[2px] bg-gold mt-2 mb-2 transition-all duration-500" />
-                    <p className="text-[0.8rem] font-light leading-[1.5]" style={{ color: "rgba(255,255,255,0.85)" }}>
-                      {hood.descriptor}
-                    </p>
-                  </div>
+                <Link
+                  href="/about#neighborhoods"
+                  className="group relative flex min-h-[140px] flex-col h-full border border-bordr bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:border-gold/30 hover:shadow-warm overflow-hidden"
+                  style={{ borderTop: "3px solid #C8A97E" }}
+                >
+                  <h3 className="font-display text-[20px] text-darkText leading-[1.2] mb-1">
+                    {hood.name}
+                  </h3>
+                  <p className="text-[11px] tracking-[0.15em] uppercase font-medium text-gold mb-2">
+                    {hood.descriptor}
+                  </p>
+                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                 </Link>
               </Reveal>
             ))}

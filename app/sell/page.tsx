@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ParallaxHero from "@/components/ui/ParallaxHero";
+import GoldParticleHero from "@/components/sell/GoldParticleHero";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
@@ -17,15 +17,15 @@ const STEPS = [
   {
     n: "01",
     title: "I Walk Your Home Like a Buyer Would",
-    body: "I\u2019ll prepare a detailed Comparative Market Analysis so you can see exactly where your home stands \u2014 based on what comparable homes actually sold for, not what they were listed at. No inflated number to win your listing. No lowball to make myself look good later. I\u2019ll also share recommendations on what may be worth addressing before we list and what to leave alone \u2014 because the wrong renovation can cost you thousands with zero return.",
+    body: "I\u2019ll prepare a detailed Comparative Market Analysis so you can see where your home stands in today\u2019s market. No inflated numbers, no surprises. I\u2019ll also share honest recommendations on what may be worth addressing before we list and what you can leave as-is \u2014 because not every update adds value.",
     closing:
       "I see your home through a buyer\u2019s eyes before they ever walk in.",
   },
   {
     n: "02",
     title: "Price It Right From Day One",
-    body: "Overpricing is the number one mistake sellers make, and it usually happens because no one wants the uncomfortable conversation. I make sure you have all the information before that conversation. I study what comparable homes actually sold for \u2014 not what they were listed at. The right price on day one attracts multiple offers. The wrong price leads to price drops and a stale listing that buyers ignore.",
-    closing: "The right price attracts. The wrong price repels.",
+    body: "Pricing your home well from the start makes everything easier \u2014 more showings, stronger offers, and a smoother timeline. I study what comparable homes in your area have actually sold for so we can land on a number that works. The right price on day one creates momentum. A price that\u2019s too high can slow everything down.",
+    closing: "Good pricing creates momentum from the start.",
   },
   {
     n: "03",
@@ -42,9 +42,9 @@ const STEPS = [
   {
     n: "05",
     title: "I Walk You Through Every Offer",
-    body: "When offers come in, the real work starts. Counteroffers, inspection negotiations, appraisal disputes, buyer financing issues \u2014 my background in accounting and HR means years of high-stakes conversations and tight deadlines were the job. I bring every offer to you, walk you through the details, and help you negotiate from a position of strength.",
+    body: "When offers come in, I walk you through every detail \u2014 terms, contingencies, timelines, and what each one means for you. My background in accounting and HR gave me years of experience navigating complex conversations calmly. I bring every offer to you and help you feel confident in your decision.",
     closing:
-      "I prepare you to negotiate like your equity depends on it \u2014 because it does.",
+      "Every offer deserves a clear head and a careful eye.",
   },
 ];
 
@@ -54,11 +54,7 @@ export default function SellPage() {
   return (
     <>
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
-      <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=3840&q=80"
-        imageAlt="Warm suburban home front view with traditional style in Dallas Texas"
-        overlayOpacity={0.45}
-      >
+      <GoldParticleHero>
         <p className="label mb-4 !text-gold">For Sellers</p>
         <h1
           className="font-display font-light text-white leading-[1.08] max-w-3xl mx-auto"
@@ -79,20 +75,20 @@ export default function SellPage() {
           Honest pricing. Precise preparation. The kind of attention your home
           gets when it&apos;s not one of thirty listings.
         </p>
-      </ParallaxHero>
+      </GoldParticleHero>
 
       {/* ─── SECTION 2: WHAT MOST SELLERS GET WRONG (DARK) ────────── */}
       <section className="bg-charcoal px-6 md:px-12 lg:px-20 py-16 md:py-24">
         <div className="container-x max-w-3xl mx-auto text-center">
           <Reveal>
             <p className="label !text-gold mb-6">
-              What Most Sellers Get Wrong
+              What Every Seller Should Know
             </p>
             <h2
               className="font-display font-light text-white leading-[1.1]"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
-              The Biggest Mistake Isn&apos;t Pricing Too Low.
+              The Right Price Opens Doors.
               <br />
               <span
                 className="italic text-gold"
@@ -101,26 +97,27 @@ export default function SellPage() {
                     "var(--font-accent, 'Playfair Display', serif)",
                 }}
               >
-                It&apos;s Pricing Too High.
+                The Wrong One Closes Them.
               </span>
             </h2>
 
             <div className="mt-10 space-y-5 text-[15px] md:text-[16px] font-light text-white/70 leading-[1.85] max-w-2xl mx-auto text-left md:text-center">
               <p>
-                An overpriced home doesn&apos;t attract higher offers &mdash; it
-                attracts silence. Days on market climb. Buyers scroll past.
-                Eventually, you drop the price anyway, but now your listing
-                looks desperate instead of desirable.
+                When a home is priced above what the market supports, it tends
+                to sit. Days on market climb, buyers move on, and eventually a
+                price reduction becomes necessary &mdash; but by then, the
+                listing has lost its momentum.
               </p>
               <p>
-                I will not inflate your number to win your listing. I prepare
-                a detailed Comparative Market Analysis based on what comparable
-                homes actually sold for &mdash; not what they were listed at
-                &mdash; so you can price with confidence.
+                I won&apos;t inflate a number just to win your listing. I
+                prepare a detailed Comparative Market Analysis based on what
+                comparable homes have actually sold for &mdash; so you can make
+                a confident, informed decision on price.
               </p>
               <p>
-                That conversation is uncomfortable. But it is the single most
-                important thing I do for every seller I work with.
+                Pricing is one of the most important conversations we&apos;ll
+                have. I want to make sure you have the full picture before we
+                set a number.
               </p>
             </div>
 
@@ -142,7 +139,7 @@ export default function SellPage() {
               <div className="text-center p-6 rounded" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <p className="text-[0.65rem] tracking-[0.15em] uppercase font-medium" style={{ color: "rgba(196, 90, 90, 0.8)" }}>Overpriced Listing</p>
                 <p className="font-display text-2xl text-white mt-2">90+ Days</p>
-                <p className="text-[0.8rem] text-white/50 mt-1 font-light">Price drops. Stale listing. Desperate look.</p>
+                <p className="text-[0.8rem] text-white/50 mt-1 font-light">Price reductions. Fewer showings. Lost momentum.</p>
               </div>
               <div className="text-center p-6 rounded" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(200,169,126,0.3)" }}>
                 <p className="text-[0.65rem] tracking-[0.15em] uppercase text-gold font-medium">Right Price, Day One</p>
@@ -238,7 +235,7 @@ export default function SellPage() {
                   Decades of Calm Negotiation
                 </p>
                 <p className="text-[0.85rem] font-light leading-[1.7]" style={{ color: "rgba(250, 247, 242, 0.7)" }}>
-                  High-stakes experience means I stay level when it matters most.
+                  Years of professional experience help me stay steady when it matters most.
                 </p>
               </div>
             </div>
