@@ -54,28 +54,7 @@ export default function SellPage() {
   return (
     <>
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
-      <GoldParticleHero>
-        <p className="label mb-4 !text-gold">For Sellers</p>
-        <h1
-          className="font-display font-light text-white leading-[1.08] max-w-3xl mx-auto"
-          style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
-        >
-          Your Home Deserves More Than a Sign in the Yard.
-          <br />
-          <span
-            className="italic text-gold"
-            style={{
-              fontFamily: "var(--font-accent, 'Playfair Display', serif)",
-            }}
-          >
-            It Deserves a Strategy.
-          </span>
-        </h1>
-        <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
-          Honest pricing. Precise preparation. The kind of attention your home
-          gets when it&apos;s not one of thirty listings.
-        </p>
-      </GoldParticleHero>
+      <GoldParticleHero />
 
       {/* ─── SECTION 2: WHAT MOST SELLERS GET WRONG (DARK) ────────── */}
       <section className="bg-charcoal px-6 md:px-12 lg:px-20 py-16 md:py-24">

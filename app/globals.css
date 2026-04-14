@@ -167,21 +167,39 @@ html { scroll-behavior: smooth; }
   pointer-events: none;
 }
 
-/* Animated smiley — subtle pulse-fade loop */
-@keyframes smileyPulse {
-  0%, 100% { opacity: 0; transform: scale(0.85); }
-  20%, 80% { opacity: 1; transform: scale(1); }
+/* Gold floating particles for sell hero */
+@keyframes goldFloat0 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(30px, -20px); }
+  50% { transform: translate(-10px, 30px); }
+  75% { transform: translate(20px, 10px); }
 }
-.smiley-animate {
-  display: inline-block;
-  animation: smileyPulse 3.5s ease-in-out infinite;
-  margin-left: 6px;
-  vertical-align: baseline;
-  font-size: 0.85em;
-  line-height: 1;
+@keyframes goldFloat1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-20px, 25px); }
+  50% { transform: translate(25px, -15px); }
+  75% { transform: translate(-15px, -25px); }
+}
+@keyframes goldFloat2 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(15px, 30px); }
+  50% { transform: translate(-25px, -10px); }
+  75% { transform: translate(10px, -20px); }
+}
+@keyframes goldFloat3 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-30px, -15px); }
+  50% { transform: translate(20px, 25px); }
+  75% { transform: translate(-10px, 15px); }
+}
+@keyframes goldFloat4 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(25px, 15px); }
+  50% { transform: translate(-15px, -25px); }
+  75% { transform: translate(-20px, 20px); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .smiley-animate { animation: none; opacity: 1; }
+  [style*="goldFloat"] { animation: none !important; }
 }
 
 /* Grain overlay for cream sections */
