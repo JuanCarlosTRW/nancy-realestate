@@ -57,11 +57,12 @@ export default function BuyPage() {
       <ParallaxHero
         imageSrc="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=3840&q=80"
         imageAlt="Warm living room interior with natural light"
-        overlayOpacity={0.6}
+        overlayOpacity={0.25}
+        glassPanel="cream"
       >
         <p className="label mb-4 !text-gold">For Buyers</p>
         <h1
-          className="font-display font-light text-white leading-[1.08] max-w-3xl mx-auto"
+          className="font-display font-light text-darkText leading-[1.08] max-w-3xl mx-auto"
           style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
         >
           The Right Home Is Out There.
@@ -75,7 +76,7 @@ export default function BuyPage() {
             I&apos;ll Make Sure You See It Clearly.
           </span>
         </h1>
-        <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
+        <p className="mt-6 text-[15px] md:text-[16px] font-light text-darkText/80 max-w-xl mx-auto leading-[1.7]">
           I know this city well enough to help you find the right home
           in the right neighborhood.
         </p>

@@ -9,6 +9,7 @@ interface ParallaxHeroProps {
   imageAlt: string;
   children: React.ReactNode;
   overlayOpacity?: number;
+  glassPanel?: "cream" | "none";
 }
 
 export default function ParallaxHero({
@@ -16,6 +17,7 @@ export default function ParallaxHero({
   imageAlt,
   children,
   overlayOpacity = 0.5,
+  glassPanel = "none",
 }: ParallaxHeroProps) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -58,9 +60,22 @@ export default function ParallaxHero({
 
       {/* Content — pushed to bottom third for cinematic feel */}
       <div className="relative z-[2] flex h-full min-h-[80vh] md:min-h-[90vh] w-full flex-col items-center justify-end pb-[100px] md:pb-[200px] px-6 text-center">
-        <div className="max-w-[800px] w-full">
-          {children}
-        </div>
+        {glassPanel === "cream" ? (
+          <div
+            className="w-full max-w-[780px] rounded-2xl px-8 py-10 md:px-12 md:py-14"
+            style={{
+              background: "rgba(250, 247, 242, 0.62)",
+              backdropFilter: "blur(14px)",
+              WebkitBackdropFilter: "blur(14px)",
+              border: "1px solid rgba(200, 169, 126, 0.28)",
+              boxShadow: "0 12px 40px rgba(20, 16, 12, 0.15)",
+            }}
+          >
+            {children}
+          </div>
+        ) : (
+          <div className="max-w-[800px] w-full">{children}</div>
+        )}
       </div>
     </div>
   );

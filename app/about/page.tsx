@@ -53,8 +53,8 @@ export default function AboutPage() {
     <>
       {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
       <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=3840&q=80"
-        imageAlt="Luxury home exterior at twilight in Dallas Texas"
+        imageSrc="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=3840&q=80"
+        imageAlt="Traditional red-brick Dallas home with established trees"
         overlayOpacity={0.45}
       >
         <p className="label mb-4 !text-gold">Meet Nancy</p>
