@@ -17,19 +17,19 @@ const STEPS = [
   {
     n: "01",
     title: "We Start With What Actually Matters",
-    body: "Most buyers start by scrolling listings online for months. That is backwards. I start by understanding what actually matters to you \u2014 not just bedrooms and budget, but the street you want to live on, the commute you can tolerate, and the neighborhood that fits how your family actually lives. The more honest this conversation is, the fewer wrong houses we waste time on.",
+    body: "Most buyers start by scrolling listings online for months. That is backwards. I start by understanding what actually matters to you. Not just bedrooms and budget, but the street you want to live on, the commute you can tolerate, and the neighborhood that fits how your family actually lives. The more honest this conversation is, the fewer wrong houses we waste time on.",
     closing: "",
   },
   {
     n: "02",
     title: "Be Ready Before the Right Home Appears",
-    body: "In this market, a home you love will not wait for your financing to catch up. I will connect you with lenders I trust in the Dallas area so you are ready to move the same day you find the right one. Being pre-approved is not just smart \u2014 it is the difference between getting the house and watching someone else get it.",
+    body: "In this market, a home you love will not wait for your financing to catch up. I will connect you with lenders I trust in the Dallas area so you are ready to move the same day you find the right one. Being pre-approved is not just smart. It is the difference between getting the house and watching someone else get it.",
     closing: "The best homes don\u2019t wait. Be ready before they appear.",
   },
   {
     n: "03",
     title: "I Show You What You Won\u2019t See Online",
-    body: "I do not just open doors and let you wander. I grew up around construction. I will point out the things you will not notice in photos \u2014 the water stain that means a roof problem, the slope in the floor that means foundation work. That is the difference between buying a home and buying a problem.",
+    body: "I do not just open doors and let you wander. I grew up around construction. I will point out the things you will not notice in photos. The water stain that means a roof problem, the slope in the floor that means foundation work. That is the difference between buying a home and buying a problem.",
     closing:
       "Listing photos show you the best angles. I show you the full picture.",
   },
@@ -76,10 +76,6 @@ export default function BuyPage() {
             I&apos;ll Make Sure You See It Clearly.
           </span>
         </h1>
-        <p className="mt-6 text-[15px] md:text-[16px] font-light text-darkText/80 max-w-xl mx-auto leading-[1.7]">
-          I know this city well enough to help you find the right home
-          in the right neighborhood.
-        </p>
       </ParallaxHero>
 
       {/* ─── SECTION 2: WHAT MOST BUYERS DON'T SEE (DARK) ─────────── */}
@@ -108,7 +104,7 @@ export default function BuyPage() {
 
             <div className="mt-10 space-y-5 text-[15px] md:text-[16px] font-light text-white/70 leading-[1.85] max-w-2xl mx-auto text-left md:text-center">
               <p>
-                Most people fall in love with finishes &mdash; the countertops,
+                Most people fall in love with finishes, the countertops,
                 the open floor plan, the backyard. But the things that cost you
                 the most are the things you never noticed.
               </p>
@@ -120,7 +116,7 @@ export default function BuyPage() {
               <p>
                 I grew up around construction. I spent years in careers where
                 details were non-negotiable. When I walk a property, I&apos;m
-                not just looking at what&apos;s there &mdash; I&apos;m looking
+                not just looking at what&apos;s there. I&apos;m looking
                 for what might need attention, what&apos;s easy to overlook,
                 and what could cost you down the road.
               </p>

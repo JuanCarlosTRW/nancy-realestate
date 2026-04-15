@@ -39,7 +39,7 @@ export default function MeetAgent() {
               I did not become a REALTOR by accident. I spent decades watching
               this city grow, raising my family here, and waiting for the right
               moment. Real estate lets me combine everything I am good
-              at&nbsp;&mdash; knowing Dallas, reading people, and making sure
+              at. Knowing Dallas, reading people, and making sure
               every detail is right.
             </p>
           </Reveal>

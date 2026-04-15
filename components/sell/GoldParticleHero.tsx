@@ -121,10 +121,6 @@ export default function GoldParticleHero() {
           </AnimatePresence>
         </div>
 
-        <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
-          Honest pricing. Precise preparation. The kind of attention your home
-          gets when it&apos;s not one of thirty listings.
-        </p>
       </div>
     </div>
   );

@@ -31,7 +31,7 @@ const SKILLS = [
     number: "03",
     title: "Steady Hands in a Stressful Process",
     description:
-      "Real estate transactions get stressful. Deals fall through, inspections surface surprises, timelines shift. My career navigating high-pressure workplace situations taught me poise. You\u2019ll never see me panic \u2014 and that steadiness is contagious when things get complicated.",
+      "Real estate transactions get stressful. Deals fall through, inspections surface surprises, timelines shift. My career navigating high-pressure workplace situations taught me poise. You\u2019ll never see me panic, and that steadiness is contagious when things get complicated.",
   },
 ];
 
@@ -41,7 +41,7 @@ const NEIGHBORHOODS = [
   { name: "North Dallas", tagline: "Central location with quick access to everything", detail: "The neighborhood I know like the back of my hand." },
   { name: "Carrollton", tagline: "Affordable charm minutes from Dallas & Plano", detail: "One of DFW\u2019s best-kept secrets for value and community." },
   { name: "Preston Hollow", tagline: "Mature trees, estate lots, and quiet prestige", detail: "Where Dallas history lives on every street." },
-  { name: "Frisco", tagline: "Explosive growth, new construction, and young energy", detail: "The fastest-growing city in America \u2014 and I\u2019ve watched every phase." },
+  { name: "Frisco", tagline: "Explosive growth, new construction, and young energy", detail: "The fastest-growing city in America, and I\u2019ve watched every phase." },
   { name: "Flower Mound", tagline: "Lakeside living with small-town charm", detail: "Small-town feel with big-city convenience." },
   { name: "Grapevine", tagline: "Historic Main Street charm near DFW Airport", detail: "Wine trails, festivals, and real Texas character." },
 ];
@@ -55,12 +55,13 @@ export default function AboutPage() {
       <ParallaxHero
         imageSrc="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=3840&q=80"
         imageAlt="Traditional red-brick Dallas home with established trees"
-        overlayOpacity={0.45}
+        overlayOpacity={0.25}
+        glassPanel="cream"
       >
         <p className="label mb-4 !text-gold">Meet Nancy</p>
         <h1
-          className="font-display font-light text-white leading-[1.08] max-w-[650px] mx-auto"
-          style={{ fontSize: "clamp(36px, 5.5vw, 64px)", textShadow: "0 2px 16px rgba(0,0,0,0.3)" }}
+          className="font-display font-light text-darkText leading-[1.08] max-w-[650px] mx-auto"
+          style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
         >
           Born Here. Raised Here.
           <br />
@@ -68,9 +69,6 @@ export default function AboutPage() {
             I Know Every Street and Story.
           </span>
         </h1>
-        <p className="mt-6 text-[15px] md:text-[16px] font-light text-white/90 max-w-xl mx-auto leading-[1.7]">
-          50+ years in DFW. 22 years of precision behind every decision.
-        </p>
       </ParallaxHero>
 
       {/* ─── SECTION 2: ORIGIN STORY ──────────────────────────────── */}
@@ -113,7 +111,7 @@ export default function AboutPage() {
                   className="font-display italic text-darkText"
                   style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.75rem)", lineHeight: 1.5 }}
                 >
-                  I didn&apos;t leave my career behind &mdash; I brought every
+                  I didn&apos;t leave my career behind. I brought every
                   bit of it with me.
                 </p>
               </div>
@@ -171,7 +169,7 @@ export default function AboutPage() {
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 text-[15px]">
                 Before I ever opened a lockbox, I spent years in careers where
-                precision and people skills weren&apos;t optional &mdash; they
+                precision and people skills weren&apos;t optional. They
                 were the job.
               </p>
             </div>
@@ -228,7 +226,7 @@ export default function AboutPage() {
               <div className="gold-divider w-16 mx-auto mt-8" />
               <p className="mt-6 text-[15px] font-light text-mediumText">
                 Market data tells you what a house sold for. Living here for 50+
-                years tells you why &mdash; and what&apos;s coming next.
+                years tells you why, and what&apos;s coming next.
               </p>
             </div>
           </Reveal>

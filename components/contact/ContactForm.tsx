@@ -140,7 +140,7 @@ export default function ContactForm() {
             <span className="font-medium text-darkText">1.</span> You reach out here or call me directly.
           </p>
           <p className="text-[0.85rem] font-light text-mediumText">
-            <span className="font-medium text-darkText">2.</span> I respond within 24 hours &mdash; personally, not a team.
+            <span className="font-medium text-darkText">2.</span> I respond within 24 hours, personally, not a team.
           </p>
           <p className="text-[0.85rem] font-light text-mediumText">
             <span className="font-medium text-darkText">3.</span> We have an honest conversation about your goals and what makes sense.

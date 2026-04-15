@@ -77,7 +77,7 @@ export default function ContactSidebar() {
           The Martinez Family
         </p>
         <p className="text-[10px] tracking-[0.08em] uppercase text-goldLight mt-0.5">
-          Homeowners &mdash; Preston Trails, Bent Tree
+          Homeowners, Preston Trails, Bent Tree
         </p>
       </div>
 

@@ -14,7 +14,7 @@ import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Nancy Musselman | Dallas Real Estate Agent | Beam Real Estate",
   description:
-    "Nancy Musselman — a lifelong Dallasite with 50+ years in DFW and 22 years of professional experience. Buying or selling, detail and care in every transaction.",
+    "Nancy Musselman, a lifelong Dallasite with 50+ years in DFW and 22 years of professional experience. Buying or selling, detail and care in every transaction.",
 };
 
 /* ── Data ──────────────────────────────────────────────────────────── */
@@ -25,7 +25,7 @@ const CARDS = [
     number: "01",
     title: "You\u2019ll See Homes With Fresh Eyes",
     hook: "I have lived in DFW for over fifty years.",
-    body: "I know the quiet streets worth a second look, the blocks where values are climbing, and the areas about to become the next big thing. A lifetime of local knowledge \u2014 not just an MLS search.",
+    body: "I know the quiet streets worth a second look, the blocks where values are climbing, and the areas about to become the next big thing. A lifetime of local knowledge, not just an MLS search.",
   },
   {
     number: "02",
@@ -103,7 +103,7 @@ export default function Home() {
         <Reveal y={12}>
           {/* Part 1A: darker trust line text */}
           <p className="font-sans text-[0.65rem] font-medium uppercase tracking-[0.2em]" style={{ color: "#4A3F35" }}>
-            Serving families across North Texas &mdash; Plano, Richardson, and North Dallas
+            Serving families across North Texas. Plano, Richardson, and North Dallas
           </p>
         </Reveal>
       </div>
@@ -129,7 +129,7 @@ export default function Home() {
               {/* Part 1A: darker section subtext */}
               <p className="mt-6 text-[0.9rem] font-light leading-[1.7]" style={{ color: "#3D342B" }}>
                 I don&apos;t take on too many clients at a time. That means you get
-                my full attention &mdash; not a fraction of it.
+                my full attention, not a fraction of it.
               </p>
             </div>
           </Reveal>
@@ -212,10 +212,10 @@ export default function Home() {
                   I did not become a REALTOR by accident. I was born and raised
                   right here in DFW and have watched this city grow for over fifty
                   years. Before real estate, I spent two decades in accounting
-                  and human resources &mdash; years of reading people,
+                  and human resources. Years of reading people,
                   catching every detail, and staying composed when it matters
-                  most. Real estate lets me combine everything I am good at &mdash;
-                  knowing Dallas, reading people, and making sure every contract,
+                  most. Real estate lets me combine everything I am good at.
+                  Knowing Dallas, reading people, and making sure every contract,
                   every negotiation, and every detail is right.
                 </p>
               </div>
@@ -253,7 +253,7 @@ export default function Home() {
                 <div className="relative z-10">
                   <p className="text-[0.6rem] tracking-[0.2em] uppercase font-medium text-gold mb-4">For Buyers</p>
                   <h3 className="font-display font-medium text-darkText leading-tight mb-4" style={{ fontSize: "1.45rem" }}>
-                    Find the Right Home &mdash; Not Just Any Home
+                    Find the Right Home, Not Just Any Home
                   </h3>
                   <p className="text-[0.9rem] font-light leading-[1.7]" style={{ color: "#2A211C" }}>
                     Finding the right home in Dallas takes more than browsing

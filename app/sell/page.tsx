@@ -17,14 +17,14 @@ const STEPS = [
   {
     n: "01",
     title: "I Walk Your Home Like a Buyer Would",
-    body: "I\u2019ll prepare a detailed Comparative Market Analysis so you can see where your home stands in today\u2019s market. No inflated numbers, no surprises. I\u2019ll also share honest recommendations on what may be worth addressing before we list and what you can leave as-is \u2014 because not every update adds value.",
+    body: "I\u2019ll prepare a detailed Comparative Market Analysis so you can see where your home stands in today\u2019s market. No inflated numbers, no surprises. I\u2019ll also share honest recommendations on what may be worth addressing before we list and what you can leave as-is, because not every update adds value.",
     closing:
       "I see your home through a buyer\u2019s eyes before they ever walk in.",
   },
   {
     n: "02",
     title: "Price It Right From Day One",
-    body: "Pricing your home well from the start makes everything easier \u2014 more showings, stronger offers, and a smoother timeline. I study what comparable homes in your area have actually sold for so we can land on a number that works. The right price on day one creates momentum. A price that\u2019s too high can slow everything down.",
+    body: "Pricing your home well from the start makes everything easier. More showings, stronger offers, and a smoother timeline. I study what comparable homes in your area have actually sold for so we can land on a number that works. The right price on day one creates momentum. A price that\u2019s too high can slow everything down.",
     closing: "Good pricing creates momentum from the start.",
   },
   {
@@ -36,13 +36,13 @@ const STEPS = [
   {
     n: "04",
     title: "Get Your Home in Front of the Right Buyers",
-    body: "Your home goes on the MLS and gets in front of every serious buyer actively searching in Dallas. But I do not just post it and wait. I make sure the listing stands out \u2014 the right photos, the right description, the right price \u2014 so it gets saved, shared, and scheduled for showings, not scrolled past.",
+    body: "Your home goes on the MLS and gets in front of every serious buyer actively searching in Dallas. But I do not just post it and wait. I make sure the listing stands out with the right photos, the right description, and the right price, so it gets saved, shared, and scheduled for showings, not scrolled past.",
     closing: "Visibility without strategy is just noise.",
   },
   {
     n: "05",
     title: "I Walk You Through Every Offer",
-    body: "When offers come in, I walk you through every detail \u2014 terms, contingencies, timelines, and what each one means for you. My background in accounting and HR gave me years of experience navigating complex conversations calmly. I bring every offer to you and help you feel confident in your decision.",
+    body: "When offers come in, I walk you through every detail. Terms, contingencies, timelines, and what each one means for you. My background in accounting and HR gave me years of experience navigating complex conversations calmly. I bring every offer to you and help you feel confident in your decision.",
     closing:
       "Every offer deserves a clear head and a careful eye.",
   },
@@ -84,13 +84,13 @@ export default function SellPage() {
               <p>
                 When a home is priced above what the market supports, it tends
                 to sit. Days on market climb, buyers move on, and eventually a
-                price reduction becomes necessary &mdash; but by then, the
+                price reduction becomes necessary, but by then the
                 listing has lost its momentum.
               </p>
               <p>
                 I won&apos;t inflate a number just to win your listing. I
                 prepare a detailed Comparative Market Analysis based on what
-                comparable homes have actually sold for &mdash; so you can make
+                comparable homes have actually sold for, so you can make
                 a confident, informed decision on price.
               </p>
               <p>
@@ -132,7 +132,7 @@ export default function SellPage() {
 
       {/* ─── SECTION 3: THE SELLING PROCESS (LIGHT) ───────────────── */}
       <section className="section-pad bg-warmWhite">
-        <div className="container-x max-w-4xl">
+        <div className="container-x max-w-6xl">
           <Reveal>
             <div className="text-center mb-16">
               <p className="label">The Process</p>
@@ -156,32 +156,55 @@ export default function SellPage() {
             </div>
           </Reveal>
 
-          <div className="space-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {STEPS.map((s, i) => (
-              <Reveal key={s.n} delay={i * 0.1}>
-                <div
-                  className={`grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start ${i % 2 === 1 ? "bg-[#F0EBE2] -mx-4 px-4 md:-mx-8 md:px-8 py-6 rounded" : ""}`}
+              <Reveal key={s.n} delay={i * 0.08}>
+                <article
+                  className="group relative h-full flex flex-col overflow-hidden p-8 md:p-10 transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg border border-gold/[0.12] hover:border-gold/30"
+                  style={{
+                    background: "#FFFCF5",
+                    borderRadius: "6px",
+                    borderTop: "3px solid #C8A97E",
+                  }}
                 >
-                  <div className="flex flex-col items-center">
-                    <span className="font-display text-[3.5rem] leading-none font-extralight select-none" style={{ color: "rgba(196, 169, 108, 0.22)" }}>
-                      {s.n}
-                    </span>
-                    {i < STEPS.length - 1 && (
-                      <div className="w-px flex-1 bg-gold/15 mt-3 min-h-[40px]" />
-                    )}
-                  </div>
-                  <div className="pb-10 md:pb-12">
-                    <h3 className="font-display text-[1.4rem] md:text-[1.6rem] text-darkText leading-tight" style={{ fontWeight: 500 }}>
+                  {/* Gold step-number watermark */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute -top-2 right-3 font-display text-[6.5rem] font-extralight leading-none select-none pointer-events-none transition-colors duration-500 group-hover:text-gold/20"
+                    style={{ color: "rgba(196, 169, 108, 0.08)" }}
+                  >
+                    {s.n}
+                  </span>
+
+                  <div className="relative z-10 flex flex-col h-full">
+                    <p className="text-[0.62rem] tracking-[0.22em] uppercase font-semibold text-gold mb-4">
+                      Step {s.n}
+                    </p>
+                    <h3
+                      className="font-display text-[1.3rem] md:text-[1.45rem] text-darkText leading-[1.25] mb-4"
+                      style={{ fontWeight: 500 }}
+                    >
                       {s.title}
                     </h3>
-                    <p className="body-p mt-4 max-w-2xl">{s.body}</p>
+                    <p
+                      className="text-[0.9rem] font-light leading-[1.75] flex-1"
+                      style={{ color: "#2A211C" }}
+                    >
+                      {s.body}
+                    </p>
                     {s.closing && (
-                      <p className="mt-4 font-display text-[0.95rem] italic" style={{ color: "#A8893F" }}>
-                        {s.closing}
-                      </p>
+                      <>
+                        <div className="mt-6 h-px w-10 bg-gold/30 transition-all duration-500 group-hover:w-16" />
+                        <p
+                          className="mt-4 font-display text-[0.88rem] italic leading-[1.5]"
+                          style={{ color: "#A8893F" }}
+                        >
+                          {s.closing}
+                        </p>
+                      </>
                     )}
                   </div>
-                </div>
+                </article>
               </Reveal>
             ))}
           </div>
@@ -206,7 +229,7 @@ export default function SellPage() {
                   Honest Pricing
                 </p>
                 <p className="text-[0.85rem] font-light leading-[1.7]" style={{ color: "rgba(250, 247, 242, 0.7)" }}>
-                  I prepare a Comparative Market Analysis so you can price with confidence &mdash; based on what actually sold.
+                  I prepare a Comparative Market Analysis so you can price with confidence, based on what actually sold.
                 </p>
               </div>
               <div className="text-center py-10 md:py-12 px-6 md:px-8">

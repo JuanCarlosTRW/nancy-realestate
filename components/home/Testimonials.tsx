@@ -44,7 +44,7 @@ export default function Testimonials() {
                 style={{ fontSize: "clamp(20px, 2.5vw, 26px)" }}
               >
                 Nancy helped us find our home on the Preston Trails Golf Course
-                in Bent Tree. She was incredibly detail-oriented &mdash; she caught
+                in Bent Tree. She was incredibly detail-oriented. She caught
                 things during walkthroughs that we never would have noticed. She
                 made us feel like we were her only clients.
               </p>
@@ -56,7 +56,7 @@ export default function Testimonials() {
                   The Martinez Family
                 </p>
                 <p className="text-[11px] tracking-[0.1em] uppercase text-goldLight mt-1">
-                  Homeowners &mdash; Preston Trails, Bent Tree
+                  Homeowners, Preston Trails, Bent Tree
                 </p>
               </div>
 
