@@ -55,7 +55,7 @@ export default function AboutPage() {
         mainText="Born and raised in Dallas. Two decades in accounting and human resources before real estate. Rooted in this city, grounded in faith, and driven by a genuine love for helping people find where they belong."
         readMoreLabel="Start a conversation"
         readMoreHref="/contact"
-        imageSrc="https://static.wixstatic.com/media/62f926_2b9b1c3435034377a4cf42c416fcb7c3~mv2.png"
+        imageSrc="https://static.wixstatic.com/media/62f926_e81e37a81dd94340b92c9d9db1eeae24~mv2.png"
         imageAlt="Nancy Musselman, Dallas real estate agent"
         overlayText={{ part1: "meet", part2: "nancy." }}
         locationText="Dallas, Texas"
