@@ -34,17 +34,6 @@ const SKILLS = [
   },
 ];
 
-const NEIGHBORHOODS = [
-  { name: "Richardson", tagline: "Telecom Corridor opportunities & steady growth", detail: "A city I\u2019ve watched evolve from quiet suburb to thriving hub." },
-  { name: "Plano", tagline: "Legacy West, dining, and master-planned communities", detail: "From open fields to one of the best cities in Texas." },
-  { name: "North Dallas", tagline: "Central location with quick access to everything", detail: "The neighborhood I know like the back of my hand." },
-  { name: "Carrollton", tagline: "Affordable charm minutes from Dallas & Plano", detail: "One of DFW\u2019s best-kept secrets for value and community." },
-  { name: "Preston Hollow", tagline: "Mature trees, estate lots, and quiet prestige", detail: "Where Dallas history lives on every street." },
-  { name: "Frisco", tagline: "Explosive growth, new construction, and young energy", detail: "The fastest-growing city in America, and I\u2019ve watched every phase." },
-  { name: "Flower Mound", tagline: "Lakeside living with small-town charm", detail: "Small-town feel with big-city convenience." },
-  { name: "Grapevine", tagline: "Historic Main Street charm near DFW Airport", detail: "Wine trails, festivals, and real Texas character." },
-];
-
 /* ── Page ───────────────────────────────────────────────────────────── */
 
 export default function AboutPage() {
@@ -144,60 +133,6 @@ export default function AboutPage() {
                   <p className="text-[0.9rem] font-light leading-[1.8] col-span-full md:col-span-1" style={{ color: "#2A211C" }}>
                     {skill.description}
                   </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Gold divider ─────────────────────────────────────────── */}
-      <div
-        className="mx-auto h-px w-full max-w-4xl"
-        style={{ background: "linear-gradient(90deg, transparent, #C8A97E, transparent)" }}
-      />
-
-      {/* ─── SECTION 4: NEIGHBORHOODS ─────────────────────────────── */}
-      <section id="neighborhoods" className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-bgSection">
-        <div className="container-x max-w-6xl mx-auto">
-          <Reveal>
-            <div className="text-center max-w-2xl mx-auto mb-14">
-              <p className="label">Local Intelligence</p>
-              <h2
-                className="font-display font-light text-darkText leading-[1.1] mt-4"
-                style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
-              >
-                I Don&apos;t Just Know These Neighborhoods.
-                <br />
-                <span
-                  className="italic text-gold"
-                  style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}
-                >
-                  I Understand What Makes Them Tick.
-                </span>
-              </h2>
-              <div className="gold-divider w-16 mx-auto mt-8" />
-              <p className="mt-6 text-[15px] font-light text-mediumText">
-                Market data tells you what a house sold for. Living here for 50+
-                years tells you why, and what&apos;s coming next.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {NEIGHBORHOODS.map((hood, i) => (
-              <Reveal key={hood.name} delay={i * 0.06}>
-                <div className="group relative flex min-h-[140px] flex-col h-full border border-bordr bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:border-gold/30 hover:shadow-warm overflow-hidden">
-                  <h3 className="font-display text-[20px] text-darkText leading-[1.2] mb-1">
-                    {hood.name}
-                  </h3>
-                  <p className="text-[11px] tracking-label uppercase font-medium text-gold mb-2">
-                    {hood.tagline}
-                  </p>
-                  <p className="text-[14px] font-light italic text-lightText leading-[1.6]">
-                    {hood.detail}
-                  </p>
-                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                 </div>
               </Reveal>
             ))}
