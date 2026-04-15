@@ -182,7 +182,7 @@ export default function Home() {
           <Reveal y={0} className="relative">
             <div className="relative w-full h-[400px] md:h-auto md:min-h-[600px] overflow-hidden">
               <Image
-                src="https://static.wixstatic.com/media/62f926_766a1173e5ca4be3b924f45b485947ac~mv2.png"
+                src="https://static.wixstatic.com/media/62f926_e81e37a81dd94340b92c9d9db1eeae24~mv2.png"
                 alt="Nancy Musselman, Dallas real estate agent"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
