@@ -3,7 +3,7 @@ import MinimalistHero from "@/components/about/MinimalistHero";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
 import Button from "@/components/ui/Button";
-import { IMG, NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
+import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About Nancy Musselman | Dallas Real Estate",
