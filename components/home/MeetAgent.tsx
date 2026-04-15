@@ -3,23 +3,37 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
 import Reveal from "@/components/ui/Reveal";
-import { IMG } from "@/lib/constants";
+
+const ABOUT_IMAGE =
+  "https://static.wixstatic.com/media/62f926_e81e37a81dd94340b92c9d9db1eeae24~mv2.png";
 
 export default function MeetAgent() {
   return (
     <section className="section-pad bg-bgSection">
       <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-        {/* Contained portrait with warm frame */}
+        {/* Portrait with soft gold halo — matches About page hero */}
         <Reveal>
-          <div className="relative w-full max-w-[460px] mx-auto">
-            <div className="absolute -inset-4 border border-gold/30 rounded-[2px] hidden md:block" />
-            <div className="relative aspect-[4/5] bg-cream rounded-[2px] overflow-hidden shadow-warmLg">
+          <div className="relative flex justify-center items-center w-full max-w-[460px] mx-auto">
+            <div
+              aria-hidden="true"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+              style={{
+                width: "min(70vw, 420px)",
+                height: "min(70vw, 420px)",
+                background:
+                  "radial-gradient(circle, rgba(200,169,126,0.55) 0%, rgba(200,169,126,0.35) 60%, rgba(200,169,126,0) 100%)",
+              }}
+            />
+            <div
+              className="relative z-10"
+              style={{ width: "min(68vw, 400px)", aspectRatio: "4 / 5" }}
+            >
               <Image
-                src={IMG.nancy}
+                src={ABOUT_IMAGE}
                 alt="Nancy Musselman, Dallas real estate agent"
                 fill
-                sizes="(max-width: 768px) 100vw, 460px"
-                className="object-cover object-top"
+                sizes="(max-width: 768px) 68vw, 400px"
+                className="object-cover object-top rounded-[2px] shadow-warmLg"
               />
             </div>
           </div>
@@ -36,21 +50,20 @@ export default function MeetAgent() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="body-p mt-8">
-              I did not become a REALTOR by accident. I spent decades watching
-              this city grow, raising my family here, and waiting for the right
-              moment. Real estate lets me combine everything I am good
-              at. Knowing Dallas, reading people, and making sure
-              every detail is right.
+              Born and raised in Dallas. Two decades in accounting and human
+              resources before real estate. Rooted in this city, grounded in
+              faith, and driven by a genuine love for helping people find
+              where they belong.
             </p>
           </Reveal>
 
           <Reveal delay={0.2}>
             <div className="mt-10">
               <Link
-                href="/about"
+                href="/contact"
                 className="group inline-flex items-center gap-3 text-[12px] tracking-button uppercase font-medium text-gold hover:text-goldDark transition-all"
               >
-                <span>Read my story</span>
+                <span>Start a conversation</span>
                 <ArrowRight
                   size={16}
                   className="transition-transform duration-500 group-hover:translate-x-1.5"
