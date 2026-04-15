@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import ParallaxHero from "@/components/ui/ParallaxHero";
+import MinimalistHero from "@/components/about/MinimalistHero";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
 import Button from "@/components/ui/Button";
-import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
+import { IMG, NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About Nancy Musselman | Dallas Real Estate",
@@ -51,87 +50,41 @@ const NEIGHBORHOODS = [
 export default function AboutPage() {
   return (
     <>
-      {/* ─── SECTION 1: PARALLAX HERO ─────────────────────────────── */}
-      <ParallaxHero
-        imageSrc="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=3840&q=80"
-        imageAlt="Traditional red-brick Dallas home with established trees"
-        overlayOpacity={0.25}
-        glassPanel="cream"
-      >
-        <p className="label mb-4 !text-gold">Meet Nancy</p>
-        <h1
-          className="font-display font-light text-darkText leading-[1.08] max-w-[650px] mx-auto"
-          style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
-        >
-          Born Here. Raised Here.
-          <br />
-          <span className="italic text-gold" style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}>
-            I Know Every Street and Story.
-          </span>
-        </h1>
-      </ParallaxHero>
+      {/* ─── SECTION 1: MINIMALIST HERO ───────────────────────────── */}
+      <MinimalistHero
+        mainText="Born and raised in Dallas. Two decades in accounting and human resources before real estate. Rooted in this city, grounded in faith, and driven by a genuine love for helping people find where they belong."
+        readMoreLabel="Start a conversation"
+        readMoreHref="/contact"
+        imageSrc={IMG.nancy}
+        imageAlt="Nancy Musselman, Dallas real estate agent"
+        overlayText={{ part1: "meet", part2: "nancy." }}
+        locationText="Dallas, Texas"
+      />
 
-      {/* ─── SECTION 2: ORIGIN STORY ──────────────────────────────── */}
-      <section className="section-pad bg-bgSection">
-        <div className="container-x grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
-          {/* Photo — left */}
+      {/* ─── PULL QUOTE STRIP ─────────────────────────────────────── */}
+      <section className="bg-bgSection px-6 md:px-12 lg:px-20 py-16 md:py-20">
+        <div className="container-x max-w-3xl mx-auto text-center">
           <Reveal>
-            <div className="relative w-full max-w-[460px] mx-auto">
-              <div className="relative aspect-[3/4] w-full overflow-hidden shadow-warmLg bg-[#F5F0E8]">
-                <Image
-                  src="https://static.wixstatic.com/media/62f926_e81e37a81dd94340b92c9d9db1eeae24~mv2.png"
-                  alt="Nancy Musselman, Dallas real estate agent"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 460px"
-                  className="object-contain object-top"
-                />
-              </div>
-            </div>
-          </Reveal>
-
-          {/* Story — right */}
-          <Reveal delay={0.15}>
             <p className="label">The Person Behind the License</p>
-            <h2 className="h-display mt-4">
-              50+ Years of Watching{" "}
-              <span className="italic text-gold">This City Become Home</span>
-            </h2>
-            <AnimatedDivider className="w-14 mt-6" />
-
-            <div className="mt-10 space-y-5 body-p text-[15px] md:text-[16px] leading-[1.85]">
-              <p>
-                I was born and raised right where I live now. For over fifty
-                years, I&apos;ve watched the DFW metroplex grow from open land
-                into one of the most dynamic communities in Texas.
-              </p>
-
-              {/* Pull quote */}
-              <div className="my-10 pl-6 border-l-2 border-gold">
-                <p
-                  className="font-display italic text-darkText"
-                  style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.75rem)", lineHeight: 1.5 }}
-                >
-                  I didn&apos;t leave my career behind. I brought every
-                  bit of it with me.
-                </p>
-              </div>
-
-              <p>
-                Before real estate, I spent two decades in accounting and
-                human resources. Years of reading people, navigating
-                high-stakes conversations, catching every detail, and
-                staying composed when it matters most.
-              </p>
-              <p>
-                I always wanted to be a Realtor. But life, career, and raising
-                my kids came first. Now my kids are grown, the timing was right,
-                and I&apos;m doing what I&apos;ve always wanted to do.
-              </p>
-              <p>
-                Rooted in my faith, grounded in this city, and driven by genuine
-                love for helping people. That&apos;s who I am.
-              </p>
-            </div>
+            <AnimatedDivider className="w-14 mx-auto mt-6" />
+            <p
+              className="font-display italic text-darkText mt-10"
+              style={{
+                fontSize: "clamp(1.4rem, 2.5vw, 1.85rem)",
+                lineHeight: 1.5,
+              }}
+            >
+              I didn&apos;t leave my career behind. I brought every
+              bit of it with me.
+            </p>
+            <p className="mt-8 text-[15px] md:text-[16px] font-light leading-[1.85] text-mediumText max-w-2xl mx-auto">
+              Before real estate, I spent two decades in accounting and human
+              resources. Years of reading people, navigating high-stakes
+              conversations, catching every detail, and staying composed when
+              it matters most. I always wanted to be a Realtor. My kids are
+              grown, the timing was right, and now I&apos;m doing what I&apos;ve
+              always wanted to do.
+            </p>
           </Reveal>
         </div>
       </section>
