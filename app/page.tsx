@@ -120,9 +120,9 @@ export default function Home() {
                 What You Can Expect
               </p>
               <h2 className="font-display font-normal text-darkText mt-4" style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.15 }}>
-                Working With Me Feels Different.{" "}
+                What You Can Expect{" "}
                 <span className="italic text-gold" style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}>
-                  Here&apos;s How.
+                  When We Work Together.
                 </span>
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />

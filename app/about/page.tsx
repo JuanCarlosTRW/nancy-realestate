@@ -18,7 +18,7 @@ const SKILLS = [
     number: "01",
     title: "Listening Before Speaking",
     description:
-      "My years in HR taught me to listen before I talk, understand what someone actually needs, and work through hard conversations without anyone feeling pushed. In real estate, that shows up as calmer negotiations, smoother closings, and an agent who\u2019s genuinely paying attention.",
+      "My years in HR taught me to listen before I talk, understand what someone actually needs, and work through hard conversations without anyone feeling pushed. In real estate, that shows up in calmer negotiations, smoother closings, and conversations where you always feel heard.",
   },
   {
     number: "02",
@@ -111,8 +111,7 @@ export default function AboutPage() {
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 text-[15px]">
                 Before I ever opened a lockbox, I spent years in careers where
-                precision and people skills weren&apos;t optional. They
-                were the job.
+                paying attention to people and details was part of every day.
               </p>
             </div>
           </Reveal>

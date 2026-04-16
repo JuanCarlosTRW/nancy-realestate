@@ -22,16 +22,16 @@ export default function StatsBar() {
               <CountUp to={22} duration={2.5} delay={0.3} className="font-display" /> Years
             </p>
             <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
-              In Professional Contracts &amp; Details
+              In Human Resources &amp; Accounting
             </p>
           </div>
           <div className="hidden md:block w-px h-10 bg-gold/30" />
           <div className="flex-1 text-center">
             <p className="font-display font-light text-white leading-none" style={{ fontSize: "2.25rem" }}>
-              Every Detail
+              A Lifetime
             </p>
             <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
-              Raised Around Construction
+              Of Noticing What Others Miss
             </p>
           </div>
         </div>

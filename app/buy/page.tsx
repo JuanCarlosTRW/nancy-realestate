@@ -17,31 +17,31 @@ const STEPS = [
   {
     n: "01",
     title: "We Start With What Actually Matters",
-    body: "A lot of buyers start by scrolling listings for months, and it\u2019s easy to see why \u2014 it feels like progress. But I\u2019ve found the search goes better when we take a quiet hour together first, before looking at any homes. I want to understand what actually matters to you. Not just bedrooms and budget, but the street you\u2019d like to walk in the evening, the commute you can live with, and the kind of neighborhood that fits how your family really spends its days. The more honest that first conversation is, the less of your time we spend on homes that were never quite right.",
+    body: "I like to start with a conversation before we start looking at homes. I want to understand what matters to you \u2014 not just bedrooms and budget, but the kind of street you\u2019d like to come home to, the commute that works for your life, and the neighborhood that fits how your family actually spends its days. The more I understand upfront, the easier it becomes to spot the right home when we see it.",
     closing: "",
   },
   {
     n: "02",
     title: "Being Ready Before the Right Home Appears",
-    body: "In this market, the right home often moves quickly, and that part I can\u2019t control. What I can do is help you be ready. I\u2019ll introduce you to a few local lenders I know and trust here in Dallas, so when you find a home that feels right, you can move forward the same day with confidence. Being pre-approved isn\u2019t just a formality \u2014 it\u2019s one of the quieter ways I help make sure the home you love is a home you can actually have.",
+    body: "One of the first things I\u2019ll do is connect you with a few local lenders I know and trust here in Dallas. Getting pre-approved early means that when a home feels right, you\u2019re ready to move forward with confidence. It\u2019s a simple step, but it makes the whole process smoother \u2014 for you and for everyone involved.",
     closing: "",
   },
   {
     n: "03",
     title: "Seeing What the Photos Don\u2019t Show",
-    body: "Listing photos are designed to show a home at its best, which is exactly what they should do. But when we walk a property together, I\u2019ll gently point out the things the photos weren\u2019t trying to show you. A water stain that might be worth a closer look. A floor that slopes just slightly. A corner of the yard that tells you more than the wide shot did. I won\u2019t talk you out of a home you love \u2014 I just want you to see it clearly before you decide.",
+    body: "When we walk through a home together, I like to take my time. I\u2019ll point out the things that are easy to miss at first \u2014 a water stain that might be worth asking about, a floor that slopes just slightly, or a part of the yard that tells a different story up close. It\u2019s not about finding problems. It\u2019s just about making sure you feel good about what you\u2019re seeing before you take the next step.",
     closing: "",
   },
   {
     n: "04",
     title: "Shaping an Offer That Feels Right",
-    body: "The right offer is rarely about price alone. It\u2019s about terms, timing, and understanding what the seller actually cares about \u2014 which isn\u2019t always what\u2019s written on the page. My years in human resources taught me to listen for what people really need, and to shape conversations where both sides walk away feeling good. I\u2019ll help you put together an offer that protects what matters to you, without stretching past what feels comfortable.",
+    body: "Putting together a good offer is about more than the number. It\u2019s about the terms, the timing, and making sure the whole picture feels right for you. My years in human resources taught me how to navigate these kinds of conversations with care, so both sides feel heard and respected. I\u2019ll walk you through every part of the offer so you understand exactly what you\u2019re agreeing to \u2014 and feel comfortable with it.",
     closing: "",
   },
   {
     n: "05",
     title: "Staying Close From Contract to Closing",
-    body: "Between the accepted offer and the keys in your hand, there\u2019s a stretch of time when small things can quietly become bigger ones. Inspection items, appraisal questions, title details, lender timelines. This is the part of the process most buyers don\u2019t see, and it\u2019s the part where I stay closest. Years of managing complex situations with moving deadlines taught me what to watch for and when to gently follow up. I\u2019ll be the steady hand in the background \u2014 so you can focus on the move itself.",
+    body: "Between the accepted offer and the day you get the keys, there are a lot of small details that need attention \u2014 inspection items, appraisal questions, title details, lender timelines. I\u2019ll stay on top of all of it and keep you updated along the way. My years managing complex timelines and moving parts taught me when to follow up and what to watch for, so nothing falls through the cracks while you\u2019re focused on planning your move.",
     closing: "",
   },
 ];
@@ -146,8 +146,8 @@ export default function BuyPage() {
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 max-w-lg mx-auto">
-                A calm, considered way to find the right home &mdash; without
-                wasting your time along the way.
+                A calm, considered way to find the right home &mdash; step by
+                step, at your pace.
               </p>
             </div>
           </Reveal>
@@ -200,9 +200,9 @@ export default function BuyPage() {
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
-              I&apos;d rather take the time to understand what matters to you
-              before we look at a single home. That&apos;s where every good
-              search begins &mdash; with a real conversation, no pressure.
+              Let&apos;s start with a conversation about what matters to you.
+              No pressure, no rush &mdash; just a chance to talk about what
+              you&apos;re looking for and how I can help.
             </p>
             <div className="mt-10">
               <Button href="/contact" variant="gold">

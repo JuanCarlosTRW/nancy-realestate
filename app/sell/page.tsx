@@ -23,21 +23,21 @@ const STEPS = [
   },
   {
     n: "02",
-    title: "Price It Right From Day One",
-    body: "Pricing your home well from the start makes everything easier. More showings, stronger offers, and a smoother timeline. I study what comparable homes in your area have actually sold for so we can land on a number that works. The right price on day one creates momentum. A price that\u2019s too high can slow everything down.",
+    title: "Finding the Right Price Together",
+    body: "Pricing your home well from the start can make a real difference \u2014 more showings, stronger interest, and a smoother path from listing to close. I\u2019ll study what comparable homes in your area have actually sold for, and we\u2019ll work through the numbers together. My goal is to make sure you feel informed and confident about the price before we go to market.",
     closing: "Good pricing creates momentum from the start.",
   },
   {
     n: "03",
     title: "The First Ten Seconds Matter Most",
-    body: "Buyers usually decide how they feel about a home in the first few seconds. From the listing photos to the way each room presents on a walkthrough, I\u2019ll make sure those early impressions are working in your favor. I\u2019ll share which rooms might benefit from staging and which ones really just need to be clean and clear.",
+    body: "First impressions happen quickly \u2014 buyers often form a feeling about a home in the first few seconds. I\u2019ll help you think through how each room presents, from the listing photos to the walkthrough experience. Sometimes that means staging a key room; sometimes it just means clearing the clutter and letting the home speak for itself.",
     closing: "",
   },
   {
     n: "04",
     title: "Get Your Home in Front of the Right Buyers",
-    body: "Your home goes on the MLS and gets in front of every serious buyer actively searching in Dallas. But I do not just post it and wait. I make sure the listing stands out with the right photos, the right description, and the right price, so it gets saved, shared, and scheduled for showings, not scrolled past.",
-    closing: "Getting seen is the start. Getting saved and scheduled is what matters.",
+    body: "Your home will go on the MLS where every active buyer in Dallas can see it. I\u2019ll make sure the listing looks its best \u2014 the right photos, a thoughtful description, and a price that invites interest. The goal is to make it easy for the right buyer to notice your home and want to see it in person.",
+    closing: "A good listing doesn\u2019t just get seen. It gets remembered.",
   },
   {
     n: "05",
@@ -83,15 +83,14 @@ export default function SellPage() {
             <div className="mt-10 space-y-5 text-[15px] md:text-[16px] font-light text-white/70 leading-[1.85] max-w-2xl mx-auto text-left md:text-center">
               <p>
                 When a home is priced above what the market will support, it
-                tends to sit. Days on market add up, buyers move on, and a
-                price reduction usually follows &mdash; but by then the
-                listing has lost some of its momentum.
+                tends to sit longer than it should. Days on market add up, and
+                the longer a listing sits, the harder it becomes to build the
+                kind of momentum that brings strong offers.
               </p>
               <p>
-                I won&apos;t inflate a number just to win your listing. I&apos;ll
-                prepare a detailed Comparative Market Analysis based on what
-                comparable homes have actually sold for, so we can land on a
-                number together with full confidence.
+                I&apos;ll prepare a detailed Comparative Market Analysis so we
+                can look at what comparable homes have actually sold for, and
+                land on a number together that you feel confident about.
               </p>
             </div>
 
