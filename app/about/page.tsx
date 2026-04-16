@@ -16,21 +16,21 @@ export const metadata: Metadata = {
 const SKILLS = [
   {
     number: "01",
-    title: "I Hear What You\u2019re Not Saying",
+    title: "Listening Before Speaking",
     description:
-      "My years in HR taught me to listen before I speak, understand what someone actually needs (not just what they say), and navigate tough conversations without anyone feeling steamrolled. In real estate, that means better negotiations, smoother closings, and an agent who genuinely hears you.",
+      "My years in HR taught me to listen before I talk, understand what someone actually needs, and work through hard conversations without anyone feeling pushed. In real estate, that shows up as calmer negotiations, smoother closings, and an agent who\u2019s genuinely paying attention.",
   },
   {
     number: "02",
-    title: "Trained to Catch What Matters",
+    title: "An Eye for Seeing Things Others Don\u2019t",
     description:
-      "Between my accounting background and growing up around construction, I pay close attention to what matters. Careful negotiations, line items that don\u2019t add up in a contract, and the foundation crack hiding behind fresh paint. You get a second set of eyes trained to protect your interests.",
+      "I was raised around construction, which gave me an eye for seeing things others don\u2019t. The line item in a contract that doesn\u2019t quite add up. The small thing in a walkthrough that\u2019s worth a second look. It\u2019s a quiet kind of care, but it\u2019s the kind that tends to matter most later on.",
   },
   {
     number: "03",
     title: "Steady Hands in a Stressful Process",
     description:
-      "Real estate transactions get stressful. Deals fall through, inspections surface surprises, timelines shift. My career navigating high-pressure workplace situations taught me poise. You\u2019ll never see me panic, and that steadiness is contagious when things get complicated.",
+      "Real estate can get stressful. Deals shift, inspections surface things, timelines move. Twenty-two years in HR taught me how to handle tough situations gracefully and with poise \u2014 and that calm tends to rub off on the people I\u2019m working with when things get complicated.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function AboutPage() {
     <>
       {/* ─── SECTION 1: MINIMALIST HERO ───────────────────────────── */}
       <MinimalistHero
-        mainText="Born and raised in Dallas. Two decades in accounting and human resources before real estate. Rooted in this city, grounded in faith, and driven by a genuine love for helping people find where they belong."
+        mainText="A people person, a master at multitasking, and always the one who wants to help. Rooted in this city, grounded in faith, and happy to finally be doing something I&rsquo;ve wanted to do for years."
         readMoreLabel="Start a conversation"
         readMoreHref="/contact"
         imageSrc="https://static.wixstatic.com/media/62f926_e81e37a81dd94340b92c9d9db1eeae24~mv2.png"
@@ -67,12 +67,12 @@ export default function AboutPage() {
               bit of it with me.
             </p>
             <p className="mt-8 text-[15px] md:text-[16px] font-light leading-[1.85] text-mediumText max-w-2xl mx-auto">
-              Before real estate, I spent two decades in accounting and human
-              resources. Years of reading people, navigating high-stakes
-              conversations, catching every detail, and staying composed when
-              it matters most. I always wanted to be a Realtor. My kids are
-              grown, the timing was right, and now I&apos;m doing what I&apos;ve
-              always wanted to do.
+              I wanted to be a REALTOR for years, but between my career and
+              raising a family, the timing never worked out. My twenty-two
+              years in human resources taught me how to read people, catch
+              every detail, and handle tough situations gracefully and with
+              poise. My kids are grown now, the timing is finally right, and
+              I&apos;m doing what I&apos;ve always wanted to do.
             </p>
           </Reveal>
         </div>
@@ -157,7 +157,7 @@ export default function AboutPage() {
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
               No pressure. No pitch. Just a real conversation about what you
-              need and how I can help you get there with confidence.
+              need and how I can help you get there.
             </p>
             <div className="mt-10">
               <Button href="/contact" variant="gold">

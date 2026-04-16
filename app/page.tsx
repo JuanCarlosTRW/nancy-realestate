@@ -30,14 +30,14 @@ const CARDS = [
   {
     number: "02",
     title: "You\u2019ll Never Feel Rushed or Pressured",
-    hook: "I don\u2019t push clients toward a decision to close a deal faster.",
-    body: "My years of professional experience taught me that the best outcomes come from clear thinking, not urgency. You move at the pace that\u2019s right for you.",
+    hook: "I don\u2019t push clients toward a decision just to close a deal faster.",
+    body: "The best outcomes come from clear thinking, not urgency. You move at the pace that\u2019s right for you.",
   },
   {
     number: "03",
-    title: "Nothing Gets Past Us",
-    hook: "I grew up around construction and spent decades where missing a detail had real consequences.",
-    body: "When I walk a property, I pay close attention to what matters. When I review a contract, I catch what doesn\u2019t add up. A second set of trained eyes on every part of the process.",
+    title: "An Eye for What Others Might Miss",
+    hook: "I was raised around construction, and I spent years in careers where missing a detail had real consequences.",
+    body: "When I walk a property, I notice what\u2019s easy to overlook. When I read a contract, I take my time with the fine print. It\u2019s not about catching anyone \u2014 it\u2019s about making sure you see the full picture before you decide.",
   },
 ];
 
@@ -209,14 +209,19 @@ export default function Home() {
               {/* Part 1A: darker body text */}
               <div className="mt-8 space-y-5 text-[0.9rem] font-light leading-[1.8]" style={{ color: "#2A211C" }}>
                 <p>
-                  I did not become a REALTOR by accident. I was born and raised
-                  right here in DFW and have watched this city grow for over fifty
-                  years. Before real estate, I spent two decades in accounting
-                  and human resources. Years of reading people,
-                  catching every detail, and staying composed when it matters
-                  most. Real estate lets me combine everything I am good at.
-                  Knowing Dallas, reading people, and making sure every contract,
-                  every negotiation, and every detail is right.
+                  I didn&apos;t become a REALTOR by accident. I was born and
+                  raised right where I live now, and I&apos;ve watched this city
+                  grow for over fifty years. I wanted to do this work for a long
+                  time, but between my career and raising a family, the timing
+                  was never right &mdash; until it was. My kids are grown now,
+                  and this is something I&apos;ve wanted to do for years.
+                </p>
+                <p>
+                  Before real estate, I spent twenty-two years in human
+                  resources. It taught me how to read people, stay composed
+                  when things get stressful, and handle difficult conversations
+                  gracefully. I bring all of that to every family I work with
+                  here.
                 </p>
               </div>
               {/* Part 5C: assertive arrow link */}
@@ -287,13 +292,14 @@ export default function Home() {
                 <div className="relative z-10">
                   <p className="text-[0.6rem] tracking-[0.2em] uppercase font-medium text-gold mb-4">For Sellers</p>
                   <h3 className="font-display font-medium text-darkText leading-tight mb-4" style={{ fontSize: "1.45rem" }}>
-                    Price It Right. Prep It Smart. Sell It Fast.
+                    Price It Thoughtfully. Prep It Well. Sell It With Confidence.
                   </h3>
                   <p className="text-[0.9rem] font-light leading-[1.7]" style={{ color: "#2A211C" }}>
-                    Most homes sit on the market because they were overpriced
-                    from day one. I prepare a Comparative Market Analysis so
-                    you can price it right, prep it for what buyers actually
-                    notice, and get it in front of serious buyers fast.
+                    Most homes that sit on the market were priced a little too
+                    high from the start. I&apos;ll prepare a Comparative Market
+                    Analysis so we can price it right together, prep it for
+                    what buyers actually notice, and get it in front of the
+                    right people from day one.
                   </p>
                 </div>
                 <Link
@@ -376,32 +382,8 @@ export default function Home() {
       {/* ─── SECTION 8: TESTIMONIAL ──────────────────────────────── */}
       <Testimonials />
 
-      {/* ─── SECTION 9: ACCENT QUOTE — Amplified signature moment ── */}
-      <section className="bg-charcoal px-6 quote-grain" style={{ paddingTop: "120px", paddingBottom: "120px" }}>
-        <div className="mx-auto max-w-3xl text-center relative z-10">
-          <Reveal>
-            <div className="mx-auto mb-10" style={{ width: "40px", height: "1.5px", background: "#C8A97E" }} />
-            <p
-              className="font-normal italic"
-              style={{
-                fontFamily: "var(--font-accent, 'Playfair Display', serif)",
-                fontSize: "clamp(2.2rem, 5vw, 3.75rem)",
-                lineHeight: 1.4,
-                color: "#FAF7F2",
-              }}
-            >
-              Some people sell houses.
-              <br />
-              I help people{" "}
-              <span className="text-gold">come home.</span>
-            </p>
-            <div className="mx-auto mt-10" style={{ width: "40px", height: "1.5px", background: "#C8A97E" }} />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ─── SECTION 9: CTA (DARK) — Part 6D: tighter gap ─────────── */}
-      <section className="relative px-6 md:px-12 lg:px-20 bg-charcoal overflow-hidden" style={{ paddingTop: "48px", paddingBottom: "80px" }}>
+      {/* ─── SECTION 9: CTA (DARK) ────────────────────────────────── */}
+      <section className="relative px-6 md:px-12 lg:px-20 bg-charcoal overflow-hidden" style={{ paddingTop: "96px", paddingBottom: "96px" }}>
         <CTASparkles />
         <div className="relative z-10 container-x max-w-3xl mx-auto text-center">
           <Reveal>

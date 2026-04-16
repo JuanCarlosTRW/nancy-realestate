@@ -15,9 +15,6 @@ export default function StatsBar() {
             <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
               Born &amp; Raised in DFW
             </p>
-            <p className="mt-1.5 text-[0.8rem] italic font-light" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
-              Every street tells a story
-            </p>
           </div>
           <div className="hidden md:block w-px h-10 bg-gold/30" />
           <div className="flex-1 text-center">
@@ -27,9 +24,6 @@ export default function StatsBar() {
             <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
               In Professional Contracts &amp; Details
             </p>
-            <p className="mt-1.5 text-[0.8rem] italic font-light" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
-              Fewer surprises. Cleaner closings.
-            </p>
           </div>
           <div className="hidden md:block w-px h-10 bg-gold/30" />
           <div className="flex-1 text-center">
@@ -38,9 +32,6 @@ export default function StatsBar() {
             </p>
             <p className="mt-1 text-[0.65rem] tracking-[0.2em] uppercase font-normal text-white/60">
               Raised Around Construction
-            </p>
-            <p className="mt-1.5 text-[0.8rem] italic font-light" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
-              Details are where I&apos;m most focused
             </p>
           </div>
         </div>

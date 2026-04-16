@@ -17,34 +17,32 @@ const STEPS = [
   {
     n: "01",
     title: "We Start With What Actually Matters",
-    body: "Most buyers start by scrolling listings online for months. That is backwards. I start by understanding what actually matters to you. Not just bedrooms and budget, but the street you want to live on, the commute you can tolerate, and the neighborhood that fits how your family actually lives. The more honest this conversation is, the fewer wrong houses we waste time on.",
+    body: "A lot of buyers start by scrolling listings for months, and it\u2019s easy to see why \u2014 it feels like progress. But I\u2019ve found the search goes better when we take a quiet hour together first, before looking at any homes. I want to understand what actually matters to you. Not just bedrooms and budget, but the street you\u2019d like to walk in the evening, the commute you can live with, and the kind of neighborhood that fits how your family really spends its days. The more honest that first conversation is, the less of your time we spend on homes that were never quite right.",
     closing: "",
   },
   {
     n: "02",
-    title: "Be Ready Before the Right Home Appears",
-    body: "In this market, a home you love will not wait for your financing to catch up. I will connect you with lenders I trust in the Dallas area so you are ready to move the same day you find the right one. Being pre-approved is not just smart. It is the difference between getting the house and watching someone else get it.",
-    closing: "The best homes don\u2019t wait. Be ready before they appear.",
+    title: "Being Ready Before the Right Home Appears",
+    body: "In this market, the right home often moves quickly, and that part I can\u2019t control. What I can do is help you be ready. I\u2019ll introduce you to a few local lenders I know and trust here in Dallas, so when you find a home that feels right, you can move forward the same day with confidence. Being pre-approved isn\u2019t just a formality \u2014 it\u2019s one of the quieter ways I help make sure the home you love is a home you can actually have.",
+    closing: "",
   },
   {
     n: "03",
-    title: "I Show You What You Won\u2019t See Online",
-    body: "I do not just open doors and let you wander. I grew up around construction. I will point out the things you will not notice in photos. The water stain that means a roof problem, the slope in the floor that means foundation work. That is the difference between buying a home and buying a problem.",
-    closing:
-      "Listing photos show you the best angles. I show you the full picture.",
+    title: "Seeing What the Photos Don\u2019t Show",
+    body: "Listing photos are designed to show a home at its best, which is exactly what they should do. But when we walk a property together, I\u2019ll gently point out the things the photos weren\u2019t trying to show you. A water stain that might be worth a closer look. A floor that slopes just slightly. A corner of the yard that tells you more than the wide shot did. I won\u2019t talk you out of a home you love \u2014 I just want you to see it clearly before you decide.",
+    closing: "",
   },
   {
     n: "04",
-    title: "Winning the Home Without Overpaying",
-    body: "The right offer is not just about price. It is about terms, timing, and knowing what the seller actually cares about. My background in HR taught me how to read people and negotiate situations where both sides feel good about the outcome. I will help you win the house without overpaying for it.",
-    closing: "The goal is not just to win. It is to win correctly.",
+    title: "Shaping an Offer That Feels Right",
+    body: "The right offer is rarely about price alone. It\u2019s about terms, timing, and understanding what the seller actually cares about \u2014 which isn\u2019t always what\u2019s written on the page. My years in human resources taught me to listen for what people really need, and to shape conversations where both sides walk away feeling good. I\u2019ll help you put together an offer that protects what matters to you, without stretching past what feels comfortable.",
+    closing: "",
   },
   {
     n: "05",
-    title: "Nothing Slips Between Contract and Keys",
-    body: "Between the accepted offer and the keys in your hand, a hundred things can go sideways. Inspection issues, appraisal gaps, title problems, lender delays. My career managing complex situations with tight deadlines means I know what to watch for and when to follow up. From contract to close, nothing slips through on my watch.",
-    closing:
-      "Most deals don\u2019t fall apart at the beginning. They fall apart in the details.",
+    title: "Staying Close From Contract to Closing",
+    body: "Between the accepted offer and the keys in your hand, there\u2019s a stretch of time when small things can quietly become bigger ones. Inspection items, appraisal questions, title details, lender timelines. This is the part of the process most buyers don\u2019t see, and it\u2019s the part where I stay closest. Years of managing complex situations with moving deadlines taught me what to watch for and when to gently follow up. I\u2019ll be the steady hand in the background \u2014 so you can focus on the move itself.",
+    closing: "",
   },
 ];
 
@@ -83,13 +81,13 @@ export default function BuyPage() {
         <div className="container-x max-w-3xl mx-auto text-center">
           <Reveal>
             <p className="label !text-gold mb-6">
-              What Most Buyers Don&apos;t See
+              What I Quietly Watch For
             </p>
             <h2
               className="font-display font-light text-white leading-[1.1]"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
-              The Perfect Kitchen Doesn&apos;t Matter
+              The Things You Fall in Love With
               <br />
               <span
                 className="italic text-gold"
@@ -98,40 +96,30 @@ export default function BuyPage() {
                     "var(--font-accent, 'Playfair Display', serif)",
                 }}
               >
-                If the Foundation Is Failing.
+                Aren&apos;t Always the Things That Matter Most.
               </span>
             </h2>
 
             <div className="mt-10 space-y-5 text-[15px] md:text-[16px] font-light text-white/70 leading-[1.85] max-w-2xl mx-auto text-left md:text-center">
               <p>
-                Most people fall in love with finishes, the countertops,
-                the open floor plan, the backyard. But the things that cost you
-                the most are the things you never noticed.
+                It&apos;s natural to fall for the finishes first &mdash; the
+                countertops, the open floor plan, the backyard. Those are the
+                things that make a house feel like home when you walk in. But
+                the things that tend to matter most over time are usually
+                quieter. They show up in the details you might not think to
+                look at on a showing.
               </p>
               <p>
-                The roof line that tells a story the seller didn&apos;t
-                mention. The aging HVAC system that&apos;s about to become
-                a five-figure problem.
+                A roof line that hints at a story the seller hasn&apos;t told.
+                An HVAC system that&apos;s a little older than it looks. A
+                slope in the floor that&apos;s worth a second glance.
               </p>
               <p>
-                I grew up around construction. I spent years in careers where
-                details were non-negotiable. When I walk a property, I&apos;m
-                not just looking at what&apos;s there. I&apos;m looking
-                for what might need attention, what&apos;s easy to overlook,
-                and what could cost you down the road.
-              </p>
-            </div>
-
-            {/* Pull quote */}
-            <div className="mx-auto mt-10 max-w-xl border-l-2 border-gold pl-6 text-left">
-              <p
-                className="text-lg italic leading-relaxed text-white/90 md:text-xl"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-              >
-                That&apos;s not pessimism. That&apos;s protection.
+                I was raised around construction, so when we walk a property
+                together, I&apos;ll be noticing those things in the background.
+                Not to talk you out of a home you love &mdash; just to make
+                sure you&apos;re seeing the full picture before you fall all
+                the way.
               </p>
             </div>
           </Reveal>
@@ -153,13 +141,13 @@ export default function BuyPage() {
                       "var(--font-accent, 'Playfair Display', serif)",
                   }}
                 >
-                  Zero Guesswork.
+                  One Thoughtful Path.
                 </span>
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 max-w-lg mx-auto">
-                Every step is designed to protect your time, your money, and
-                your peace of mind.
+                A calm, considered way to find the right home &mdash; without
+                wasting your time along the way.
               </p>
             </div>
           </Reveal>
@@ -208,12 +196,13 @@ export default function BuyPage() {
               Tell Me What You&apos;re Looking For.
               <br />
               <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
-                I&apos;ll Help You Find What Matches.
+                We&apos;ll Take It From There.
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
-              I won&apos;t show you a single home until I understand exactly
-              what matters to you. That&apos;s where every great search starts.
+              I&apos;d rather take the time to understand what matters to you
+              before we look at a single home. That&apos;s where every good
+              search begins &mdash; with a real conversation, no pressure.
             </p>
             <div className="mt-10">
               <Button href="/contact" variant="gold">

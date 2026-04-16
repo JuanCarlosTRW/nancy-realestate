@@ -102,7 +102,7 @@ export default function SplitHero() {
             }}
           >
             Born and raised in DFW. Twenty-two years of detail, organization,
-            and multitasking, applied to every transaction.
+            and careful multitasking &mdash; now behind every home I help you find.
           </p>
 
           {/* CTAs */}

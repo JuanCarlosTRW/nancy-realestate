@@ -29,20 +29,20 @@ const STEPS = [
   },
   {
     n: "03",
-    title: "Make Buyers Feel It in the First Ten Seconds",
-    body: "Buyers decide in the first ten seconds whether a home feels right. From professional photography to listing copy that highlights what makes your home worth it, I will make sure those ten seconds work in your favor. I\u2019ll recommend which rooms to stage and which ones just need to be clean.",
-    closing: "You never get a second chance at a first showing.",
+    title: "The First Ten Seconds Matter Most",
+    body: "Buyers usually decide how they feel about a home in the first few seconds. From the listing photos to the way each room presents on a walkthrough, I\u2019ll make sure those early impressions are working in your favor. I\u2019ll share which rooms might benefit from staging and which ones really just need to be clean and clear.",
+    closing: "",
   },
   {
     n: "04",
     title: "Get Your Home in Front of the Right Buyers",
     body: "Your home goes on the MLS and gets in front of every serious buyer actively searching in Dallas. But I do not just post it and wait. I make sure the listing stands out with the right photos, the right description, and the right price, so it gets saved, shared, and scheduled for showings, not scrolled past.",
-    closing: "Visibility without strategy is just noise.",
+    closing: "Getting seen is the start. Getting saved and scheduled is what matters.",
   },
   {
     n: "05",
     title: "I Walk You Through Every Offer",
-    body: "When offers come in, I walk you through every detail. Terms, contingencies, timelines, and what each one means for you. My background in accounting and HR gave me years of experience navigating complex conversations calmly. I bring every offer to you and help you feel confident in your decision.",
+    body: "When offers come in, I\u2019ll walk you through every detail. Terms, contingencies, timelines, and what each one means for you. Twenty-two years in HR taught me to handle complex conversations gracefully and with poise. I\u2019ll bring every offer to you and help you feel confident in whatever you decide.",
     closing:
       "Every offer deserves a clear head and a careful eye.",
   },
@@ -67,7 +67,7 @@ export default function SellPage() {
               className="font-display font-light text-white leading-[1.1]"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
-              The Right Price Opens Doors.
+              Pricing Your Home Is the Most
               <br />
               <span
                 className="italic text-gold"
@@ -76,27 +76,22 @@ export default function SellPage() {
                     "var(--font-accent, 'Playfair Display', serif)",
                 }}
               >
-                The Wrong One Closes Them.
+                Important Conversation We&apos;ll Have.
               </span>
             </h2>
 
             <div className="mt-10 space-y-5 text-[15px] md:text-[16px] font-light text-white/70 leading-[1.85] max-w-2xl mx-auto text-left md:text-center">
               <p>
-                When a home is priced above what the market supports, it tends
-                to sit. Days on market climb, buyers move on, and eventually a
-                price reduction becomes necessary, but by then the
-                listing has lost its momentum.
+                When a home is priced above what the market will support, it
+                tends to sit. Days on market add up, buyers move on, and a
+                price reduction usually follows &mdash; but by then the
+                listing has lost some of its momentum.
               </p>
               <p>
-                I won&apos;t inflate a number just to win your listing. I
+                I won&apos;t inflate a number just to win your listing. I&apos;ll
                 prepare a detailed Comparative Market Analysis based on what
-                comparable homes have actually sold for, so you can make
-                a confident, informed decision on price.
-              </p>
-              <p>
-                Pricing is one of the most important conversations we&apos;ll
-                have. I want to make sure you have the full picture before we
-                set a number.
+                comparable homes have actually sold for, so we can land on a
+                number together with full confidence.
               </p>
             </div>
 
@@ -116,14 +111,14 @@ export default function SellPage() {
             {/* Pricing comparison visual */}
             <div className="grid grid-cols-2 gap-6 mt-12 max-w-lg mx-auto">
               <div className="text-center p-6 rounded" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}>
-                <p className="text-[0.65rem] tracking-[0.15em] uppercase font-medium" style={{ color: "rgba(196, 90, 90, 0.8)" }}>Overpriced Listing</p>
+                <p className="text-[0.65rem] tracking-[0.15em] uppercase font-medium" style={{ color: "rgba(196, 90, 90, 0.8)" }}>Priced Too High at List</p>
                 <p className="font-display text-2xl text-white mt-2">90+ Days</p>
-                <p className="text-[0.8rem] text-white/50 mt-1 font-light">Price reductions. Fewer showings. Lost momentum.</p>
+                <p className="text-[0.8rem] text-white/50 mt-1 font-light">Often leads to price cuts and a slower path to offers.</p>
               </div>
               <div className="text-center p-6 rounded" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(200,169,126,0.3)" }}>
-                <p className="text-[0.65rem] tracking-[0.15em] uppercase text-gold font-medium">Right Price, Day One</p>
+                <p className="text-[0.65rem] tracking-[0.15em] uppercase text-gold font-medium">Priced Well From Day One</p>
                 <p className="font-display text-2xl text-white mt-2">14&ndash;30 Days</p>
-                <p className="text-[0.8rem] text-white/50 mt-1 font-light">Multiple showings. Strong offers. Clean close.</p>
+                <p className="text-[0.8rem] text-white/50 mt-1 font-light">More showings, stronger offers, a smoother close.</p>
               </div>
             </div>
           </Reveal>
@@ -211,40 +206,6 @@ export default function SellPage() {
         </div>
       </section>
 
-      {/* ─── SECTION 4: PROOF STRIP (DARK) ─────────────────────────── */}
-      <section className="px-6 md:px-12 lg:px-20 py-14 md:py-20" style={{ background: "#1C1814" }}>
-        <div className="container-x max-w-5xl mx-auto">
-          <Reveal>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-              <div className="text-center py-10 md:py-12 px-6 md:px-8" style={{ borderRight: "1px solid rgba(196, 169, 108, 0.1)" }}>
-                <p className="text-[0.65rem] font-medium tracking-[0.2em] uppercase text-gold mb-4">
-                  Full Attention
-                </p>
-                <p className="text-[0.85rem] font-light leading-[1.7]" style={{ color: "rgba(250, 247, 242, 0.7)" }}>
-                  I don&apos;t juggle 30 listings. Your home gets my full focus from listing to closing.
-                </p>
-              </div>
-              <div className="text-center py-10 md:py-12 px-6 md:px-8" style={{ borderRight: "1px solid rgba(196, 169, 108, 0.1)" }}>
-                <p className="text-[0.65rem] font-medium tracking-[0.2em] uppercase text-gold mb-4">
-                  Honest Pricing
-                </p>
-                <p className="text-[0.85rem] font-light leading-[1.7]" style={{ color: "rgba(250, 247, 242, 0.7)" }}>
-                  I prepare a Comparative Market Analysis so you can price with confidence, based on what actually sold.
-                </p>
-              </div>
-              <div className="text-center py-10 md:py-12 px-6 md:px-8">
-                <p className="text-[0.65rem] font-medium tracking-[0.2em] uppercase text-gold mb-4">
-                  Decades of Calm Negotiation
-                </p>
-                <p className="text-[0.85rem] font-light leading-[1.7]" style={{ color: "rgba(250, 247, 242, 0.7)" }}>
-                  Years of professional experience help me stay steady when it matters most.
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* ─── CTA (DARK) ─────────────────────────────────────────────── */}
       <section className="px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-charcoal">
         <div className="container-x max-w-3xl mx-auto text-center">
@@ -254,16 +215,15 @@ export default function SellPage() {
               className="font-display font-light text-white leading-[1.1] mt-4 max-w-[700px] mx-auto"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
-              Let&apos;s Find Out What Your Home Is Worth.
+              Let&apos;s Start With a Real
               <br />
               <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
-                With Data You Can Trust.
+                Conversation About Your Home.
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
-              That honesty is the foundation of how I work. Let&apos;s
-              start with a real conversation about your home, your
-              timeline, and your goals.
+              No pressure, no pitch. Just an honest look at your home, your
+              timeline, and what you&apos;re hoping to do next.
             </p>
             <div className="mt-10">
               <Button href="/contact" variant="gold">
