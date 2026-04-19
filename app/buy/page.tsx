@@ -17,7 +17,7 @@ const STEPS = [
   {
     n: "01",
     title: "We Start With What Actually Matters",
-    body: "I want to understand what matters to you \u2014 not just bedrooms and budget, but the kind of street you\u2019d like to come home to, the commute that works for your life, and the neighborhood that fits how your family actually spends its days. The more I understand upfront, the easier it becomes to spot the right home when we see it.",
+    body: "The more I understand upfront, the easier it becomes to spot the right home when we see it.",
     closing: "",
   },
   {
