@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const STEPS = [
   {
     n: "01",
-    title: "I Walk Your Home Like a Buyer Would",
+    title: "I \"See\" Your Home Like a Buyer Would",
     body: "I\u2019ll prepare a detailed Comparative Market Analysis so you can see where your home stands in today\u2019s market. No inflated numbers, no surprises. I\u2019ll also share honest recommendations on what may be worth addressing before we list and what you can leave as-is, because not every update adds value.",
     closing:
       "I see your home through a buyer\u2019s eyes before they ever walk in.",
@@ -29,8 +29,8 @@ const STEPS = [
   },
   {
     n: "03",
-    title: "The First Ten Seconds Matter Most",
-    body: "First impressions happen quickly \u2014 buyers often form a feeling about a home in the first few seconds. I\u2019ll help you think through how each room presents, from the listing photos to the walkthrough experience. Sometimes that means staging a key room; sometimes it just means clearing the clutter and letting the home speak for itself.",
+    title: "First Impressions Matter Most",
+    body: "First impressions happen from the moment you drive up. I\u2019ll help you think through how each room presents, from the listing photos to the walkthrough experience. Sometimes that means staging a key room; sometimes it just means clearing the clutter and letting the home speak for itself.",
     closing: "",
   },
   {
@@ -42,7 +42,7 @@ const STEPS = [
   {
     n: "05",
     title: "I Walk You Through Every Offer",
-    body: "When offers come in, I\u2019ll walk you through every detail. Terms, contingencies, timelines, and what each one means for you. Twenty-two years in HR taught me to handle complex conversations gracefully and with poise. I\u2019ll bring every offer to you and help you feel confident in whatever you decide.",
+    body: "When offers come in, I\u2019ll walk you through every detail. I\u2019ll bring every offer to you and help you feel confident in whatever you decide.",
     closing:
       "Every offer deserves a clear head and a careful eye.",
   },
@@ -126,7 +126,7 @@ export default function SellPage() {
 
       {/* ─── SECTION 3: THE SELLING PROCESS (LIGHT) ───────────────── */}
       <section className="section-pad bg-warmWhite">
-        <div className="container-x max-w-6xl">
+        <div className="container-x max-w-4xl">
           <Reveal>
             <div className="text-center mb-16">
               <p className="label">The Process</p>
@@ -150,55 +150,32 @@ export default function SellPage() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="space-y-0">
             {STEPS.map((s, i) => (
-              <Reveal key={s.n} delay={i * 0.08}>
-                <article
-                  className="group relative h-full flex flex-col overflow-hidden p-8 md:p-10 transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg border border-gold/[0.12] hover:border-gold/30"
-                  style={{
-                    background: "#FFFCF5",
-                    borderRadius: "6px",
-                    borderTop: "3px solid #C8A97E",
-                  }}
+              <Reveal key={s.n} delay={i * 0.1}>
+                <div
+                  className={`grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start ${i % 2 === 1 ? "bg-[#F0EBE2] -mx-4 px-4 md:-mx-8 md:px-8 py-6 rounded" : ""}`}
                 >
-                  {/* Gold step-number watermark */}
-                  <span
-                    aria-hidden="true"
-                    className="absolute -top-2 right-3 font-display text-[6.5rem] font-extralight leading-none select-none pointer-events-none transition-colors duration-500 group-hover:text-gold/20"
-                    style={{ color: "rgba(196, 169, 108, 0.08)" }}
-                  >
-                    {s.n}
-                  </span>
-
-                  <div className="relative z-10 flex flex-col h-full">
-                    <p className="text-[0.62rem] tracking-[0.22em] uppercase font-semibold text-gold mb-4">
-                      Step {s.n}
-                    </p>
-                    <h3
-                      className="font-display text-[1.3rem] md:text-[1.45rem] text-darkText leading-[1.25] mb-4"
-                      style={{ fontWeight: 500 }}
-                    >
-                      {s.title}
-                    </h3>
-                    <p
-                      className="text-[0.9rem] font-light leading-[1.75] flex-1"
-                      style={{ color: "#2A211C" }}
-                    >
-                      {s.body}
-                    </p>
-                    {s.closing && (
-                      <>
-                        <div className="mt-6 h-px w-10 bg-gold/30 transition-all duration-500 group-hover:w-16" />
-                        <p
-                          className="mt-4 font-display text-[0.88rem] italic leading-[1.5]"
-                          style={{ color: "#A8893F" }}
-                        >
-                          {s.closing}
-                        </p>
-                      </>
+                  <div className="flex flex-col items-center">
+                    <span className="font-display text-[3.5rem] leading-none font-extralight select-none" style={{ color: "rgba(196, 169, 108, 0.22)" }}>
+                      {s.n}
+                    </span>
+                    {i < STEPS.length - 1 && (
+                      <div className="w-px flex-1 bg-gold/15 mt-3 min-h-[40px]" />
                     )}
                   </div>
-                </article>
+                  <div className="pb-10 md:pb-12">
+                    <h3 className="font-display text-[1.4rem] md:text-[1.6rem] text-darkText leading-tight" style={{ fontWeight: 500 }}>
+                      {s.title}
+                    </h3>
+                    <p className="body-p mt-4 max-w-2xl">{s.body}</p>
+                    {s.closing && (
+                      <p className="mt-4 font-display text-[0.95rem] italic" style={{ color: "#A8893F" }}>
+                        {s.closing}
+                      </p>
+                    )}
+                  </div>
+                </div>
               </Reveal>
             ))}
           </div>

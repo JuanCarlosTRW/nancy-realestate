@@ -61,7 +61,7 @@ export default function SplitHero() {
               textShadow: "0 1px 8px rgba(0, 0, 0, 0.4)",
             }}
           >
-            Dallas &middot; Fort Worth &middot; North Texas
+            Dallas, Fort Worth, North Texas
           </p>
 
           {/* Signature name */}
@@ -101,23 +101,13 @@ export default function SplitHero() {
               textShadow: "0 1px 12px rgba(0, 0, 0, 0.4)",
             }}
           >
-            Born and raised in DFW. Twenty-two years of detail, organization,
-            and careful multitasking &mdash; now behind every home I help you find.
+            Born and raised in DFW. Decades of professional experience in
+            detail, organization, and careful multitasking &mdash; now behind
+            every home I help you find.
           </p>
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[0.8rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-[#D4B87A] hover:-translate-y-[2px] hover:shadow-[0_8px_32px_rgba(196,169,108,0.5)] transition-all duration-300"
-              style={{
-                borderRadius: "2px",
-                padding: "16px 40px",
-                boxShadow: "0 4px 24px rgba(196, 169, 108, 0.35)",
-              }}
-            >
-              Let&apos;s Talk
-            </Link>
             <Link
               href="/buy"
               className="inline-flex items-center justify-center text-[0.8rem] font-medium tracking-[0.12em] uppercase text-white hover:bg-white/5 hover:-translate-y-[2px] transition-all duration-300"
@@ -128,6 +118,17 @@ export default function SplitHero() {
               }}
             >
               See How I Help &rarr;
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center text-[0.8rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-[#D4B87A] hover:-translate-y-[2px] hover:shadow-[0_8px_32px_rgba(196,169,108,0.5)] transition-all duration-300"
+              style={{
+                borderRadius: "2px",
+                padding: "16px 40px",
+                boxShadow: "0 4px 24px rgba(196, 169, 108, 0.35)",
+              }}
+            >
+              Let&apos;s Talk
             </Link>
           </div>
         </div>

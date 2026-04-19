@@ -8,7 +8,6 @@ import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
 import CTASparkles from "@/components/home/CTASparkles";
 import Testimonials from "@/components/home/Testimonials";
-import StatsBar from "@/components/home/StatsBar";
 import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -24,13 +23,13 @@ const CARDS = [
   {
     number: "01",
     title: "You\u2019ll See Homes With Fresh Eyes",
-    hook: "I have lived in DFW for over fifty years.",
-    body: "I know the quiet streets worth a second look, the blocks where values are climbing, and the areas about to become the next big thing. A lifetime of local knowledge, not just an MLS search.",
+    hook: "Being a Dallas native, I know the quiet streets, the hidden gems, and what to watch for in every neighborhood.",
+    body: "",
   },
   {
     number: "02",
     title: "You\u2019ll Never Feel Rushed or Pressured",
-    hook: "I don\u2019t push clients toward a decision just to close a deal faster.",
+    hook: "",
     body: "The best outcomes come from clear thinking, not urgency. You move at the pace that\u2019s right for you.",
   },
   {
@@ -95,15 +94,12 @@ export default function Home() {
       {/* ─── SECTION 1: SPLIT HERO ───────────────────────────────── */}
       <SplitHero />
 
-      {/* ─── SECTION 2: STATS BAR (DARK) ──────────────────────────── */}
-      <StatsBar />
-
       {/* ─── Micro authority line ────────────────────────────────── */}
       <div className="bg-warmWhite py-4 text-center md:py-12">
         <Reveal y={12}>
           {/* Part 1A: darker trust line text */}
           <p className="font-sans text-[0.65rem] font-medium uppercase tracking-[0.2em]" style={{ color: "#4A3F35" }}>
-            Serving families across North Texas. Plano, Richardson, and North Dallas
+            Serving individuals and families across North Texas. Plano, Richardson, and North Dallas
           </p>
         </Reveal>
       </div>
@@ -128,8 +124,8 @@ export default function Home() {
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               {/* Part 1A: darker section subtext */}
               <p className="mt-6 text-[0.9rem] font-light leading-[1.7]" style={{ color: "#3D342B" }}>
-                I don&apos;t take on too many clients at a time. That means you get
-                my full attention, not a fraction of it.
+                When you are my client, you get my full attention &mdash; not a
+                fraction of it.
               </p>
             </div>
           </Reveal>
@@ -182,7 +178,7 @@ export default function Home() {
           <Reveal y={0} className="relative">
             <div className="relative w-full h-[400px] md:h-auto md:min-h-[600px] overflow-hidden">
               <Image
-                src="https://static.wixstatic.com/media/62f926_e81e37a81dd94340b92c9d9db1eeae24~mv2.png"
+                src="https://static.wixstatic.com/media/62f926_59c50cdac54448d3a4fe4072288285a1~mv2.png"
                 alt="Nancy Musselman, Dallas real estate agent"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -209,19 +205,14 @@ export default function Home() {
               {/* Part 1A: darker body text */}
               <div className="mt-8 space-y-5 text-[0.9rem] font-light leading-[1.8]" style={{ color: "#2A211C" }}>
                 <p>
-                  I didn&apos;t become a REALTOR by accident. I was born and
-                  raised right where I live now, and I&apos;ve watched this city
-                  grow for over fifty years. I wanted to do this work for a long
-                  time, but between my career and raising a family, the timing
-                  was never right &mdash; until it was. My kids are grown now,
-                  and this is something I&apos;ve wanted to do for years.
-                </p>
-                <p>
-                  Before real estate, I spent twenty-two years in human
-                  resources. It taught me how to read people, stay composed
-                  when things get stressful, and handle difficult conversations
-                  gracefully. I bring all of that to every family I work with
-                  here.
+                  I didn&apos;t become a REALTOR<sup>&reg;</sup> by accident. I
+                  was born and raised in the same area where I live now, and
+                  I&apos;ve watched this city grow for decades. I&apos;ve been
+                  involved with multiple facets of real estate including
+                  construction and renovation projects, which has taught me how
+                  to stay composed, read people, and handle difficult
+                  conversations gracefully. I bring all of that to every family
+                  I work with.
                 </p>
               </div>
               {/* Part 5C: assertive arrow link */}
@@ -331,10 +322,7 @@ export default function Home() {
                 className="font-display font-normal text-darkText mt-4"
                 style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.15 }}
               >
-                The City I&apos;ve Called Home for{" "}
-                <span className="italic text-gold" style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}>
-                  50+ Years
-                </span>
+                The City I&apos;ve Called Home
               </h2>
               <p className="mt-6 text-[0.9rem] font-light leading-[1.7]" style={{ color: "#4A3F35" }}>
                 From North Dallas to Flower Mound, I know these streets and the

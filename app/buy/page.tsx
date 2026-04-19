@@ -17,7 +17,7 @@ const STEPS = [
   {
     n: "01",
     title: "We Start With What Actually Matters",
-    body: "I like to start with a conversation before we start looking at homes. I want to understand what matters to you \u2014 not just bedrooms and budget, but the kind of street you\u2019d like to come home to, the commute that works for your life, and the neighborhood that fits how your family actually spends its days. The more I understand upfront, the easier it becomes to spot the right home when we see it.",
+    body: "I want to understand what matters to you \u2014 not just bedrooms and budget, but the kind of street you\u2019d like to come home to, the commute that works for your life, and the neighborhood that fits how your family actually spends its days. The more I understand upfront, the easier it becomes to spot the right home when we see it.",
     closing: "",
   },
   {
@@ -35,7 +35,7 @@ const STEPS = [
   {
     n: "04",
     title: "Shaping an Offer That Feels Right",
-    body: "Putting together a good offer is about more than the number. It\u2019s about the terms, the timing, and making sure the whole picture feels right for you. My years in human resources taught me how to navigate these kinds of conversations with care, so both sides feel heard and respected. I\u2019ll walk you through every part of the offer so you understand exactly what you\u2019re agreeing to \u2014 and feel comfortable with it.",
+    body: "Putting together a good offer is about more than the number. It\u2019s about the terms, the timing, and making sure the whole picture feels right for you, and both sides feel heard and respected. I\u2019ll walk you through every part of the offer so you understand exactly what you\u2019re agreeing to \u2014 and feel comfortable with it.",
     closing: "",
   },
   {
@@ -71,7 +71,7 @@ export default function BuyPage() {
               fontFamily: "var(--font-accent, 'Playfair Display', serif)",
             }}
           >
-            I&apos;ll Make Sure You See It Clearly.
+            We&apos;ll find it together.
           </span>
         </h1>
       </ParallaxHero>
@@ -99,29 +99,6 @@ export default function BuyPage() {
                 Aren&apos;t Always the Things That Matter Most.
               </span>
             </h2>
-
-            <div className="mt-10 space-y-5 text-[15px] md:text-[16px] font-light text-white/70 leading-[1.85] max-w-2xl mx-auto text-left md:text-center">
-              <p>
-                It&apos;s natural to fall for the finishes first &mdash; the
-                countertops, the open floor plan, the backyard. Those are the
-                things that make a house feel like home when you walk in. But
-                the things that tend to matter most over time are usually
-                quieter. They show up in the details you might not think to
-                look at on a showing.
-              </p>
-              <p>
-                A roof line that hints at a story the seller hasn&apos;t told.
-                An HVAC system that&apos;s a little older than it looks. A
-                slope in the floor that&apos;s worth a second glance.
-              </p>
-              <p>
-                I was raised around construction, so when we walk a property
-                together, I&apos;ll be noticing those things in the background.
-                Not to talk you out of a home you love &mdash; just to make
-                sure you&apos;re seeing the full picture before you fall all
-                the way.
-              </p>
-            </div>
           </Reveal>
         </div>
       </section>
@@ -196,7 +173,7 @@ export default function BuyPage() {
               Tell Me What You&apos;re Looking For.
               <br />
               <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
-                We&apos;ll Take It From There.
+                I&apos;ll Take It From There.
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">

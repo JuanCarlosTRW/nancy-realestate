@@ -18,7 +18,7 @@ const SKILLS = [
     number: "01",
     title: "Listening Before Speaking",
     description:
-      "My years in HR taught me to listen before I talk, understand what someone actually needs, and work through hard conversations without anyone feeling pushed. In real estate, that shows up in calmer negotiations, smoother closings, and conversations where you always feel heard.",
+      "My years of professional experience taught me to listen before I talk, understand what someone actually needs, and work through hard conversations without anyone feeling pushed. In real estate, that shows up in calmer negotiations, smoother closings, and conversations where you always feel heard.",
   },
   {
     number: "02",
@@ -30,7 +30,7 @@ const SKILLS = [
     number: "03",
     title: "Steady Hands in a Stressful Process",
     description:
-      "Real estate can get stressful. Deals shift, inspections surface things, timelines move. Twenty-two years in HR taught me how to handle tough situations gracefully and with poise \u2014 and that calm tends to rub off on the people I\u2019m working with when things get complicated.",
+      "Real estate can get stressful. Deals shift, inspections surface things, timelines move. Decades of professional experience taught me how to handle tough situations gracefully and with poise \u2014 and that calm tends to rub off on the people I\u2019m working with when things get complicated.",
   },
 ];
 
@@ -56,23 +56,13 @@ export default function AboutPage() {
           <Reveal>
             <p className="label">The Person Behind the License</p>
             <AnimatedDivider className="w-14 mx-auto mt-6" />
-            <p
-              className="font-display italic text-darkText mt-10"
-              style={{
-                fontSize: "clamp(1.4rem, 2.5vw, 1.85rem)",
-                lineHeight: 1.5,
-              }}
-            >
-              I didn&apos;t leave my career behind. I brought every
-              bit of it with me.
-            </p>
-            <p className="mt-8 text-[15px] md:text-[16px] font-light leading-[1.85] text-mediumText max-w-2xl mx-auto">
-              I wanted to be a REALTOR for years, but between my career and
-              raising a family, the timing never worked out. My twenty-two
-              years in human resources taught me how to read people, catch
-              every detail, and handle tough situations gracefully and with
-              poise. My kids are grown now, the timing is finally right, and
-              I&apos;m doing what I&apos;ve always wanted to do.
+            <p className="mt-10 text-[15px] md:text-[16px] font-light leading-[1.85] text-mediumText max-w-2xl mx-auto">
+              I wanted to be a REALTOR<sup>&reg;</sup> for years, but between
+              my career and raising a family, the timing never worked out. My
+              decades of professional experience taught me how to read people,
+              catch every detail, and handle tough situations gracefully and
+              with poise. My kids are grown now, the timing is right. Families
+              find their dream homes.
             </p>
           </Reveal>
         </div>
@@ -120,16 +110,13 @@ export default function AboutPage() {
             {SKILLS.map((skill, i) => (
               <Reveal key={skill.number} delay={i * 0.12}>
                 <div
-                  className="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr_1.5fr] gap-4 md:gap-6 items-start py-8 md:py-10"
+                  className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-4 md:gap-6 items-start py-8 md:py-10"
                   style={i < SKILLS.length - 1 ? { borderBottom: "1px solid rgba(196, 169, 108, 0.15)" } : {}}
                 >
-                  <span className="font-display text-[3rem] font-extralight leading-none select-none" style={{ color: "rgba(196, 169, 108, 0.25)" }}>
-                    {skill.number}
-                  </span>
                   <h3 className="font-display text-[1.3rem] text-darkText leading-[1.2]" style={{ fontWeight: 500 }}>
                     {skill.title}
                   </h3>
-                  <p className="text-[0.9rem] font-light leading-[1.8] col-span-full md:col-span-1" style={{ color: "#2A211C" }}>
+                  <p className="text-[0.9rem] font-light leading-[1.8]" style={{ color: "#2A211C" }}>
                     {skill.description}
                   </p>
                 </div>
@@ -149,10 +136,6 @@ export default function AboutPage() {
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
               The Right Agent Makes the Difference.
-              <br />
-              <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
-                Let&apos;s Make Sure You Have One.
-              </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
               No pressure. No pitch. Just a real conversation about what you
