@@ -101,9 +101,8 @@ export default function SplitHero() {
               textShadow: "0 1px 12px rgba(0, 0, 0, 0.4)",
             }}
           >
-            Born and raised in DFW. Decades of professional experience in
-            detail, organization, and careful multitasking &mdash; now behind
-            every home I help you find.
+            Born and raised in DFW. Decades of detail, organization, and
+            careful multitasking &mdash; now behind every home I help you find.
           </p>
 
           {/* CTAs */}

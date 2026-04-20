@@ -8,7 +8,7 @@ import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Nancy Musselman | Dallas Real Estate",
   description:
-    "Meet Nancy Musselman, a Dallasite with 50+ years in the DFW Metroplex and two decades of professional experience, now putting it all to work for her clients.",
+    "Meet Nancy Musselman, a Dallasite born and raised in DFW with decades of professional experience, now putting it all to work for her clients.",
 };
 
 /* ── Data ──────────────────────────────────────────────────────────── */
@@ -41,7 +41,7 @@ export default function AboutPage() {
     <>
       {/* ─── SECTION 1: MINIMALIST HERO ───────────────────────────── */}
       <MinimalistHero
-        mainText="A people person, a master at multitasking, and always the one who wants to help. Rooted in this city, grounded in faith, and happy to finally be doing something I&rsquo;ve wanted to do for years."
+        mainText="A people person, a master at multitasking, and always the one who wants to help. Rooted in this city, grounded in faith."
         readMoreLabel="Start a conversation"
         readMoreHref="/contact"
         imageSrc="https://static.wixstatic.com/media/62f926_e81e37a81dd94340b92c9d9db1eeae24~mv2.png"

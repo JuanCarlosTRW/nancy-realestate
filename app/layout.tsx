@@ -30,12 +30,12 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Nancy Musselman | Dallas Real Estate · Beam Real Estate",
   description:
-    "Nancy Musselman is a Dallas real estate agent with 50+ years in the DFW Metroplex and 22 years of professional experience. Born here. Built for this.",
+    "Nancy Musselman is a Dallas real estate agent, born and raised in DFW, with decades of professional experience. Born here. Built for this.",
   metadataBase: new URL("https://nancy-realestate.vercel.app"),
   openGraph: {
     title: "Nancy Musselman | Dallas Real Estate",
     description:
-      "Born here. Built for this. 50+ years in Dallas, helping you call it home.",
+      "Born here. Built for this. A lifelong Dallasite helping you call it home.",
     type: "website",
   },
 };

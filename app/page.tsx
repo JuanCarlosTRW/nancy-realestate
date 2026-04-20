@@ -13,7 +13,7 @@ import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Nancy Musselman | Dallas Real Estate Agent | Beam Real Estate",
   description:
-    "Nancy Musselman, a lifelong Dallasite with 50+ years in DFW and 22 years of professional experience. Buying or selling, detail and care in every transaction.",
+    "Nancy Musselman, a Dallasite born and raised in DFW with decades of professional experience. Buying or selling, detail and care in every transaction.",
 };
 
 /* ── Data ──────────────────────────────────────────────────────────── */
@@ -99,7 +99,7 @@ export default function Home() {
         <Reveal y={12}>
           {/* Part 1A: darker trust line text */}
           <p className="font-sans text-[0.65rem] font-medium uppercase tracking-[0.2em]" style={{ color: "#4A3F35" }}>
-            Serving individuals and families across North Texas. Plano, Richardson, and North Dallas
+            Serving individuals and families in North Texas &mdash; Plano, Richardson, and North Dallas
           </p>
         </Reveal>
       </div>
@@ -206,7 +206,7 @@ export default function Home() {
               <div className="mt-8 space-y-5 text-[0.9rem] font-light leading-[1.8]" style={{ color: "#2A211C" }}>
                 <p>
                   I didn&apos;t become a REALTOR<sup>&reg;</sup> by accident. I
-                  was born and raised in the same area where I live now, and
+                  was born and raised in the same area as I live now, and
                   I&apos;ve watched this city grow for decades. I&apos;ve been
                   involved with multiple facets of real estate including
                   construction and renovation projects, which has taught me how

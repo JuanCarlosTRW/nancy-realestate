@@ -8,7 +8,7 @@ import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Buying a Home in Dallas | Nancy Musselman",
   description:
-    "Finding your Dallas home starts here. Work with Nancy Musselman, a Dallas agent with 50+ years in the DFW Metroplex.",
+    "Finding your Dallas home starts here. Work with Nancy Musselman, a Dallas agent born and raised in DFW.",
 };
 
 /* ── Data ──────────────────────────────────────────────────────────── */
@@ -17,7 +17,7 @@ const STEPS = [
   {
     n: "01",
     title: "We Start With What Actually Matters",
-    body: "The more I understand upfront, the easier it becomes to spot the right home when we see it.",
+    body: "I want to understand what actually matters to you \u2014 the neighborhood feel, the daily routine, the features that would make a home feel like yours. The more I understand upfront, the easier it becomes to spot the right home when we see it.",
     closing: "",
   },
   {
@@ -41,7 +41,7 @@ const STEPS = [
   {
     n: "05",
     title: "Staying Close From Contract to Closing",
-    body: "Between the accepted offer and the day you get the keys, there are a lot of small details that need attention \u2014 inspection items, appraisal questions, title details, lender timelines. I\u2019ll stay on top of all of it and keep you updated along the way. My years managing complex timelines and moving parts taught me when to follow up and what to watch for, so nothing falls through the cracks while you\u2019re focused on planning your move.",
+    body: "Between the accepted offer and the day you get the keys, there are a lot of small details that need attention \u2014 inspection items, appraisal questions, title details, lender timelines. I\u2019ll stay on top of all of it and keep you updated along the way, and nothing falls through the cracks while you\u2019re focused on planning your move.",
     closing: "",
   },
 ];
@@ -75,33 +75,6 @@ export default function BuyPage() {
           </span>
         </h1>
       </ParallaxHero>
-
-      {/* ─── SECTION 2: WHAT MOST BUYERS DON'T SEE (DARK) ─────────── */}
-      <section className="bg-charcoal px-6 md:px-12 lg:px-20 py-16 md:py-24">
-        <div className="container-x max-w-3xl mx-auto text-center">
-          <Reveal>
-            <p className="label !text-gold mb-6">
-              What I Quietly Watch For
-            </p>
-            <h2
-              className="font-display font-light text-white leading-[1.1]"
-              style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
-            >
-              The Things You Fall in Love With
-              <br />
-              <span
-                className="italic text-gold"
-                style={{
-                  fontFamily:
-                    "var(--font-accent, 'Playfair Display', serif)",
-                }}
-              >
-                Aren&apos;t Always the Things That Matter Most.
-              </span>
-            </h2>
-          </Reveal>
-        </div>
-      </section>
 
       {/* ─── SECTION 3: THE BUYING PROCESS (LIGHT) ────────────────── */}
       <section className="section-pad bg-warmWhite">
@@ -194,6 +167,13 @@ export default function BuyPage() {
               >
                 {NANCY_PHONE}
               </a>
+            </p>
+            <p className="mt-10 text-[12px] tracking-[0.2em] uppercase text-gold/70">
+              About Me
+            </p>
+            <p className="mt-3 text-[14px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
+              Decades of local knowledge, professional experience, and a
+              people-first approach to every transaction.
             </p>
           </Reveal>
         </div>
