@@ -37,14 +37,11 @@ export default function Navigation() {
           <Image
             src="https://static.wixstatic.com/media/62f926_a4e8d4b1911b4aa7a3b026a0052431e7~mv2.png"
             alt="Nancy Musselman Real Estate"
-            width={130}
-            height={65}
+            width={180}
+            height={90}
             priority
             className="h-auto object-contain"
-            style={{
-              width: "clamp(90px, 10vw, 130px)",
-              filter: solid ? "none" : "brightness(0) invert(1)",
-            }}
+            style={{ width: "clamp(120px, 14vw, 180px)" }}
           />
           <span
             className={cn(
