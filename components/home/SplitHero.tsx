@@ -66,10 +66,16 @@ export default function SplitHero() {
 
           {/* Signature name */}
           <p
-            className="font-display italic text-gold mb-4"
+            className="font-display italic text-gold mb-1"
             style={{ fontSize: "clamp(20px, 2.5vw, 28px)" }}
           >
             Nancy Musselman
+          </p>
+          <p
+            className="font-sans uppercase tracking-[0.25em] mb-6"
+            style={{ color: "#a67c52", fontSize: "clamp(10px, 1vw, 12px)" }}
+          >
+            REALTOR®
           </p>
 
           {/* Headline */}
@@ -102,7 +108,7 @@ export default function SplitHero() {
             }}
           >
             Born and raised in DFW. Decades of detail, organization, and
-            careful multitasking &mdash; now behind every home I help you find.
+            careful multitasking &mdash; now behind every client I work with.
           </p>
 
           {/* CTAs */}

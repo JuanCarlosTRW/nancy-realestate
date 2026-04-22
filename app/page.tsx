@@ -72,6 +72,11 @@ const HOODS = [
     img: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&q=80",
   },
   {
+    name: "Colleyville",
+    descriptor: "Refined North Texas living with small-town character",
+    img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+  },
+  {
     name: "Richardson",
     descriptor: "A thriving tech corridor with strong community roots",
     img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
@@ -99,7 +104,7 @@ export default function Home() {
         <Reveal y={12}>
           {/* Part 1A: darker trust line text */}
           <p className="font-sans text-[0.65rem] font-medium uppercase tracking-[0.2em]" style={{ color: "#4A3F35" }}>
-            Serving individuals and families in North Texas &mdash; Plano, Richardson, and North Dallas
+            Serving individuals and families in North Texas &mdash; North Dallas, Frisco, Grapevine, Colleyville, and beyond
           </p>
         </Reveal>
       </div>

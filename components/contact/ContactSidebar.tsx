@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Phone, Mail, MapPin, FileText } from "lucide-react";
 import {
-  IMG,
   NANCY_NAME,
   NANCY_BROKERAGE,
   NANCY_PHONE,
@@ -19,20 +18,28 @@ export default function ContactSidebar() {
         <div className="absolute -inset-3 border border-gold/30 rounded-[2px] hidden md:block" />
         <div className="relative aspect-[4/5] bg-cream rounded-[2px] overflow-hidden shadow-warmLg">
           <Image
-            src={IMG.nancy}
+            src="https://static.wixstatic.com/media/62f926_59c50cdac54448d3a4fe4072288285a1~mv2.png"
             alt="Nancy Musselman"
             fill
             sizes="(max-width: 768px) 100vw, 380px"
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
         </div>
       </div>
 
       <div className="mt-10">
         <p className="font-display text-3xl text-darkText">{NANCY_NAME}</p>
+        <p
+          className="font-sans uppercase tracking-[0.25em] font-medium mt-1"
+          style={{ color: "#a67c52", fontSize: "11px" }}
+        >
+          REALTOR®
+        </p>
         <p className="text-[11px] tracking-label uppercase font-medium text-gold mt-2">
           {NANCY_BROKERAGE}
         </p>
+        <p className="text-[12px] font-light text-mediumText mt-1">14455 Webb Chapel Road</p>
+        <p className="text-[12px] font-light text-mediumText">Farmers Branch, TX 74234</p>
         <div className="gold-divider w-12 mt-5" />
         <ul className="mt-6 space-y-4 text-[14px] text-mediumText font-light">
           <li className="flex items-start gap-3">
