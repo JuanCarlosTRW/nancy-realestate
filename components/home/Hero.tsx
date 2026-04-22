@@ -47,46 +47,26 @@ export default function Hero() {
           initial={prefersReduced ? {} : { opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: prefersReduced ? 0 : INTRO_OFFSET }}
-          className="flex justify-center mb-6"
+          className="flex flex-col items-center mb-8"
         >
           <Image
             src="https://static.wixstatic.com/media/62f926_a4e8d4b1911b4aa7a3b026a0052431e7~mv2.png"
             alt="Nancy Musselman Real Estate"
-            width={200}
-            height={100}
+            width={260}
+            height={130}
             priority
-            className="w-[140px] md:w-[200px] h-auto object-contain"
+            className="w-[180px] md:w-[260px] h-auto object-contain"
           />
-        </motion.div>
-
-        <motion.div
-          initial={prefersReduced ? {} : { opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: prefersReduced ? 0.2 : INTRO_OFFSET + 0.15 }}
-          className="mb-6"
-        >
           <p
-            className="font-display font-medium text-white text-center leading-[1.1]"
-            style={{ fontSize: "clamp(28px, 5vw, 52px)" }}
-          >
-            Nancy Musselman
-          </p>
-          <p
-            className="text-center uppercase tracking-[0.2em] mt-3"
-            style={{ color: "#a67c52", fontSize: "clamp(11px, 1.2vw, 14px)" }}
+            className="uppercase tracking-[0.2em] mt-4"
+            style={{ color: "#a67c52", fontSize: "clamp(11px, 1.2vw, 13px)" }}
           >
             REALTOR®
           </p>
+          <p className="text-[11px] md:text-[12px] tracking-label uppercase font-medium text-goldLight mt-2">
+            Beam Real Estate
+          </p>
         </motion.div>
-
-        <motion.p
-          initial={prefersReduced ? {} : { opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: prefersReduced ? 0.3 : INTRO_OFFSET + 0.3 }}
-          className="text-[11px] md:text-[12px] tracking-label uppercase font-medium text-goldLight mb-8"
-        >
-          Beam Real Estate · Dallas, Texas
-        </motion.p>
 
         {/* Animated headline with BlurText */}
         <motion.div
