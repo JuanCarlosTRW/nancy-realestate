@@ -31,7 +31,7 @@ export default function Navigation() {
           : "bg-transparent"
       )}
     >
-      <div className="container-x flex items-center justify-between px-6 md:px-12 h-20">
+      <div className="container-x flex items-center justify-between px-6 md:px-12 h-28">
         {/* Logo */}
         <Link href="/" className="flex items-start leading-none">
           <Image
@@ -40,9 +40,9 @@ export default function Navigation() {
             width={180}
             height={90}
             priority
-            className="w-auto object-contain"
+            className="h-auto object-contain"
             style={{
-              height: "clamp(44px, 5.5vw, 58px)",
+              width: "clamp(150px, 18vw, 240px)",
               filter: solid ? "none" : "brightness(0) invert(1)",
             }}
           />
