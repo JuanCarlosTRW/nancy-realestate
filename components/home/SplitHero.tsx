@@ -53,31 +53,6 @@ export default function SplitHero() {
       <div className="relative z-[2] flex flex-row items-stretch w-full min-h-[80vh] md:min-h-[90vh]">
         {/* ── Left column: Text + CTAs ───────────────────────────── */}
         <div className="w-full md:w-[55%] flex flex-col justify-center text-center md:text-left px-6 md:pl-16 lg:pl-24 md:pr-8 py-16 md:py-0">
-          {/* Eyebrow */}
-          <p
-            className="text-[0.7rem] font-medium tracking-[0.25em] uppercase mb-5"
-            style={{
-              color: "rgba(255, 255, 255, 0.85)",
-              textShadow: "0 1px 8px rgba(0, 0, 0, 0.4)",
-            }}
-          >
-            Dallas, Fort Worth, North Texas
-          </p>
-
-          {/* Signature name */}
-          <p
-            className="font-display italic text-gold mb-1"
-            style={{ fontSize: "clamp(20px, 2.5vw, 28px)" }}
-          >
-            Nancy Musselman
-          </p>
-          <p
-            className="font-sans uppercase tracking-[0.25em] mb-6"
-            style={{ color: "#a67c52", fontSize: "clamp(10px, 1vw, 12px)" }}
-          >
-            REALTOR®
-          </p>
-
           {/* Headline */}
           <h1
             className="font-display font-light text-white"

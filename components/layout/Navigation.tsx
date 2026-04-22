@@ -33,7 +33,7 @@ export default function Navigation() {
     >
       <div className="container-x flex items-center justify-between px-6 md:px-12 h-20">
         {/* Logo */}
-        <Link href="/" className="flex flex-col items-start leading-none">
+        <Link href="/" className="flex items-start leading-none">
           <Image
             src="https://static.wixstatic.com/media/62f926_a4e8d4b1911b4aa7a3b026a0052431e7~mv2.png"
             alt="Nancy Musselman Real Estate"
@@ -46,14 +46,6 @@ export default function Navigation() {
               filter: solid ? "none" : "brightness(0) invert(1)",
             }}
           />
-          <span
-            className={cn(
-              "text-[0.5rem] tracking-[0.2em] uppercase font-light mt-1",
-              solid ? "text-mediumText/50" : "text-white/60"
-            )}
-          >
-            Beam Real Estate &middot; Dallas
-          </span>
         </Link>
 
         {/* Desktop nav */}
