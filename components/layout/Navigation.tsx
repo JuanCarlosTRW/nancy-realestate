@@ -42,7 +42,7 @@ export default function Navigation() {
             priority
             className="h-auto object-contain"
             style={{
-              width: "clamp(120px, 14vw, 180px)",
+              width: "clamp(150px, 18vw, 240px)",
               filter: solid ? "none" : "brightness(0) invert(1)",
             }}
           />

@@ -74,21 +74,6 @@ export default function AboutPage() {
         style={{ background: "linear-gradient(90deg, transparent, #C8A97E, transparent)" }}
       />
 
-      {/* ─── ACCENT QUOTE ─────────────────────────────────────────── */}
-      <section className="bg-charcoal px-6 py-12 md:py-16">
-        <Reveal>
-          <p
-            className="mx-auto max-w-3xl text-center text-2xl md:text-4xl lg:text-5xl font-normal italic leading-relaxed text-white"
-            style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}
-          >
-            Some people sell houses.
-            <br />
-            I help people{" "}
-            <span className="text-gold">come home.</span>
-          </p>
-        </Reveal>
-      </section>
-
       {/* ─── SECTION 3: SKILL CARDS ───────────────────────────────── */}
       <section className="pt-14 pb-20 md:pt-20 md:pb-28 px-6 md:px-12 lg:px-20 bg-warmWhite">
         <div className="container-x max-w-6xl mx-auto">
