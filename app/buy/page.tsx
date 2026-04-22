@@ -104,31 +104,30 @@ export default function BuyPage() {
 
           <div className="space-y-0">
             {STEPS.map((s, i) => (
-              <Reveal key={s.n} delay={i * 0.1}>
-                <div
-                  className={`grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start ${i % 2 === 1 ? "bg-[#F0EBE2] -mx-4 px-4 md:-mx-8 md:px-8 py-6 rounded" : ""}`}
-                >
-                  <div className="flex flex-col items-center">
-                    <span className="font-display text-[3.5rem] leading-none font-extralight select-none" style={{ color: "rgba(196, 169, 108, 0.22)" }}>
-                      {s.n}
-                    </span>
-                    {i < STEPS.length - 1 && (
-                      <div className="w-px flex-1 bg-gold/15 mt-3 min-h-[40px]" />
-                    )}
-                  </div>
-                  <div className="pb-10 md:pb-12">
-                    <h3 className="font-display text-[1.4rem] md:text-[1.6rem] text-darkText leading-tight" style={{ fontWeight: 500 }}>
-                      {s.title}
-                    </h3>
-                    <p className="body-p mt-4 max-w-2xl">{s.body}</p>
-                    {s.closing && (
-                      <p className="mt-4 font-display text-[0.95rem] italic" style={{ color: "#A8893F" }}>
-                        {s.closing}
-                      </p>
-                    )}
-                  </div>
+              <div
+                key={s.n}
+                className={`grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-10 items-start ${i % 2 === 1 ? "bg-[#F0EBE2] -mx-4 px-4 md:-mx-8 md:px-8 py-6 rounded" : ""}`}
+              >
+                <div className="flex flex-col items-center">
+                  <span className="font-display text-[3.5rem] leading-none font-extralight select-none" style={{ color: "rgba(196, 169, 108, 0.22)" }}>
+                    {s.n}
+                  </span>
+                  {i < STEPS.length - 1 && (
+                    <div className="w-px flex-1 bg-gold/15 mt-3 min-h-[40px]" />
+                  )}
                 </div>
-              </Reveal>
+                <div className="pb-10 md:pb-12">
+                  <h3 className="font-display text-[1.4rem] md:text-[1.6rem] text-darkText leading-tight" style={{ fontWeight: 500 }}>
+                    {s.title}
+                  </h3>
+                  <p className="body-p mt-4 max-w-2xl">{s.body}</p>
+                  {s.closing && (
+                    <p className="mt-4 font-display text-[0.95rem] italic" style={{ color: "#A8893F" }}>
+                      {s.closing}
+                    </p>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
         </div>

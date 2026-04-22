@@ -38,8 +38,8 @@ export default function ContactSidebar() {
         <p className="text-[11px] tracking-label uppercase font-medium text-gold mt-2">
           {NANCY_BROKERAGE}
         </p>
-        <p className="text-[12px] font-light text-mediumText mt-1">14455 Webb Chapel Road</p>
-        <p className="text-[12px] font-light text-mediumText">Farmers Branch, TX 74234</p>
+        <p className="text-[14px] font-light text-mediumText mt-2">14455 Webb Chapel Road</p>
+        <p className="text-[14px] font-light text-mediumText">Farmers Branch, TX 74234</p>
         <div className="gold-divider w-12 mt-5" />
         <ul className="mt-6 space-y-4 text-[14px] text-mediumText font-light">
           <li className="flex items-start gap-3">
