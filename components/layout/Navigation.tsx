@@ -40,9 +40,9 @@ export default function Navigation() {
             width={180}
             height={90}
             priority
-            className="h-auto object-contain"
+            className="w-auto object-contain"
             style={{
-              width: "clamp(150px, 18vw, 240px)",
+              height: "clamp(44px, 5.5vw, 58px)",
               filter: solid ? "none" : "brightness(0) invert(1)",
             }}
           />
