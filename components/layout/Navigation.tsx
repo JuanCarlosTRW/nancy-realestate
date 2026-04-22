@@ -41,7 +41,10 @@ export default function Navigation() {
             height={90}
             priority
             className="h-auto object-contain"
-            style={{ width: "clamp(120px, 14vw, 180px)" }}
+            style={{
+              width: "clamp(120px, 14vw, 180px)",
+              filter: solid ? "none" : "brightness(0) invert(1)",
+            }}
           />
           <span
             className={cn(
