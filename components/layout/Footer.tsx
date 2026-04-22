@@ -28,6 +28,12 @@ export default function Footer() {
           <p className="text-[0.55rem] tracking-[0.2em] uppercase font-medium text-gold mt-2">
             {NANCY_BROKERAGE} &middot; Dallas, TX
           </p>
+          <p className="text-[0.55rem] tracking-[0.12em] font-light mt-1" style={{ color: "rgba(250, 247, 242, 0.45)" }}>
+            14455 Webb Chapel Road
+          </p>
+          <p className="text-[0.55rem] tracking-[0.12em] font-light" style={{ color: "rgba(250, 247, 242, 0.45)" }}>
+            Farmers Branch, TX 74234
+          </p>
           {/* Part 8C: brighter bio text */}
           <p className="mt-6 text-[0.8rem] leading-[1.9] font-light max-w-sm" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
             Decades of local knowledge, professional experience, and a

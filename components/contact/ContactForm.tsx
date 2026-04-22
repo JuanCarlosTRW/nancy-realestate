@@ -61,6 +61,9 @@ export default function ContactForm() {
           <span className="w-1.5 h-1.5 rounded-full bg-gold/60" /> Within 24 hours
         </span>
       </div>
+      <p className="mt-4 text-[12px] font-light italic" style={{ color: "rgba(74, 63, 53, 0.7)" }}>
+        Your information stays between us. Never shared, never sold.
+      </p>
 
       {hasError && (
         <div className="mt-8 border border-red-300 rounded-[2px] p-5 bg-red-50/50">

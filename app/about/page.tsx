@@ -41,7 +41,7 @@ export default function AboutPage() {
     <>
       {/* ─── SECTION 1: MINIMALIST HERO ───────────────────────────── */}
       <MinimalistHero
-        mainText="A people person, a master at multitasking, and always the one who wants to help. Rooted in this city, grounded in faith."
+        mainText="A people person, a master at multitasking, and always the one who wants to help. Rooted in this city, grounded in my faith."
         readMoreLabel="Start a conversation"
         readMoreHref="/contact"
         imageSrc="https://static.wixstatic.com/media/62f926_e81e37a81dd94340b92c9d9db1eeae24~mv2.png"

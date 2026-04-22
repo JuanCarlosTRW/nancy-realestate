@@ -43,10 +43,46 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-12 text-center">
+        <motion.div
+          initial={prefersReduced ? {} : { opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: prefersReduced ? 0 : INTRO_OFFSET }}
+          className="flex justify-center mb-6"
+        >
+          <Image
+            src="https://static.wixstatic.com/media/62f926_a4e8d4b1911b4aa7a3b026a0052431e7~mv2.png"
+            alt="Nancy Musselman Real Estate"
+            width={200}
+            height={100}
+            priority
+            className="w-[140px] md:w-[200px] h-auto object-contain"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={prefersReduced ? {} : { opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: prefersReduced ? 0.2 : INTRO_OFFSET + 0.15 }}
+          className="mb-6"
+        >
+          <p
+            className="font-display font-medium text-white text-center leading-[1.1]"
+            style={{ fontSize: "clamp(28px, 5vw, 52px)" }}
+          >
+            Nancy Musselman
+          </p>
+          <p
+            className="text-center uppercase tracking-[0.2em] mt-3"
+            style={{ color: "#a67c52", fontSize: "clamp(11px, 1.2vw, 14px)" }}
+          >
+            REALTOR®
+          </p>
+        </motion.div>
+
         <motion.p
           initial={prefersReduced ? {} : { opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: prefersReduced ? 0.2 : INTRO_OFFSET }}
+          transition={{ duration: 0.8, delay: prefersReduced ? 0.3 : INTRO_OFFSET + 0.3 }}
           className="text-[11px] md:text-[12px] tracking-label uppercase font-medium text-goldLight mb-8"
         >
           Beam Real Estate · Dallas, Texas
@@ -81,8 +117,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: prefersReduced ? 1.2 : INTRO_OFFSET + 1.0 }}
           className="text-white/85 text-[16px] md:text-[18px] font-light mt-10 max-w-xl mx-auto leading-[1.7]"
         >
-          50+ years in Dallas. 22 years of professional precision. Now putting
-          it all to work for you.
+          Born and raised in DFW. Decades of detail, organization, and careful
+          multitasking — now behind every client I work with.
         </motion.p>
 
         <motion.div

@@ -32,6 +32,11 @@ const HOODS: Hood[] = [
     img: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=600&q=80",
   },
   {
+    name: "Colleyville",
+    descriptor: "Upscale and quiet, with great schools and community feel",
+    img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+  },
+  {
     name: "Flower Mound",
     descriptor: "Lakeside living with a small-town feel",
     img: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&q=80",
@@ -95,7 +100,7 @@ export default function Neighborhoods() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 [&>*:nth-child(7)]:lg:col-start-2">
           {HOODS.map((n, i) => (
             <Reveal key={n.name} delay={i * 0.08}>
               <div className="h-[200px] sm:h-[240px] md:h-[300px]">
