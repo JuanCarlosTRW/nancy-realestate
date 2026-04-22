@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
@@ -32,19 +33,22 @@ export default function Navigation() {
     >
       <div className="container-x flex items-center justify-between px-6 md:px-12 h-20">
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-none">
+        <Link href="/" className="flex flex-col items-start leading-none">
+          <Image
+            src="https://static.wixstatic.com/media/62f926_a4e8d4b1911b4aa7a3b026a0052431e7~mv2.png"
+            alt="Nancy Musselman Real Estate"
+            width={130}
+            height={65}
+            priority
+            className="h-auto object-contain"
+            style={{
+              width: "clamp(90px, 10vw, 130px)",
+              filter: solid ? "none" : "brightness(0) invert(1)",
+            }}
+          />
           <span
             className={cn(
-              "font-display text-[1.25rem] tracking-[0.05em]",
-              solid ? "text-darkText" : "text-white"
-            )}
-            style={{ textShadow: solid ? "none" : "0 1px 8px rgba(0,0,0,0.3)" }}
-          >
-            Nancy Musselman
-          </span>
-          <span
-            className={cn(
-              "text-[0.55rem] tracking-[0.2em] uppercase font-light mt-1",
+              "text-[0.5rem] tracking-[0.2em] uppercase font-light mt-1",
               solid ? "text-mediumText/50" : "text-white/60"
             )}
           >
