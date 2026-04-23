@@ -30,7 +30,7 @@ const STEPS = [
   {
     n: "03",
     title: "First Impressions Matter Most",
-    body: "I\u2019ll help you think through how each room presents, from the listing photos to the walkthrough experience. Sometimes that means staging a key room; sometimes it just means clearing the clutter and letting the home speak for itself. First impressions happen from the moment prospects drive up.",
+    body: "I\u2019ll help you think through how each room presents, from the listing photos to the walkthrough experience. Sometimes that means staging a key room; sometimes it just means clearing the clutter and letting the home speak for itself. First impressions happen the moment prospects drive up.",
     closing: "",
   },
   {
@@ -65,7 +65,7 @@ export default function SellPage() {
             </p>
             <h2
               className="font-display font-light text-white leading-[1.1]"
-              style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
+              style={{ fontSize: "clamp(22px, 4.5vw, 44px)" }}
             >
               Pricing Your Home Is The
               <br />
@@ -110,7 +110,7 @@ export default function SellPage() {
             </div>
 
             {/* Pricing comparison visual */}
-            <div className="grid grid-cols-2 gap-6 mt-12 max-w-lg mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 max-w-lg mx-auto">
               <div className="text-center p-6 rounded" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <p className="text-[0.65rem] tracking-[0.15em] uppercase font-medium" style={{ color: "rgba(196, 90, 90, 0.8)" }}>Priced Too High at List</p>
                 <p className="font-display text-2xl text-white mt-2">90+ Days</p>

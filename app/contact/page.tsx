@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="section-pad bg-warmWhite pt-40">
-      <div className="container-x grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-16">
+    <section className="section-pad bg-warmWhite pt-28 md:pt-40">
+      <div className="container-x grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-16">
         <ContactForm />
         <ContactSidebar />
       </div>

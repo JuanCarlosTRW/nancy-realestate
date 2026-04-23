@@ -62,7 +62,7 @@ export default function ParallaxHero({
       <div className="relative z-[2] flex h-full min-h-[80vh] md:min-h-[90vh] w-full flex-col items-center justify-end pb-[100px] md:pb-[200px] px-6 text-center">
         {glassPanel === "cream" ? (
           <div
-            className="w-full max-w-[780px] rounded-2xl px-8 py-10 md:px-12 md:py-14"
+            className="w-full max-w-[780px] rounded-2xl px-6 py-8 md:px-12 md:py-14"
             style={{
               background: "rgba(250, 247, 242, 0.62)",
               backdropFilter: "blur(14px)",

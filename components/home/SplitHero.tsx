@@ -111,7 +111,7 @@ export default function SplitHero() {
           >
             <Link
               href="/buy"
-              className="inline-flex items-center justify-center text-[0.8rem] font-medium tracking-[0.12em] uppercase text-white hover:bg-white/5 hover:-translate-y-[2px] transition-all duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center text-[0.8rem] font-medium tracking-[0.12em] uppercase text-white hover:bg-white/5 hover:-translate-y-[2px] transition-all duration-300"
               style={{
                 borderRadius: "2px",
                 padding: "16px 36px",
@@ -122,7 +122,7 @@ export default function SplitHero() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center text-[0.8rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-[#D4B87A] hover:-translate-y-[2px] hover:shadow-[0_8px_32px_rgba(196,169,108,0.5)] transition-all duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center text-[0.8rem] font-semibold tracking-[0.12em] uppercase bg-gold text-charcoal hover:bg-[#D4B87A] hover:-translate-y-[2px] hover:shadow-[0_8px_32px_rgba(196,169,108,0.5)] transition-all duration-300"
               style={{
                 borderRadius: "2px",
                 padding: "16px 40px",

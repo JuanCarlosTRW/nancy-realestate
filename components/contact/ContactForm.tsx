@@ -18,7 +18,7 @@ function SubmitButton() {
 }
 
 const inputCls =
-  "w-full bg-warmWhite border border-bordr rounded-[2px] px-4 py-3 text-[14px] text-darkText font-light focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-colors";
+  "w-full bg-warmWhite border border-bordr rounded-[2px] px-4 py-3.5 md:py-3 text-[14px] md:text-[14px] text-darkText font-light focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-colors";
 const labelCls =
   "block text-[11px] tracking-button uppercase font-medium text-mediumText mb-2";
 

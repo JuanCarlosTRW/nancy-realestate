@@ -1,13 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-
-const PHRASES = [
-  "It Deserves a Strategy.",
-  "It Deserves Real Attention.",
-  "It Deserves Someone Who Cares.",
-];
+import { motion } from "framer-motion";
 
 function FloatingPaths({ position }: { position: number }) {
   const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -57,15 +50,6 @@ function FloatingPaths({ position }: { position: number }) {
 }
 
 export default function GoldParticleHero() {
-  const [phraseIndex, setPhraseIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPhraseIndex((prev) => (prev + 1) % PHRASES.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div
       className="relative w-full overflow-hidden flex items-end justify-center"
@@ -77,7 +61,7 @@ export default function GoldParticleHero() {
         <FloatingPaths position={-1} />
       </div>
 
-      {/* Subtle radial glow to keep focus on copy */}
+      {/* Subtle radial glow */}
       <div
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
@@ -97,30 +81,16 @@ export default function GoldParticleHero() {
           Your Home Deserves More Than a Sign in the Yard.
         </h1>
 
-        {/* Rotating italic phrase */}
-        <div
-          className="relative mx-auto max-w-3xl"
-          style={{ height: "clamp(90px, 14vw, 150px)", marginTop: "0.15em" }}
+        <span
+          className="block font-display italic text-gold mt-[0.15em]"
+          style={{
+            fontSize: "clamp(36px, 5.5vw, 64px)",
+            fontFamily: "var(--font-accent, 'Playfair Display', serif)",
+            lineHeight: 1.08,
+          }}
         >
-          <AnimatePresence mode="wait">
-            <motion.span
-              key={phraseIndex}
-              className="absolute inset-x-0 font-display italic text-gold"
-              style={{
-                fontSize: "clamp(36px, 5.5vw, 64px)",
-                fontFamily: "var(--font-accent, 'Playfair Display', serif)",
-                lineHeight: 1.08,
-              }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
-              {PHRASES[phraseIndex]}
-            </motion.span>
-          </AnimatePresence>
-        </div>
-
+          It Deserves a Strategy.
+        </span>
       </div>
     </div>
   );

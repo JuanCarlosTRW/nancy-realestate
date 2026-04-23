@@ -137,7 +137,7 @@ export default function Home() {
             {CARDS.map((card, i) => (
               <Reveal key={card.number} delay={i * 0.15}>
                 <div
-                  className="group relative h-full min-h-[280px] flex flex-col overflow-hidden p-10 md:p-12 transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg border border-gold/[0.12] hover:border-gold/25"
+                  className="group relative h-full md:min-h-[280px] flex flex-col overflow-hidden p-6 md:p-10 lg:p-12 transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg border border-gold/[0.12] hover:border-gold/25"
                   style={{ background: "#FFFCF5", borderRadius: "4px", borderTop: "3px solid #C8A97E" }}
                 >
                   {/* Gold number watermark — top right */}
@@ -241,7 +241,7 @@ export default function Home() {
             {/* Buy Card */}
             <Reveal>
               <div
-                className="group relative flex flex-col justify-between overflow-hidden border border-gold/[0.12] hover:border-gold/25 bg-[#FFFCF5] p-10 md:p-12 min-h-[320px] transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg"
+                className="group relative flex flex-col justify-between overflow-hidden border border-gold/[0.12] hover:border-gold/25 bg-[#FFFCF5] p-8 md:p-10 lg:p-12 md:min-h-[320px] transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg"
                 style={{ borderRadius: "4px", borderTop: "3px solid #C8A97E" }}
               >
                 {/* Watermark */}
@@ -275,7 +275,7 @@ export default function Home() {
             {/* Sell Card */}
             <Reveal delay={0.1}>
               <div
-                className="group relative flex flex-col justify-between overflow-hidden border border-gold/[0.12] hover:border-gold/25 bg-[#FFFCF5] p-10 md:p-12 min-h-[320px] transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg"
+                className="group relative flex flex-col justify-between overflow-hidden border border-gold/[0.12] hover:border-gold/25 bg-[#FFFCF5] p-8 md:p-10 lg:p-12 md:min-h-[320px] transition-all duration-500 hover:-translate-y-[6px] hover:shadow-warmLg"
                 style={{ borderRadius: "4px", borderTop: "3px solid #C8A97E" }}
               >
                 {/* Watermark */}
@@ -375,7 +375,7 @@ export default function Home() {
       <Testimonials />
 
       {/* ─── SECTION 9: CTA (DARK) ────────────────────────────────── */}
-      <section className="relative px-6 md:px-12 lg:px-20 bg-charcoal overflow-hidden" style={{ paddingTop: "96px", paddingBottom: "96px" }}>
+      <section className="relative px-6 md:px-12 lg:px-20 bg-charcoal overflow-hidden py-20 md:py-24">
         <CTASparkles />
         <div className="relative z-10 container-x max-w-3xl mx-auto text-center">
           <Reveal>

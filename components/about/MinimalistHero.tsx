@@ -55,7 +55,7 @@ export default function MinimalistHero({
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-            className="md:col-span-3 order-3 md:order-1"
+            className="md:col-span-3 order-3 md:order-1 mt-4 md:mt-0"
           >
             <p className="label !text-gold mb-4">About Nancy</p>
             <p
@@ -77,7 +77,7 @@ export default function MinimalistHero({
           </motion.div>
 
           {/* Center — portrait with gold circle behind */}
-          <div className="md:col-span-5 order-2 md:order-2 relative flex justify-center items-center">
+          <div className="md:col-span-5 order-1 md:order-2 relative flex justify-center items-center">
             {/* Gold circle */}
             <motion.div
               initial={{ opacity: 0, scale: 0.85 }}
@@ -120,11 +120,11 @@ export default function MinimalistHero({
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            className="md:col-span-4 order-1 md:order-3 text-center md:text-right"
+            className="md:col-span-4 order-2 md:order-3 text-center md:text-right"
           >
             <h1
               className="font-display font-light leading-[0.95] tracking-tight text-darkText"
-              style={{ fontSize: "clamp(54px, 14vw, 140px)" }}
+              style={{ fontSize: "clamp(44px, 11vw, 140px)" }}
             >
               {overlayText.part1}
               <br />
