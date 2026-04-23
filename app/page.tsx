@@ -117,20 +117,18 @@ export default function Home() {
         <div className="container-x max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold">
-                What You Can Expect
-              </p>
               <h2 className="font-display font-normal text-darkText mt-4" style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.15 }}>
                 What You Can Expect{" "}
                 <span className="italic text-gold" style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}>
-                  When We Work Together.
+                  When We Work Together
                 </span>
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               {/* Part 1A: darker section subtext */}
               <p className="mt-6 text-[0.9rem] font-light leading-[1.7]" style={{ color: "#3D342B" }}>
-                When you are my client, you get my full attention &mdash; not a
-                fraction of it.
+                When you are my client, you get my full attention.
+                <br />
+                Not a fraction of it.
               </p>
             </div>
           </Reveal>
@@ -201,7 +199,8 @@ export default function Home() {
                 className="font-display font-normal text-darkText"
                 style={{ fontSize: "clamp(2rem, 3.5vw, 2.75rem)", lineHeight: 1.2 }}
               >
-                A Dallasite{" "}
+                A Dallasite
+                <br />
                 <span className="italic text-gold" style={{ fontFamily: "var(--font-accent, 'Playfair Display', serif)" }}>
                   Through and Through
                 </span>
@@ -212,7 +211,7 @@ export default function Home() {
                 <p>
                   I didn&apos;t become a REALTOR<sup>&reg;</sup> by accident. I
                   was born and raised in the same area as I live now, and
-                  I&apos;ve watched this city grow for decades. I&apos;ve been
+                  I&apos;ve watched this city grow. I&apos;ve been
                   involved with multiple facets of real estate including
                   construction and renovation projects, which has taught me how
                   to stay composed, read people, and handle difficult

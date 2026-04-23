@@ -83,7 +83,8 @@ export default function BuyPage() {
             <div className="text-center mb-16">
               <p className="label">The Process</p>
               <h2 className="h-display mt-4">
-                Five Steps.{" "}
+                Five Steps
+                <br />
                 <span
                   className="italic text-gold"
                   style={{
@@ -91,7 +92,7 @@ export default function BuyPage() {
                       "var(--font-accent, 'Playfair Display', serif)",
                   }}
                 >
-                  One Thoughtful Path.
+                  One Thoughtful Path
                 </span>
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />

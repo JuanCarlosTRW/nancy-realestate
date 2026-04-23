@@ -30,7 +30,7 @@ const STEPS = [
   {
     n: "03",
     title: "First Impressions Matter Most",
-    body: "First impressions happen from the moment you drive up. I\u2019ll help you think through how each room presents, from the listing photos to the walkthrough experience. Sometimes that means staging a key room; sometimes it just means clearing the clutter and letting the home speak for itself.",
+    body: "I\u2019ll help you think through how each room presents, from the listing photos to the walkthrough experience. Sometimes that means staging a key room; sometimes it just means clearing the clutter and letting the home speak for itself. First impressions happen from the moment prospects drive up.",
     closing: "",
   },
   {
@@ -67,7 +67,9 @@ export default function SellPage() {
               className="font-display font-light text-white leading-[1.1]"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
-              Pricing Your Home Is the Most
+              Pricing Your Home Is The
+              <br />
+              Most Important Conversation
               <br />
               <span
                 className="italic text-gold"
@@ -76,7 +78,7 @@ export default function SellPage() {
                     "var(--font-accent, 'Playfair Display', serif)",
                 }}
               >
-                Important Conversation We&apos;ll Have.
+                We Will Have
               </span>
             </h2>
 
@@ -131,7 +133,8 @@ export default function SellPage() {
             <div className="text-center mb-16">
               <p className="label">The Process</p>
               <h2 className="h-display mt-4">
-                Five Steps.{" "}
+                Five Steps
+                <br />
                 <span
                   className="italic text-gold"
                   style={{
@@ -139,7 +142,7 @@ export default function SellPage() {
                       "var(--font-accent, 'Playfair Display', serif)",
                   }}
                 >
-                  No Surprises.
+                  No Surprises
                 </span>
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />

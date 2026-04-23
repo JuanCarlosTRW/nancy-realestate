@@ -57,12 +57,12 @@ export default function AboutPage() {
             <p className="label">The Person Behind the License</p>
             <AnimatedDivider className="w-14 mx-auto mt-6" />
             <p className="mt-10 text-[15px] md:text-[16px] font-light leading-[1.85] text-mediumText max-w-2xl mx-auto">
-              I wanted to be a REALTOR<sup>&reg;</sup> for years, but between
+              I wanted to be a REALTOR<sup>&reg;</sup> for years, between
               my career and raising a family, the timing never worked out. My
-              decades of professional experience taught me how to read people,
+              professional experience taught me how to read people,
               catch every detail, and handle tough situations gracefully and
-              with poise. My kids are grown now, the timing is right. Families
-              find their dream homes.
+              with poise. My goal has always been to help families find their
+              dream homes.
             </p>
           </Reveal>
         </div>

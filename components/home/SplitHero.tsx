@@ -87,7 +87,7 @@ export default function SplitHero() {
                 fontSize: "clamp(2.8rem, 5.5vw, 4.6rem)",
               }}
             >
-              With the Right Guide.
+              With the Right Guide
             </motion.span>
           </h1>
 
@@ -100,7 +100,7 @@ export default function SplitHero() {
               textShadow: "0 1px 12px rgba(0, 0, 0, 0.4)",
             }}
           >
-            Born and raised in DFW. Decades of detail, organization, and
+            Born and raised in DFW. Years of detail, organization, and
             careful multitasking &mdash; now behind every client I work with.
           </motion.p>
 
