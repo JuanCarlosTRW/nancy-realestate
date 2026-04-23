@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const STEPS = [
   {
     n: "01",
-    title: "I \"See\" Your Home Like a Buyer Would",
+    title: "I See Your Home Like a Buyer Would",
     body: "I\u2019ll prepare a detailed Comparative Market Analysis so you can see where your home stands in today\u2019s market. No inflated numbers, no surprises. I\u2019ll also share honest recommendations on what may be worth addressing before we list and what you can leave as-is, because not every update adds value.",
     closing:
       "I see your home through a buyer\u2019s eyes before they ever walk in.",
