@@ -1,9 +1,11 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 export default function SplitHero() {
   const container = useRef<HTMLDivElement>(null);
@@ -12,6 +14,17 @@ export default function SplitHero() {
     offset: ["start start", "end start"],
   });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const prefersReduced = useReducedMotion();
+
+  const anim = (delay: number) => ({
+    initial: { opacity: 0, y: prefersReduced ? 0 : 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: {
+      duration: prefersReduced ? 0 : 0.8,
+      delay: prefersReduced ? 0 : delay,
+      ease: EASE,
+    },
+  });
 
   return (
     <div
@@ -53,6 +66,7 @@ export default function SplitHero() {
       <div className="relative z-[2] flex flex-row items-stretch w-full min-h-[80vh] md:min-h-[90vh]">
         {/* ── Left column: Text + CTAs ───────────────────────────── */}
         <div className="w-full md:w-[55%] flex flex-col justify-center text-center md:text-left px-6 md:pl-16 lg:pl-24 md:pr-8 py-16 md:py-0">
+
           {/* Headline */}
           <h1
             className="font-display font-light text-white"
@@ -62,8 +76,11 @@ export default function SplitHero() {
               textShadow: "0 2px 16px rgba(0, 0, 0, 0.3)",
             }}
           >
-            <span className="block">Your Next Chapter Starts</span>
-            <span
+            <motion.span {...anim(0.2)} className="block">
+              Your Next Chapter Starts
+            </motion.span>
+            <motion.span
+              {...anim(0.4)}
               className="block italic text-gold"
               style={{
                 fontFamily: "var(--font-accent, 'Playfair Display', serif)",
@@ -71,11 +88,12 @@ export default function SplitHero() {
               }}
             >
               With the Right Guide.
-            </span>
+            </motion.span>
           </h1>
 
           {/* Subheadline */}
-          <p
+          <motion.p
+            {...anim(0.6)}
             className="mt-6 text-[1rem] font-light max-w-xl leading-[1.7] mx-auto md:mx-0"
             style={{
               color: "rgba(255, 255, 255, 0.92)",
@@ -84,10 +102,13 @@ export default function SplitHero() {
           >
             Born and raised in DFW. Decades of detail, organization, and
             careful multitasking &mdash; now behind every client I work with.
-          </p>
+          </motion.p>
 
           {/* CTAs */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+          <motion.div
+            {...anim(0.8)}
+            className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4"
+          >
             <Link
               href="/buy"
               className="inline-flex items-center justify-center text-[0.8rem] font-medium tracking-[0.12em] uppercase text-white hover:bg-white/5 hover:-translate-y-[2px] transition-all duration-300"
@@ -110,12 +131,11 @@ export default function SplitHero() {
             >
               Let&apos;s Talk
             </Link>
-          </div>
+          </motion.div>
         </div>
 
         {/* ── Right column: Nancy's cutout photo (desktop only) ──── */}
         <div className="relative hidden md:flex md:w-[45%] z-[3] items-end justify-center">
-          {/* Subtle warm glow behind Nancy */}
           <div
             className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-[70%] pointer-events-none"
             style={{
