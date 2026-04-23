@@ -63,7 +63,7 @@ export default function BuyPage() {
           className="font-display font-light text-darkText leading-[1.08] max-w-3xl mx-auto"
           style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
         >
-          The Right Home Is Out There.
+          The Right Home Is Out There
           <br />
           <span
             className="italic text-gold"
@@ -71,7 +71,7 @@ export default function BuyPage() {
               fontFamily: "var(--font-accent, 'Playfair Display', serif)",
             }}
           >
-            We&apos;ll find it together.
+            We&apos;ll find it together
           </span>
         </h1>
       </ParallaxHero>
@@ -143,10 +143,10 @@ export default function BuyPage() {
               className="font-display font-light text-white leading-[1.1] mt-4"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
-              Tell Me What You&apos;re Looking For.
+              Tell Me What You&apos;re Looking For
               <br />
               <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
-                I&apos;ll Take It From There.
+                I&apos;ll Take It From There
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
@@ -172,7 +172,7 @@ export default function BuyPage() {
               About Me
             </p>
             <p className="mt-3 text-[14px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
-              Decades of local knowledge, professional experience, and a
+              Years of local knowledge, professional experience, and a
               people-first approach to every transaction.
             </p>
           </Reveal>

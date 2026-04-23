@@ -78,7 +78,7 @@ export default function GoldParticleHero() {
           className="font-display font-light text-white leading-[1.08] max-w-3xl mx-auto"
           style={{ fontSize: "clamp(36px, 5.5vw, 64px)" }}
         >
-          Your Home Deserves More Than a Sign in the Yard.
+          Your Home Deserves More Than a Sign in the Yard
         </h1>
 
         <span

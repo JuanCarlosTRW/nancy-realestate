@@ -8,7 +8,7 @@ import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Nancy Musselman | Dallas Real Estate",
   description:
-    "Meet Nancy Musselman, a Dallasite born and raised in DFW with decades of professional experience, now putting it all to work for her clients.",
+    "Meet Nancy Musselman, a Dallasite born and raised in DFW with years of professional experience, now putting it all to work for her clients.",
 };
 
 /* ── Data ──────────────────────────────────────────────────────────── */
@@ -30,7 +30,7 @@ const SKILLS = [
     number: "03",
     title: "Steady Hands in a Stressful Process",
     description:
-      "Real estate can get stressful. Deals shift, inspections surface things, timelines move. Decades of professional experience taught me how to handle tough situations gracefully and with poise \u2014 and that calm tends to rub off on the people I\u2019m working with when things get complicated.",
+      "Real estate can get stressful. Deals shift, inspections surface things, timelines move. Years of professional experience taught me how to handle tough situations gracefully and with poise \u2014 and that calm tends to rub off on the people I\u2019m working with when things get complicated.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function AboutPage() {
         readMoreHref="/contact"
         imageSrc="https://static.wixstatic.com/media/62f926_e81e37a81dd94340b92c9d9db1eeae24~mv2.png"
         imageAlt="Nancy Musselman, Dallas real estate agent"
-        overlayText={{ part1: "meet", part2: "nancy." }}
+        overlayText={{ part1: "meet", part2: "nancy" }}
         locationText="Dallas, Texas"
       />
 
@@ -81,7 +81,7 @@ export default function AboutPage() {
             <div className="text-center max-w-2xl mx-auto mb-14">
               <p className="label">The Edge</p>
               <h2 className="h-display mt-4">
-                Years of Reading People and Catching Details.
+                Years of Reading People and Catching Details
               </h2>
               <AnimatedDivider className="w-16 mx-auto mt-8" />
               <p className="body-p mt-6 text-[15px]">
@@ -120,7 +120,7 @@ export default function AboutPage() {
               className="font-display font-light text-white leading-[1.1] mt-4 max-w-[700px] mx-auto"
               style={{ fontSize: "clamp(30px, 4vw, 44px)" }}
             >
-              The Right Agent Makes the Difference.
+              The Right Agent Makes the Difference
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
               No pressure. No pitch. Just a real conversation about what you

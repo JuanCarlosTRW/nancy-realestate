@@ -36,7 +36,7 @@ export default function Footer() {
           </p>
           {/* Part 8C: brighter bio text */}
           <p className="mt-6 text-[0.8rem] leading-[1.9] font-light max-w-sm" style={{ color: "rgba(250, 247, 242, 0.6)" }}>
-            Decades of local knowledge, professional experience, and a
+            Years of local knowledge, professional experience, and a
             people-first approach to every transaction.
           </p>
         </div>

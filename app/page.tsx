@@ -13,7 +13,7 @@ import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Nancy Musselman | Dallas Real Estate Agent | Beam Real Estate",
   description:
-    "Nancy Musselman, a Dallasite born and raised in DFW with decades of professional experience. Buying or selling, detail and care in every transaction.",
+    "Nancy Musselman, a Dallasite born and raised in DFW with years of professional experience. Buying or selling, detail and care in every transaction.",
 };
 
 /* ── Data ──────────────────────────────────────────────────────────── */
@@ -287,7 +287,7 @@ export default function Home() {
                 <div className="relative z-10">
                   <p className="text-[0.6rem] tracking-[0.2em] uppercase font-medium text-gold mb-4">For Sellers</p>
                   <h3 className="font-display font-medium text-darkText leading-tight mb-4" style={{ fontSize: "1.45rem" }}>
-                    Price It Thoughtfully. Prep It Well. Sell It With Confidence.
+                    Price It Thoughtfully. Prep It Well. Sell It With Confidence
                   </h3>
                   <p className="text-[0.9rem] font-light leading-[1.7]" style={{ color: "#2A211C" }}>
                     Most homes that sit on the market were priced a little too
@@ -386,10 +386,10 @@ export default function Home() {
               className="font-display font-normal leading-[1.1] mt-4"
               style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", color: "#FAF7F2" }}
             >
-              Tell Me What You Need.
+              Tell Me What You Need
               <br />
               <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
-                Let&apos;s Figure Out Your Next Move Together.
+                Let&apos;s Figure Out Your Next Move Together
               </span>
             </h2>
             {/* Part 1B: brighter body text on dark bg */}

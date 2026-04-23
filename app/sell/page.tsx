@@ -197,7 +197,7 @@ export default function SellPage() {
               Let&apos;s Start With a Real
               <br />
               <span style={{ color: "rgba(250, 247, 242, 0.9)" }}>
-                Conversation About Your Home.
+                Conversation About Your Home
               </span>
             </h2>
             <p className="mt-6 text-[15px] font-light text-white/70 leading-[1.8] max-w-lg mx-auto">
