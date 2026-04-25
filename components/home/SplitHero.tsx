@@ -65,7 +65,7 @@ export default function SplitHero() {
       {/* ── Content wrapper ──────────────────────────────────────── */}
       <div className="relative z-[2] flex flex-row items-stretch w-full min-h-[80vh] md:min-h-[90vh]">
         {/* ── Left column: Text + CTAs ───────────────────────────── */}
-        <div className="w-full md:w-[55%] flex flex-col justify-center text-center md:text-left px-6 md:pl-16 lg:pl-24 md:pr-8 py-16 md:py-0">
+        <div className="w-full md:w-[55%] flex flex-col justify-center text-center md:text-left px-6 md:pl-16 lg:pl-24 md:pr-8 pt-28 pb-16 md:py-0">
 
           {/* Headline */}
           <h1

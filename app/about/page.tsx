@@ -22,7 +22,7 @@ const SKILLS = [
   },
   {
     number: "02",
-    title: "An Eye for Seeing Things Others Don\u2019t",
+    title: "An Eye for Seeing Things Others Might Miss",
     description:
       "I was raised around construction, which gave me an eye for seeing things others don\u2019t. The line item in a contract that doesn\u2019t quite add up. The small thing in a walkthrough that\u2019s worth a second look. It\u2019s a quiet kind of care, but it\u2019s the kind that tends to matter most later on.",
   },
@@ -59,7 +59,7 @@ export default function AboutPage() {
             <p className="mt-10 text-[15px] md:text-[16px] font-light leading-[1.85] text-mediumText max-w-2xl mx-auto">
               I wanted to be a REALTOR<sup>&reg;</sup> for years, between
               my career and raising a family, the timing never worked out. My
-              professional experience taught me how to read people,
+              professional experience has taught me how to read people,
               catch every detail, and handle tough situations gracefully and
               with poise. My goal has always been to help families find their
               dream homes.
