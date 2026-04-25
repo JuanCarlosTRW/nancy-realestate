@@ -22,9 +22,9 @@ const SKILLS = [
   },
   {
     number: "02",
-    title: "An Eye for Seeing Things Others Might Miss",
+    title: "An Eye for Seeing Things",
     description:
-      "I was raised around construction, which gave me an eye for seeing things others don\u2019t. The line item in a contract that doesn\u2019t quite add up. The small thing in a walkthrough that\u2019s worth a second look. It\u2019s a quiet kind of care, but it\u2019s the kind that tends to matter most later on.",
+      "I was raised around construction, which gave me an eye for seeing things others might miss. The line item in a contract that doesn\u2019t quite add up. The small thing in a walkthrough that\u2019s worth a second look. It\u2019s a quiet kind of care, but it\u2019s the kind that tends to matter most later on.",
   },
   {
     number: "03",
