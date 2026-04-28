@@ -128,6 +128,10 @@ export default function ContactForm() {
             className={inputCls}
           />
         </div>
+        {/* TREC §535.154 marketing disclaimer — must be clearly associated with the form */}
+        <p className="text-[12px] leading-relaxed font-light" style={{ color: "rgba(42, 42, 42, 0.60)" }}>
+          By submitting, you agree to be contacted by Nancy Musselman with Beam Real Estate via call, email, or text.
+        </p>
         <SubmitButton />
         <p className="text-[11px] text-lightText text-center font-light">
           I typically respond within 24 hours.

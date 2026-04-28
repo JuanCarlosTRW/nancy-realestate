@@ -21,6 +21,13 @@ export const TREC_IABS_URL =
 export const TREC_CPN_URL =
   "https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-4.pdf";
 
+// Beam Real Estate brokerage identifiers (TREC §535.154)
+export const BEAM_OFFICE_PHONE = "(972) 484-6644";
+export const BEAM_OFFICE_PHONE_TEL = "9724846644";
+export const BEAM_DESIGNATED_BROKER = "Mani Jacob";
+export const BEAM_LOGO_URL =
+  "https://static.wixstatic.com/media/62f926_9ad494fb59a64c3abe3ff5bd1941b69c~mv2.jpg";
+
 export const IMG = {
   // Nancy's photo — downloaded locally for reliability
   nancy: "/images/nancy.jpg",
