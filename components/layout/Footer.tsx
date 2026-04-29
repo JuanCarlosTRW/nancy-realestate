@@ -138,24 +138,34 @@ export default function Footer() {
                 {COMPLIANCE_DISCLAIMER}
               </p>
 
-              {/* Trust Badges — REALTOR® + Equal Housing Opportunity */}
-              <div className="flex items-center gap-3 mt-1">
-                <Image
-                  src={REALTOR_LOGO_URL}
-                  alt="REALTOR®"
-                  width={24}
-                  height={24}
-                  className="h-6 w-auto"
-                  unoptimized
-                />
-                <Image
-                  src={EHO_LOGO_URL}
-                  alt="Equal Housing Opportunity"
-                  width={24}
-                  height={24}
-                  className="h-6 w-auto"
-                  unoptimized
-                />
+              {/* Trust Badges — wrapped in cream for contrast on dark footer */}
+              <div className="flex items-center gap-3 mt-2">
+                <div
+                  className="flex items-center justify-center p-2"
+                  style={{ backgroundColor: "#FAF7F2" }}
+                >
+                  <Image
+                    src={REALTOR_LOGO_URL}
+                    alt="REALTOR®"
+                    width={28}
+                    height={28}
+                    className="h-6 w-auto"
+                    unoptimized
+                  />
+                </div>
+                <div
+                  className="flex items-center justify-center p-2"
+                  style={{ backgroundColor: "#FAF7F2" }}
+                >
+                  <Image
+                    src={EHO_LOGO_URL}
+                    alt="Equal Housing Opportunity"
+                    width={28}
+                    height={28}
+                    className="h-6 w-auto"
+                    unoptimized
+                  />
+                </div>
               </div>
 
             </div>
