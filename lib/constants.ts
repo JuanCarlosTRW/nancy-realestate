@@ -30,7 +30,7 @@ export const BEAM_LEGAL_NAME = "Beam Real Estate, LLC";
 export const BEAM_LOGO_URL =
   "https://static.wixstatic.com/media/62f926_9ad494fb59a64c3abe3ff5bd1941b69c~mv2.jpg";
 export const REALTOR_LOGO_URL =
-  "https://static.wixstatic.com/media/62f926_f9431531d01045338fa382de6bb7f44c~mv2.png";
+  "https://static.wixstatic.com/media/62f926_7a8afbc9ac2043af8361240b65d9a87e~mv2.png";
 
 // Equal Housing Opportunity logo (Wix CDN)
 export const EHO_LOGO_URL =
