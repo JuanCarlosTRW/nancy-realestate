@@ -16,17 +16,27 @@ export const NANCY_EMAIL = "nmusselmanrealty@gmail.com";
 export const NANCY_LICENSE = "TX License #844625";
 export const NANCY_LICENSE_NUMBER = "844625";
 
-export const TREC_IABS_URL =
-  "https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-0.pdf";
+// TREC compliance links — brokerage-provided Google Drive versions
 export const TREC_CPN_URL =
-  "https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-4.pdf";
+  "https://drive.google.com/file/d/1fczVW0a2O-3URc71Qf6TGMSJKSLAkmNt/view";
+export const TREC_IABS_URL =
+  "https://drive.google.com/file/d/1g6akp3EcTrQMRGbAnGC5XhRh_QGi40ti/view";
 
 // Beam Real Estate brokerage identifiers (TREC §535.154)
 export const BEAM_OFFICE_PHONE = "(972) 484-6644";
 export const BEAM_OFFICE_PHONE_TEL = "9724846644";
 export const BEAM_DESIGNATED_BROKER = "Mani Jacob";
+export const BEAM_LEGAL_NAME = "Beam Real Estate, LLC";
 export const BEAM_LOGO_URL =
   "https://static.wixstatic.com/media/62f926_9ad494fb59a64c3abe3ff5bd1941b69c~mv2.jpg";
+export const REALTOR_LOGO_URL =
+  "https://static.wixstatic.com/media/62f926_2094d8730e5b4160a91d570e79ff29d3~mv2.png";
+
+// Equal Housing Opportunity logo (local asset — see /public/eho-logo.svg)
+export const EHO_LOGO_URL = "/eho-logo.svg";
+
+export const COMPLIANCE_DISCLAIMER =
+  "All information is deemed reliable but not guaranteed and should be independently reviewed and verified.";
 
 export const IMG = {
   // Nancy's photo — downloaded locally for reliability
