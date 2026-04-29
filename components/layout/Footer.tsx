@@ -136,54 +136,58 @@ export default function Footer() {
                 {COMPLIANCE_DISCLAIMER}
               </p>
 
-              {/* Trust Badges — inline SVG, guaranteed to render */}
+              {/* Trust Badges — official mark layout with text labels */}
               <div className="flex items-center gap-3 mt-2">
 
-                {/* REALTOR® Mark */}
+                {/* REALTOR® Mark with Text */}
                 <div
                   className="flex items-center justify-center"
-                  style={{ backgroundColor: "#FAF7F2", width: "40px", height: "40px" }}
+                  style={{ backgroundColor: "#FAF7F2", padding: "6px 10px", height: "44px" }}
                   aria-label="REALTOR®"
                   title="REALTOR®"
                 >
                   <svg
-                    viewBox="0 0 100 100"
+                    viewBox="0 0 120 60"
                     xmlns="http://www.w3.org/2000/svg"
-                    style={{ width: "26px", height: "26px" }}
+                    style={{ height: "32px", width: "auto" }}
                     aria-hidden="true"
                   >
-                    <rect x="0" y="0" width="100" height="100" fill="#2A2A2A" />
+                    <rect x="0" y="0" width="56" height="60" fill="#2A2A2A" />
                     <path
-                      d="M 28 22 L 28 78 L 40 78 L 40 56 L 50 56 L 62 78 L 76 78 L 62 54 C 70 50 73 44 73 36 C 73 27 67 22 56 22 L 28 22 Z M 40 32 L 54 32 C 59 32 61 34 61 38 C 61 42 59 46 54 46 L 40 46 L 40 32 Z"
+                      d="M 14 12 L 14 48 L 22 48 L 22 34 L 28 34 L 36 48 L 46 48 L 36 32 C 42 30 44 25 44 20 C 44 14 39 12 32 12 L 14 12 Z M 22 18 L 30 18 C 33 18 35 19 35 22 C 35 25 33 27 30 27 L 22 27 L 22 18 Z"
                       fill="#FAF7F2"
                     />
-                    <circle cx="84" cy="28" r="6" fill="none" stroke="#FAF7F2" strokeWidth="1.5" />
-                    <text x="84" y="31" textAnchor="middle" fontSize="8" fontFamily="serif" fontWeight="bold" fill="#FAF7F2">R</text>
+                    <circle cx="50" cy="16" r="3" fill="none" stroke="#FAF7F2" strokeWidth="0.8" />
+                    <text x="50" y="17.5" textAnchor="middle" fontSize="4" fontFamily="serif" fontWeight="bold" fill="#FAF7F2">R</text>
+                    <text x="62" y="38" fontFamily="Arial, Helvetica, sans-serif" fontSize="12" fontWeight="700" letterSpacing="0.5" fill="#2A2A2A">REALTOR</text>
+                    <text x="108" y="32" fontFamily="Arial, Helvetica, sans-serif" fontSize="6" fontWeight="700" fill="#2A2A2A">®</text>
                   </svg>
                 </div>
 
-                {/* Equal Housing Opportunity */}
+                {/* Equal Housing Opportunity with Text */}
                 <div
                   className="flex items-center justify-center"
-                  style={{ backgroundColor: "#FAF7F2", width: "40px", height: "40px" }}
+                  style={{ backgroundColor: "#FAF7F2", padding: "6px 10px", height: "44px" }}
                   aria-label="Equal Housing Opportunity"
                   title="Equal Housing Opportunity"
                 >
                   <svg
-                    viewBox="0 0 100 100"
+                    viewBox="0 0 160 60"
                     xmlns="http://www.w3.org/2000/svg"
-                    style={{ width: "26px", height: "26px" }}
+                    style={{ height: "32px", width: "auto" }}
                     aria-hidden="true"
                   >
                     <path
-                      d="M 50 18 L 18 44 L 26 44 L 26 78 L 74 78 L 74 44 L 82 44 Z"
+                      d="M 28 14 L 8 30 L 14 30 L 14 50 L 42 50 L 42 30 L 48 30 Z"
                       fill="none"
                       stroke="#2A2A2A"
-                      strokeWidth="4"
+                      strokeWidth="2.5"
                       strokeLinejoin="miter"
                     />
-                    <rect x="38" y="54" width="24" height="4" fill="#2A2A2A" />
-                    <rect x="38" y="64" width="24" height="4" fill="#2A2A2A" />
+                    <rect x="20" y="34" width="16" height="2.5" fill="#2A2A2A" />
+                    <rect x="20" y="40" width="16" height="2.5" fill="#2A2A2A" />
+                    <text x="56" y="28" fontFamily="Arial, Helvetica, sans-serif" fontSize="9" fontWeight="700" letterSpacing="0.3" fill="#2A2A2A">EQUAL HOUSING</text>
+                    <text x="56" y="42" fontFamily="Arial, Helvetica, sans-serif" fontSize="9" fontWeight="700" letterSpacing="0.3" fill="#2A2A2A">OPPORTUNITY</text>
                   </svg>
                 </div>
 
