@@ -92,17 +92,6 @@ export default function SplitHero() {
           </h1>
 
           {/* Subheadline */}
-          <motion.p
-            {...anim(0.6)}
-            className="mt-6 text-[1rem] font-light max-w-xl leading-[1.7] mx-auto md:mx-0"
-            style={{
-              color: "rgba(255, 255, 255, 0.92)",
-              textShadow: "0 1px 12px rgba(0, 0, 0, 0.4)",
-            }}
-          >
-            Born and raised in DFW. Years of detail, organization, and
-            careful multitasking &mdash; now behind every client I work with.
-          </motion.p>
 
           {/* CTAs */}
           <motion.div
