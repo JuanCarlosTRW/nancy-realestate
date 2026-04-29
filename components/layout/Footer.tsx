@@ -199,14 +199,6 @@ export default function Footer() {
         <p>
           &copy; {new Date().getFullYear()} Nancy Musselman. All rights reserved.
         </p>
-        <a
-          href="https://clientgrowth.ca"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-gold/60 transition-colors duration-200"
-        >
-          Designed by Client Growth
-        </a>
       </div>
 
     </footer>
