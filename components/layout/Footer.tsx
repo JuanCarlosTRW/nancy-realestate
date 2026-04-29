@@ -168,21 +168,21 @@ export default function Footer() {
             </p>
 
             {/* Trust Badges — REALTOR® + Equal Housing Opportunity */}
-            <div className="flex items-center gap-4 mt-1">
+            <div className="flex items-center gap-6 mt-1">
               <Image
                 src={REALTOR_LOGO_URL}
                 alt="REALTOR®"
-                width={32}
-                height={32}
-                className="h-8 w-auto"
+                width={64}
+                height={64}
+                className="h-16 w-auto"
                 unoptimized
               />
               <Image
                 src={EHO_LOGO_URL}
                 alt="Equal Housing Opportunity"
-                width={32}
-                height={32}
-                className="h-8 w-auto"
+                width={64}
+                height={64}
+                className="h-16 w-auto"
                 unoptimized
               />
             </div>
