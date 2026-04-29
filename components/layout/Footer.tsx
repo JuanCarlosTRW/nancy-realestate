@@ -13,8 +13,6 @@ import {
   BEAM_DESIGNATED_BROKER,
   BEAM_LEGAL_NAME,
   BEAM_LOGO_URL,
-  REALTOR_LOGO_URL,
-  EHO_LOGO_URL,
   COMPLIANCE_DISCLAIMER,
 } from "@/lib/constants";
 
@@ -138,34 +136,57 @@ export default function Footer() {
                 {COMPLIANCE_DISCLAIMER}
               </p>
 
-              {/* Trust Badges — wrapped in cream for contrast on dark footer */}
+              {/* Trust Badges — inline SVG, guaranteed to render */}
               <div className="flex items-center gap-3 mt-2">
+
+                {/* REALTOR® Mark */}
                 <div
-                  className="flex items-center justify-center p-2"
-                  style={{ backgroundColor: "#FAF7F2" }}
+                  className="flex items-center justify-center"
+                  style={{ backgroundColor: "#FAF7F2", width: "40px", height: "40px" }}
+                  aria-label="REALTOR®"
+                  title="REALTOR®"
                 >
-                  <Image
-                    src={REALTOR_LOGO_URL}
-                    alt="REALTOR®"
-                    width={28}
-                    height={28}
-                    className="h-6 w-auto"
-                    unoptimized
-                  />
+                  <svg
+                    viewBox="0 0 100 100"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ width: "26px", height: "26px" }}
+                    aria-hidden="true"
+                  >
+                    <rect x="0" y="0" width="100" height="100" fill="#2A2A2A" />
+                    <path
+                      d="M 28 22 L 28 78 L 40 78 L 40 56 L 50 56 L 62 78 L 76 78 L 62 54 C 70 50 73 44 73 36 C 73 27 67 22 56 22 L 28 22 Z M 40 32 L 54 32 C 59 32 61 34 61 38 C 61 42 59 46 54 46 L 40 46 L 40 32 Z"
+                      fill="#FAF7F2"
+                    />
+                    <circle cx="84" cy="28" r="6" fill="none" stroke="#FAF7F2" strokeWidth="1.5" />
+                    <text x="84" y="31" textAnchor="middle" fontSize="8" fontFamily="serif" fontWeight="bold" fill="#FAF7F2">R</text>
+                  </svg>
                 </div>
+
+                {/* Equal Housing Opportunity */}
                 <div
-                  className="flex items-center justify-center p-2"
-                  style={{ backgroundColor: "#FAF7F2" }}
+                  className="flex items-center justify-center"
+                  style={{ backgroundColor: "#FAF7F2", width: "40px", height: "40px" }}
+                  aria-label="Equal Housing Opportunity"
+                  title="Equal Housing Opportunity"
                 >
-                  <Image
-                    src={EHO_LOGO_URL}
-                    alt="Equal Housing Opportunity"
-                    width={28}
-                    height={28}
-                    className="h-6 w-auto"
-                    unoptimized
-                  />
+                  <svg
+                    viewBox="0 0 100 100"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ width: "26px", height: "26px" }}
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M 50 18 L 18 44 L 26 44 L 26 78 L 74 78 L 74 44 L 82 44 Z"
+                      fill="none"
+                      stroke="#2A2A2A"
+                      strokeWidth="4"
+                      strokeLinejoin="miter"
+                    />
+                    <rect x="38" y="54" width="24" height="4" fill="#2A2A2A" />
+                    <rect x="38" y="64" width="24" height="4" fill="#2A2A2A" />
+                  </svg>
                 </div>
+
               </div>
 
             </div>
