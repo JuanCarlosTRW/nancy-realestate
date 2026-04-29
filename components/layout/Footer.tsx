@@ -142,18 +142,18 @@ export default function Footer() {
 
                 {/* REALTOR® — official logo image, multiply blend for dark-on-cream */}
                 <div
-                  className="flex items-center justify-center"
-                  style={{ backgroundColor: "#FAF7F2", padding: "6px 10px", height: "64px" }}
+                  className="flex items-center justify-center overflow-hidden"
+                  style={{ backgroundColor: "#FAF7F2", padding: "6px 10px", height: "44px" }}
                   aria-label="REALTOR®"
                   title="REALTOR®"
                 >
                   <Image
                     src={REALTOR_LOGO_URL}
                     alt="REALTOR®"
-                    width={160}
-                    height={52}
-                    className="h-13 w-auto"
-                    style={{ mixBlendMode: "multiply" }}
+                    width={120}
+                    height={32}
+                    className="w-auto"
+                    style={{ mixBlendMode: "multiply", height: "32px", maxHeight: "32px" }}
                     unoptimized
                   />
                 </div>
