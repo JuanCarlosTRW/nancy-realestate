@@ -23,7 +23,7 @@ const CARDS = [
   {
     number: "01",
     title: "You\u2019ll See Homes With Fresh Eyes",
-    hook: "With 50+ years of DFW roots, I know the quiet streets, the hidden gems, and what each neighborhood is actually like to live in.",
+    hook: "Having only lived in the DFW area, I know the quiet streets, the hidden gems, and would love to share that with you.",
     body: "",
   },
   {
