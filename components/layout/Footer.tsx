@@ -100,15 +100,6 @@ export default function Footer() {
                 >
                   Texas Real Estate Commission Information About Brokerage Services
                 </a>
-                <a
-                  href={TREC_CPN_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[16px] underline underline-offset-2 hover:text-[#C6A96C] transition-colors"
-                  style={{ color: "rgba(250, 247, 242, 0.85)" }}
-                >
-                  TREC Disclaimer
-                </a>
               </div>
 
               {/* Brokerage Identification */}

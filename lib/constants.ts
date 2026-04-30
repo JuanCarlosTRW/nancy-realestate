@@ -20,7 +20,7 @@ export const NANCY_LICENSE_NUMBER = "844625";
 export const TREC_CPN_URL =
   "https://drive.google.com/file/d/1fczVW0a2O-3URc71Qf6TGMSJKSLAkmNt/view";
 export const TREC_IABS_URL =
-  "https://drive.google.com/file/d/1g6akp3EcTrQMRGbAnGC5XhRh_QGi40ti/view";
+  "https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-2_1.pdf";
 
 // Beam Real Estate brokerage identifiers (TREC §535.154)
 export const BEAM_OFFICE_PHONE = "(972) 484-6644";
