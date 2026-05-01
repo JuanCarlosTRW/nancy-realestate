@@ -30,7 +30,7 @@ export default function Footer() {
           <h2 className="font-display text-3xl md:text-4xl font-light tracking-wide" style={{ color: "#FAF7F2" }}>
             Nancy Musselman{" "}
             <span style={{ color: "#C6A96C" }}>|</span>{" "}
-            REALTOR<sup className="text-base">®</sup>
+            <span className="text-2xl md:text-3xl">REALTOR<sup className="text-sm">®</sup></span>
           </h2>
           <p
             className="text-[0.7rem] font-medium tracking-[0.25em] uppercase"
