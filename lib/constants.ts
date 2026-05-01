@@ -16,11 +16,10 @@ export const NANCY_EMAIL = "nmusselmanrealty@gmail.com";
 export const NANCY_LICENSE = "TX License #844625";
 export const NANCY_LICENSE_NUMBER = "844625";
 
-// TREC compliance links — brokerage-provided Google Drive versions
+// TREC compliance links
 export const TREC_CPN_URL =
-  "https://drive.google.com/file/d/1fczVW0a2O-3URc71Qf6TGMSJKSLAkmNt/view";
-export const TREC_IABS_URL =
-  "https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-2_1.pdf";
+  "https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-4.pdf";
+export const TREC_IABS_URL = "/iabs-2026.pdf";
 
 // Beam Real Estate brokerage identifiers (TREC §535.154)
 export const BEAM_OFFICE_PHONE = "(972) 484-6644";
