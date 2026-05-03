@@ -7,7 +7,6 @@ import SplitHero from "@/components/home/SplitHero";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
 import CTASparkles from "@/components/home/CTASparkles";
-import Testimonials from "@/components/home/Testimonials";
 import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -370,9 +369,6 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-
-      {/* ─── SECTION 8: TESTIMONIAL ──────────────────────────────── */}
-      <Testimonials />
 
       {/* ─── SECTION 9: CTA (DARK) ────────────────────────────────── */}
       <section className="relative px-6 md:px-12 lg:px-20 bg-charcoal overflow-hidden py-20 md:py-24">
