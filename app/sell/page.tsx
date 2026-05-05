@@ -30,7 +30,7 @@ const STEPS = [
   {
     n: "03",
     title: "First Impressions Matter Most",
-    body: "I\u2019ll help you think through how each room presents, from the listing photos to the walkthrough experience. Sometimes that means staging a key room; sometimes it just means clearing the clutter and letting the home speak for itself. First impressions happen the moment prospects drive up.",
+    body: "I\u2019ll help you think through how each room presents itself, from the listing photos to the walkthrough experience. Sometimes that means staging a key room; sometimes it just means clearing the clutter and letting the home speak for itself. First impressions happen the moment prospects drive up.",
     closing: "",
   },
   {
