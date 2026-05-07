@@ -67,27 +67,6 @@ export default function ContactSidebar() {
         </ul>
       </div>
 
-      {/* Testimonial */}
-      <div className="mt-10 p-6 bg-bgSection rounded-[2px]">
-        <span
-          className="font-display text-[40px] text-goldLight/30 leading-none select-none"
-          aria-hidden="true"
-        >
-          &ldquo;
-        </span>
-        <p className="font-display italic text-darkText text-[15px] leading-[1.6] -mt-4">
-          Nancy helped us find our home on the Preston Trails Golf Course in
-          Bent Tree. She made us feel like we were her only clients.
-        </p>
-        <div className="w-8 h-px bg-gold/30 mt-4" />
-        <p className="text-[11px] tracking-[0.1em] uppercase font-semibold text-darkText mt-3">
-          The Martinez Family
-        </p>
-        <p className="text-[10px] tracking-[0.08em] uppercase text-goldLight mt-0.5">
-          Homeowners, Preston Trails, Bent Tree
-        </p>
-      </div>
-
       {/* TREC legal links */}
       <div className="mt-8 p-4 bg-bgSection/50 border border-bordr/60 rounded-[2px]">
         <p className="text-[9px] tracking-label uppercase font-medium text-lightText mb-3">
