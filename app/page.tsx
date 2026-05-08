@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroIntro from "@/components/home/HeroIntro";
 import SplitHero from "@/components/home/SplitHero";
+import Testimonials from "@/components/home/Testimonials";
 
 import Reveal from "@/components/ui/Reveal";
 import AnimatedDivider from "@/components/ui/AnimatedDivider";
@@ -229,6 +230,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ─── SECTION 5.5: TESTIMONIAL ─────────────────────────────── */}
+      <Testimonials />
 
       {/* ─── SECTION 6: BUY / SELL DUAL CARDS ─────────────────────── */}
       <section className="py-20 md:py-24 px-6 md:px-12 lg:px-20 bg-warmWhite">
