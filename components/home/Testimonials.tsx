@@ -5,7 +5,7 @@ import AnimatedDivider from "@/components/ui/AnimatedDivider";
 export default function Testimonials() {
   return (
     <section className="py-20 md:py-24 px-6 md:px-12 lg:px-20 bg-bgSection">
-      <div className="container-x max-w-6xl mx-auto">
+      <div className="container-x max-w-5xl mx-auto">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-gold">
@@ -29,63 +29,104 @@ export default function Testimonials() {
 
         <Reveal delay={0.1}>
           <div
-            className="grid grid-cols-1 md:grid-cols-[45%_55%] overflow-hidden border border-gold/[0.12] shadow-warm"
-            style={{ borderRadius: "4px", borderTop: "3px solid #C8A97E", background: "#FFFCF5" }}
+            className="relative overflow-hidden border border-gold/20 shadow-warmLg"
+            style={{ borderRadius: "4px", borderTop: "3px solid #C8A97E" }}
           >
-            {/* Left — property photo */}
-            <div className="relative h-[280px] md:h-auto md:min-h-[460px]">
+            {/* Background — house image */}
+            <div className="relative w-full min-h-[520px] md:min-h-[560px]">
               <Image
                 src="https://static.wixstatic.com/media/62f926_a22adc913a92483a81f67cd676406e51~mv2.png"
-                alt="A home Nancy Musselman recently sold in the Dallas area"
+                alt="A home Nancy Musselman recently sold"
                 fill
-                sizes="(max-width: 768px) 100vw, 45vw"
+                sizes="(max-width: 1024px) 100vw, 1024px"
                 className="object-cover"
+                priority={false}
               />
-            </div>
 
-            {/* Right — testimonial content */}
-            <div className="relative flex flex-col justify-center p-8 md:p-12 lg:p-14">
+              {/* Light brown wash — keeps photo visible underneath */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(74, 56, 38, 0.78) 0%, rgba(120, 90, 60, 0.68) 50%, rgba(160, 125, 85, 0.55) 100%)",
+                }}
+              />
+
+              {/* Subtle vignette for legibility */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at center, rgba(0,0,0,0) 35%, rgba(40, 28, 18, 0.35) 100%)",
+                }}
+              />
+
               {/* Decorative quotation mark */}
               <span
-                className="font-display absolute top-3 right-6 md:top-4 md:right-10 leading-none select-none pointer-events-none"
+                className="font-display absolute leading-none select-none pointer-events-none"
                 style={{
-                  fontSize: "clamp(80px, 9vw, 130px)",
-                  color: "rgba(196, 169, 108, 0.18)",
+                  fontSize: "clamp(140px, 18vw, 240px)",
+                  color: "rgba(245, 230, 200, 0.18)",
+                  top: "0.5rem",
+                  left: "1.5rem",
                 }}
                 aria-hidden="true"
               >
                 &ldquo;
               </span>
 
-              <p
-                className="font-display italic relative z-10"
-                style={{
-                  fontSize: "clamp(1.05rem, 1.7vw, 1.35rem)",
-                  lineHeight: 1.65,
-                  color: "#1A1510",
-                }}
-              >
-                Working with Nancy has been an outstanding experience. She is
-                professional, knowledgeable, and genuinely cares about her
-                clients every step of the way. From contract to closing, she
-                stays proactive, communicates clearly, and makes the entire
-                process feel seamless. Her clients are truly in great hands,
-                and it&rsquo;s a pleasure partnering with her on transactions.
-                We highly recommend her to anyone looking for a trusted real
-                estate professional.
-              </p>
-
-              <div className="w-[60px] h-px bg-gold/40 mt-8" />
-
-              <div className="mt-6">
-                <p className="text-[0.8rem] tracking-[0.15em] uppercase font-semibold text-darkText">
-                  Christina Keck
+              {/* Content overlay */}
+              <div className="relative z-10 flex flex-col justify-center items-center text-center px-6 py-16 md:px-16 md:py-20 lg:px-24 min-h-[520px] md:min-h-[560px]">
+                <p
+                  className="font-display italic max-w-2xl"
+                  style={{
+                    fontSize: "clamp(1.05rem, 1.9vw, 1.5rem)",
+                    lineHeight: 1.65,
+                    color: "#FBF5E8",
+                    textShadow: "0 2px 24px rgba(40, 28, 18, 0.6)",
+                  }}
+                >
+                  Working with Nancy has been an outstanding experience. She is
+                  professional, knowledgeable, and genuinely cares about her
+                  clients every step of the way. From contract to closing, she
+                  stays proactive, communicates clearly, and makes the entire
+                  process feel seamless. Her clients are truly in great hands,
+                  and it&rsquo;s a pleasure partnering with her on transactions.
+                  We highly recommend her to anyone looking for a trusted real
+                  estate professional.
                 </p>
-                <p className="text-[0.7rem] tracking-[0.12em] uppercase mt-1.5" style={{ color: "#7A6A52" }}>
-                  Business Development Officer
-                  <span className="mx-2 text-gold/60">&middot;</span>
-                  MH Title
-                </p>
+
+                <div
+                  className="mt-10 mx-auto"
+                  style={{
+                    width: "60px",
+                    height: "1px",
+                    background: "rgba(232, 205, 156, 0.6)",
+                  }}
+                />
+
+                <div className="mt-6">
+                  <p
+                    className="font-display italic"
+                    style={{
+                      fontSize: "clamp(1.4rem, 2.4vw, 1.85rem)",
+                      color: "#F2DDB0",
+                      fontFamily: "var(--font-accent, 'Playfair Display', serif)",
+                      letterSpacing: "0.01em",
+                      textShadow: "0 2px 18px rgba(40, 28, 18, 0.55)",
+                    }}
+                  >
+                    Christina
+                  </p>
+                  <p
+                    className="text-[0.7rem] tracking-[0.25em] uppercase font-medium mt-2"
+                    style={{ color: "rgba(245, 225, 188, 0.85)" }}
+                  >
+                    MH Title
+                  </p>
+                </div>
               </div>
             </div>
           </div>
