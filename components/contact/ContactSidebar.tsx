@@ -9,6 +9,8 @@ import {
   NANCY_LICENSE,
   TREC_IABS_URL,
   TREC_CPN_URL,
+  CLANCY_OFFICE_ADDRESS_LINE1,
+  CLANCY_OFFICE_ADDRESS_LINE2,
 } from "@/lib/constants";
 
 export default function ContactSidebar() {
@@ -38,8 +40,8 @@ export default function ContactSidebar() {
         <p className="text-[11px] tracking-label uppercase font-medium text-gold mt-2">
           {NANCY_BROKERAGE}
         </p>
-        <p className="text-[14px] font-light text-mediumText mt-2">14455 Webb Chapel Road</p>
-        <p className="text-[14px] font-light text-mediumText">Farmers Branch, TX 74234</p>
+        <p className="text-[14px] font-light text-mediumText mt-2">{CLANCY_OFFICE_ADDRESS_LINE1}</p>
+        <p className="text-[14px] font-light text-mediumText">{CLANCY_OFFICE_ADDRESS_LINE2}</p>
         <div className="gold-divider w-12 mt-5" />
         <ul className="mt-6 space-y-4 text-[14px] text-mediumText font-light">
           <li className="flex items-start gap-3">

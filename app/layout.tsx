@@ -28,7 +28,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Nancy Musselman | Dallas Real Estate · Beam Real Estate",
+  title: "Nancy Musselman | Dallas Real Estate · Clancy Realty",
   description:
     "Nancy Musselman is a Dallas real estate agent, born and raised in DFW, with decades of professional experience. Born here. Built for this.",
   metadataBase: new URL("https://nancy-realestate.vercel.app"),

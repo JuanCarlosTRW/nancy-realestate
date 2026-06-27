@@ -8,11 +8,9 @@ import {
   NANCY_LEGAL_NAME,
   TREC_IABS_URL,
   TREC_CPN_URL,
-  BEAM_OFFICE_PHONE,
-  BEAM_OFFICE_PHONE_TEL,
-  BEAM_DESIGNATED_BROKER,
-  BEAM_LEGAL_NAME,
-  BEAM_LOGO_URL,
+  CLANCY_DESIGNATED_BROKER,
+  CLANCY_DESIGNATED_BROKER_LICENSE,
+  CLANCY_LEGAL_NAME,
   REALTOR_LOGO_URL,
   COMPLIANCE_DISCLAIMER,
 } from "@/lib/constants";
@@ -36,7 +34,7 @@ export default function Footer() {
             className="text-[0.7rem] font-medium tracking-[0.25em] uppercase"
             style={{ color: "#C6A96C" }}
           >
-            Beam Real Estate
+            Clancy Realty, LLC
           </p>
           <div className="flex flex-col gap-2 mt-2">
             <a
@@ -63,19 +61,9 @@ export default function Footer() {
           className="pt-10 md:pt-12"
           style={{ borderTop: "1px solid rgba(255, 255, 255, 0.08)" }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 md:gap-8 items-start">
+          <div className="grid grid-cols-1 gap-6 md:gap-8 items-start">
 
-            {/* Beam Logo */}
-            <div className="flex-shrink-0">
-              <Image
-                src={BEAM_LOGO_URL}
-                alt="Beam Real Estate, LLC"
-                width={140}
-                height={70}
-                className="h-[55px] md:h-[65px] w-auto object-contain object-left"
-                unoptimized
-              />
-            </div>
+            {/* TODO: Clancy brokerage logo goes here once provided (see CLANCY_LOGO_URL in lib/constants.ts) */}
 
             {/* TREC Links + Compliance Info */}
             <div className="flex flex-col gap-5">
@@ -104,19 +92,13 @@ export default function Footer() {
 
               {/* Brokerage Identification */}
               <div className="flex flex-col gap-1">
+                {/* TODO: Add Clancy office number here once Nancy provides it, e.g.:
+                    {CLANCY_LEGAL_NAME} | Office Number: <a href={`tel:${CLANCY_OFFICE_PHONE_TEL}`}>{CLANCY_OFFICE_PHONE}</a> */}
                 <p className="text-[14px]" style={{ color: "rgba(250, 247, 242, 0.85)" }}>
-                  {BEAM_LEGAL_NAME}{" "}
-                  <span style={{ opacity: 0.5 }}>|</span>{" "}
-                  Office Number:{" "}
-                  <a
-                    href={`tel:${BEAM_OFFICE_PHONE_TEL}`}
-                    className="hover:text-[#C6A96C] transition-colors underline underline-offset-2"
-                  >
-                    {BEAM_OFFICE_PHONE}
-                  </a>
+                  {CLANCY_LEGAL_NAME}
                 </p>
                 <p className="text-[14px]" style={{ color: "rgba(250, 247, 242, 0.85)" }}>
-                  Designated Broker: {BEAM_DESIGNATED_BROKER}
+                  Designated Broker: {CLANCY_DESIGNATED_BROKER}, License #{CLANCY_DESIGNATED_BROKER_LICENSE}
                 </p>
               </div>
 

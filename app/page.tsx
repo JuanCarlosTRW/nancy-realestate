@@ -11,7 +11,7 @@ import CTASparkles from "@/components/home/CTASparkles";
 import { NANCY_PHONE, NANCY_PHONE_TEL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Nancy Musselman | Dallas Real Estate Agent | Beam Real Estate",
+  title: "Nancy Musselman | Dallas Real Estate Agent | Clancy Realty",
   description:
     "Nancy Musselman, a Dallasite born and raised in DFW with years of professional experience. Buying or selling, detail and care in every transaction.",
 };

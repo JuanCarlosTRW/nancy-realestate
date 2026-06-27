@@ -4,7 +4,7 @@ import CountUp from "@/components/CountUp";
 const STATS = [
   { number: 50, suffix: "+ Years", label: "in the DFW Metroplex" },
   { number: 22, suffix: " Years", label: "Professional Experience" },
-  { text: "Beam Real Estate", label: "Licensed Agent · TX #844625" },
+  { text: "Clancy Realty, LLC", label: "Licensed Agent · TX #844625" },
 ];
 
 export default function TrustBar() {

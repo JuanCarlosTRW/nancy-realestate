@@ -64,7 +64,7 @@ export default function Hero() {
             REALTOR®
           </p>
           <p className="text-[11px] md:text-[12px] tracking-label uppercase font-medium text-goldLight mt-2">
-            Beam Real Estate
+            Clancy Realty, LLC
           </p>
         </motion.div>
 
