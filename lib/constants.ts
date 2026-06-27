@@ -22,9 +22,8 @@ export const TREC_CPN_URL =
 export const TREC_IABS_URL = "/iabs-2026.pdf";
 
 // Clancy Realty brokerage identifiers (TREC §535.154)
-// TODO: Clancy office phone number not yet provided by Nancy.
-//       Add it here (e.g. CLANCY_OFFICE_PHONE / CLANCY_OFFICE_PHONE_TEL) and
-//       re-enable the "Office Number" line in components/layout/Footer.tsx.
+export const CLANCY_OFFICE_PHONE = "(214) 753-4440";
+export const CLANCY_OFFICE_PHONE_TEL = "2147534440";
 export const CLANCY_DESIGNATED_BROKER = "Doyle Liesenfelt";
 export const CLANCY_DESIGNATED_BROKER_LICENSE = "337382";
 export const CLANCY_LEGAL_NAME = "Clancy Realty, LLC";

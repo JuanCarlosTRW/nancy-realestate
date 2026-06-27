@@ -8,6 +8,8 @@ import {
   NANCY_LEGAL_NAME,
   TREC_IABS_URL,
   TREC_CPN_URL,
+  CLANCY_OFFICE_PHONE,
+  CLANCY_OFFICE_PHONE_TEL,
   CLANCY_DESIGNATED_BROKER,
   CLANCY_DESIGNATED_BROKER_LICENSE,
   CLANCY_LEGAL_NAME,
@@ -92,10 +94,16 @@ export default function Footer() {
 
               {/* Brokerage Identification */}
               <div className="flex flex-col gap-1">
-                {/* TODO: Add Clancy office number here once Nancy provides it, e.g.:
-                    {CLANCY_LEGAL_NAME} | Office Number: <a href={`tel:${CLANCY_OFFICE_PHONE_TEL}`}>{CLANCY_OFFICE_PHONE}</a> */}
                 <p className="text-[14px]" style={{ color: "rgba(250, 247, 242, 0.85)" }}>
-                  {CLANCY_LEGAL_NAME}
+                  {CLANCY_LEGAL_NAME}{" "}
+                  <span style={{ opacity: 0.5 }}>|</span>{" "}
+                  Office Number:{" "}
+                  <a
+                    href={`tel:${CLANCY_OFFICE_PHONE_TEL}`}
+                    className="hover:text-[#C6A96C] transition-colors underline underline-offset-2"
+                  >
+                    {CLANCY_OFFICE_PHONE}
+                  </a>
                 </p>
                 <p className="text-[14px]" style={{ color: "rgba(250, 247, 242, 0.85)" }}>
                   Designated Broker: {CLANCY_DESIGNATED_BROKER}, License #{CLANCY_DESIGNATED_BROKER_LICENSE}
