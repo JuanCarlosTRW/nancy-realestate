@@ -25,7 +25,6 @@ export const TREC_IABS_URL = "/iabs-2026.pdf";
 export const CLANCY_OFFICE_PHONE = "(214) 753-4440";
 export const CLANCY_OFFICE_PHONE_TEL = "2147534440";
 export const CLANCY_DESIGNATED_BROKER = "Doyle Liesenfelt";
-export const CLANCY_DESIGNATED_BROKER_LICENSE = "337382";
 export const CLANCY_LEGAL_NAME = "Clancy Realty, LLC";
 export const CLANCY_OFFICE_ADDRESS_LINE1 = "14114 N Dallas Parkway, Ste 420";
 export const CLANCY_OFFICE_ADDRESS_LINE2 = "Dallas, TX 75254";

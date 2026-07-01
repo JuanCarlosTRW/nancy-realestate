@@ -11,7 +11,6 @@ import {
   CLANCY_OFFICE_PHONE,
   CLANCY_OFFICE_PHONE_TEL,
   CLANCY_DESIGNATED_BROKER,
-  CLANCY_DESIGNATED_BROKER_LICENSE,
   CLANCY_LEGAL_NAME,
   REALTOR_LOGO_URL,
   COMPLIANCE_DISCLAIMER,
@@ -106,7 +105,7 @@ export default function Footer() {
                   </a>
                 </p>
                 <p className="text-[14px]" style={{ color: "rgba(250, 247, 242, 0.85)" }}>
-                  Designated Broker: {CLANCY_DESIGNATED_BROKER}, License #{CLANCY_DESIGNATED_BROKER_LICENSE}
+                  Designated Broker: {CLANCY_DESIGNATED_BROKER}
                 </p>
               </div>
 
