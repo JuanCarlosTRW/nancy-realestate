@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroIntro from "@/components/home/HeroIntro";
 import SplitHero from "@/components/home/SplitHero";
+import Listings from "@/components/home/Listings";
 import Testimonials from "@/components/home/Testimonials";
 
 import Reveal from "@/components/ui/Reveal";
@@ -108,6 +109,9 @@ export default function Home() {
           </p>
         </Reveal>
       </div>
+
+      {/* ─── SECTION 2: LISTINGS — Coming Soon ───────────────────── */}
+      <Listings />
 
       {/* ─── Gold divider ─────────────────────────────────────────── */}
       <div className="mx-auto h-px w-full max-w-4xl" style={{ background: "linear-gradient(90deg, transparent, #C8A97E, transparent)" }} />
